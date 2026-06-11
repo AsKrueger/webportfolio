@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AsKrueger - Desarrollador Web</title>
+    <title>Alonso Amador - Desarrollador de Aplicaciones Multiplataforma</title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <div class="logo">
-                <a href="#inicio">AsKrueger</a>
+                <a href="/">Alonso Amador</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#curriculum">CV</a></li>
-                <li><a href="https://github.com/AsKrueger" target="_blank" class="github-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg> GitHub
-                </a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sobre">Sobre mí</a></li>
+                <li><a href="/proyectos">Proyectos</a></li>
+                <li><a href="/curriculum">CV</a></li>
+                
+                <li><a href="https://www.linkedin.com/in/alonso-amador" target="_blank" class="github-btn">LinkedIn</a></li>
+                
+                <li><a href="https://github.com/AsKrueger" target="_blank" class="github-btn">GitHub</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -32,141 +30,203 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>¡Hola! Soy AsKrueger 👋</h1>
-                <p class="subtitle">Desarrollador Full Stack | Python | JavaScript | Web Apps</p>
-                <p class="description">
-                    Creando soluciones web innovadoras y escalables. Apasionado por la programación y siempre buscando aprender nuevas tecnologías.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#sobre" class="btn btn-primary">Conoce más sobre mí</a>
-                    <a href="https://github.com/AsKrueger" target="_blank" class="btn btn-secondary">Mi GitHub</a>
-                </div>
+    <main>
+        
+<section id="inicio" class="hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <span class="eyebrow">DESARROLLADOR DE APLICACIONES MULTIPLATAFORMA | JUNIOR DEVELOPER</span>
+            <h1>Hola, soy Alonso Amador</h1>
+            <p class="hero-title">Apasionado por la creación de soluciones digitales eficientes y escalables.</p>
+            <p class="hero-text">Actualmente trabajo como Desarrollador de Software Junior Multiplataforma. Mi pasión radica en la creación de soluciones digitales precisas y escalables tanto en entornos móviles como web.</p>
+            <div class="hero-actions">
+                <a href="https://github.com/AsKrueger" target="_blank" class="btn btn-primary">Explorar mi GitHub</a>
+                <a href="/proyectos" class="btn btn-outline">Ver Proyectos</a>
             </div>
         </div>
-    </section>
+        <div class="hero-panel">
+            <div class="code-card">
+                <div class="code-card-label">stack_tecnico.kt</div>
+                <pre><code>class Developer {
+    val languages = listOf("Java", "Kotlin", "C#", "Python", "SQL")
+    val tools = listOf(".NET", "Unity", "Android Studio", "Git")
 
-    <!-- Highlights Section -->
-    <section class="highlights">
-        <div class="container">
-            <h2>¿Qué hago?</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">💻</div>
-                    <h3>Desarrollo Web</h3>
-                    <p>Creo aplicaciones web modernas con Flask, Django y JavaScript.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🚀</div>
-                    <h3>Full Stack</h3>
-                    <p>Domino tanto frontend como backend para soluciones completas.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📱</div>
-                    <h3>Responsive Design</h3>
-                    <p>Sitios que se ven bien en cualquier dispositivo.</p>
-                </div>
+    fun workflow() {
+        // Metodologías y Paradigmas
+        apply(Scrum, POO, CleanCode)
+    }
+}</code></pre>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Sobre mí -->
-    <section id="sobre" class="page-section">
-        <div class="container">
-            <h1>Sobre mí</h1>
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>¿Quién soy?</h2>
-                    <p>
-                        Soy un desarrollador apasionado por la programación y el desarrollo web.
-                        Tengo experiencia en múltiples tecnologías y siempre estoy buscando mejorar mis habilidades.
-                    </p>
-                    <p>
-                        Me encanta crear soluciones que resuelvan problemas reales y ayuden a las personas.
-                        En mi tiempo libre, contribuyo a proyectos open source y participo en la comunidad de desarrolladores.
-                    </p>
+<section class="section-sobre">
+    <div class="container section-grid">
+        <div class="content-card">
+            <div class="section-header">
+                <span class="section-label">Stack Técnico & Habilidades</span>
+                <h2>Mi formación y experiencia se centran en el desarrollo multiplataforma</h2>
+            </div>
+            <p>Utilizo herramientas líderes en la industria para construir aplicaciones robustas y mantenibles.</p>
+            <div class="feature-list">
+                <div class="feature-item">➔ Dominio de Java y Kotlin (Android).</div>
+                <div class="feature-item">➔ Desarrollo C# con .NET y Unity.</div>
+                <div class="feature-item">➔ Control de versiones con Git/GitHub.</div>
+                <div class="feature-item">➔ Metodologías Ágiles (Scrum).</div>
+                <div class="feature-item">➔ Scripting y datos con Python & SQL.</div>
+                <div class="feature-item">➔ Programación Orientada a Objetos.</div>
+            </div>
+        </div>
+        <div class="skills-panel">
+            <div class="section-header">
+                <span class="section-label">Habilidades</span>
+                <h2>Lo que manejo con confianza</h2>
+            </div>
+            <div class="skills-grid">
+                
+                <span class="skill-tag">Java</span>
+                
+                <span class="skill-tag">Kotlin</span>
+                
+                <span class="skill-tag">C#</span>
+                
+                <span class="skill-tag">Python</span>
+                
+                <span class="skill-tag">SQL</span>
+                
+                <span class="skill-tag">XML</span>
+                
+                <span class="skill-tag">.NET</span>
+                
+                <span class="skill-tag">Unity</span>
+                
+                <span class="skill-tag">Android SDK</span>
+                
+                <span class="skill-tag">Jetpack Compose</span>
+                
+                <span class="skill-tag">PostgreSQL</span>
+                
+                <span class="skill-tag">SQLite</span>
+                
+                <span class="skill-tag">Git</span>
+                
+                <span class="skill-tag">VS Code</span>
+                
+                <span class="skill-tag">IntelliJ</span>
+                
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <h3>Habilidades</h3>
-                    <div class="skills-grid">
-                        <div class="skill-tag">Python</div>
-                        <div class="skill-tag">Flask</div>
-                        <div class="skill-tag">Django</div>
-                        <div class="skill-tag">JavaScript</div>
-                        <div class="skill-tag">React</div>
-                        <div class="skill-tag">HTML/CSS</div>
-                        <div class="skill-tag">SQL</div>
-                        <div class="skill-tag">Git</div>
-                        <div class="skill-tag">API REST</div>
+<section class="section-proyectos">
+    <div class="container">
+        <div class="section-header center">
+            <span class="section-label">Proyectos Destacados</span>
+            <h2>Construyendo software con propósito y calidad técnica.</h2>
+        </div>
+        <div class="projects-grid">
+            
+                
+                <article class="project-card">
+                    <div class="project-meta-top">
+                        
+                        <span class="project-badge secondary">GitHub</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section id="proyectos" class="page-section">
-        <div class="container">
-            <h1>Mis Proyectos</h1>
-            <p class="section-subtitle">Estos son algunos de mis proyectos recientes en GitHub</p>
-            <div class="projects-grid" id="projects-grid">
-                <div class="loading">Cargando proyectos...</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CV -->
-    <section id="curriculum" class="page-section">
-        <div class="container">
-            <h1>Mi Currículum</h1>
-            <div class="cv-content">
-                <div class="cv-section">
-                    <h2>📄 CV</h2>
-                    <p>Puedes ver mi información profesional completa en mi perfil de GitHub.</p>
-                    <a href="https://github.com/AsKrueger" target="_blank" class="btn btn-primary">
-                        Ver perfil GitHub
-                    </a>
-                </div>
-
-                <div class="cv-section">
-                    <h2>💼 Experiencia</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h3>Desarrollador Full Stack</h3>
-                            <p class="meta">Proyecto Personal | 2024 - Presente</p>
-                            <p>Desarrollando soluciones web con Python y JavaScript.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3>Aprendizaje Continuo</h3>
-                            <p class="meta">Autoformación | 2023 - Presente</p>
-                            <p>Cursos en desarrollo web, frameworks modernos y mejores prácticas.</p>
-                        </div>
+                    <h3>Alonso-Amador</h3>
+                    <p class="project-description">Perfil como desarrollador.</p>
+                    <a href="https://github.com/AsKrueger/Alonso-Amador" target="_blank" class="project-link">Ver código</a>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-meta-top">
+                        
+                        <span class="project-badge">Java</span>
+                        
+                        <span class="project-badge secondary">GitHub</span>
                     </div>
-                </div>
-
-                <div class="cv-section">
-                    <h2>🎓 Educación</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h3>Autoformación en Desarrollo Web</h3>
-                            <p class="meta">Plataformas online | 2022 - Presente</p>
-                            <p>Cursos en Python, JavaScript, Flask, React y más tecnologías.</p>
-                        </div>
+                    <h3>Project100</h3>
+                    <p class="project-description">Proyecto de ejercicio al estilo one punch man y solo leveling.</p>
+                    <a href="https://github.com/AsKrueger/Project100" target="_blank" class="project-link">Ver código</a>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-meta-top">
+                        
+                        <span class="project-badge">Kotlin</span>
+                        
+                        <span class="project-badge secondary">GitHub</span>
                     </div>
+                    <h3>ExplorerSaga-Extremadura</h3>
+                    <p class="project-description">La idea principal es una app de turismo centrada en lugares de interes turistico facil de usar</p>
+                    <a href="https://github.com/AsKrueger/ExplorerSaga-Extremadura" target="_blank" class="project-link">Ver código</a>
+                </article>
+                
+            
+        </div>
+    </div>
+</section>
+
+<section class="section-cv">
+    <div class="container">
+        <div class="section-header center">
+            <span class="section-label">Experiencia & Educación</span>
+            <h2>Trayectoria y formación enfocadas en el desarrollo de software.</h2>
+        </div>
+        <div class="timeline-grid">
+            <div class="timeline-block">
+                <span class="timeline-title">Formación</span>
+                
+                <div class="timeline-item">
+                    <h3>Autoformación en Desarrollo Web</h3>
+                    <p class="meta">Cursos online y práctica personal · 2022 - Presente</p>
+                    <p>Aprendizaje continuo en Python, desarrollo web, frameworks y buenas prácticas de código.</p>
                 </div>
+                
+            </div>
+            <div class="timeline-block">
+                <span class="timeline-title">Experiencia</span>
+                
+                <div class="timeline-item">
+                    <h3>Proyectos Web Personales</h3>
+                    <p class="meta">Auto gestión · 2024 - Presente</p>
+                    <p>Construcción de aplicaciones web y portfolios con Python, Flask y despliegue en GitHub Pages.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Desarrollo de aplicaciones móviles y turismo</h3>
+                    <p class="meta">Proyectos personales · 2023 - 2025</p>
+                    <p>Desarrollo de apps Kotlin y prototipos de turismo con enfoque en usabilidad.</p>
+                </div>
+                
             </div>
         </div>
-    </section>
+        <div class="certification-panel">
+            <h3>Certificaciones & Logros</h3>
+            <div class="certification-list">
+                <span class="badge">Lógica de Programación</span>
+                <span class="badge">Python Intermedio</span>
+                <span class="badge">SQL & Bases de Datos</span>
+                <span class="badge">Git & GitHub Pro</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 AsKrueger. Desarrollador apasionado por crear soluciones web.</p>
+    </main>
+
+    <footer class="footer-dark">
+        <div class="container footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 Desarrolado por Alonso Amador.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/alonso-amador" target="_blank">LinkedIn</a> · 
+                <a href="https://github.com/AsKrueger" target="_blank">GitHub</a>
+            </div>
         </div>
     </footer>
-
     <script src="static/js/main.js"></script>
 </body>
 </html>
