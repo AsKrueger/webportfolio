@@ -1,34 +1,83 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nombre }} - Proyectos</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">{{ nombre }}</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sobre">Sobre mí</a></li>
+                <li><a href="/proyectos">Proyectos</a></li>
+                <li><a href="/curriculum">CV</a></li>
+                {% if linkedin_url %}
+                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
+                {% endif %}
+                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
 {% block title %}{{ nombre }} - Proyectos{% endblock %}
 
-{% block content %}
-<section class="page-section">
-    <div class="container">
-        <h1>Mis Proyectos</h1>
-        <p class="section-subtitle">Estos son algunos de mis proyectos recientes en GitHub</p>
+    <section id="projects-showcase" class="section-showcase">
+        <div class="container">
+            {% if proyectos %}
+                <div class="projects-grid-showcase">
+                    {% for project in proyectos[:6] %}
+                    <article class="project-card-showcase">
+                        <div class="project-image">
+                            {% if project.language %}
+                            <div class="project-badge">{{ project.language }}</div>
+                            {% endif %}
+                            {% if project.topics %}
+                            <div class="project-topics">
+                                {% for topic in project.topics[:2] %}
+                                <span class="topic-tag">{{ topic }}</span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="project-content">
+                            <h3>{{ project.name }}</h3>
+                            <p class="project-desc">
+                                {{ project.description or "Proyecto sin descripción disponible." }}
+                            </p>
+                            <div class="project-footer">
+                                <div class="project-stats">
+                                    <span class="stat">⭐ {{ project.stargazers_count }}</span>
+                                    {% if project.forks_count %}
+                                    <span class="stat">🍴 {{ project.forks_count }}</span>
+                                    {% endif %}
+                                </div>
+                                <a href="{{ project.html_url }}" target="_blank" class="view-code">Ver Código →</a>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
 
-        <div class="projects-grid">
-            {% if projects %}
-                {% for project in projects %}
-                <div class="project-card">
-                    <h3>{{ project.name }}</h3>
-                    <p class="project-description">
-                        {{ project.description or "Sin descripción" }}
-                    </p>
-                    <div class="project-meta">
-                        {% if project.language %}
-                            <span class="language">{{ project.language }}</span>
-                        {% endif %}
-                        <span class="stars">⭐ {{ project.stargazers_count }}</span>
-                    </div>
-                    <a href="{{ project.html_url }}" target="_blank" class="btn btn-small">
-                        Ver en GitHub
+                <div class="projects-cta">
+                    <p>¿Quieres ver más proyectos?</p>
+                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
+                        Visita mi GitHub
                     </a>
                 </div>
-                {% endfor %}
             {% else %}
                 <div class="empty-state">
+                    <div class="empty-icon">📦</div>
                     <p>No se pudieron cargar los proyectos en este momento.</p>
                     <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
                         Ver todos en GitHub
@@ -36,6 +85,64 @@
                 </div>
             {% endif %}
         </div>
-    </div>
-</section>
-{% endblock %}
+    </section>
+
+    <section id="technologies" class="section-tech-stack">
+        <div class="container">
+            <div class="tech-header">
+                <h2>Stack Tecnológico</h2>
+                <p>Tecnologías utilizadas en los proyectos</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <span class="tech-icon">☕</span>
+                    <span>Java</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🎯</span>
+                    <span>Kotlin</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">#️⃣</span>
+                    <span>C#</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🐍</span>
+                    <span>Python</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">.️⃣</span>
+                    <span>.NET</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🎮</span>
+                    <span>Unity</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">📱</span>
+                    <span>Android</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🗄️</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-dark">
+        <div class="container footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 {{ nombre }}. Built with precision.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/{{ github_user }}" target="_blank">GitHub</a>
+                {% if linkedin_url %} · <a href="{{ linkedin_url }}" target="_blank">LinkedIn</a>{% endif %}
+                {% if contacto.email %} · <a href="mailto:{{ contacto.email }}">Email</a>{% endif %}
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

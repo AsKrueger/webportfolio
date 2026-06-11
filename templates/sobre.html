@@ -1,7 +1,51 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nombre }} - Sobre mí</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">{{ nombre }}</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sobre">Sobre mí</a></li>
+                <li><a href="/proyectos">Proyectos</a></li>
+                <li><a href="/curriculum">CV</a></li>
+                {% if linkedin_url %}
+                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
+                {% endif %}
+                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-{% block title %}{{ nombre }} - Sobre mí{% endblock %}
-
+    <section id="sobre-hero" class="section-hero">
+        <div class="container">
+            <div class="hero-intro">
+                <h1>HolaMundo</h1>
+                <h2>¡Hola a todos! Soy <span class="accent">{{ nombre }}</span>.</h2>
+                <p class="intro-text">
+                    Actualmente trabajo como <span class="highlight">Desarrollador de Software Junior Multiplataforma</span>. 
+                    Mi pasión reside en la creación de soluciones digitales precisas y escalables tanto en entornos móviles como web.
+                </p>
+                <p class="intro-description">
+                    Tengo formación especializada en <span class="highlight">Desarrollo de Aplicaciones Web (DAW)</span>, 
+                    lo que me ha permitido consolidar una base técnica sólida y una mentalidad orientada a la arquitectura limpia y la eficiencia del código.
+                </p>
+            </div>
+        </div>
+    </section>
 {% block content %}
 <section class="hero">
     <div class="container hero-grid">

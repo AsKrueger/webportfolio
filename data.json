@@ -1,55 +1,47 @@
 {
   "nombre": "Alonso Amador",
-  "titulo": "Desarrollador de Aplicaciones Multiplataforma",
-  "subtitulo": "Java | Kotlin | C# | Python | Web",
-  "descripcion": "Actualmente trabajo como Desarrollador de Software Junior Multiplataforma. Mi pasión radica en la creación de soluciones digitales precisas y escalables tanto en entornos móviles como web.",
-  "biografia": "Soy Alonso Amador, apasionado por la creación de soluciones digitales eficientes y escalables. Tengo formación especializada en Desarrollo de Aplicaciones Web (DAW), lo que me ha permitido construir una base técnica sólida y una mentalidad orientada a la arquitectura limpia y la eficiencia del código.",
-  "habilidades_categorias": {
-    "Lenguajes": ["Java", "Kotlin", "C#", "Python", "SQL", "XML"],
-    "Frameworks & Herramientas": [".NET", "Unity"],
-    "Desarrollo Móvil": ["Android SDK", "Jetpack Compose"],
-    "Bases de Datos": ["PostgreSQL", "SQLite"],
-    "Herramientas": ["Git", "VS Code", "IntelliJ", "Scrum/Agile", "POO"]
-  },
+  "titulo": "Desarrollador Full Stack",
+  "subtitulo": "Python | Desarrollo Web | GitHub Pages",
+  "descripcion": "Construyo portafolios y aplicaciones web con Python y Flask, con enfoque en interfaces limpias y despliegue en GitHub Pages.",
+  "biografia": "Soy Alonso Amador, desarrollador web enfocado en proyectos personales y soluciones prácticas. Me apasiona aprender nuevas tecnologías y publicar mis proyectos en GitHub para compartirlos con la comunidad.",
   "habilidades": [
-    "Java",
-    "Kotlin",
-    "C#",
     "Python",
-    "SQL",
-    "XML",
-    ".NET",
-    "Unity",
-    "Android SDK",
-    "Jetpack Compose",
-    "PostgreSQL",
-    "SQLite",
-    "Git",
-    "VS Code",
-    "IntelliJ"
+    "Flask",
+    "HTML/CSS",
+    "JavaScript",
+    "GitHub Pages",
+    "APIs",
+    "Jinja2",
+    "Control de versiones",
+    "Desarrollo responsive"
   ],
   "experiencia": [
     {
-      "titulo": "Proyectos Web Personales",
-      "empresa": "Auto gestión",
-      "periodo": "2024 - Presente",
-      "descripcion": "Construcción de aplicaciones web y portfolios con Python, Flask y despliegue en GitHub Pages."
-    },
-    {
-      "titulo": "Desarrollo de aplicaciones móviles y turismo",
-      "empresa": "Proyectos personales",
-      "periodo": "2023 - 2025",
-      "descripcion": "Desarrollo de apps Kotlin y prototipos de turismo con enfoque en usabilidad."
+      "titulo": "Desarrollador de Aplicaciones",
+      "empresa": "CodeArts Solutions (Prácticas)",
+      "periodo": "sept. 2025 – nov. 2025",
+      "descripcion": "Desarrollé aplicaciones multiplataforma con C#, Unity y .NET participando en el ciclo completo: análisis, implementación, pruebas y entrega. Gestión de versiones con Git/GitHub y trabajo en sprints ágiles."
     }
   ],
   "educacion": [
     {
-      "titulo": "Autoformación en Desarrollo Web",
-      "institucion": "Cursos online y práctica personal",
-      "periodo": "2022 - Presente",
-      "descripcion": "Aprendizaje continuo en Python, desarrollo web, frameworks y buenas prácticas de código."
+      "titulo": "Técnico Superior DAM — Programación Multiplataforma",
+      "institucion": "Cesur FP",
+      "periodo": "oct. 2023 – dic. 2025",
+      "descripcion": "Formación en Java, Kotlin, C#, Python, SQL; desarrollo de apps Android, escritorio y web; acceso a datos y servicios en red."
     }
   ],
+  "certificaciones": [
+    {"nombre": "Lógica de Programación", "fecha": "feb. 2026"},
+    {"nombre": "Python Intermedio", "fecha": "feb. 2026"},
+    {"nombre": "SQL y Bases de Datos", "fecha": "ene. 2026"},
+    {"nombre": "Git y GitHub desde cero", "fecha": "ene. 2026"},
+    {"nombre": "Python desde cero", "fecha": "sept. 2025"}
+  ],
+  "idiomas": {
+    "es": "Nativo",
+    "en": "B1 Intermedio — lectura técnica fluida, comunicación profesional básica"
+  },
   "github_user": "AsKrueger",
-  "linkedin_url": "https://www.linkedin.com/in/alonso-amador"
+  "linkedin_url": "https://www.linkedin.com/in/alonso-amador-sanchez"
 }
