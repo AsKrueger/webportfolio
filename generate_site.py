@@ -28,6 +28,13 @@ env = Environment(
     autoescape=select_autoescape(['html', 'xml'])
 )
 
+def static_url_for(endpoint, filename=None):
+    if endpoint == 'static' and filename:
+        return f"static/{filename}"
+    return ''
+
+env.globals['url_for'] = static_url_for
+
 
 def cargar_datos():
     """Carga los datos del portafolio desde data.json"""
@@ -89,6 +96,30 @@ def generar_sitio():
     with open(OUTPUT_DIR / "index.html", "w", encoding="utf-8") as f:
         f.write(html)
 
+    # Generar sobre.html
+    print("[+] Generando sobre.html...")
+    template = env.get_template("sobre.html")
+    html = template.render(**datos)
+
+    with open(OUTPUT_DIR / "sobre.html", "w", encoding="utf-8") as f:
+        f.write(html)
+
+    # Generar proyectos.html
+    print("[+] Generando proyectos.html...")
+    template = env.get_template("proyectos.html")
+    html = template.render(**datos)
+
+    with open(OUTPUT_DIR / "proyectos.html", "w", encoding="utf-8") as f:
+        f.write(html)
+
+    # Generar curriculum.html
+    print("[+] Generando curriculum.html...")
+    template = env.get_template("curriculum.html")
+    html = template.render(**datos)
+
+    with open(OUTPUT_DIR / "curriculum.html", "w", encoding="utf-8") as f:
+        f.write(html)
+
     # Generar CNAME para dominio personalizado (opcional)
     cname_file = BASE_DIR / "CNAME"
     if cname_file.exists():
@@ -98,6 +129,8 @@ def generar_sitio():
     print("[OK] Portafolio generado exitosamente!")
     print(f"[*] Archivos en: {OUTPUT_DIR}")
     print(f"   - index.html")
+    print(f"   - sobre.html")
+    print(f"   - proyectos.html")
     print(f"   - static/css/")
     print(f"   - static/js/")
     print("\n[INFO] Proximos pasos:")

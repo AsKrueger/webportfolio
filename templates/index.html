@@ -35,8 +35,7 @@
             <div class="hero-copy">
                 <span class="eyebrow">DESARROLLADOR DE APLICACIONES MULTIPLATAFORMA | JUNIOR DEVELOPER</span>
                 <h1>Hola, soy {{ nombre }}</h1>
-                <p class="hero-title">Apasionado por la creación de soluciones digitales eficientes y escalables.</p>
-                <p class="hero-text">{{ descripcion }}</p>
+                <p class="hero-text">{{ descripcion or perfil_profesional }}</p>
                 <div class="hero-actions">
                     <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Explorar mi GitHub</a>
                     <a href="#proyectos" class="btn btn-outline">Ver Proyectos</a>

@@ -1,34 +1,169 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nombre }} - Sobre mí</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">{{ nombre }}</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sobre">Sobre mí</a></li>
+                <li><a href="/proyectos">Proyectos</a></li>
+                <li><a href="/curriculum">CV</a></li>
+                {% if linkedin_url %}
+                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
+                {% endif %}
+                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-{% block title %}{{ nombre }} - Sobre mí{% endblock %}
+    <section id="sobre-hero" class="section-hero">
+        <div class="container">
+            <div class="hero-intro">
+                <h1>HolaMundo</h1>
+                <h2>¡Hola a todos! Soy <span class="accent">{{ nombre }}</span>.</h2>
+                <p class="intro-text">
+                    Actualmente trabajo como <span class="highlight">Desarrollador de Software Junior Multiplataforma</span>. 
+                    Mi pasión reside en la creación de soluciones digitales precisas y escalables tanto en entornos móviles como web.
+                </p>
+                <p class="intro-description">
+                    Tengo formación especializada en <span class="highlight">Desarrollo de Aplicaciones Web (DAW)</span>, 
+                    lo que me ha permitido consolidar una base técnica sólida y una mentalidad orientada a la arquitectura limpia y la eficiencia del código.
+                </p>
+            </div>
+        </div>
+    </section>
 
-{% block content %}
-<section class="page-section">
-    <div class="container">
-        <h1>Sobre mí</h1>
+    <section id="habilidades" class="section-skills">
+        <div class="container">
+            <div class="skills-header">
+                <h2>Habilidades <span class="accent">Profesionales</span></h2>
+                <p>Stack tecnológico y metodologías aplicadas en mi flujo de trabajo diario.</p>
+            </div>
 
-        <div class="about-content">
-            <div class="about-text">
-                <h2>¿Quién soy?</h2>
-                <p>{{ biografia }}</p>
+            <div class="skills-categories">
+                <!-- Lenguajes -->
+                <div class="skill-category">
+                    <h3 class="category-title">Lenguajes</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">Kotlin</span>
+                        <span class="skill-badge">C#</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">XML</span>
+                    </div>
+                </div>
 
-                <h3>Habilidades</h3>
-                <div class="skills-grid">
-                    {% for skill in habilidades %}
-                    <div class="skill-tag">{{ skill }}</div>
+                <!-- Frameworks & Motores -->
+                <div class="skill-category">
+                    <h3 class="category-title">Frameworks & Motores</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">.NET</span>
+                        <span class="skill-badge">Unity</span>
+                    </div>
+                </div>
+
+                <!-- Desarrollo Móvil -->
+                <div class="skill-category">
+                    <h3 class="category-title">Desarrollo Móvil</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">Android SDK</span>
+                        <span class="skill-badge">Jetpack Compose</span>
+                    </div>
+                </div>
+
+                <!-- Bases de Datos -->
+                <div class="skill-category">
+                    <h3 class="category-title">Bases de Datos</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">SQLite</span>
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <div class="skill-category">
+                    <h3 class="category-title">Herramientas</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">VS Code</span>
+                        <span class="skill-badge">IntelliJ</span>
+                    </div>
+                </div>
+
+                <!-- Metodologías -->
+                <div class="skill-category">
+                    <h3 class="category-title">Metodologías</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">Scrum / Agile</span>
+                        <span class="skill-badge">POO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formacion" class="section-education">
+        <div class="container">
+            <div class="education-header">
+                <h2>Formación & Experiencia</h2>
+            </div>
+
+            <div class="timeline-grid">
+                <!-- Educación -->
+                <div class="timeline-section">
+                    <h3 class="section-label">Educación</h3>
+                    {% for edu in educacion %}
+                    <div class="timeline-item">
+                        <h4>{{ edu.titulo }}</h4>
+                        <p class="meta">{{ edu.institucion }} · {{ edu.periodo }}</p>
+                        <p>{{ edu.descripcion }}</p>
+                    </div>
                     {% endfor %}
                 </div>
 
-                <h3>Educación</h3>
-                {% for edu in educacion %}
-                <div class="timeline-item">
-                    <h4>{{ edu.titulo }}</h4>
-                    <p class="meta">{{ edu.institucion }} | {{ edu.periodo }}</p>
-                    <p>{{ edu.descripcion }}</p>
+                <!-- Experiencia -->
+                <div class="timeline-section">
+                    <h3 class="section-label">Experiencia</h3>
+                    {% for exp in experiencia %}
+                    <div class="timeline-item">
+                        <h4>{{ exp.titulo }}</h4>
+                        <p class="meta">{{ exp.empresa }} · {{ exp.periodo }}</p>
+                        <p>{{ exp.descripcion }}</p>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
-    </div>
-</section>
-{% endblock %}
+    </section>
+
+    <footer class="footer-dark">
+        <div class="container footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 {{ nombre }}. Junior Multiplatform Developer</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/{{ github_user }}" target="_blank">GitHub</a>
+                {% if linkedin_url %} · <a href="{{ linkedin_url }}" target="_blank">LinkedIn</a>{% endif %}
+                <a href="mailto:{{ contacto.email }}" target="_blank"> · Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
