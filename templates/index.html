@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <div class="logo">
                 <a href="#inicio">{{ nombre }}</a>
             </div>
@@ -31,150 +30,146 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>¡Hola! Soy {{ nombre }} 👋</h1>
-                <p class="subtitle">{{ titulo }} | {{ subtitulo }}</p>
-                <p class="description">{{ descripcion }}</p>
-                <div class="cta-buttons">
-                    <a href="#sobre" class="btn btn-primary">Conoce más sobre mí</a>
-                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-secondary">Mi GitHub</a>
-                    {% if linkedin_url %}
-                    <a href="{{ linkedin_url }}" target="_blank" class="btn btn-secondary">LinkedIn</a>
-                    {% endif %}
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <span class="eyebrow">DESARROLLADOR DE APLICACIONES MULTIPLATAFORMA | JUNIOR DEVELOPER</span>
+                <h1>Hola, soy {{ nombre }}</h1>
+                <p class="hero-title">Apasionado por la creación de soluciones digitales eficientes y escalables.</p>
+                <p class="hero-text">{{ descripcion }}</p>
+                <div class="hero-actions">
+                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Explorar mi GitHub</a>
+                    <a href="#proyectos" class="btn btn-outline">Ver Proyectos</a>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <div class="code-card">
+                    <div class="code-card-label">stack_tecnico.kt</div>
+                    <pre><code>class Developer {
+    val languages = listOf("Java", "Kotlin", "C#", "Python", "SQL")
+    val tools = listOf(".NET", "Unity", "Android Studio", "Git")
+
+    fun workflow() {
+        // Metodologías y Paradigmas
+        apply(Scrum, POO, CleanCode)
+    }
+}</code></pre>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Highlights Section -->
-    <section class="highlights">
-        <div class="container">
-            <h2>¿Qué hago?</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">💻</div>
-                    <h3>Desarrollo Web</h3>
-                    <p>Creo aplicaciones web modernas con Flask, Django y JavaScript.</p>
+    <section id="sobre" class="section-sobre">
+        <div class="container section-grid">
+            <div class="content-card">
+                <div class="section-header">
+                    <span class="section-label">Stack Técnico & Habilidades</span>
+                    <h2>Mi formación y experiencia se centran en el desarrollo multiplataforma</h2>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🚀</div>
-                    <h3>Full Stack</h3>
-                    <p>Domino tanto frontend como backend para soluciones completas.</p>
+                <p>Utilizo herramientas líderes en la industria para construir aplicaciones robustas y mantenibles.</p>
+                <div class="feature-list">
+                    <div class="feature-item">➔ Dominio de Java y Kotlin (Android).</div>
+                    <div class="feature-item">➔ Desarrollo C# con .NET y Unity.</div>
+                    <div class="feature-item">➔ Control de versiones con Git/GitHub.</div>
+                    <div class="feature-item">➔ Metodologías Ágiles (Scrum).</div>
+                    <div class="feature-item">➔ Scripting y datos con Python & SQL.</div>
+                    <div class="feature-item">➔ Programación Orientada a Objetos.</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">📱</div>
-                    <h3>Responsive Design</h3>
-                    <p>Sitios que se ven bien en cualquier dispositivo.</p>
+            </div>
+            <div class="skills-panel">
+                <div class="section-header">
+                    <span class="section-label">Habilidades</span>
+                    <h2>Lo que manejo con confianza</h2>
+                </div>
+                <div class="skills-grid">
+                    {% for skill in habilidades %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre mí -->
-    <section id="sobre" class="page-section">
+    <section id="proyectos" class="section-proyectos">
         <div class="container">
-            <h1>Sobre mí</h1>
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>¿Quién soy?</h2>
-                    <p>{{ biografia }}</p>
-
-                    <h3>Habilidades</h3>
-                    <div class="skills-grid">
-                        {% for skill in habilidades %}
-                        <div class="skill-tag">{{ skill }}</div>
-                        {% endfor %}
-                    </div>
-                </div>
+            <div class="section-header center">
+                <span class="section-label">Proyectos Destacados</span>
+                <h2>Construyendo software con propósito y calidad técnica.</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section id="proyectos" class="page-section">
-        <div class="container">
-            <h1>Mis Proyectos</h1>
-            <p class="section-subtitle">Estos son algunos de mis proyectos recientes en GitHub</p>
             <div class="projects-grid">
                 {% if proyectos %}
-                    {% for project in proyectos %}
-                    <div class="project-card">
-                        <h3>{{ project.name }}</h3>
-                        <p class="project-description">
-                            {{ project.description or "Sin descripción" }}
-                        </p>
-                        <div class="project-meta">
+                    {% for project in proyectos[:3] %}
+                    <article class="project-card">
+                        <div class="project-meta-top">
                             {% if project.language %}
-                                <span class="language">{{ project.language }}</span>
+                            <span class="project-badge">{{ project.language }}</span>
                             {% endif %}
-                            <span class="stars">⭐ {{ project.stargazers_count }}</span>
+                            <span class="project-badge secondary">GitHub</span>
                         </div>
-                        <a href="{{ project.html_url }}" target="_blank" class="btn btn-small">
-                            Ver en GitHub
-                        </a>
-                    </div>
+                        <h3>{{ project.name }}</h3>
+                        <p class="project-description">{{ project.description or "Aplicación en desarrollo con enfoque en buenas prácticas." }}</p>
+                        <a href="{{ project.html_url }}" target="_blank" class="project-link">Ver código</a>
+                    </article>
                     {% endfor %}
                 {% else %}
-                    <div class="empty-state" style="grid-column: 1 / -1; text-align: center;">
+                    <div class="empty-state">
                         <p>No se pudieron cargar los proyectos en este momento.</p>
-                        <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
-                            Ver todos en GitHub
-                        </a>
+                        <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Ver todos en GitHub</a>
                     </div>
                 {% endif %}
             </div>
         </div>
     </section>
 
-    <!-- CV -->
-    <section id="curriculum" class="page-section">
+    <section id="curriculum" class="section-cv">
         <div class="container">
-            <h1>Mi Currículum</h1>
-            <div class="cv-content">
-                <div class="cv-section">
-                    <h2>💼 Experiencia</h2>
-                    <div class="timeline">
-                        {% for exp in experiencia %}
-                        <div class="timeline-item">
-                            <h3>{{ exp.titulo }}</h3>
-                            <p class="meta">{{ exp.empresa }} | {{ exp.periodo }}</p>
-                            <p>{{ exp.descripcion }}</p>
-                        </div>
-                        {% endfor %}
+            <div class="section-header center">
+                <span class="section-label">Experiencia & Educación</span>
+                <h2>Trayectoria y formación enfocadas en el desarrollo de software.</h2>
+            </div>
+            <div class="timeline-grid">
+                <div class="timeline-block">
+                    <span class="timeline-title">Formación</span>
+                    {% for edu in educacion %}
+                    <div class="timeline-item">
+                        <h3>{{ edu.titulo }}</h3>
+                        <p class="meta">{{ edu.institucion }} · {{ edu.periodo }}</p>
+                        <p>{{ edu.descripcion }}</p>
                     </div>
+                    {% endfor %}
                 </div>
-
-                <div class="cv-section">
-                    <h2>🎓 Educación</h2>
-                    <div class="timeline">
-                        {% for edu in educacion %}
-                        <div class="timeline-item">
-                            <h3>{{ edu.titulo }}</h3>
-                            <p class="meta">{{ edu.institucion }} | {{ edu.periodo }}</p>
-                            <p>{{ edu.descripcion }}</p>
-                        </div>
-                        {% endfor %}
+                <div class="timeline-block">
+                    <span class="timeline-title">Experiencia</span>
+                    {% for exp in experiencia %}
+                    <div class="timeline-item">
+                        <h3>{{ exp.titulo }}</h3>
+                        <p class="meta">{{ exp.empresa }} · {{ exp.periodo }}</p>
+                        <p>{{ exp.descripcion }}</p>
                     </div>
+                    {% endfor %}
                 </div>
-
-                <div class="cv-section">
-                    <h2>📄 Más información</h2>
-                    <p>Puedes ver más detalles en mi perfil de GitHub.</p>
-                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
-                        Ver perfil GitHub
-                    </a>
+            </div>
+            <div class="certification-panel">
+                <h3>Certificaciones & Logros</h3>
+                <div class="certification-list">
+                    <span class="badge">Lógica de Programación</span>
+                    <span class="badge">Python Intermedio</span>
+                    <span class="badge">SQL & Bases de Datos</span>
+                    <span class="badge">Git & GitHub Pro</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 {{ nombre }}. Desarrollador apasionado por crear soluciones web.</p>
+    <footer class="footer-dark">
+        <div class="container footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 {{ nombre }}. Built with precision.</p>
+            </div>
+            <div class="footer-links">
+                {% if linkedin_url %}<a href="{{ linkedin_url }}" target="_blank">LinkedIn</a> · {% endif %}
+                <a href="https://github.com/{{ github_user }}" target="_blank">GitHub</a>
+            </div>
         </div>
     </footer>
 

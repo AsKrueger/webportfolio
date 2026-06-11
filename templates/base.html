@@ -8,11 +8,11 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <div class="logo">
                 <a href="/">{{ nombre }}</a>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/sobre">Sobre mí</a></li>
                 <li><a href="/proyectos">Proyectos</a></li>
@@ -22,6 +22,11 @@
                 {% endif %}
                 <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
             </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
@@ -29,12 +34,15 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 {{ nombre }}. Desarrollador apasionado por crear soluciones web. <br>
+    <footer class="footer-dark">
+        <div class="container footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 {{ nombre }}. Built with precision.</p>
+            </div>
+            <div class="footer-links">
                 {% if linkedin_url %}<a href="{{ linkedin_url }}" target="_blank">LinkedIn</a> · {% endif %}
                 <a href="https://github.com/{{ github_user }}" target="_blank">GitHub</a>
-            </p>
+            </div>
         </div>
     </footer>
 </body>
