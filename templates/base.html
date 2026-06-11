@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ nombre }} - Desarrollador{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="/">{{ nombre }}</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sobre">Sobre mí</a></li>
+                <li><a href="/proyectos">Proyectos</a></li>
+                <li><a href="/curriculum">CV</a></li>
+                {% if linkedin_url %}
+                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
+                {% endif %}
+                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 {{ nombre }}. Desarrollador apasionado por crear soluciones web. <br>
+                {% if linkedin_url %}<a href="{{ linkedin_url }}" target="_blank">LinkedIn</a> · {% endif %}
+                <a href="https://github.com/{{ github_user }}" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}AsKrueger - Curriculum{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container">
+        <h1>Mi Currículum</h1>
+
+        <div class="cv-content">
+            <div class="cv-section">
+                <h2>📄 Descargar CV</h2>
+                <p>Aquí puedes descargar mi currículum completo en PDF:</p>
+                <a href="/static/cv/CV_AsKrueger.pdf" download class="btn btn-primary">
+                    Descargar CV (PDF)
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    O visualizarlo en línea usando Google Drive
+                </p>
+            </div>
+
+            <div class="cv-section">
+                <h2>💼 Experiencia</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Desarrollador Full Stack</h3>
+                        <p class="meta">Empresa / Proyecto | 2024 - Presente</p>
+                        <p>Descripción de experiencia y logros relevantes.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Desarrollador Junior</h3>
+                        <p class="meta">Anterior Empresa | 2023 - 2024</p>
+                        <p>Experiencia anterior relevante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2>🎓 Educación</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Autoformación en Desarrollo Web</h3>
+                        <p class="meta">Plataformas online | 2022 - Presente</p>
+                        <p>Cursos en Python, JavaScript, Flask, React y más.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

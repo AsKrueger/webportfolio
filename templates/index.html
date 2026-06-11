@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nombre }} - {{ titulo }}</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#inicio">{{ nombre }}</a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#curriculum">CV</a></li>
+                {% if linkedin_url %}
+                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
+                {% endif %}
+                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>¡Hola! Soy {{ nombre }} 👋</h1>
+                <p class="subtitle">{{ titulo }} | {{ subtitulo }}</p>
+                <p class="description">{{ descripcion }}</p>
+                <div class="cta-buttons">
+                    <a href="#sobre" class="btn btn-primary">Conoce más sobre mí</a>
+                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-secondary">Mi GitHub</a>
+                    {% if linkedin_url %}
+                    <a href="{{ linkedin_url }}" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="container">
+            <h2>¿Qué hago?</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Creo aplicaciones web modernas con Flask, Django y JavaScript.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Full Stack</h3>
+                    <p>Domino tanto frontend como backend para soluciones completas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Sitios que se ven bien en cualquier dispositivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre" class="page-section">
+        <div class="container">
+            <h1>Sobre mí</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>¿Quién soy?</h2>
+                    <p>{{ biografia }}</p>
+
+                    <h3>Habilidades</h3>
+                    <div class="skills-grid">
+                        {% for skill in habilidades %}
+                        <div class="skill-tag">{{ skill }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="page-section">
+        <div class="container">
+            <h1>Mis Proyectos</h1>
+            <p class="section-subtitle">Estos son algunos de mis proyectos recientes en GitHub</p>
+            <div class="projects-grid">
+                {% if proyectos %}
+                    {% for project in proyectos %}
+                    <div class="project-card">
+                        <h3>{{ project.name }}</h3>
+                        <p class="project-description">
+                            {{ project.description or "Sin descripción" }}
+                        </p>
+                        <div class="project-meta">
+                            {% if project.language %}
+                                <span class="language">{{ project.language }}</span>
+                            {% endif %}
+                            <span class="stars">⭐ {{ project.stargazers_count }}</span>
+                        </div>
+                        <a href="{{ project.html_url }}" target="_blank" class="btn btn-small">
+                            Ver en GitHub
+                        </a>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="empty-state" style="grid-column: 1 / -1; text-align: center;">
+                        <p>No se pudieron cargar los proyectos en este momento.</p>
+                        <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
+                            Ver todos en GitHub
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="curriculum" class="page-section">
+        <div class="container">
+            <h1>Mi Currículum</h1>
+            <div class="cv-content">
+                <div class="cv-section">
+                    <h2>💼 Experiencia</h2>
+                    <div class="timeline">
+                        {% for exp in experiencia %}
+                        <div class="timeline-item">
+                            <h3>{{ exp.titulo }}</h3>
+                            <p class="meta">{{ exp.empresa }} | {{ exp.periodo }}</p>
+                            <p>{{ exp.descripcion }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>🎓 Educación</h2>
+                    <div class="timeline">
+                        {% for edu in educacion %}
+                        <div class="timeline-item">
+                            <h3>{{ edu.titulo }}</h3>
+                            <p class="meta">{{ edu.institucion }} | {{ edu.periodo }}</p>
+                            <p>{{ edu.descripcion }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>📄 Más información</h2>
+                    <p>Puedes ver más detalles en mi perfil de GitHub.</p>
+                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
+                        Ver perfil GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 {{ nombre }}. Desarrollador apasionado por crear soluciones web.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

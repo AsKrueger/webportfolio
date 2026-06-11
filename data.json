@@ -1,0 +1,42 @@
+{
+  "nombre": "Alonso Amador",
+  "titulo": "Desarrollador Full Stack",
+  "subtitulo": "Python | Desarrollo Web | GitHub Pages",
+  "descripcion": "Construyo portafolios y aplicaciones web con Python y Flask, con enfoque en interfaces limpias y despliegue en GitHub Pages.",
+  "biografia": "Soy Alonso Amador, desarrollador web enfocado en proyectos personales y soluciones prácticas. Me apasiona aprender nuevas tecnologías y publicar mis proyectos en GitHub para compartirlos con la comunidad.",
+  "habilidades": [
+    "Python",
+    "Flask",
+    "HTML/CSS",
+    "JavaScript",
+    "GitHub Pages",
+    "APIs",
+    "Jinja2",
+    "Control de versiones",
+    "Desarrollo responsive"
+  ],
+  "experiencia": [
+    {
+      "titulo": "Proyectos Web Personales",
+      "empresa": "Auto gestión",
+      "periodo": "2024 - Presente",
+      "descripcion": "Construcción de aplicaciones web y portfolios con Python, Flask y despliegue en GitHub Pages."
+    },
+    {
+      "titulo": "Desarrollo de aplicaciones móviles y turismo",
+      "empresa": "Proyectos personales",
+      "periodo": "2023 - 2025",
+      "descripcion": "Desarrollo de apps Kotlin y prototipos de turismo con enfoque en usabilidad."
+    }
+  ],
+  "educacion": [
+    {
+      "titulo": "Autoformación en Desarrollo Web",
+      "institucion": "Cursos online y práctica personal",
+      "periodo": "2022 - Presente",
+      "descripcion": "Aprendizaje continuo en Python, desarrollo web, frameworks y buenas prácticas de código."
+    }
+  ],
+  "github_user": "AsKrueger",
+  "linkedin_url": "https://www.linkedin.com/in/alonso-amador"
+}

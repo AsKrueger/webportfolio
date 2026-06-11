@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}{{ nombre }} - Sobre mí{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container">
+        <h1>Sobre mí</h1>
+
+        <div class="about-content">
+            <div class="about-text">
+                <h2>¿Quién soy?</h2>
+                <p>{{ biografia }}</p>
+
+                <h3>Habilidades</h3>
+                <div class="skills-grid">
+                    {% for skill in habilidades %}
+                    <div class="skill-tag">{{ skill }}</div>
+                    {% endfor %}
+                </div>
+
+                <h3>Educación</h3>
+                {% for edu in educacion %}
+                <div class="timeline-item">
+                    <h4>{{ edu.titulo }}</h4>
+                    <p class="meta">{{ edu.institucion }} | {{ edu.periodo }}</p>
+                    <p>{{ edu.descripcion }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
