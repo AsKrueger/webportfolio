@@ -28,6 +28,13 @@ env = Environment(
     autoescape=select_autoescape(['html', 'xml'])
 )
 
+def url_for(endpoint, **values):
+    if endpoint == "static":
+        return f"static/{values.get('filename', '')}"
+    raise ValueError("Only 'static' endpoint is supported in static generation")
+
+env.globals["url_for"] = url_for
+
 
 def cargar_datos():
     """Carga los datos del portafolio desde data.json"""
@@ -76,18 +83,27 @@ def generar_sitio():
     print("[+] Cargando proyectos de GitHub...")
     proyectos = obtener_proyectos_github(github_user)
     datos["proyectos"] = proyectos
+    datos["projects"] = proyectos
 
     # Copiar archivos estáticos
     print("[+] Copiando archivos estáticos...")
     copiar_archivos_estaticos()
 
-    # Generar index.html
-    print("[+] Generando index.html...")
-    template = env.get_template("index.html")
-    html = template.render(**datos)
+    # Generar páginas HTML
+    pages = [
+        "index.html",
+        "sobre.html",
+        "proyectos.html",
+        "curriculum.html",
+    ]
 
-    with open(OUTPUT_DIR / "index.html", "w", encoding="utf-8") as f:
-        f.write(html)
+    for page in pages:
+        print(f"[+] Generando {page}...")
+        template = env.get_template(page)
+        html = template.render(**datos)
+
+        with open(OUTPUT_DIR / page, "w", encoding="utf-8") as f:
+            f.write(html)
 
     # Generar CNAME para dominio personalizado (opcional)
     cname_file = BASE_DIR / "CNAME"

@@ -1,19 +1,32 @@
 {
   "nombre": "Alonso Amador",
-  "titulo": "Desarrollador Full Stack",
-  "subtitulo": "Python | Desarrollo Web | GitHub Pages",
-  "descripcion": "Construyo portafolios y aplicaciones web con Python y Flask, con enfoque en interfaces limpias y despliegue en GitHub Pages.",
-  "biografia": "Soy Alonso Amador, desarrollador web enfocado en proyectos personales y soluciones prácticas. Me apasiona aprender nuevas tecnologías y publicar mis proyectos en GitHub para compartirlos con la comunidad.",
+  "titulo": "Desarrollador de Aplicaciones Multiplataforma",
+  "subtitulo": "Java | Kotlin | C# | Python | Web",
+  "descripcion": "Actualmente trabajo como Desarrollador de Software Junior Multiplataforma. Mi pasión radica en la creación de soluciones digitales precisas y escalables tanto en entornos móviles como web.",
+  "biografia": "Soy Alonso Amador, apasionado por la creación de soluciones digitales eficientes y escalables. Tengo formación especializada en Desarrollo de Aplicaciones Web (DAW), lo que me ha permitido construir una base técnica sólida y una mentalidad orientada a la arquitectura limpia y la eficiencia del código.",
+  "habilidades_categorias": {
+    "Lenguajes": ["Java", "Kotlin", "C#", "Python", "SQL", "XML"],
+    "Frameworks & Herramientas": [".NET", "Unity"],
+    "Desarrollo Móvil": ["Android SDK", "Jetpack Compose"],
+    "Bases de Datos": ["PostgreSQL", "SQLite"],
+    "Herramientas": ["Git", "VS Code", "IntelliJ", "Scrum/Agile", "POO"]
+  },
   "habilidades": [
+    "Java",
+    "Kotlin",
+    "C#",
     "Python",
-    "Flask",
-    "HTML/CSS",
-    "JavaScript",
-    "GitHub Pages",
-    "APIs",
-    "Jinja2",
-    "Control de versiones",
-    "Desarrollo responsive"
+    "SQL",
+    "XML",
+    ".NET",
+    "Unity",
+    "Android SDK",
+    "Jetpack Compose",
+    "PostgreSQL",
+    "SQLite",
+    "Git",
+    "VS Code",
+    "IntelliJ"
   ],
   "experiencia": [
     {

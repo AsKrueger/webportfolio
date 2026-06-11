@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}AsKrueger - Proyectos{% endblock %}
+{% block title %}{{ nombre }} - Proyectos{% endblock %}
 
 {% block content %}
 <section class="page-section">
@@ -30,7 +30,7 @@
             {% else %}
                 <div class="empty-state">
                     <p>No se pudieron cargar los proyectos en este momento.</p>
-                    <a href="https://github.com/AsKrueger" target="_blank" class="btn btn-primary">
+                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
                         Ver todos en GitHub
                     </a>
                 </div>

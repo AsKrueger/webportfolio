@@ -1,51 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ nombre }} - {{ titulo }}</title>
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="#inicio">{{ nombre }}</a>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#curriculum">CV</a></li>
-                {% if linkedin_url %}
-                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
-                {% endif %}
-                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+{% extends "base.html" %}
+
+{% block title %}{{ nombre }} - {{ titulo }}{% endblock %}
+
+{% block content %}
+<section id="inicio" class="hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <span class="eyebrow">DESARROLLADOR DE APLICACIONES MULTIPLATAFORMA | JUNIOR DEVELOPER</span>
+            <h1>Hola, soy {{ nombre }}</h1>
+            <p class="hero-title">Apasionado por la creación de soluciones digitales eficientes y escalables.</p>
+            <p class="hero-text">{{ descripcion }}</p>
+            <div class="hero-actions">
+                <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Explorar mi GitHub</a>
+                <a href="/proyectos" class="btn btn-outline">Ver Proyectos</a>
             </div>
         </div>
-    </nav>
-
-    <section id="inicio" class="hero">
-        <div class="container hero-grid">
-            <div class="hero-copy">
-                <span class="eyebrow">DESARROLLADOR DE APLICACIONES MULTIPLATAFORMA | JUNIOR DEVELOPER</span>
-                <h1>Hola, soy {{ nombre }}</h1>
-                <p class="hero-title">Apasionado por la creación de soluciones digitales eficientes y escalables.</p>
-                <p class="hero-text">{{ descripcion }}</p>
-                <div class="hero-actions">
-                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Explorar mi GitHub</a>
-                    <a href="#proyectos" class="btn btn-outline">Ver Proyectos</a>
-                </div>
-            </div>
-            <div class="hero-panel">
-                <div class="code-card">
-                    <div class="code-card-label">stack_tecnico.kt</div>
-                    <pre><code>class Developer {
+        <div class="hero-panel">
+            <div class="code-card">
+                <div class="code-card-label">stack_tecnico.kt</div>
+                <pre><code>class Developer {
     val languages = listOf("Java", "Kotlin", "C#", "Python", "SQL")
     val tools = listOf(".NET", "Unity", "Android Studio", "Git")
 
@@ -54,125 +27,110 @@
         apply(Scrum, POO, CleanCode)
     }
 }</code></pre>
-                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="sobre" class="section-sobre">
-        <div class="container section-grid">
-            <div class="content-card">
-                <div class="section-header">
-                    <span class="section-label">Stack Técnico & Habilidades</span>
-                    <h2>Mi formación y experiencia se centran en el desarrollo multiplataforma</h2>
-                </div>
-                <p>Utilizo herramientas líderes en la industria para construir aplicaciones robustas y mantenibles.</p>
-                <div class="feature-list">
-                    <div class="feature-item">➔ Dominio de Java y Kotlin (Android).</div>
-                    <div class="feature-item">➔ Desarrollo C# con .NET y Unity.</div>
-                    <div class="feature-item">➔ Control de versiones con Git/GitHub.</div>
-                    <div class="feature-item">➔ Metodologías Ágiles (Scrum).</div>
-                    <div class="feature-item">➔ Scripting y datos con Python & SQL.</div>
-                    <div class="feature-item">➔ Programación Orientada a Objetos.</div>
-                </div>
+<section class="section-sobre">
+    <div class="container section-grid">
+        <div class="content-card">
+            <div class="section-header">
+                <span class="section-label">Stack Técnico & Habilidades</span>
+                <h2>Mi formación y experiencia se centran en el desarrollo multiplataforma</h2>
             </div>
-            <div class="skills-panel">
-                <div class="section-header">
-                    <span class="section-label">Habilidades</span>
-                    <h2>Lo que manejo con confianza</h2>
-                </div>
-                <div class="skills-grid">
-                    {% for skill in habilidades %}
-                    <span class="skill-tag">{{ skill }}</span>
-                    {% endfor %}
-                </div>
+            <p>Utilizo herramientas líderes en la industria para construir aplicaciones robustas y mantenibles.</p>
+            <div class="feature-list">
+                <div class="feature-item">➔ Dominio de Java y Kotlin (Android).</div>
+                <div class="feature-item">➔ Desarrollo C# con .NET y Unity.</div>
+                <div class="feature-item">➔ Control de versiones con Git/GitHub.</div>
+                <div class="feature-item">➔ Metodologías Ágiles (Scrum).</div>
+                <div class="feature-item">➔ Scripting y datos con Python & SQL.</div>
+                <div class="feature-item">➔ Programación Orientada a Objetos.</div>
             </div>
         </div>
-    </section>
-
-    <section id="proyectos" class="section-proyectos">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-label">Proyectos Destacados</span>
-                <h2>Construyendo software con propósito y calidad técnica.</h2>
+        <div class="skills-panel">
+            <div class="section-header">
+                <span class="section-label">Habilidades</span>
+                <h2>Lo que manejo con confianza</h2>
             </div>
-            <div class="projects-grid">
-                {% if proyectos %}
-                    {% for project in proyectos[:3] %}
-                    <article class="project-card">
-                        <div class="project-meta-top">
-                            {% if project.language %}
-                            <span class="project-badge">{{ project.language }}</span>
-                            {% endif %}
-                            <span class="project-badge secondary">GitHub</span>
-                        </div>
-                        <h3>{{ project.name }}</h3>
-                        <p class="project-description">{{ project.description or "Aplicación en desarrollo con enfoque en buenas prácticas." }}</p>
-                        <a href="{{ project.html_url }}" target="_blank" class="project-link">Ver código</a>
-                    </article>
-                    {% endfor %}
-                {% else %}
-                    <div class="empty-state">
-                        <p>No se pudieron cargar los proyectos en este momento.</p>
-                        <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Ver todos en GitHub</a>
+            <div class="skills-grid">
+                {% for skill in habilidades %}
+                <span class="skill-tag">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-proyectos">
+    <div class="container">
+        <div class="section-header center">
+            <span class="section-label">Proyectos Destacados</span>
+            <h2>Construyendo software con propósito y calidad técnica.</h2>
+        </div>
+        <div class="projects-grid">
+            {% if proyectos %}
+                {% for project in proyectos[:3] %}
+                <article class="project-card">
+                    <div class="project-meta-top">
+                        {% if project.language %}
+                        <span class="project-badge">{{ project.language }}</span>
+                        {% endif %}
+                        <span class="project-badge secondary">GitHub</span>
                     </div>
-                {% endif %}
+                    <h3>{{ project.name }}</h3>
+                    <p class="project-description">{{ project.description or "Aplicación en desarrollo con enfoque en buenas prácticas." }}</p>
+                    <a href="{{ project.html_url }}" target="_blank" class="project-link">Ver código</a>
+                </article>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state">
+                    <p>No se pudieron cargar los proyectos en este momento.</p>
+                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Ver todos en GitHub</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="section-cv">
+    <div class="container">
+        <div class="section-header center">
+            <span class="section-label">Experiencia & Educación</span>
+            <h2>Trayectoria y formación enfocadas en el desarrollo de software.</h2>
+        </div>
+        <div class="timeline-grid">
+            <div class="timeline-block">
+                <span class="timeline-title">Formación</span>
+                {% for edu in educacion %}
+                <div class="timeline-item">
+                    <h3>{{ edu.titulo }}</h3>
+                    <p class="meta">{{ edu.institucion }} · {{ edu.periodo }}</p>
+                    <p>{{ edu.descripcion }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="timeline-block">
+                <span class="timeline-title">Experiencia</span>
+                {% for exp in experiencia %}
+                <div class="timeline-item">
+                    <h3>{{ exp.titulo }}</h3>
+                    <p class="meta">{{ exp.empresa }} · {{ exp.periodo }}</p>
+                    <p>{{ exp.descripcion }}</p>
+                </div>
+                {% endfor %}
             </div>
         </div>
-    </section>
-
-    <section id="curriculum" class="section-cv">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-label">Experiencia & Educación</span>
-                <h2>Trayectoria y formación enfocadas en el desarrollo de software.</h2>
-            </div>
-            <div class="timeline-grid">
-                <div class="timeline-block">
-                    <span class="timeline-title">Formación</span>
-                    {% for edu in educacion %}
-                    <div class="timeline-item">
-                        <h3>{{ edu.titulo }}</h3>
-                        <p class="meta">{{ edu.institucion }} · {{ edu.periodo }}</p>
-                        <p>{{ edu.descripcion }}</p>
-                    </div>
-                    {% endfor %}
-                </div>
-                <div class="timeline-block">
-                    <span class="timeline-title">Experiencia</span>
-                    {% for exp in experiencia %}
-                    <div class="timeline-item">
-                        <h3>{{ exp.titulo }}</h3>
-                        <p class="meta">{{ exp.empresa }} · {{ exp.periodo }}</p>
-                        <p>{{ exp.descripcion }}</p>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="certification-panel">
-                <h3>Certificaciones & Logros</h3>
-                <div class="certification-list">
-                    <span class="badge">Lógica de Programación</span>
-                    <span class="badge">Python Intermedio</span>
-                    <span class="badge">SQL & Bases de Datos</span>
-                    <span class="badge">Git & GitHub Pro</span>
-                </div>
+        <div class="certification-panel">
+            <h3>Certificaciones & Logros</h3>
+            <div class="certification-list">
+                <span class="badge">Lógica de Programación</span>
+                <span class="badge">Python Intermedio</span>
+                <span class="badge">SQL & Bases de Datos</span>
+                <span class="badge">Git & GitHub Pro</span>
             </div>
         </div>
-    </section>
-
-    <footer class="footer-dark">
-        <div class="container footer-container">
-            <div class="footer-copy">
-                <p>&copy; 2026 {{ nombre }}. Built with precision.</p>
-            </div>
-            <div class="footer-links">
-                {% if linkedin_url %}<a href="{{ linkedin_url }}" target="_blank">LinkedIn</a> · {% endif %}
-                <a href="https://github.com/{{ github_user }}" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="static/js/main.js"></script>
-</body>
-</html>
+    </div>
+</section>
+{% endblock %}

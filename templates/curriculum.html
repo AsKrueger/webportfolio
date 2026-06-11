@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}AsKrueger - Curriculum{% endblock %}
+{% block title %}{{ nombre }} - Curriculum{% endblock %}
 
 {% block content %}
 <section class="page-section">
@@ -11,7 +11,7 @@
             <div class="cv-section">
                 <h2>📄 Descargar CV</h2>
                 <p>Aquí puedes descargar mi currículum completo en PDF:</p>
-                <a href="/static/cv/CV_AsKrueger.pdf" download class="btn btn-primary">
+                <a href="{{ url_for('static', filename='cv/CV_AsKrueger.pdf') }}" download class="btn btn-primary">
                     Descargar CV (PDF)
                 </a>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
