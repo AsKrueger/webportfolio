@@ -1353,6 +1353,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
+    min-width: 0;
 }
 
 .card-panel {
@@ -1378,6 +1379,7 @@ p {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     margin-bottom: 1rem;
+    min-width: 0;
 }
 
 .timeline-card-header {
@@ -1386,11 +1388,17 @@ p {
     gap: 1rem;
     align-items: flex-start;
     margin-bottom: 0.8rem;
+    min-width: 0;
+}
+
+.timeline-card-header > div {
+    min-width: 0;
 }
 
 .timeline-card-header h3 {
     font-size: 1.1rem;
     margin: 0;
+    overflow-wrap: anywhere;
 }
 
 .company {
