@@ -27,9 +27,8 @@ Portafolio web profesional desarrollado con **Python** y generado de forma está
 4. **Despliegue**: Sube `dist/` a GitHub Pages
 
 El generador crea `robots.txt` permitiendo el rastreo. Si se confirma la URL pública
-del despliegue, añade `"public_url": "https://tu-dominio-verificado/"` en `data.json`.
-En ese caso también se generarán las URLs canónicas, `og:url` y `sitemap.xml`.
-No se debe rellenar ese valor con una URL que todavía no exista.
+del despliegue, la configuración actual utiliza `"public_url": "https://askrueger.github.io/webportfolio/"` en `data.json`.
+Con esa URL se generan las URLs canónicas, `og:url` y `sitemap.xml`.
 
 ## 💻 Instalación Local
 
@@ -80,7 +79,7 @@ pip install ghp-import
 ghp-import -p dist/
 ```
 
-Tu portafolio estará en: `https://AsKrueger.github.io/webportfolio/`
+Tu portafolio está publicado en: `https://askrueger.github.io/webportfolio/`
 
 ### Opción 2: Configuración manual en GitHub
 

@@ -4,7 +4,7 @@ Fecha: 2026-09-22
 
 ## Estado
 
-**BLOQUEADA para cierre de produccion.** El build y la publicacion de las ramas se realizaron, pero GitHub Pages no esta habilitado o no es accesible para verificacion desde este entorno. No se declara una URL publica operativa sin evidencia HTTP real.
+**VERIFICACION DE PRODUCCION EN CURSO.** GitHub Pages ya responde en la URL publica y la nueva build esta publicada en `gh-pages`. El workflow de Pages del ultimo commit se encontraba `in_progress` durante la primera comprobacion del CV; se repite la comprobacion despues de su finalizacion.
 
 ## Metodo de publicacion
 
@@ -37,8 +37,8 @@ La salida contiene las rutas publicas esperadas, CSS, JavaScript, `robots.txt` y
 
 ## Commits publicados
 
-- `main`: `aa1498c8c1e2ac4faeb814630579e1a043523ed9`
-- `gh-pages`: `5e113c37d1d5a92cd3a20319252b419128b18336`
+- `main`: pendiente del commit final de esta verificacion
+- `gh-pages`: `15d044e0` (publicacion de la build con `public_url`)
 
 El commit de `main` fue enviado a `origin/main` antes de publicar `dist/`.
 
@@ -50,12 +50,11 @@ Por el nombre del repositorio, la URL esperada de GitHub Pages seria:
 https://askrueger.github.io/webportfolio/
 ```
 
-Esta URL no se considera publica/verificada todavia. Las comprobaciones realizadas devolvieron:
+La URL publica verificada responde:
 
-- sitio raiz: HTTP 404
-- `robots.txt`: HTTP 404
-- `sitemap.xml`: HTTP 404
-- API de Pages: HTTP 404
+- sitio raiz: HTTP 200
+- `robots.txt`: HTTP 200
+- `sitemap.xml`: HTTP 200 despues de la propagacion de Pages
 
 El repositorio HTTP tampoco pudo ser consultado anonimamente desde este entorno, aunque Git pudo publicar mediante las credenciales configuradas localmente. Esto impide distinguir de forma independiente entre Pages deshabilitado, repositorio privado o una configuracion de hosting no disponible.
 
@@ -79,42 +78,34 @@ La rama `gh-pages` contiene:
 
 ## SEO de produccion
 
-No se configuro `public_url` porque la URL no esta verificada. Por tanto, no se generaron canonical, `og:url` ni `sitemap.xml` con una URL inventada.
-
-Cuando GitHub Pages este habilitado y la URL responda correctamente:
-
-1. añadir `"public_url": "https://askrueger.github.io/webportfolio/"` en `data.json`;
-2. ejecutar `python generate_site.py`;
-3. volver a publicar `dist/` en `gh-pages`;
-4. comprobar canonical, `og:url`, sitemap y robots desde HTTPS.
+`public_url` esta configurada en `data.json` con la URL real. La build local contiene canonical, `og:url`, `robots.txt` y `sitemap.xml` con URLs bajo `https://askrueger.github.io/webportfolio/`.
 
 ## Problemas encontrados
 
-- GitHub Pages no responde en la URL esperada.
-- `robots.txt` y `sitemap.xml` tampoco son accesibles en produccion.
-- No fue posible ejecutar una auditoria de navegador sobre una URL publica real.
-- No fue posible afirmar HTTPS, ausencia de mixed content, errores de consola ni rendimiento de produccion.
+- La primera respuesta del CV servido por Pages permanecia cacheada mientras el workflow de despliegue estaba `in_progress`.
 
 ## Correcciones realizadas
 
-- Se publico `main` con el estado verificado de Issues anteriores.
-- Se publico el contenido generado de `dist/` en `gh-pages`.
-- Se corrigio en README la URL esperada de `portfolio` a `webportfolio`.
-- No se agrego `public_url` hasta disponer de una URL real verificada.
+- Se configuro `public_url` con la URL real.
+- Se regenero el sitio y se publico el contenido generado de `dist/` en `gh-pages`.
+- Se corrigio el desbordamiento responsive de `curriculum.html` a 320px.
+- Se eliminaron enlaces de descarga PDF que apuntaban a un archivo inexistente.
+- Se actualizo README con la URL publica real.
 
 ## Limitaciones
 
-Lighthouse, axe, Node.js, npm y npx no estan disponibles. La validacion responsive y de accesibilidad existe para el entorno local, pero no se puede trasladar a produccion mientras Pages no sirva el sitio.
+Lighthouse, axe, Node.js, npm y npx no estan disponibles. La verificacion de consola y responsive se realiza con Playwright y comprobaciones HTTP directas.
 
 ## Resultado
 
 - Build: **VERIFICADO**
-- Fuente `main` publicada: **VERIFICADO**
+- Fuente `main` publicada: **PENDIENTE DEL COMMIT FINAL**
 - Rama `gh-pages` publicada: **VERIFICADO**
-- URL publica: **PENDIENTE / BLOQUEADA**
-- Canonical y `og:url` reales: **PENDIENTE**
-- Sitemap publico: **PENDIENTE**
-- Robots publico: **PENDIENTE**
-- Rutas, assets, HTTPS y consola en produccion: **PENDIENTE**
-
-La Issue #8 no debe marcarse como `CLOSED` hasta que GitHub Pages este habilitado y la URL esperada devuelva el sitio generado mediante HTTPS.
+- URL publica: **VERIFICADO**
+- Canonical y `og:url` reales: **VERIFICADO EN LA BUILD Y EN PAGINAS SERVIDAS**
+- Sitemap publico: **VERIFICADO**
+- Robots publico: **VERIFICADO**
+- Rutas y assets principales: **VERIFICADO HTTP 200**
+- HTTPS y ausencia de mixed content: **VERIFICADO EN LAS RESPUESTAS AUDITADAS**
+- Responsive: **PENDIENTE DE REPETIR DESPUES DEL WORKFLOW FINAL**
+- Consola: **SIN ERRORES EN LA AUDITORIA REALIZADA**

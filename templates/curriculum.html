@@ -11,18 +11,9 @@
 
         <div class="cv-content">
             <div class="cv-section">
-                <h2>📄 Descargar CV</h2>
-                <p>Aquí puedes descargar mi currículum completo en PDF:</p>
-                <a href="{{ url_for('static', filename='cv/CV_AsKrueger.pdf') }}" download class="btn btn-primary">
-                    Descargar CV (PDF)
-                </a>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    O visualizarlo en línea usando Google Drive
-                </p>
+                <h2>Perfil profesional</h2>
+                <p>{{ descripcion }}</p>
             </div>
-            <a href="/static/cv/CV_AsKrueger.pdf" download class="btn btn-primary btn-wide">
-                Descargar CV (PDF)
-            </a>
         </div>
     </div>
 </section>
