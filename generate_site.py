@@ -1,31 +1,30 @@
 #!/usr/bin/env python3
 """
-Script para generar el portafolio web estático desde Python
-Ejecutar: python generate_site.py
+Script para generar el portafolio web estático desde Python.
+Mantiene la generación estática del sitio pero añade una estructura
+más clara de rutas y templates reutilizables para la arquitectura de navegación.
 """
 
 import json
-import os
+import shutil
 from pathlib import Path
+
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import requests
 
-# Configuración
 BASE_DIR = Path(__file__).parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 STATIC_DIR = BASE_DIR / "static"
 OUTPUT_DIR = BASE_DIR / "dist"
 
-# Crear directorio de salida
 OUTPUT_DIR.mkdir(exist_ok=True)
 (OUTPUT_DIR / "static").mkdir(exist_ok=True)
 (OUTPUT_DIR / "static" / "css").mkdir(exist_ok=True)
 (OUTPUT_DIR / "static" / "js").mkdir(exist_ok=True)
 
-# Configurar Jinja2
 env = Environment(
     loader=FileSystemLoader(TEMPLATES_DIR),
-    autoescape=select_autoescape(['html', 'xml'])
+    autoescape=select_autoescape(["html", "xml"]),
 )
 
 def url_for(endpoint, **values):
@@ -35,6 +34,7 @@ def url_for(endpoint, **values):
 
 env.globals["url_for"] = url_for
 
+
 def cargar_datos():
     """Carga los datos del portafolio desde data.json"""
     with open(BASE_DIR / "data.json", "r", encoding="utf-8") as f:
@@ -42,24 +42,21 @@ def cargar_datos():
 
 
 def obtener_proyectos_github(usuario):
-    """Obtiene los proyectos del usuario de GitHub"""
+    """Obtiene una vista rápida de repositorios desde la API de GitHub."""
     try:
         url = f"https://api.github.com/users/{usuario}/repos"
         params = {"sort": "updated", "per_page": 6}
         response = requests.get(url, params=params, timeout=5)
-
         if response.status_code == 200:
             return response.json()
     except Exception as e:
         print(f"[!] Error al traer proyectos de GitHub: {e}")
-
     return []
 
 
 def copiar_archivos_estaticos():
-    """Copia los archivos estáticos (CSS, JS, imagenes)"""
+    """Copia los archivos estáticos al directorio de salida."""
     if STATIC_DIR.exists():
-        import shutil
         for item in STATIC_DIR.iterdir():
             dest = OUTPUT_DIR / "static" / item.name
             if item.is_file():
@@ -70,81 +67,75 @@ def copiar_archivos_estaticos():
                 shutil.copytree(item, dest)
 
 
-def generar_sitio():
-    """Genera el sitio web estático"""
-    print("[*] Generando portafolio...")
+def relative_root(depth):
+    return "../" * max(depth, 0)
 
-    # Cargar datos
+
+def render_page(template_name, target_file, depth=0, **context):
+    template = env.get_template(template_name)
+    page_context = dict(context)
+    page_context["site_root"] = relative_root(depth)
+    target_path = OUTPUT_DIR / target_file
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+    target_path.write_text(template.render(**page_context), encoding="utf-8")
+
+
+def generar_sitio():
+    """Genera el sitio web estático con estructura de rutas clara."""
+    print("[*] Generando portafolio...")
     datos = cargar_datos()
     github_user = datos.get("github_user", "AsKrueger")
 
-    # Obtener proyectos de GitHub
     print("[+] Cargando proyectos de GitHub...")
-    proyectos = obtener_proyectos_github(github_user)
-    datos["proyectos"] = proyectos
-    datos["projects"] = proyectos
+    proyectos_api = obtener_proyectos_github(github_user)
+    datos["project_cards"] = proyectos_api
+    datos["featured_projects"] = [
+        project for project in datos.get("projects", []) if project.get("featured")
+    ]
 
-    # Copiar archivos estáticos
     print("[+] Copiando archivos estáticos...")
     copiar_archivos_estaticos()
 
-    # Generar páginas HTML
-    pages = [
-        "index.html",
-        "sobre.html",
-        "proyectos.html",
-        "curriculum.html",
-    ]
+    print("[+] Generando páginas principales...")
+    render_page("index.html", "index.html", depth=0, **datos)
+    render_page("sobre.html", "sobre-mi/index.html", depth=1, **datos)
+    render_page("experiencia.html", "experiencia/index.html", depth=1, **datos)
+    render_page("formacion.html", "formacion/index.html", depth=1, **datos)
+    render_page("contacto.html", "contacto/index.html", depth=1, **datos)
+    render_page("proyectos.html", "proyectos/index.html", depth=1, **datos)
+    render_page("curriculum.html", "curriculum.html", depth=0, **datos)
+    render_page("sobre.html", "sobre.html", depth=0, **datos)
+    render_page("proyectos.html", "proyectos.html", depth=0, **datos)
 
-    for page in pages:
-        print(f"[+] Generando {page}...")
-        template = env.get_template(page)
-        html = template.render(**datos)
+    print("[+] Generando páginas de proyecto...")
+    for project in datos.get("projects", []):
+        slug = project.get("slug")
+        if not slug:
+            continue
+        render_page(
+            "proyecto.html",
+            f"proyectos/{slug}/index.html",
+            depth=2,
+            project=project,
+            **datos,
+        )
 
-        with open(OUTPUT_DIR / page, "w", encoding="utf-8") as f:
-            f.write(html)
-
-    # Generar sobre.html
-    print("[+] Generando sobre.html...")
-    template = env.get_template("sobre.html")
-    html = template.render(**datos)
-
-    with open(OUTPUT_DIR / "sobre.html", "w", encoding="utf-8") as f:
-        f.write(html)
-
-    # Generar proyectos.html
-    print("[+] Generando proyectos.html...")
-    template = env.get_template("proyectos.html")
-    html = template.render(**datos)
-
-    with open(OUTPUT_DIR / "proyectos.html", "w", encoding="utf-8") as f:
-        f.write(html)
-
-    # Generar curriculum.html
-    print("[+] Generando curriculum.html...")
-    template = env.get_template("curriculum.html")
-    html = template.render(**datos)
-
-    with open(OUTPUT_DIR / "curriculum.html", "w", encoding="utf-8") as f:
-        f.write(html)
-
-    # Generar CNAME para dominio personalizado (opcional)
     cname_file = BASE_DIR / "CNAME"
     if cname_file.exists():
-        import shutil
         shutil.copy2(cname_file, OUTPUT_DIR / "CNAME")
 
     print("[OK] Portafolio generado exitosamente!")
     print(f"[*] Archivos en: {OUTPUT_DIR}")
-    print(f"   - index.html")
-    print(f"   - sobre.html")
-    print(f"   - proyectos.html")
-    print(f"   - static/css/")
-    print(f"   - static/js/")
+    print("   - index.html")
+    print("   - sobre-mi/index.html")
+    print("   - proyectos/index.html")
+    print("   - experiencia/index.html")
+    print("   - formacion/index.html")
+    print("   - contacto/index.html")
     print("\n[INFO] Proximos pasos:")
-    print("   1. Verifica los archivos en 'dist/'")
-    print("   2. Sube 'dist/' a GitHub Pages en la rama 'gh-pages'")
-    print(f"   3. Tu portafolio estara en: https://{github_user}.github.io/portfolio/")
+    print("   1. Verifica el contenido en 'dist/'")
+    print("   2. Comprueba los enlaces internos y las rutas")
+    print(f"   3. Publica 'dist/' en GitHub Pages si procede")
 
 
 if __name__ == "__main__":

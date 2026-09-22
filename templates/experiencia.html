@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Experiencia | {{ nombre }}{% endblock %}
+{% block description %}Experiencia profesional relevante y evolución hacia el backend Java / Spring Boot.{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container narrow">
+        <p class="eyebrow">Experiencia</p>
+        <h1>Trayectoria profesional</h1>
+        <div class="timeline-list">
+            {% for exp in experiencia %}
+            <article class="card-panel timeline-item">
+                <h2>{{ exp.titulo }}</h2>
+                <p class="meta"><strong>{{ exp.empresa }}</strong> · {{ exp.periodo }}</p>
+                <p>{{ exp.descripcion }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

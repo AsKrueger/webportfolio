@@ -1,19 +1,27 @@
 {
   "nombre": "Alonso Amador",
-  "titulo": "Desarrollador Full Stack",
-  "subtitulo": "Python | Desarrollo Web | GitHub Pages",
-  "descripcion": "Construyo portafolios y aplicaciones web con Python y Flask, con enfoque en interfaces limpias y despliegue en GitHub Pages.",
-  "biografia": "Soy Alonso Amador, desarrollador web enfocado en proyectos personales y soluciones prácticas. Me apasiona aprender nuevas tecnologías y publicar mis proyectos en GitHub para compartirlos con la comunidad.",
+  "titulo": "Junior Software Developer",
+  "subtitulo": "Backend Java / Spring Boot",
+  "descripcion": "Soy Alonso Amador, Junior Software Developer con orientación principal al backend en Java y Spring Boot. Estoy consolidando mi perfil profesional alrededor de APIs REST, persistencia con PostgreSQL, testing y buenas prácticas de diseño de software.",
+  "biografia": "Soy Alonso Amador, graduado en Desarrollo de Aplicaciones Multiplataforma y con experiencia previa en prácticas como desarrollador de aplicaciones. He trabajado con C#, Unity y tecnologías de desarrollo multiplataforma, y actualmente estoy orientando mi perfil profesional hacia el backend con Java, Spring Boot y arquitectura de software.",
   "habilidades": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "PostgreSQL",
+    "JPA / Hibernate",
+    "JUnit",
+    "Mockito",
+    "Docker",
+    "Docker Compose",
+    "Maven",
+    "Git / GitHub",
+    "SOLID",
+    "Hexagonal Architecture",
+    "Kotlin",
+    "C#",
     "Python",
-    "Flask",
-    "HTML/CSS",
-    "JavaScript",
-    "GitHub Pages",
-    "APIs",
-    "Jinja2",
-    "Control de versiones",
-    "Desarrollo responsive"
+    "SQL"
   ],
   "experiencia": [
     {
@@ -43,5 +51,44 @@
     "en": "B1 Intermedio — lectura técnica fluida, comunicación profesional básica"
   },
   "github_user": "AsKrueger",
-  "linkedin_url": "https://www.linkedin.com/in/alonso-amador-sanchez"
+  "linkedin_url": "https://www.linkedin.com/in/alonso-amador-sanchez",
+  "contact": {
+    "email": "alonsoamador.sanchez@gmail.com",
+    "github": "https://github.com/AsKrueger",
+    "linkedin": "https://www.linkedin.com/in/alonso-amador-sanchez"
+  },
+  "projects": [
+    {
+      "slug": "3d-cost-manager",
+      "name": "3D Cost Manager",
+      "status": "En evolución",
+      "featured": true,
+      "summary": "Aplicación para gestionar y calcular costes relacionados con impresión 3D, con lógica de negocio para materiales, maquinaria, herramientas y presupuestos.",
+      "problem": "Necesidad de centralizar y calcular costes asociados a impresión 3D con criterios técnicos y de negocio.",
+      "solution": "Desarrollo de una aplicación que gestiona proyectos, materiales, máquinas y presupuestos con cálculo de costes y estructura backend orientada a negocio.",
+      "architecture": "Estructura de dominio con separación de lógica de negocio, persistencia y servicios. Evoluciona hacia una arquitectura más clara con capas, buenas prácticas y testing.",
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "JPA / Hibernate", "Docker", "JUnit", "Mockito", "Flyway", "Maven"],
+      "testing": "JUnit y Mockito para validar la lógica de negocio y los servicios clave del dominio.",
+      "deployment": "Docker y Docker Compose como entorno de ejecución y despliegue local para la aplicación.",
+      "repository": "https://github.com/AsKrueger/Calculadora3D",
+      "documentation": "README del repositorio y documentación técnica disponible en GitHub.",
+      "tags": ["backend", "java", "spring", "postgresql", "testing"]
+    },
+    {
+      "slug": "explorersaga",
+      "name": "ExplorerSaga",
+      "status": "En evolución",
+      "featured": true,
+      "summary": "Aplicación turística orientada a Mérida y Extremadura para descubrir monumentos, gastronomía, comercios y puntos de interés locales.",
+      "problem": "Facilitar el descubrimiento de patrimonio y actividades locales de una manera clara y accesible para usuarios interesados en la zona.",
+      "solution": "Aplicación móvil y backend orientado a datos turísticos, con enfoque en usabilidad, contenido local y evolución hacia arquitectura backend.",
+      "architecture": "Aplicación en evolución con base Android y estructura que va consolidando servicios backend y persistencia para datos de negocio y contenido local.",
+      "technologies": ["Kotlin", "Android", "Jetpack Compose", "Room", "Retrofit", "PostgreSQL", "Java", "Spring Boot", "JUnit", "Docker"],
+      "testing": "Estructura de testing con JUnit en componentes del backend y validación de procesos clave.",
+      "deployment": "Entorno de desarrollo con Docker y persistencia con PostgreSQL en la evolución del backend.",
+      "repository": "https://github.com/AsKrueger/ExplorerSaga-Extremadura",
+      "documentation": "README del repositorio y documentación técnica disponible en GitHub.",
+      "tags": ["android", "backend", "java", "spring", "travel"]
+    }
+  ]
 }

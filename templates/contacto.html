@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto | {{ nombre }}{% endblock %}
+{% block description %}Contacta con Alonso Amador para hablar de backend, Java, Spring Boot y proyectos técnicos.{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container narrow">
+        <p class="eyebrow">Contacto</p>
+        <h1>Hablemos de tecnología</h1>
+        <div class="card-panel contact-panel">
+            <p>Estoy buscando oportunidades para seguir creciendo como Junior Software Developer orientado principalmente a backend con Java y Spring Boot.</p>
+            <ul class="contact-list">
+                {% if contact and contact.email %}
+                <li><strong>Email:</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+                {% endif %}
+                {% if contact and contact.github %}
+                <li><strong>GitHub:</strong> <a href="{{ contact.github }}" target="_blank" rel="noreferrer">{{ contact.github }}</a></li>
+                {% endif %}
+                {% if linkedin_url %}
+                <li><strong>LinkedIn:</strong> <a href="{{ linkedin_url }}" target="_blank" rel="noreferrer">{{ linkedin_url }}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

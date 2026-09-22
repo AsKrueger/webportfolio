@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.name }} | {{ nombre }}{% endblock %}
+{% block description %}{{ project.summary or project.name }}{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container narrow">
+        <p class="eyebrow">Proyecto</p>
+        <h1>{{ project.name }}</h1>
+        <p class="lead">{{ project.summary or 'Proyecto orientado a resolver un problema real con una solución técnica clara.' }}</p>
+
+        <div class="project-meta-top">
+            {% if project.status %}
+            <span class="project-badge secondary">Estado: {{ project.status }}</span>
+            {% endif %}
+            {% if project.technologies %}
+            {% for tech in project.technologies[:3] %}
+            <span class="project-badge">{{ tech }}</span>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="project-actions">
+            {% if project.repository %}
+            <a class="btn btn-primary" href="{{ project.repository }}" target="_blank" rel="noreferrer">Ver repositorio</a>
+            {% endif %}
+            {% if project.documentation %}
+            <a class="btn btn-outline" href="{{ project.repository }}" target="_blank" rel="noreferrer">Documentación</a>
+            {% endif %}
+            <a class="btn btn-outline" href="{{ site_root }}proyectos/">Volver a proyectos</a>
+        </div>
+
+        <div class="project-detail-grid">
+            <article class="card-panel">
+                <h2>Problema</h2>
+                <p>{{ project.problem or 'Información del problema no disponible todavía.' }}</p>
+            </article>
+            <article class="card-panel">
+                <h2>Solución</h2>
+                <p>{{ project.solution or 'Información de la solución no disponible todavía.' }}</p>
+            </article>
+            <article class="card-panel">
+                <h2>Arquitectura</h2>
+                <p>{{ project.architecture or 'Arquitectura en evolución y aún sin detalle público completo.' }}</p>
+            </article>
+            <article class="card-panel">
+                <h2>Tecnologías</h2>
+                <ul class="tag-list">
+                    {% for tech in project.technologies or [] %}
+                    <li>{{ tech }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <article class="card-panel">
+                <h2>Decisiones técnicas</h2>
+                <p>{{ project.decisions or 'No se dispone de detalle público específico sobre decisiones técnicas relevantes.' }}</p>
+            </article>
+            <article class="card-panel">
+                <h2>Testing</h2>
+                <p>{{ project.testing or 'No se dispone de detalle público específico sobre testing.' }}</p>
+            </article>
+            <article class="card-panel">
+                <h2>API e integraciones</h2>
+                <p>{{ project.api or project.integrations or 'No se dispone de detalle público sobre APIs o integraciones externas.' }}</p>
+            </article>
+            <article class="card-panel">
+                <h2>Estado y despliegue</h2>
+                <p>{{ project.deployment or 'Información de despliegue no disponible todavía.' }}</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

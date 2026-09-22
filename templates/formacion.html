@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Formación | {{ nombre }}{% endblock %}
+{% block description %}Formación en desarrollo de aplicaciones y evolución hacia el backend Java / Spring Boot.{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container narrow">
+        <p class="eyebrow">Formación</p>
+        <h1>Formación y aprendizaje</h1>
+        <div class="timeline-list">
+            {% for edu in educacion %}
+            <article class="card-panel timeline-item">
+                <h2>{{ edu.titulo }}</h2>
+                <p class="meta"><strong>{{ edu.institucion }}</strong> · {{ edu.periodo }}</p>
+                <p>{{ edu.descripcion }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

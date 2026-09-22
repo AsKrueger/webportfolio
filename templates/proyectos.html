@@ -1,148 +1,64 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ nombre }} - Proyectos</title>
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="/">{{ nombre }}</a>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/sobre">Sobre mí</a></li>
-                <li><a href="/proyectos">Proyectos</a></li>
-                <li><a href="/curriculum">CV</a></li>
-                {% if linkedin_url %}
-                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
-                {% endif %}
-                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
 {% block title %}{{ nombre }} - Proyectos{% endblock %}
 
-    <section id="projects-showcase" class="section-showcase">
-        <div class="container">
-            {% if proyectos %}
-                <div class="projects-grid-showcase">
-                    {% for project in proyectos[:6] %}
-                    <article class="project-card-showcase">
-                        <div class="project-image">
-                            {% if project.language %}
-                            <div class="project-badge">{{ project.language }}</div>
-                            {% endif %}
-                            {% if project.topics %}
-                            <div class="project-topics">
-                                {% for topic in project.topics[:2] %}
-                                <span class="topic-tag">{{ topic }}</span>
-                                {% endfor %}
-                            </div>
-                            {% endif %}
-                        </div>
-                        <div class="project-content">
-                            <h3>{{ project.name }}</h3>
-                            <p class="project-desc">
-                                {{ project.description or "Proyecto sin descripción disponible." }}
-                            </p>
-                            <div class="project-footer">
-                                <div class="project-stats">
-                                    <span class="stat">⭐ {{ project.stargazers_count }}</span>
-                                    {% if project.forks_count %}
-                                    <span class="stat">🍴 {{ project.forks_count }}</span>
-                                    {% endif %}
-                                </div>
-                                <a href="{{ project.html_url }}" target="_blank" class="view-code">Ver Código →</a>
-                            </div>
-                        </div>
-                    </article>
+{% block content %}
+<section class="page-section">
+    <div class="container">
+        <p class="eyebrow">Proyectos</p>
+        <h1>Proyectos técnicos y evidencias de backend</h1>
+        <p class="lead">Estos proyectos representan mi evolución profesional hacia Java, Spring Boot, APIs REST, persistencia y testing.</p>
+
+        {% if projects %}
+        <div class="projects-grid">
+            {% for project in projects %}
+            <article class="project-card">
+                <div class="project-meta-top">
+                    {% if project.status %}
+                    <span class="project-badge secondary">{{ project.status }}</span>
+                    {% endif %}
+                    {% if project.tags %}
+                    <span class="project-badge">{{ project.tags[0] }}</span>
+                    {% endif %}
+                </div>
+                <h2>{{ project.name }}</h2>
+                <p class="project-description">{{ project.summary or project.problem or 'Proyecto en evolución con enfoque técnico.' }}</p>
+                <ul class="tag-list">
+                    {% for tech in (project.technologies or [])[:4] %}
+                    <li>{{ tech }}</li>
                     {% endfor %}
+                </ul>
+                <div class="project-actions">
+                    <a href="{{ site_root }}proyectos/{{ project.slug }}/" class="btn btn-primary">Ver proyecto</a>
+                    <a href="{{ project.repository }}" target="_blank" rel="noreferrer" class="btn btn-outline">GitHub</a>
                 </div>
-
-                <div class="projects-cta">
-                    <p>¿Quieres ver más proyectos?</p>
-                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
-                        Visita mi GitHub
-                    </a>
-                </div>
-            {% else %}
-                <div class="empty-state">
-                    <div class="empty-icon">📦</div>
-                    <p>No se pudieron cargar los proyectos en este momento.</p>
-                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">
-                        Ver todos en GitHub
-                    </a>
-                </div>
-            {% endif %}
+            </article>
+            {% endfor %}
         </div>
-    </section>
-
-    <section id="technologies" class="section-tech-stack">
-        <div class="container">
-            <div class="tech-header">
-                <h2>Stack Tecnológico</h2>
-                <p>Tecnologías utilizadas en los proyectos</p>
-            </div>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <span class="tech-icon">☕</span>
-                    <span>Java</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">🎯</span>
-                    <span>Kotlin</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">#️⃣</span>
-                    <span>C#</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">🐍</span>
-                    <span>Python</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">.️⃣</span>
-                    <span>.NET</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">🎮</span>
-                    <span>Unity</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">📱</span>
-                    <span>Android</span>
-                </div>
-                <div class="tech-item">
-                    <span class="tech-icon">🗄️</span>
-                    <span>SQL</span>
-                </div>
-            </div>
+        {% else %}
+        <div class="empty-state">
+            <p>No hay proyectos disponibles todavía.</p>
         </div>
-    </section>
+        {% endif %}
+    </div>
+</section>
 
-    <footer class="footer-dark">
-        <div class="container footer-container">
-            <div class="footer-copy">
-                <p>&copy; 2026 {{ nombre }}. Built with precision.</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/{{ github_user }}" target="_blank">GitHub</a>
-                {% if linkedin_url %} · <a href="{{ linkedin_url }}" target="_blank">LinkedIn</a>{% endif %}
-                {% if contacto.email %} · <a href="mailto:{{ contacto.email }}">Email</a>{% endif %}
-            </div>
+<section class="section-tech-stack">
+    <div class="container">
+        <div class="tech-header">
+            <h2>Stack orientado a backend</h2>
+            <p>Tecnologías que están reforzando mi especialización actual en Java y Spring Boot.</p>
         </div>
-    </footer>
-
-    <script src="static/js/main.js"></script>
-</body>
-</html>
+        <div class="tech-grid">
+            <div class="tech-item"><span class="tech-icon">☕</span><span>Java</span></div>
+            <div class="tech-item"><span class="tech-icon">🌱</span><span>Spring Boot</span></div>
+            <div class="tech-item"><span class="tech-icon">🔌</span><span>REST</span></div>
+            <div class="tech-item"><span class="tech-icon">🗄️</span><span>PostgreSQL</span></div>
+            <div class="tech-item"><span class="tech-icon">🧩</span><span>JPA / Hibernate</span></div>
+            <div class="tech-item"><span class="tech-icon">✅</span><span>JUnit</span></div>
+            <div class="tech-item"><span class="tech-icon">🧪</span><span>Mockito</span></div>
+            <div class="tech-item"><span class="tech-icon">🐳</span><span>Docker</span></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
