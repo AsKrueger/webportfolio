@@ -37,7 +37,7 @@ La salida contiene las rutas publicas esperadas, CSS, JavaScript, `robots.txt` y
 
 ## Commits publicados
 
-- `main`: `df4cd74` (documentacion final de produccion)
+- `main`: `99dfff1` (fuente desplegada; documentación final en `afb6a03`)
 - `gh-pages`: `8e7ca23` (publicacion de la build con `public_url`)
 
 El commit de `main` fue enviado a `origin/main` antes de publicar `dist/`.
