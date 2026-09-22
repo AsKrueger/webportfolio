@@ -4,7 +4,7 @@ Fecha: 2026-09-22
 
 ## Estado
 
-**VERIFICACION DE PRODUCCION EN CURSO.** GitHub Pages ya responde en la URL publica y la nueva build esta publicada en `gh-pages`. El workflow de Pages del ultimo commit `8e7ca23` seguia `in_progress` durante la ultima comprobacion de assets; el cierre queda pendiente de su finalizacion.
+**CLOSED.** GitHub Pages sirve la build final y la verificacion directa en produccion ha terminado correctamente.
 
 ## Metodo de publicacion
 
@@ -37,7 +37,7 @@ La salida contiene las rutas publicas esperadas, CSS, JavaScript, `robots.txt` y
 
 ## Commits publicados
 
-- `main`: `99dfff1` (configuracion de produccion y versionado de assets)
+- `main`: `df4cd74` (documentacion final de produccion)
 - `gh-pages`: `8e7ca23` (publicacion de la build con `public_url`)
 
 El commit de `main` fue enviado a `origin/main` antes de publicar `dist/`.
@@ -82,8 +82,8 @@ La rama `gh-pages` contiene:
 
 ## Problemas encontrados
 
-- La primera respuesta del CV servido por Pages permanecia cacheada mientras el workflow de despliegue estaba `in_progress`.
-- La version `?v=8` de CSS/JS esta publicada en `gh-pages`, pero aun no se ha confirmado en el navegador publico porque el workflow no habia terminado.
+- La primera respuesta del CV servido por Pages permanecia cacheada mientras el workflow de despliegue estaba `in_progress`; tras finalizar se verifico la version nueva.
+- La version `?v=8` de CSS/JS se carga en todas las rutas auditadas.
 
 ## Correcciones realizadas
 
@@ -108,5 +108,16 @@ Lighthouse, axe, Node.js, npm y npx no estan disponibles. La verificacion de con
 - Robots publico: **VERIFICADO**
 - Rutas y assets principales: **VERIFICADO HTTP 200**
 - HTTPS y ausencia de mixed content: **VERIFICADO EN LAS RESPUESTAS AUDITADAS**
-- Responsive: **PENDIENTE DE REPETIR DESPUES DEL WORKFLOW FINAL**
-- Consola: **SIN ERRORES EN LA AUDITORIA REALIZADA**
+- Responsive: **VERIFICADO: 45 combinaciones de 9 rutas y 5 viewports**
+- Consola: **VERIFICADO: 0 errores**
+
+## Verificacion final
+
+- Workflow Pages `8e7ca23`: `completed / success`.
+- HTTP 200 en las 9 paginas publicas, `robots.txt`, `sitemap.xml`, CSS y JavaScript.
+- `sitemap.xml`: 9 URLs, sin `localhost` ni dominios de ejemplo.
+- CV: contenido actualizado, sin enlaces PDF rotos y sin overflow a 320px.
+- Menu movil: abre con teclado, Tab alcanza `Inicio` y Escape cierra devolviendo el foco.
+- HTTPS activo y sin referencias HTTP inseguras en el HTML auditado.
+- `git status`: limpio.
+- `git diff --check`: correcto.
