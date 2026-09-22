@@ -4,7 +4,7 @@ Fecha: 2026-09-22
 
 ## Estado
 
-**VERIFICACION DE PRODUCCION EN CURSO.** GitHub Pages ya responde en la URL publica y la nueva build esta publicada en `gh-pages`. El workflow de Pages del ultimo commit se encontraba `in_progress` durante la primera comprobacion del CV; se repite la comprobacion despues de su finalizacion.
+**VERIFICACION DE PRODUCCION EN CURSO.** GitHub Pages ya responde en la URL publica y la nueva build esta publicada en `gh-pages`. El workflow de Pages del ultimo commit `8e7ca23` seguia `in_progress` durante la ultima comprobacion de assets; el cierre queda pendiente de su finalizacion.
 
 ## Metodo de publicacion
 
@@ -37,8 +37,8 @@ La salida contiene las rutas publicas esperadas, CSS, JavaScript, `robots.txt` y
 
 ## Commits publicados
 
-- `main`: pendiente del commit final de esta verificacion
-- `gh-pages`: `15d044e0` (publicacion de la build con `public_url`)
+- `main`: `99dfff1` (configuracion de produccion y versionado de assets)
+- `gh-pages`: `8e7ca23` (publicacion de la build con `public_url`)
 
 El commit de `main` fue enviado a `origin/main` antes de publicar `dist/`.
 
@@ -83,6 +83,7 @@ La rama `gh-pages` contiene:
 ## Problemas encontrados
 
 - La primera respuesta del CV servido por Pages permanecia cacheada mientras el workflow de despliegue estaba `in_progress`.
+- La version `?v=8` de CSS/JS esta publicada en `gh-pages`, pero aun no se ha confirmado en el navegador publico porque el workflow no habia terminado.
 
 ## Correcciones realizadas
 
@@ -99,7 +100,7 @@ Lighthouse, axe, Node.js, npm y npx no estan disponibles. La verificacion de con
 ## Resultado
 
 - Build: **VERIFICADO**
-- Fuente `main` publicada: **PENDIENTE DEL COMMIT FINAL**
+- Fuente `main` publicada: **VERIFICADO**
 - Rama `gh-pages` publicada: **VERIFICADO**
 - URL publica: **VERIFICADO**
 - Canonical y `og:url` reales: **VERIFICADO EN LA BUILD Y EN PAGINAS SERVIDAS**
