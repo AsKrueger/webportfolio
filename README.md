@@ -80,7 +80,7 @@ pip install ghp-import
 ghp-import -p dist/
 ```
 
-Tu portafolio estará en: `https://AsKrueger.github.io/portfolio/`
+Tu portafolio estará en: `https://AsKrueger.github.io/webportfolio/`
 
 ### Opción 2: Configuración manual en GitHub
 
