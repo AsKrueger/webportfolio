@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://askrueger.github.io/webportfolio/sitemap.xml
