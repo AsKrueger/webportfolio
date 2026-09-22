@@ -9,6 +9,7 @@ Portafolio web profesional desarrollado con **Python** y generado de forma está
 - **Responsive** - Diseño adaptable a cualquier dispositivo
 - **Fácil de personalizar** - Edita `data.json` y ejecuta el generador
 - **GitHub Pages** - Despliegue gratuito y automático
+- **SEO técnico** - Metadatos por página y `robots.txt` generado
 
 ## 📋 Secciones
 
@@ -24,6 +25,11 @@ Portafolio web profesional desarrollado con **Python** y generado de forma está
 2. **Generación**: Ejecuta `python generate_site.py`
 3. **Salida**: Los archivos se generan en la carpeta `dist/`
 4. **Despliegue**: Sube `dist/` a GitHub Pages
+
+El generador crea `robots.txt` permitiendo el rastreo. Si se confirma la URL pública
+del despliegue, añade `"public_url": "https://tu-dominio-verificado/"` en `data.json`.
+En ese caso también se generarán las URLs canónicas, `og:url` y `sitemap.xml`.
+No se debe rellenar ese valor con una URL que todavía no exista.
 
 ## 💻 Instalación Local
 
@@ -123,6 +129,8 @@ webportfolio/
 │   └── js/main.js           # Scripts
 └── dist/                    # Salida (generado)
     ├── index.html
+  ├── robots.txt
+  ├── sitemap.xml           # Solo cuando public_url está configurada
     └── static/
 ```
 

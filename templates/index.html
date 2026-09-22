@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}{{ nombre }} - {{ titulo }}{% endblock %}
+{% block title %}{{ nombre }} | {{ titulo }} | {{ subtitulo }}{% endblock %}
+{% block description %}{{ descripcion }}{% endblock %}
 
 {% block content %}
 <section id="inicio" class="hero">
@@ -11,8 +12,8 @@
             <p class="hero-title">Desarrollador junior orientado principalmente al backend con Java y Spring Boot.</p>
             <p class="hero-text">{{ descripcion }}</p>
             <div class="hero-actions">
-                <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Ver GitHub</a>
-                <a href="/proyectos" class="btn btn-outline">Ver proyectos</a>
+                <a href="https://github.com/{{ github_user }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver GitHub</a>
+                <a href="{{ site_root }}proyectos/" class="btn btn-outline">Ver proyectos</a>
             </div>
         </div>
         <div class="hero-panel">
@@ -72,8 +73,8 @@
             <h2>Construyendo software con propósito y calidad técnica.</h2>
         </div>
         <div class="projects-grid">
-            {% if proyectos %}
-                {% for project in proyectos[:3] %}
+            {% if project_cards %}
+                {% for project in project_cards[:3] %}
                 <article class="project-card">
                     <div class="project-meta-top">
                         {% if project.language %}
@@ -83,13 +84,13 @@
                     </div>
                     <h3>{{ project.name }}</h3>
                     <p class="project-description">{{ project.description or "Aplicación en desarrollo con enfoque en buenas prácticas." }}</p>
-                    <a href="{{ project.html_url }}" target="_blank" class="project-link">Ver código</a>
+                    <a href="{{ project.html_url }}" target="_blank" rel="noopener noreferrer" class="project-link">Ver código</a>
                 </article>
                 {% endfor %}
             {% else %}
                 <div class="empty-state">
                     <p>No se pudieron cargar los proyectos en este momento.</p>
-                    <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Ver todos en GitHub</a>
+                    <a href="https://github.com/{{ github_user }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver todos en GitHub</a>
                 </div>
             {% endif %}
         </div>

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}{{ nombre }} - Proyectos{% endblock %}
+{% block title %}Proyectos técnicos | {{ nombre }}{% endblock %}
+{% block description %}Proyectos técnicos de Alonso Amador con Java, Spring Boot, APIs REST, persistencia, testing y evolución backend.{% endblock %}
 
 {% block content %}
 <section class="page-section">
@@ -30,7 +31,7 @@
                 </ul>
                 <div class="project-actions">
                     <a href="{{ site_root }}proyectos/{{ project.slug }}/" class="btn btn-primary">Ver proyecto</a>
-                    <a href="{{ project.repository }}" target="_blank" rel="noreferrer" class="btn btn-outline">GitHub</a>
+                    <a href="{{ project.repository }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
                 </div>
             </article>
             {% endfor %}

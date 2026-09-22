@@ -1,61 +1,36 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ nombre }} - Sobre mí</title>
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="/">{{ nombre }}</a>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/sobre">Sobre mí</a></li>
-                <li><a href="/proyectos">Proyectos</a></li>
-                <li><a href="/curriculum">CV</a></li>
-                {% if linkedin_url %}
-                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
-                {% endif %}
-                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
-    <section id="sobre-hero" class="section-hero">
-        <div class="container">
-            <div class="hero-intro">
-                <h1>Junior Software Developer</h1>
-                <h2>Orientado principalmente a <span class="accent">Backend Java / Spring Boot</span>.</h2>
-                <p class="intro-text">
-                    Soy <span class="highlight">Alonso Amador</span>, graduado en Desarrollo de Aplicaciones Multiplataforma y con experiencia previa en prácticas como desarrollador de aplicaciones.
-                    Mi evolución profesional está centrada en fortalecer mi perfil backend con Java, Spring Boot, APIs REST, persistencia y testing.
-                </p>
-                <p class="intro-description">
-                    He trabajado con tecnologías como C#, Unity y desarrollo multiplataforma, pero actualmente mi objetivo profesional es especializarme en backend, arquitectura de software y la construcción de soluciones que resuelvan problemas de negocio con calidad y mantenibilidad.
-                </p>
-            </div>
-        </div>
-    </section>
+{% block title %}Sobre mí | {{ nombre }}{% endblock %}
+{% block description %}Conoce la formación, experiencia y evolución de {{ nombre }} hacia el desarrollo backend con Java y Spring Boot.{% endblock %}
+
 {% block content %}
+<section id="sobre-hero" class="section-hero">
+    <div class="container">
+        <div class="hero-intro">
+            <p class="eyebrow">Perfil profesional</p>
+            <h1>Junior Software Developer</h1>
+            <h2>Orientado principalmente a <span class="accent">Backend Java / Spring Boot</span>.</h2>
+            <p class="intro-text">
+                Soy <span class="highlight">Alonso Amador</span>, graduado en Desarrollo de Aplicaciones Multiplataforma y con experiencia previa en prácticas como desarrollador de aplicaciones.
+                Mi evolución profesional está centrada en fortalecer mi perfil backend con Java, Spring Boot, APIs REST, persistencia y testing.
+            </p>
+            <p class="intro-description">
+                He trabajado con tecnologías como C#, Unity y desarrollo multiplataforma, pero actualmente mi objetivo profesional es especializarme en backend, arquitectura de software y la construcción de soluciones que resuelvan problemas de negocio con calidad y mantenibilidad.
+            </p>
+        </div>
+    </div>
+</section>
+
 <section class="hero">
     <div class="container hero-grid">
         <div class="hero-copy">
             <span class="eyebrow">FORMACIÓN · EVOLUCIÓN · BACKEND</span>
-            <h1>Construyendo mi perfil como desarrollador backend</h1>
+            <h2>Construyendo mi perfil como desarrollador backend</h2>
             <p class="hero-text">{{ descripcion }}</p>
             <p class="hero-text">{{ biografia }}</p>
             <div class="hero-actions">
-                <a href="https://github.com/{{ github_user }}" target="_blank" class="btn btn-primary">Ver GitHub</a>
-                <a href="/curriculum" class="btn btn-outline">Ver CV</a>
+                <a href="https://github.com/{{ github_user }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver GitHub</a>
+                <a href="{{ site_root }}curriculum.html" class="btn btn-outline">Ver CV</a>
             </div>
         </div>
         <div class="hero-panel">
@@ -63,7 +38,7 @@
                 <div class="code-card-label">backend_path.java</div>
                 <pre><code>// Evolución profesional
 DAM -> fundamentos de programación
-Practicas -> desarrollo de aplicaciones
+Prácticas -> desarrollo de aplicaciones
 Ahora -> Java, Spring Boot, backend, testing
 Objetivo -> crear APIs robustas y mantenibles</code></pre>
             </div>
@@ -78,29 +53,16 @@ Objetivo -> crear APIs robustas y mantenibles</code></pre>
             <h2>Habilidades y tecnologías clave</h2>
             <p class="section-subtitle">Mi enfoque actual está centrado en el backend, la lógica de negocio y la calidad del código.</p>
         </div>
-        
+
         <div class="skills-categories">
-            {% if habilidades_categorias %}
-                {% for categoria, skills in habilidades_categorias.items() %}
-                <div class="skill-category">
-                    <h3 class="category-title">{{ categoria }}</h3>
-                    <div class="category-skills">
-                        {% for skill in skills %}
-                        <span class="skill-badge">{{ skill }}</span>
-                        {% endfor %}
-                    </div>
+            <div class="skill-category">
+                <h3 class="category-title">Habilidades</h3>
+                <div class="category-skills">
+                    {% for skill in habilidades %}
+                    <span class="skill-badge">{{ skill }}</span>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            {% else %}
-                <div class="skill-category">
-                    <h3 class="category-title">Habilidades</h3>
-                    <div class="category-skills">
-                        {% for skill in habilidades %}
-                        <span class="skill-badge">{{ skill }}</span>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
+            </div>
         </div>
     </div>
 </section>

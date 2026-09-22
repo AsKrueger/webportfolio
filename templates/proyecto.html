@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}{{ project.name }} | {{ nombre }}{% endblock %}
-{% block description %}{{ project.summary or project.name }}{% endblock %}
+{% block title %}{{ project.name }} | Java / Spring Boot | {{ nombre }}{% endblock %}
+{% block description %}{{ project.summary or project.name }} Proyecto técnico de {{ nombre }}.{% endblock %}
 
 {% block content %}
 <section class="page-section">
@@ -23,10 +23,10 @@
 
         <div class="project-actions">
             {% if project.repository %}
-            <a class="btn btn-primary" href="{{ project.repository }}" target="_blank" rel="noreferrer">Ver repositorio</a>
+            <a class="btn btn-primary" href="{{ project.repository }}" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
             {% endif %}
             {% if project.documentation %}
-            <a class="btn btn-outline" href="{{ project.repository }}" target="_blank" rel="noreferrer">Documentación</a>
+            <a class="btn btn-outline" href="{{ project.repository }}" target="_blank" rel="noopener noreferrer">Documentación</a>
             {% endif %}
             <a class="btn btn-outline" href="{{ site_root }}proyectos/">Volver a proyectos</a>
         </div>

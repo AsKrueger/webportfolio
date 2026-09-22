@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ nombre }} | Junior Software Developer con orientación principal al backend en Java y Spring Boot.">
+    <meta name="description" content="{% block description %}{{ descripcion }}{% endblock %}">
     <title>{% block title %}{{ nombre }} | {{ titulo }} | {{ subtitulo }}{% endblock %}</title>
+    <meta property="og:title" content="{{ self.title() }}">
+    <meta property="og:description" content="{{ self.description() }}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ self.title() }}">
+    <meta name="twitter:description" content="{{ self.description() }}">
+    {% if page_url %}
+    <link rel="canonical" href="{{ page_url }}">
+    <meta property="og:url" content="{{ page_url }}">
+    {% endif %}
     <link rel="stylesheet" href="{{ site_root }}static/css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
             <div class="logo">
                 <a href="{{ site_root }}">{{ nombre }}</a>
             </div>
-            <ul class="nav-links" id="nav-links">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links" aria-label="Navegación principal">
                 <li><a href="{{ site_root }}">Inicio</a></li>
                 <li><a href="{{ site_root }}sobre-mi/">Sobre mí</a></li>
                 <li><a href="{{ site_root }}proyectos/">Proyectos</a></li>
@@ -22,17 +38,13 @@
                 <li><a href="{{ site_root }}contacto/">Contacto</a></li>
                 <li><a href="{{ site_root }}curriculum.html">CV</a></li>
                 {% if linkedin_url %}
-                <li><a href="{{ linkedin_url }}" target="_blank" class="github-btn">LinkedIn</a></li>
+                <li><a href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer" class="github-btn">LinkedIn</a></li>
                 {% endif %}
-                <li><a href="https://github.com/{{ github_user }}" target="_blank" class="github-btn">GitHub</a></li>
+                <li><a href="https://github.com/{{ github_user }}" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main>
         {% block content %}{% endblock %}
@@ -44,8 +56,8 @@
                 <p>&copy; 2026 Desarrollado por {{ nombre }}.</p>
             </div>
             <div class="footer-links">
-                {% if linkedin_url %}<a href="{{ linkedin_url }}" target="_blank">LinkedIn</a> · {% endif %}
-                <a href="https://github.com/{{ github_user }}" target="_blank">GitHub</a>
+                {% if linkedin_url %}<a href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a> · {% endif %}
+                <a href="https://github.com/{{ github_user }}" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </footer>

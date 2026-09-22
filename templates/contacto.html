@@ -15,10 +15,10 @@
                 <li><strong>Email:</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
                 {% endif %}
                 {% if contact and contact.github %}
-                <li><strong>GitHub:</strong> <a href="{{ contact.github }}" target="_blank" rel="noreferrer">{{ contact.github }}</a></li>
+                <li><strong>GitHub:</strong> <a href="{{ contact.github }}" target="_blank" rel="noopener noreferrer">{{ contact.github }}</a></li>
                 {% endif %}
                 {% if linkedin_url %}
-                <li><strong>LinkedIn:</strong> <a href="{{ linkedin_url }}" target="_blank" rel="noreferrer">{{ linkedin_url }}</a></li>
+                <li><strong>LinkedIn:</strong> <a href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer">{{ linkedin_url }}</a></li>
                 {% endif %}
             </ul>
         </div>

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}{{ nombre }} - Curriculum{% endblock %}
+{% block description %}Currículum de {{ nombre }}: experiencia, formación, certificaciones y habilidades en desarrollo de software.{% endblock %}
 
 {% block content %}
 <section class="page-section curriculum-hero">
@@ -95,7 +96,7 @@
             <div class="card-panel contact-panel">
                 <h3>¿Buscas un perfil proactivo?</h3>
                 <p>Estoy listo para aportar valor a tu equipo desde el primer día con una base técnica sólida y pasión por el código limpio.</p>
-                <a href="mailto:{{ contacto.email }}" class="btn btn-primary btn-wide">Enviar un mensaje</a>
+                <a href="mailto:{{ contact.email }}" class="btn btn-primary btn-wide">Enviar un mensaje</a>
             </div>
         </aside>
     </div>
