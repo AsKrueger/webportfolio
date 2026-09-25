@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aplicación turística orientada a Mérida y Extremadura para descubrir monumentos, gastronomía, comercios y puntos de interés locales. Proyecto técnico de Alonso Amador.">
-    <title>ExplorerSaga | Java / Spring Boot | Alonso Amador</title>
-    <meta property="og:title" content="ExplorerSaga | Java / Spring Boot | Alonso Amador">
-    <meta property="og:description" content="Aplicación turística orientada a Mérida y Extremadura para descubrir monumentos, gastronomía, comercios y puntos de interés locales. Proyecto técnico de Alonso Amador.">
+    <meta name="description" content="Aplicación turística Android para descubrir monumentos, gastronomía y comercios de Mérida y Extremadura mediante Kotlin, Jetpack Compose, Room y OpenStreetMap. Proyecto técnico de Alonso Amador.">
+    <title>ExplorerSaga | Proyecto técnico | Alonso Amador</title>
+    <meta property="og:title" content="ExplorerSaga | Proyecto técnico | Alonso Amador">
+    <meta property="og:description" content="Aplicación turística Android para descubrir monumentos, gastronomía y comercios de Mérida y Extremadura mediante Kotlin, Jetpack Compose, Room y OpenStreetMap. Proyecto técnico de Alonso Amador.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="ExplorerSaga | Java / Spring Boot | Alonso Amador">
-    <meta name="twitter:description" content="Aplicación turística orientada a Mérida y Extremadura para descubrir monumentos, gastronomía, comercios y puntos de interés locales. Proyecto técnico de Alonso Amador.">
+    <meta name="twitter:title" content="ExplorerSaga | Proyecto técnico | Alonso Amador">
+    <meta name="twitter:description" content="Aplicación turística Android para descubrir monumentos, gastronomía y comercios de Mérida y Extremadura mediante Kotlin, Jetpack Compose, Room y OpenStreetMap. Proyecto técnico de Alonso Amador.">
     
     <link rel="canonical" href="https://askrueger.github.io/webportfolio/proyectos/explorersaga/">
     <meta property="og:url" content="https://askrueger.github.io/webportfolio/proyectos/explorersaga/">
@@ -52,11 +52,11 @@
     <div class="container narrow">
         <p class="eyebrow">Proyecto</p>
         <h1>ExplorerSaga</h1>
-        <p class="lead">Aplicación turística orientada a Mérida y Extremadura para descubrir monumentos, gastronomía, comercios y puntos de interés locales.</p>
+        <p class="lead">Aplicación turística Android para descubrir monumentos, gastronomía y comercios de Mérida y Extremadura mediante Kotlin, Jetpack Compose, Room y OpenStreetMap.</p>
 
         <div class="project-meta-top">
             
-            <span class="project-badge secondary">Estado: En evolución</span>
+            <span class="project-badge secondary">Estado: Android funcional · Backend planificado</span>
             
             
             
@@ -74,7 +74,7 @@
             <a class="btn btn-primary" href="https://github.com/AsKrueger/ExplorerSaga-Extremadura" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
             
             
-            <a class="btn btn-outline" href="https://github.com/AsKrueger/ExplorerSaga-Extremadura" target="_blank" rel="noopener noreferrer">Documentación</a>
+            <a class="btn btn-outline" href="https://github.com/AsKrueger/ExplorerSaga-Extremadura" target="_blank" rel="noopener noreferrer">Documentación (en el repositorio)</a>
             
             <a class="btn btn-outline" href="../../proyectos/">Volver a proyectos</a>
         </div>
@@ -86,11 +86,11 @@
             </article>
             <article class="card-panel">
                 <h2>Solución</h2>
-                <p>Aplicación móvil y backend orientado a datos turísticos, con enfoque en usabilidad, contenido local y evolución hacia arquitectura backend.</p>
+                <p>Cliente Android nativo con Kotlin, Jetpack Compose, MVVM, Room y un mapa OpenStreetMap basado en osmdroid. Los datos actuales se cargan desde assets JSON y se persisten localmente.</p>
             </article>
             <article class="card-panel">
                 <h2>Arquitectura</h2>
-                <p>Aplicación en evolución con base Android y estructura que va consolidando servicios backend y persistencia para datos de negocio y contenido local.</p>
+                <p>Arquitectura Android organizada por navegación, pantallas Compose, ViewModels y repositorio local. La separación con un backend Java/Spring Boot y una API REST es una línea de evolución planificada, no una parte presente del repositorio actual.</p>
             </article>
             <article class="card-panel">
                 <h2>Tecnologías</h2>
@@ -102,19 +102,25 @@
                     
                     <li>Jetpack Compose</li>
                     
+                    <li>Navigation Compose</li>
+                    
+                    <li>Material Design 3</li>
+                    
+                    <li>MVVM</li>
+                    
+                    <li>Coroutines</li>
+                    
+                    <li>StateFlow</li>
+                    
                     <li>Room</li>
                     
-                    <li>Retrofit</li>
+                    <li>SQLite</li>
                     
-                    <li>PostgreSQL</li>
+                    <li>OpenStreetMap</li>
                     
-                    <li>Java</li>
+                    <li>osmdroid</li>
                     
-                    <li>Spring Boot</li>
-                    
-                    <li>JUnit</li>
-                    
-                    <li>Docker</li>
+                    <li>kotlinx.serialization</li>
                     
                 </ul>
             </article>
@@ -124,15 +130,15 @@
             </article>
             <article class="card-panel">
                 <h2>Testing</h2>
-                <p>Estructura de testing con JUnit en componentes del backend y validación de procesos clave.</p>
+                <p>El repositorio contiene tests de ejemplo unitarios e instrumentados. La cobertura funcional específica de la aplicación todavía está pendiente.</p>
             </article>
             <article class="card-panel">
                 <h2>API e integraciones</h2>
-                <p>No se dispone de detalle público sobre APIs o integraciones externas.</p>
+                <p>No existe una API REST propia en el repositorio público actual. Los datos se cargan desde assets JSON y se gestionan localmente.</p>
             </article>
             <article class="card-panel">
                 <h2>Estado y despliegue</h2>
-                <p>Entorno de desarrollo con Docker y persistencia con PostgreSQL en la evolución del backend.</p>
+                <p>Aplicación Android ejecutable mediante Android Studio/Gradle. No existe actualmente un despliegue backend o Docker en el repositorio público.</p>
             </article>
         </div>
     </div>
