@@ -30,10 +30,10 @@ GitHub Profile muestra exactamente esa orientacion y tiene fijados `Calculadora3
 
 El resultado no es un `AUDIT PASSED` limpio porque existen dos zonas que requieren correccion o evidencia adicional:
 
-1. ExplorerSaga aparece en PortfolioWeb como proyecto con backend Java/Spring Boot en evolucion, pero su README publico verificable lo presenta como aplicacion Android nativa en Kotlin, Jetpack Compose, MVVM, Room y OpenStreetMap. No documenta un backend Java/Spring Boot activo.
+1. En la fecha de la auditoria, ExplorerSaga aparecia en PortfolioWeb como proyecto con backend Java/Spring Boot en evolucion, pero el arbol publico verificable no contenia backend Java/Spring Boot, PostgreSQL, Flyway, Docker ni endpoints REST. El repositorio publico contiene el cliente Android y su persistencia local.
 2. PortfolioWeb muestra para 3D Cost Manager `JPA / Hibernate`, `Flyway` y `Maven`, y describe arquitectura, persistencia y API con mas detalle del que confirma el README publico revisado. El README confirma Java, Spring Boot, PostgreSQL, Docker, Git/GitHub, JUnit, Mockito y OpenAPI/Swagger, pero no esos tres elementos concretos.
 
-No se realizaron cambios de produccion como parte de esta auditoria.
+La discrepancia de ExplorerSaga se corrige en la Issue #10 mediante una actualizacion de la fuente de PortfolioWeb; el repositorio externo de ExplorerSaga no se modifica desde este workspace.
 
 ## Evidencia por activo
 

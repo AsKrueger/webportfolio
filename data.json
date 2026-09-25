@@ -78,18 +78,20 @@
     {
       "slug": "explorersaga",
       "name": "ExplorerSaga",
-      "status": "En evolución",
+      "status": "Android funcional · Backend planificado",
       "featured": true,
-      "summary": "Aplicación turística orientada a Mérida y Extremadura para descubrir monumentos, gastronomía, comercios y puntos de interés locales.",
+      "summary": "Aplicación turística Android para descubrir monumentos, gastronomía y comercios de Mérida y Extremadura mediante Kotlin, Jetpack Compose, Room y OpenStreetMap.",
       "problem": "Facilitar el descubrimiento de patrimonio y actividades locales de una manera clara y accesible para usuarios interesados en la zona.",
-      "solution": "Aplicación móvil y backend orientado a datos turísticos, con enfoque en usabilidad, contenido local y evolución hacia arquitectura backend.",
-      "architecture": "Aplicación en evolución con base Android y estructura que va consolidando servicios backend y persistencia para datos de negocio y contenido local.",
-      "technologies": ["Kotlin", "Android", "Jetpack Compose", "Room", "Retrofit", "PostgreSQL", "Java", "Spring Boot", "JUnit", "Docker"],
-      "testing": "Estructura de testing con JUnit en componentes del backend y validación de procesos clave.",
-      "deployment": "Entorno de desarrollo con Docker y persistencia con PostgreSQL en la evolución del backend.",
+      "solution": "Cliente Android nativo con Kotlin, Jetpack Compose, MVVM, Room y un mapa OpenStreetMap basado en osmdroid. Los datos actuales se cargan desde assets JSON y se persisten localmente.",
+      "architecture": "Arquitectura Android organizada por navegación, pantallas Compose, ViewModels y repositorio local. La separación con un backend Java/Spring Boot y una API REST es una línea de evolución planificada, no una parte presente del repositorio actual.",
+      "technologies": ["Kotlin", "Android", "Jetpack Compose", "Navigation Compose", "Material Design 3", "MVVM", "Coroutines", "StateFlow", "Room", "SQLite", "OpenStreetMap", "osmdroid", "kotlinx.serialization"],
+      "testing": "El repositorio contiene tests de ejemplo unitarios e instrumentados. La cobertura funcional específica de la aplicación todavía está pendiente.",
+      "deployment": "Aplicación Android ejecutable mediante Android Studio/Gradle. No existe actualmente un despliegue backend o Docker en el repositorio público.",
+      "api": "No existe una API REST propia en el repositorio público actual. Los datos se cargan desde assets JSON y se gestionan localmente.",
+      "integrations": "OpenStreetMap/osmdroid para el mapa. La futura integración Android ↔ backend Java/Spring Boot está planificada, pero aún no está implementada.",
       "repository": "https://github.com/AsKrueger/ExplorerSaga-Extremadura",
-      "documentation": "README del repositorio y documentación técnica disponible en GitHub.",
-      "tags": ["android", "backend", "java", "spring", "travel"]
+      "documentation": "README del repositorio y documentación técnica en docs/ (estado actual, arquitectura, API y base de datos).",
+      "tags": ["android", "kotlin", "compose", "room", "travel"]
     }
   ]
 }
