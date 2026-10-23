@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirigiendo…</title>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url={{ root }}{{ destination }}">
+    <link rel="canonical" href="{{ public_url }}{{ destination.split("#")[0] }}">
+</head>
+<body>
+    <p>Esta página se ha movido. <a href="{{ root }}{{ destination }}">Continuar</a>.</p>
+</body>
+</html>

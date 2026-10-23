@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}404 · {{ profile.name }}{% endblock %}
+
+{% block content %}
+<section class="section not-found">
+    <div class="container">
+        <pre class="terminal-body mono"><span class="t-prompt">$</span> curl -s <span class="t-url" data-path>/…</span>
+<span class="t-err">HTTP/1.1 404 Not Found</span>
+
+{
+  <span class="t-key">"error"</span>: <span class="t-str">"RESOURCE_NOT_FOUND"</span>,
+  <span class="t-key">"message"</span>: <span class="t-str">"Esta página no existe (o se mudó)."</span>,
+  <span class="t-key">"message_en"</span>: <span class="t-str">"This page doesn't exist (or it moved)."</span>
+}</pre>
+        <p class="hero-actions">
+            <a class="btn btn-primary" href="{{ root }}">Volver al inicio</a>
+            <a class="btn btn-ghost" href="{{ root }}en/" lang="en">Go to the English site</a>
+        </p>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,316 @@
+{
+  "skip": {
+    "es": "Saltar al contenido",
+    "en": "Skip to content"
+  },
+  "theme": {
+    "es": "Cambiar tema claro/oscuro",
+    "en": "Toggle light/dark theme"
+  },
+  "switch_lang": {
+    "es": "Read this page in English",
+    "en": "Leer esta página en español"
+  },
+  "menu_open": {
+    "es": "Abrir menú",
+    "en": "Open menu"
+  },
+  "menu_close": {
+    "es": "Cerrar menú",
+    "en": "Close menu"
+  },
+  "footer_built": {
+    "es": "Generado con Python + Jinja2 desde un",
+    "en": "Generated with Python + Jinja2 from a"
+  },
+  "nav": {
+    "label": {
+      "es": "Principal",
+      "en": "Main"
+    },
+    "home": {
+      "es": "Inicio",
+      "en": "Home"
+    },
+    "projects": {
+      "es": "Proyectos",
+      "en": "Projects"
+    },
+    "about": {
+      "es": "Sobre mí",
+      "en": "About"
+    },
+    "experience": {
+      "es": "Experiencia",
+      "en": "Experience"
+    },
+    "contact": {
+      "es": "Contacto",
+      "en": "Contact"
+    }
+  },
+  "hero": {
+    "cta_projects": {
+      "es": "Ver proyectos",
+      "en": "See projects"
+    },
+    "cta_cv": {
+      "es": "Ver CV",
+      "en": "View CV"
+    },
+    "cta_cv_pdf": {
+      "es": "CV en PDF",
+      "en": "CV (PDF)"
+    },
+    "terminal_label": {
+      "es": "Perfil resumido como respuesta JSON de una API",
+      "en": "Profile summary as a JSON API response"
+    },
+    "facts_label": {
+      "es": "Resumen rápido",
+      "en": "At a glance"
+    }
+  },
+  "projects": {
+    "title": {
+      "es": "Software con dominio, contratos y tests",
+      "en": "Software with a domain, contracts and tests"
+    },
+    "lead": {
+      "es": "Proyectos personales trabajados como en un equipo real: issues, ramas, ADRs, CI y documentación. Cada estado está indicado tal como es.",
+      "en": "Personal projects run like real team work: issues, branches, ADRs, CI and documentation. Every status is shown exactly as it is."
+    },
+    "read_case": {
+      "es": "Ver caso técnico",
+      "en": "Read the case study"
+    },
+    "has_diagram": {
+      "es": "arquitectura",
+      "en": "architecture"
+    },
+    "has_code": {
+      "es": "código real",
+      "en": "real code"
+    },
+    "more": {
+      "es": "Más proyectos",
+      "en": "More projects"
+    }
+  },
+  "about": {
+    "title": {
+      "es": "De la recepción de un Parador al backend",
+      "en": "From a hotel front desk to the backend"
+    },
+    "photo_alt": {
+      "es": "Foto de",
+      "en": "Photo of"
+    },
+    "base": {
+      "es": "base",
+      "en": "based in"
+    },
+    "modes": {
+      "es": "modalidad",
+      "en": "work mode"
+    },
+    "languages": {
+      "es": "Idiomas",
+      "en": "Languages"
+    },
+    "status": {
+      "es": "estado",
+      "en": "status"
+    }
+  },
+  "stack": {
+    "title": {
+      "es": "Herramientas que uso en mis proyectos",
+      "en": "Tools I use in my projects"
+    },
+    "also": {
+      "es": "también he trabajado con",
+      "en": "I've also worked with"
+    }
+  },
+  "experience": {
+    "title": {
+      "es": "Trayectoria",
+      "en": "Career"
+    }
+  },
+  "education": {
+    "kicker": {
+      "es": "Formación",
+      "en": "Education"
+    },
+    "title": {
+      "es": "Estudios",
+      "en": "Studies"
+    },
+    "certs": {
+      "es": "Certificaciones",
+      "en": "Certifications"
+    }
+  },
+  "contact": {
+    "title": {
+      "es": "¿Buscas un backend junior con ganas de aprender en serio?",
+      "en": "Looking for a junior backend developer who takes learning seriously?"
+    },
+    "lead": {
+      "es": "Estoy disponible ya, en Mérida o en remoto. Respondo rápido.",
+      "en": "I'm available now, in Mérida (Spain) or remotely. I reply fast."
+    },
+    "copy": {
+      "es": "Copiar email",
+      "en": "Copy email"
+    },
+    "copied": {
+      "es": "¡Copiado!",
+      "en": "Copied!"
+    },
+    "cv": {
+      "es": "CV para imprimir",
+      "en": "Printable CV"
+    },
+    "cv_pdf": {
+      "es": "Descargar CV en PDF",
+      "en": "Download CV (PDF)"
+    }
+  },
+  "case": {
+    "title_suffix": {
+      "es": "Caso técnico",
+      "en": "Case study"
+    },
+    "breadcrumb": {
+      "es": "Ruta",
+      "en": "Breadcrumb"
+    },
+    "repo": {
+      "es": "Ver repositorio",
+      "en": "View repository"
+    },
+    "all": {
+      "es": "Todos los proyectos",
+      "en": "All projects"
+    },
+    "problem": {
+      "es": "El problema",
+      "en": "The problem"
+    },
+    "architecture": {
+      "es": "Arquitectura",
+      "en": "Architecture"
+    },
+    "code": {
+      "es": "Un fragmento del código",
+      "en": "A look at the code"
+    },
+    "view_source": {
+      "es": "ver en GitHub",
+      "en": "view on GitHub"
+    },
+    "built": {
+      "es": "Qué he construido",
+      "en": "What I built"
+    },
+    "note_title": {
+      "es": "Transparencia:",
+      "en": "Transparency:"
+    },
+    "note": {
+      "es": "el estado indicado arriba refleja el README del repositorio. Lo que está planificado se marca como tal; el código y la documentación completa están en GitHub.",
+      "en": "the status above reflects the repository README. Anything planned is labelled as such; the full code and documentation are on GitHub."
+    },
+    "other": {
+      "es": "Otros proyectos",
+      "en": "Other projects"
+    },
+    "prev": {
+      "es": "anterior",
+      "en": "previous"
+    },
+    "next": {
+      "es": "siguiente",
+      "en": "next"
+    }
+  },
+  "diagram": {
+    "in": {
+      "es": "Entrada",
+      "en": "Driving side"
+    },
+    "out": {
+      "es": "Salida",
+      "en": "Driven side"
+    },
+    "pending": {
+      "es": "IaC definida · pendiente de aprovisionar",
+      "en": "IaC defined · not yet provisioned"
+    },
+    "fallback": {
+      "es": "si la API falla",
+      "en": "if the API fails"
+    },
+    "import": {
+      "es": "importación idempotente",
+      "en": "idempotent import"
+    },
+    "pure": {
+      "es": "Java puro · sin Spring ni JPA",
+      "en": "plain Java · no Spring, no JPA"
+    },
+    "hex_rule": {
+      "es": "Las dependencias apuntan hacia el dominio (ports & adapters).",
+      "en": "Dependencies point towards the domain (ports & adapters)."
+    },
+    "hex_label": {
+      "es": "Arquitectura hexagonal de Cosplay Journal: REST, consumidor Kafka y scheduler entran por puertos a los casos de uso y al dominio; PostgreSQL, Kafka, el scraper de ListadoManga y la seguridad son adaptadores de salida.",
+      "en": "Cosplay Journal hexagonal architecture: REST, a Kafka consumer and a scheduler enter through ports into use cases and the domain; PostgreSQL, Kafka, the ListadoManga scraper and security are driven adapters."
+    },
+    "cost_label": {
+      "es": "Arquitectura de 3D Cost Manager: app Android contra API REST Spring Boot, servicios, motor CostCalculator puro, PostgreSQL y API de ESIOS; debajo, la infraestructura AWS definida como código.",
+      "en": "3D Cost Manager architecture: Android app calling a Spring Boot REST API, services, a pure CostCalculator engine, PostgreSQL and the ESIOS API; below, the AWS infrastructure defined as code."
+    },
+    "explorer_label": {
+      "es": "Arquitectura de ExplorerSaga: la app Android pide los lugares al backend Spring Boot por Retrofit y, si falla, usa JSON locales; el backend importa lugares de OpenStreetMap y los guarda en PostgreSQL.",
+      "en": "ExplorerSaga architecture: the Android app requests places from the Spring Boot backend via Retrofit and falls back to local JSON; the backend imports places from OpenStreetMap into PostgreSQL."
+    }
+  },
+  "cv": {
+    "description": {
+      "es": "Currículum de",
+      "en": "Résumé of"
+    },
+    "toolbar": {
+      "es": "Una página, lista para descargar o imprimir.",
+      "en": "One page, ready to download or print."
+    },
+    "download": {
+      "es": "Descargar PDF",
+      "en": "Download PDF"
+    },
+    "print": {
+      "es": "Imprimir / guardar PDF",
+      "en": "Print / save as PDF"
+    },
+    "profile": {
+      "es": "Perfil",
+      "en": "Profile"
+    },
+    "projects": {
+      "es": "Proyectos destacados",
+      "en": "Featured projects"
+    },
+    "skills": {
+      "es": "Habilidades",
+      "en": "Skills"
+    },
+    "other": {
+      "es": "Otros",
+      "en": "Other"
+    }
+  }
+}

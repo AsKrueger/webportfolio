@@ -1,97 +1,426 @@
 {
-  "nombre": "Alonso Amador",
-  "titulo": "Junior Software Developer",
-  "subtitulo": "Backend Java / Spring Boot",
-  "descripcion": "Soy Alonso Amador, Junior Software Developer con orientación principal al backend en Java y Spring Boot. Estoy consolidando mi perfil profesional alrededor de APIs REST, persistencia con PostgreSQL, testing y buenas prácticas de diseño de software.",
-  "biografia": "Soy Alonso Amador, graduado en Desarrollo de Aplicaciones Multiplataforma y con experiencia previa en prácticas como desarrollador de aplicaciones. He trabajado con C#, Unity y tecnologías de desarrollo multiplataforma, y actualmente estoy orientando mi perfil profesional hacia el backend con Java, Spring Boot y arquitectura de software.",
-  "habilidades": [
-    "Java",
-    "Spring Boot",
-    "REST APIs",
-    "PostgreSQL",
-    "JPA / Hibernate",
-    "JUnit",
-    "Mockito",
-    "Docker",
-    "Docker Compose",
-    "Maven",
-    "Git / GitHub",
-    "SOLID",
-    "Hexagonal Architecture",
-    "Kotlin",
-    "C#",
-    "Python",
-    "SQL"
-  ],
-  "experiencia": [
-    {
-      "titulo": "Desarrollador de Aplicaciones",
-      "empresa": "CodeArts Solutions (Prácticas)",
-      "periodo": "sept. 2025 – nov. 2025",
-      "descripcion": "Desarrollé aplicaciones multiplataforma con C#, Unity y .NET participando en el ciclo completo: análisis, implementación, pruebas y entrega. Gestión de versiones con Git/GitHub y trabajo en sprints ágiles."
-    }
-  ],
-  "educacion": [
-    {
-      "titulo": "Técnico Superior DAM — Programación Multiplataforma",
-      "institucion": "Cesur FP",
-      "periodo": "oct. 2023 – dic. 2025",
-      "descripcion": "Formación en Java, Kotlin, C#, Python, SQL; desarrollo de apps Android, escritorio y web; acceso a datos y servicios en red."
-    }
-  ],
-  "certificaciones": [
-    {"nombre": "Lógica de Programación", "fecha": "feb. 2026"},
-    {"nombre": "Python Intermedio", "fecha": "feb. 2026"},
-    {"nombre": "SQL y Bases de Datos", "fecha": "ene. 2026"},
-    {"nombre": "Git y GitHub desde cero", "fecha": "ene. 2026"},
-    {"nombre": "Python desde cero", "fecha": "sept. 2025"}
-  ],
-  "idiomas": {
-    "es": "Nativo",
-    "en": "B1 Intermedio — lectura técnica fluida, comunicación profesional básica"
+  "site": {
+    "public_url": "https://askrueger.github.io/webportfolio/",
+    "avatar": "https://avatars.githubusercontent.com/u/156074850?v=4",
+    "og_image": "static/img/og.png",
+    "cv_pdf": "alonso-amador-sanchez-cv.pdf"
   },
-  "github_user": "AsKrueger",
-  "public_url": "https://askrueger.github.io/webportfolio/",
-  "linkedin_url": "https://www.linkedin.com/in/alonso-amador-sanchez",
+  "profile": {
+    "name": "Alonso Amador Sánchez",
+    "short_name": "Alonso Amador",
+    "handle": "alonso-amador",
+    "role": {"es": "Desarrollador de Software Junior", "en": "Junior Software Developer"},
+    "focus": "Backend · Java · Spring Boot",
+    "headline": {
+      "es": "Construyo backends en Java y Spring Boot: APIs REST con contratos claros, dominio protegido y tests que dejan dormir tranquilo.",
+      "en": "I build Java and Spring Boot backends: REST APIs with clear contracts, a protected domain and tests you can sleep on."
+    },
+    "location": "Mérida, Extremadura",
+    "country": {"es": "España", "en": "Spain"},
+    "availability": {"es": "Disponibilidad inmediata", "en": "Available now"},
+    "work_modes": {"es": ["Presencial", "Híbrido", "Remoto"], "en": ["On-site", "Hybrid", "Remote"]},
+    "about": {
+      "es": [
+        "Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (Cesur) y he trabajado como desarrollador de aplicaciones en CodeArts Solutions con C#, Unity y .NET. Hoy mi foco está en el backend: Java, Spring Boot, PostgreSQL y arquitectura limpia.",
+        "Antes de programar estudié Turismo en la Universidad de Extremadura y trabajé en la recepción del Parador de Mérida. De ahí me traigo algo que no se aprende en un tutorial: entender qué necesita la persona al otro lado y explicarlo con claridad.",
+        "Me gusta trabajar como en un equipo real aunque el proyecto sea mío: issues, ramas, ADRs, CI y documentación que cuenta la verdad sobre el estado del código."
+      ],
+      "en": [
+        "I hold a Higher National Diploma in Cross-Platform Application Development (Cesur) and worked as an application developer at CodeArts Solutions with C#, Unity and .NET. Today my focus is the backend: Java, Spring Boot, PostgreSQL and clean architecture.",
+        "Before coding I studied Tourism at the University of Extremadura and worked the front desk at the Parador de Mérida hotel. That taught me something no tutorial does: understanding what the person on the other side needs and explaining things clearly.",
+        "I like working as if I were on a real team even on my own projects: issues, branches, ADRs, CI and documentation that tells the truth about the state of the code."
+      ]
+    },
+    "principles": [
+      {"title": {"es": "Dominio primero", "en": "Domain first"}, "text": {"es": "Agregados que protegen sus invariantes y lógica de negocio desacoplada del framework.", "en": "Aggregates that guard their invariants and business logic decoupled from the framework."}},
+      {"title": {"es": "Contratos claros", "en": "Clear contracts"}, "text": {"es": "APIs REST versionadas, errores homogéneos y especificación OpenAPI.", "en": "Versioned REST APIs, consistent errors and an OpenAPI spec."}},
+      {"title": {"es": "Tests de verdad", "en": "Real tests"}, "text": {"es": "JUnit 5, Mockito y Testcontainers contra PostgreSQL y Kafka reales.", "en": "JUnit 5, Mockito and Testcontainers against real PostgreSQL and Kafka."}},
+      {"title": {"es": "Documentación honesta", "en": "Honest docs"}, "text": {"es": "README, ADRs y roadmap que dicen qué está hecho y qué no.", "en": "READMEs, ADRs and roadmaps that say what is done and what is not."}}
+    ]
+  },
+  "quick_facts": [
+    {"value": "3", "label": {"es": "backends Spring Boot con PostgreSQL y Flyway", "en": "Spring Boot backends with PostgreSQL and Flyway"}},
+    {"value": "4", "label": {"es": "repos con CI en GitHub Actions", "en": "repos with CI on GitHub Actions"}},
+    {"value": "20+", "label": {"es": "decisiones técnicas documentadas (ADRs)", "en": "documented technical decisions (ADRs)"}},
+    {"value": {"es": "Ya", "en": "Now"}, "label": {"es": "incorporación · presencial, híbrido o remoto", "en": "start date · on-site, hybrid or remote"}}
+  ],
   "contact": {
-    "email": "alonsoamador.sanchez@gmail.com",
+    "email": "alonsoamadorsanchez@gmail.com",
     "github": "https://github.com/AsKrueger",
-    "linkedin": "https://www.linkedin.com/in/alonso-amador-sanchez"
+    "github_user": "AsKrueger",
+    "linkedin": "https://www.linkedin.com/in/alonso-amador"
   },
+  "skills": [
+    {"group": "Backend", "items": ["Java 17/21", "Spring Boot 3", "Spring Security + JWT", "REST / OpenAPI", "JPA / Hibernate", "Apache Kafka", "NestJS"]},
+    {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL", "SQL", "Flyway", "Prisma", "Room / SQLite"]},
+    {"group": {"es": "Calidad", "en": "Quality"}, "items": ["JUnit 5", "Mockito", "Testcontainers", "Vitest", "Jest"]},
+    {"group": "DevOps", "items": ["Docker", "Docker Compose", "GitHub Actions", "AWS (CloudFormation, EC2, RDS)", "Maven", "Gradle"]},
+    {"group": {"es": "Cliente", "en": "Client"}, "items": ["Kotlin", "Jetpack Compose", "Retrofit", "React", "Angular", "TypeScript"]},
+    {"group": {"es": "Arquitectura", "en": "Architecture"}, "items": ["Hexagonal", {"es": "DDD táctico", "en": "Tactical DDD"}, "MVVM", "SOLID", "ADRs"]}
+  ],
+  "also_know": ["C#", ".NET", "Unity", "Python", "Git / GitHub"],
+  "experience": [
+    {
+      "role": {"es": "Desarrollador de aplicaciones", "en": "Application Developer"},
+      "company": "CodeArts Solutions",
+      "type": {"es": "Prácticas · Remoto", "en": "Internship · Remote"},
+      "period": {"es": "sept. 2025 – ene. 2026", "en": "Sep 2025 – Jan 2026"},
+      "points": {
+        "es": [
+          "Desarrollo de aplicaciones multiplataforma con C#, Unity y .NET.",
+          "Participación en el ciclo completo: análisis, implementación, pruebas y entrega.",
+          "Trabajo en sprints ágiles con control de versiones en Git/GitHub."
+        ],
+        "en": [
+          "Built cross-platform applications with C#, Unity and .NET.",
+          "Took part in the full cycle: analysis, implementation, testing and delivery.",
+          "Worked in agile sprints with version control on Git/GitHub."
+        ]
+      },
+      "tech": ["C#", ".NET", "Unity", "Git"]
+    },
+    {
+      "role": {"es": "Ayudante de recepción", "en": "Front Desk Assistant"},
+      "company": "Parador de Mérida",
+      "type": {"es": "Contrato temporal · Mérida", "en": "Fixed-term contract · Mérida"},
+      "period": {"es": "abr. 2022 – ago. 2023", "en": "Apr 2022 – Aug 2023"},
+      "points": {
+        "es": [
+          "Atención al cliente en recepción, primero en prácticas (abr. – sept. 2022) y después con contrato (oct. 2022 – ago. 2023).",
+          "Servicio de atención al cliente y turismo sostenible en un entorno de alta exigencia."
+        ],
+        "en": [
+          "Front desk guest service, first as an intern (Apr – Sep 2022) and then under contract (Oct 2022 – Aug 2023).",
+          "Customer service and sustainable tourism in a demanding environment."
+        ]
+      },
+      "tech": []
+    }
+  ],
+  "education": [
+    {
+      "title": {"es": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma", "en": "Higher National Diploma in Cross-Platform Application Development"},
+      "school": "Cesur",
+      "period": {"es": "oct. 2023 – dic. 2025", "en": "Oct 2023 – Dec 2025"},
+      "detail": {
+        "es": "Java, Kotlin, C#, Python y SQL. Android, escritorio, acceso a datos y servicios en red. TFG: ExplorerSaga Extremadura.",
+        "en": "Java, Kotlin, C#, Python and SQL. Android, desktop, data access and network services. Final project: ExplorerSaga Extremadura."
+      }
+    },
+    {
+      "title": {"es": "Grado en Turismo", "en": "Bachelor's Degree in Tourism"},
+      "school": {"es": "Universidad de Extremadura", "en": "University of Extremadura"},
+      "period": {"es": "sept. 2018 – jun. 2024", "en": "Sep 2018 – Jun 2024"},
+      "detail": {
+        "es": "Gestión, atención al cliente y turismo sostenible. El origen de ExplorerSaga y Wayly.",
+        "en": "Management, customer service and sustainable tourism. Where ExplorerSaga and Wayly come from."
+      }
+    }
+  ],
+  "certifications": [
+    {"name": {"es": "Lógica de programación", "en": "Programming Logic"}, "issuer": "mouredev pro", "date": {"es": "feb. 2026", "en": "Feb 2026"}},
+    {"name": {"es": "Python intermedio", "en": "Intermediate Python"}, "issuer": "mouredev pro", "date": {"es": "feb. 2026", "en": "Feb 2026"}},
+    {"name": {"es": "SQL y bases de datos", "en": "SQL and Databases"}, "issuer": "", "date": {"es": "ene. 2026", "en": "Jan 2026"}},
+    {"name": {"es": "Git y GitHub desde cero", "en": "Git and GitHub from Scratch"}, "issuer": "", "date": {"es": "ene. 2026", "en": "Jan 2026"}},
+    {"name": {"es": "Python desde cero", "en": "Python from Scratch"}, "issuer": "", "date": {"es": "sept. 2025", "en": "Sep 2025"}}
+  ],
+  "languages": [
+    {"name": {"es": "Español", "en": "Spanish"}, "level": {"es": "Nativo", "en": "Native"}},
+    {"name": {"es": "Inglés", "en": "English"}, "level": {"es": "B1 · lectura técnica fluida", "en": "B1 · fluent technical reading"}}
+  ],
   "projects": [
+    {
+      "slug": "cosplay-journal",
+      "name": "Cosplay Journal",
+      "tagline": {"es": "Plataforma para cosplayers: eventos, proyectos y grupos.", "en": "A platform for cosplayers: events, projects and groups."},
+      "kind": "Backend · Java 21",
+      "status": {"es": "Backend en desarrollo activo", "en": "Backend in active development"},
+      "status_level": "active",
+      "featured": true,
+      "summary": {
+        "es": "Backend en Java 21 y Spring Boot 3 con arquitectura hexagonal que importa eventos de cosplay reales, gestiona proyectos (cosplans) y coordina participaciones individuales, en dúo y en grupo.",
+        "en": "A Java 21 and Spring Boot 3 backend with hexagonal architecture that imports real cosplay events, manages projects (cosplans) and coordinates solo, duo and group entries."
+      },
+      "problem": {
+        "es": "Los cosplayers organizan eventos, materiales, presupuestos y grupos entre hojas de cálculo, chats y webs de eventos dispersas.",
+        "en": "Cosplayers juggle events, materials, budgets and groups across spreadsheets, chats and scattered event websites."
+      },
+      "highlights": {
+        "es": [
+          "Arquitectura hexagonal (ports & adapters) con el dominio desacoplado de la infraestructura.",
+          "Agregados con límites de consistencia e invariantes de negocio explícitos.",
+          "Eventos de dominio publicados en Apache Kafka.",
+          "Spring Security + JWT y autorización por propiedad del recurso (403 cuando no es tuyo).",
+          "Scraper de ListadoManga con Jsoup, sincronización idempotente, scheduler, timeouts y reintentos con backoff exponencial.",
+          "API REST /api/v1 documentada con OpenAPI 3 y Swagger UI.",
+          "Tests de integración con Testcontainers (PostgreSQL 16 y Kafka) y CI en GitHub Actions.",
+          "13 ADRs documentados y 16 issues cerradas; la siguiente es integrar el cliente Android."
+        ],
+        "en": [
+          "Hexagonal architecture (ports & adapters) with the domain decoupled from infrastructure.",
+          "Aggregates with explicit consistency boundaries and business invariants.",
+          "Domain events published to Apache Kafka.",
+          "Spring Security + JWT and resource-ownership authorization (403 when it isn't yours).",
+          "ListadoManga scraper with Jsoup, idempotent sync, scheduler, timeouts and retries with exponential backoff.",
+          "REST API /api/v1 documented with OpenAPI 3 and Swagger UI.",
+          "Integration tests with Testcontainers (PostgreSQL 16 and Kafka) and CI on GitHub Actions.",
+          "13 ADRs written and 16 issues closed; next up is wiring the Android client."
+        ]
+      },
+      "stack": [
+        {"group": "Backend", "items": ["Java 21", "Spring Boot 3", "Spring Security", "JWT", "Apache Kafka", "Jsoup", "OpenAPI"]},
+        {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL 16", "JPA / Hibernate", "Flyway"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["JUnit 5", "Mockito", "Testcontainers", "GitHub Actions", "Docker"]},
+        {"group": {"es": "Cliente", "en": "Client"}, "items": ["Android", "Jetpack Compose", "Material 3"]}
+      ],
+      "metrics": [
+        {"value": "16", "label": {"es": "issues cerradas", "en": "issues closed"}},
+        {"value": "13", "label": "ADRs"},
+        {"value": "Kafka", "label": {"es": "eventos de dominio", "en": "domain events"}}
+      ],
+      "snippet": {
+        "file": "snippets/cosplay-journal.java",
+        "lang": "java",
+        "path": "domain/model/participation/Participation.java",
+        "url": "https://github.com/AsKrueger/Cosplay-Journal/blob/main/backend/src/main/java/com/cosplayjournal/domain/model/participation/Participation.java",
+        "caption": {
+          "es": "El agregado Participation protege sus propias reglas: un dúo no admite un tercer participante y una participación de grupo no puede confirmarse con menos de tres. Ningún controlador ni servicio puede saltárselo.",
+          "en": "The Participation aggregate enforces its own rules: a duo can't take a third member and a group entry can't be confirmed with fewer than three. No controller or service can bypass it."
+        }
+      },
+      "repository": "https://github.com/AsKrueger/Cosplay-Journal"
+    },
     {
       "slug": "3d-cost-manager",
       "name": "3D Cost Manager",
-      "status": "En evolución",
+      "tagline": {"es": "Gestión de proyectos y presupuestos de impresión 3D.", "en": "Project and quote management for 3D printing."},
+      "kind": "Full stack · Java + Kotlin",
+      "status": "v1.0.0",
+      "status_level": "stable",
       "featured": true,
-      "summary": "Aplicación para gestionar y calcular costes relacionados con impresión 3D, con lógica de negocio para materiales, maquinaria, herramientas y presupuestos.",
-      "problem": "Necesidad de centralizar y calcular costes asociados a impresión 3D con criterios técnicos y de negocio.",
-      "solution": "Desarrollo de una aplicación que gestiona proyectos, materiales, máquinas y presupuestos con cálculo de costes y estructura backend orientada a negocio.",
-      "architecture": "Estructura de dominio con separación de lógica de negocio, persistencia y servicios. Evoluciona hacia una arquitectura más clara con capas, buenas prácticas y testing.",
-      "technologies": ["Java", "Spring Boot", "PostgreSQL", "JPA / Hibernate", "Docker", "JUnit", "Mockito", "Flyway", "Maven"],
-      "testing": "JUnit y Mockito para validar la lógica de negocio y los servicios clave del dominio.",
-      "deployment": "Docker y Docker Compose como entorno de ejecución y despliegue local para la aplicación.",
-      "repository": "https://github.com/AsKrueger/Calculadora3D",
-      "documentation": "README del repositorio y documentación técnica disponible en GitHub.",
-      "tags": ["backend", "java", "spring", "postgresql", "testing"]
+      "summary": {
+        "es": "Backend Spring Boot con un motor de cálculo de costes y un cliente Android nativo. A partir de materiales, máquinas, mano de obra, márgenes y la tarifa eléctrica real de ESIOS, genera presupuestos inmutables.",
+        "en": "A Spring Boot backend with a cost calculation engine and a native Android client. From materials, machines, labour, margins and the real ESIOS electricity rate, it produces immutable quotes."
+      },
+      "problem": {
+        "es": "Calcular con precisión el coste real de una pieza impresa en 3D (material, máquina, electricidad, post-procesado y margen) y dejar un presupuesto que no cambie después de emitirlo.",
+        "en": "Accurately calculating the real cost of a 3D-printed part (material, machine, electricity, post-processing and margin) and issuing a quote that never changes afterwards."
+      },
+      "highlights": {
+        "es": [
+          "Motor de cálculo puro (CostCalculator) desacoplado del ORM, con BigDecimal y redondeo HALF_UP deterministas.",
+          "DDD táctico: agregados Project y Quote, proyectos archivados inmodificables y snapshots financieros inmutables.",
+          "Contrato de errores REST unificado (ApiError + GlobalExceptionHandler) sin filtrar trazas internas.",
+          "JWT con secreto inyectado y validado al arrancar; BCrypt para contraseñas.",
+          "Cliente Android con MVVM, Retrofit y sesión cifrada con EncryptedSharedPreferences (AES-256).",
+          "Infraestructura como código en AWS (VPC, RDS, EC2 ARM64, Parameter Store) y pipeline de GitHub Actions hacia ECR y EC2. Definida y validada en código; pendiente de aprovisionar en una cuenta real.",
+          "69 tests unitarios y de integración en el backend."
+        ],
+        "en": [
+          "Pure calculation engine (CostCalculator) decoupled from the ORM, with deterministic BigDecimal and HALF_UP rounding.",
+          "Tactical DDD: Project and Quote aggregates, read-only archived projects and immutable financial snapshots.",
+          "Unified REST error contract (ApiError + GlobalExceptionHandler) that never leaks internal traces.",
+          "JWT with an injected secret validated at startup; BCrypt for passwords.",
+          "Android client with MVVM, Retrofit and an encrypted session in EncryptedSharedPreferences (AES-256).",
+          "Infrastructure as code on AWS (VPC, RDS, ARM64 EC2, Parameter Store) and a GitHub Actions pipeline to ECR and EC2. Defined and validated in code; not yet provisioned on a real account.",
+          "69 unit and integration tests in the backend."
+        ]
+      },
+      "stack": [
+        {"group": "Backend", "items": ["Java 21", "Spring Boot 3.2", "Spring Security", "JWT", "ESIOS API"]},
+        {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL 16", "JPA / Hibernate", "Flyway"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["JUnit 5", "Mockito", "Testcontainers", "Docker", "GitHub Actions"]},
+        {"group": "Cloud", "items": ["CloudFormation", "EC2", "RDS", "ECR", "SSM Parameter Store"]},
+        {"group": {"es": "Cliente", "en": "Client"}, "items": ["Kotlin", "Jetpack Compose", "Retrofit", "Coroutines"]}
+      ],
+      "metrics": [
+        {"value": "69", "label": {"es": "tests en backend", "en": "backend tests"}},
+        {"value": "BigDecimal", "label": {"es": "cálculo determinista", "en": "deterministic maths"}},
+        {"value": "AWS IaC", "label": "CloudFormation"}
+      ],
+      "snippet": {
+        "file": "snippets/3d-cost-manager.java",
+        "lang": "java",
+        "path": "domain/calculation/CostCalculator.java",
+        "url": "https://github.com/AsKrueger/Calculadora3D/blob/main/backend/src/main/java/com/tdcostmanager/backend/domain/calculation/CostCalculator.java",
+        "caption": {
+          "es": "El motor de costes es Java puro: no conoce Spring ni JPA. Calcula con 8 decimales internos, redondea a 4 al final y recibe el precio de la luz a través de un puerto (ElectricityPriceProvider), así que se prueba sin red ni base de datos.",
+          "en": "The cost engine is plain Java: it knows nothing about Spring or JPA. It works with 8 internal decimals, rounds to 4 at the end and gets the electricity price through a port (ElectricityPriceProvider), so it is tested without network or database."
+        }
+      },
+      "repository": "https://github.com/AsKrueger/Calculadora3D"
     },
     {
       "slug": "explorersaga",
-      "name": "ExplorerSaga",
-      "status": "Android funcional · Backend planificado",
+      "name": "ExplorerSaga Extremadura",
+      "tagline": {"es": "Guía turística de Mérida. Mi Trabajo de Fin de Grado.", "en": "A tourist guide to Mérida. My final degree project."},
+      "kind": "Android + Backend",
+      "status": {"es": "MVP · TFG", "en": "MVP · Final project"},
+      "status_level": "stable",
       "featured": true,
-      "summary": "Aplicación turística Android para descubrir monumentos, gastronomía y comercios de Mérida y Extremadura mediante Kotlin, Jetpack Compose, Room y OpenStreetMap.",
-      "problem": "Facilitar el descubrimiento de patrimonio y actividades locales de una manera clara y accesible para usuarios interesados en la zona.",
-      "solution": "Cliente Android nativo con Kotlin, Jetpack Compose, MVVM, Room y un mapa OpenStreetMap basado en osmdroid. Los datos actuales se cargan desde assets JSON y se persisten localmente.",
-      "architecture": "Arquitectura Android organizada por navegación, pantallas Compose, ViewModels y repositorio local. La separación con un backend Java/Spring Boot y una API REST es una línea de evolución planificada, no una parte presente del repositorio actual.",
-      "technologies": ["Kotlin", "Android", "Jetpack Compose", "Navigation Compose", "Material Design 3", "MVVM", "Coroutines", "StateFlow", "Room", "SQLite", "OpenStreetMap", "osmdroid", "kotlinx.serialization"],
-      "testing": "El repositorio contiene tests de ejemplo unitarios e instrumentados. La cobertura funcional específica de la aplicación todavía está pendiente.",
-      "deployment": "Aplicación Android ejecutable mediante Android Studio/Gradle. No existe actualmente un despliegue backend o Docker en el repositorio público.",
-      "api": "No existe una API REST propia en el repositorio público actual. Los datos se cargan desde assets JSON y se gestionan localmente.",
-      "integrations": "OpenStreetMap/osmdroid para el mapa. La futura integración Android ↔ backend Java/Spring Boot está planificada, pero aún no está implementada.",
-      "repository": "https://github.com/AsKrueger/ExplorerSaga-Extremadura",
-      "documentation": "README del repositorio y documentación técnica en docs/ (estado actual, arquitectura, API y base de datos).",
-      "tags": ["android", "kotlin", "compose", "room", "travel"]
+      "summary": {
+        "es": "App Android nativa en Kotlin y Jetpack Compose para descubrir monumentos, restaurantes y comercios de Mérida en listas y un mapa OpenStreetMap, respaldada por un backend Spring Boot que importa lugares desde Overpass API.",
+        "en": "A native Android app in Kotlin and Jetpack Compose to discover Mérida's monuments, restaurants and shops through lists and an OpenStreetMap map, backed by a Spring Boot service that imports places from the Overpass API."
+      },
+      "problem": {
+        "es": "La información turística de Mérida está repartida. Quería una guía visual y sencilla que juntara la historia de la ciudad con un mapa de lo que hay que ver, comer y comprar.",
+        "en": "Tourist information about Mérida is scattered. I wanted a simple, visual guide that brings the city's history together with a map of what to see, eat and buy."
+      },
+      "highlights": {
+        "es": [
+          "Cliente Android con MVVM, Navigation Compose y Material Design 3.",
+          "Mapa OpenStreetMap (osmdroid) con marcadores por categoría y BottomSheet informativo.",
+          "Backend Spring Boot hexagonal con API REST /api/v1/places, filtrado por categoría y Swagger.",
+          "Importación idempotente de lugares desde OpenStreetMap (Overpass API), sin coste de licencias.",
+          "Integración con Retrofit y modo local de respaldo (assets JSON) cuando el servidor no responde, con indicador de origen de datos y reintento.",
+          "Proyecto llevado de principio a fin de forma autónoma."
+        ],
+        "en": [
+          "Android client with MVVM, Navigation Compose and Material Design 3.",
+          "OpenStreetMap map (osmdroid) with category markers and an info BottomSheet.",
+          "Hexagonal Spring Boot backend with a REST API /api/v1/places, category filtering and Swagger.",
+          "Idempotent import of places from OpenStreetMap (Overpass API), with no licensing cost.",
+          "Retrofit integration with a local fallback (JSON assets) when the server is down, plus a data-source indicator and retry.",
+          "Built end to end on my own."
+        ]
+      },
+      "stack": [
+        {"group": {"es": "Cliente", "en": "Client"}, "items": ["Kotlin", "Jetpack Compose", "Navigation Compose", "Material 3", "Retrofit", "osmdroid"]},
+        {"group": "Backend", "items": ["Java 17", "Spring Boot 3", "REST / OpenAPI", "Overpass API"]},
+        {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL 15", "Flyway", "Room / SQLite"]}
+      ],
+      "metrics": [
+        {"value": {"es": "TFG", "en": "Thesis"}, "label": "DAM · Cesur"},
+        {"value": "OSM", "label": {"es": "mapas sin coste", "en": "free maps"}},
+        {"value": "Offline", "label": {"es": "respaldo local", "en": "local fallback"}}
+      ],
+      "snippet": {
+        "file": "snippets/explorersaga.kt",
+        "lang": "kotlin",
+        "path": "app/…/data/PlaceRepository.kt",
+        "url": "https://github.com/AsKrueger/ExplorerSaga-Extremadura/blob/main/app/src/main/java/com/alonso/explorersaga/data/PlaceRepository.kt",
+        "caption": {
+          "es": "El repositorio intenta primero la API y, si falla o no hay datos, cae a los JSON locales. Devuelve también el origen de los datos para que la interfaz muestre si estás conectado al backend o en modo local.",
+          "en": "The repository tries the API first and falls back to local JSON if it fails or returns nothing. It also returns where the data came from, so the UI can show whether you're on the backend or in local mode."
+        }
+      },
+      "repository": "https://github.com/AsKrueger/ExplorerSaga-Extremadura"
+    },
+    {
+      "slug": "pantrymind",
+      "name": "PantryMind",
+      "tagline": {"es": "Aprovecha todos los alimentos de tu despensa.", "en": "Make the most of everything in your pantry."},
+      "kind": "Monorepo · TypeScript",
+      "status": {"es": "Fase inicial", "en": "Early stage"},
+      "status_level": "early",
+      "featured": false,
+      "summary": {
+        "es": "Monorepo con API en NestJS y web en React para gestionar inventario, recetas y lista de la compra. Ya tiene registro, inicio de sesión con tokens y rutas protegidas; la lógica de producto viene después.",
+        "en": "A monorepo with a NestJS API and a React web app to manage pantry stock, recipes and shopping lists. Sign-up, token login and protected routes are in place; product features come next."
+      },
+      "problem": {
+        "es": "Se compra lo que ya hay en casa, otras cosas caducan sin usarse y cuesta decidir qué cocinar con lo disponible.",
+        "en": "People buy what they already have, other food expires unused, and it's hard to decide what to cook with what's on hand."
+      },
+      "highlights": {
+        "es": [
+          "Workspaces de npm con un único lockfile para la API y la web.",
+          "Autenticación con tokens y rutas protegidas en NestJS.",
+          "Prisma ORM sobre PostgreSQL 18 en Docker, con una base de datos separada para tests de integración.",
+          "Decisiones registradas en ADRs y guías de instalación para Windows y Linux.",
+          "CI en GitHub Actions."
+        ],
+        "en": [
+          "npm workspaces with a single lockfile for the API and the web app.",
+          "Token authentication and protected routes in NestJS.",
+          "Prisma ORM on PostgreSQL 18 in Docker, with a separate database for integration tests.",
+          "Decisions recorded in ADRs and setup guides for Windows and Linux.",
+          "CI on GitHub Actions."
+        ]
+      },
+      "stack": [
+        {"group": "Backend", "items": ["NestJS", "TypeScript", "Prisma"]},
+        {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL 18", "Docker Compose"]},
+        {"group": {"es": "Cliente", "en": "Client"}, "items": ["React 19", "Vite"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["Vitest", "Testing Library", "GitHub Actions"]}
+      ],
+      "metrics": [],
+      "repository": "https://github.com/AsKrueger/PantryMind"
+    },
+    {
+      "slug": "wayly",
+      "name": "Wayly",
+      "tagline": {"es": "Tu tiempo. Tu lugar. Tu plan.", "en": "Your time. Your place. Your plan."},
+      "kind": "Frontend · Angular",
+      "status": {"es": "En desarrollo", "en": "In development"},
+      "status_level": "active",
+      "featured": false,
+      "summary": {
+        "es": "Aplicación web que propone qué hacer en una ciudad según el tiempo libre, el presupuesto y las preferencias, con recomendaciones explicables que se pueden comparar.",
+        "en": "A web app that suggests what to do in a city based on free time, budget and preferences, with explainable recommendations you can compare."
+      },
+      "problem": {
+        "es": "Tener dos horas libres en una ciudad y no saber en qué invertirlas sin abrir diez pestañas.",
+        "en": "Having two free hours in a city and no idea how to spend them without opening ten tabs."
+      },
+      "highlights": {
+        "es": [
+          "Angular 18 con standalone components y TypeScript estricto.",
+          "Motor de propuestas explicable sobre un catálogo tipado e intercambiable.",
+          "Mapa Leaflet opcional que solo pide teselas cuando hay coordenadas válidas.",
+          "Sistema de diseño con tokens y estados accesibles documentados.",
+          "Jest, ESLint y 8 ADRs; principio de coste cero."
+        ],
+        "en": [
+          "Angular 18 with standalone components and strict TypeScript.",
+          "Explainable suggestion engine over a typed, swappable catalogue.",
+          "Optional Leaflet map that only requests tiles when coordinates are valid.",
+          "Design system with tokens and documented accessible states.",
+          "Jest, ESLint and 8 ADRs; zero-cost principle."
+        ]
+      },
+      "stack": [
+        {"group": {"es": "Cliente", "en": "Client"}, "items": ["Angular 18", "TypeScript", "Leaflet"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["Jest", "ESLint"]}
+      ],
+      "metrics": [],
+      "repository": "https://github.com/AsKrueger/Wayly"
+    },
+    {
+      "slug": "bingogoals",
+      "name": "BingoGoals",
+      "tagline": {"es": "Tus metas convertidas en un cartón de bingo.", "en": "Your goals turned into a bingo card."},
+      "kind": "Monorepo · TypeScript",
+      "status": {"es": "Reconstrucción en curso", "en": "Rebuild in progress"},
+      "status_level": "active",
+      "featured": false,
+      "summary": {
+        "es": "Cada casilla es un objetivo y al completarlos cantas línea o bingo. Nació como prototipo en Flutter y se está reconstruyendo como web React con una API NestJS.",
+        "en": "Each square is a goal, and completing them gets you a line or a bingo. It started as a Flutter prototype and is being rebuilt as a React web app with a NestJS API."
+      },
+      "problem": {
+        "es": "Los propósitos de año nuevo se olvidan en febrero. Un formato de juego hace que apetezca volver a ellos.",
+        "en": "New Year's resolutions are forgotten by February. A game format makes you want to come back to them."
+      },
+      "highlights": {
+        "es": [
+          "Migración desde un prototipo Flutter, conservado en la etiqueta flutter-prototype-final como referencia de reglas y diseño.",
+          "Monorepo con web React + Vite y API NestJS.",
+          "ESLint, Prettier, typecheck y tests en cada pull request con GitHub Actions."
+        ],
+        "en": [
+          "Migration from a Flutter prototype, kept under the flutter-prototype-final tag as a reference for rules and design.",
+          "Monorepo with a React + Vite web app and a NestJS API.",
+          "ESLint, Prettier, typecheck and tests on every pull request with GitHub Actions."
+        ]
+      },
+      "stack": [
+        {"group": {"es": "Cliente", "en": "Client"}, "items": ["React", "Vite", "TypeScript"]},
+        {"group": "Backend", "items": ["NestJS"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["Vitest", "ESLint", "Prettier", "GitHub Actions"]}
+      ],
+      "metrics": [],
+      "repository": "https://github.com/AsKrueger/BingoGoals"
     }
   ]
 }

@@ -1,0 +1,64 @@
+<svg class="dg" viewBox="0 0 820 440" role="img" aria-label="{{ t.diagram.hex_label }}" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="dg-arrow-cj" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path class="dg-head" d="M0 0L10 5L0 10z"/>
+        </marker>
+    </defs>
+
+    <text class="dg-label" x="10" y="26">{{ t.diagram["in"] }}</text>
+    <text class="dg-label" x="810" y="26" text-anchor="end">{{ t.diagram.out }}</text>
+
+    <!-- Adaptadores de entrada -->
+    <rect class="dg-box" x="10" y="64" width="170" height="72" rx="10"/>
+    <text class="dg-t" x="24" y="94">REST API</text>
+    <text class="dg-s" x="24" y="114">/api/v1 · OpenAPI</text>
+    <text class="dg-s" x="24" y="128">JWT filter</text>
+
+    <rect class="dg-box" x="10" y="179" width="170" height="72" rx="10"/>
+    <text class="dg-t" x="24" y="209">Kafka consumer</text>
+    <text class="dg-s" x="24" y="229">ParticipantJoined</text>
+
+    <rect class="dg-box" x="10" y="294" width="170" height="72" rx="10"/>
+    <text class="dg-t" x="24" y="324">Scheduler</text>
+    <text class="dg-s" x="24" y="344">sync ListadoManga</text>
+
+    <!-- Hexágono: aplicación + dominio -->
+    <polygon class="dg-hex" points="235,215 322.5,63.4 497.5,63.4 585,215 497.5,366.6 322.5,366.6"/>
+    <text class="dg-t" x="410" y="96" text-anchor="middle">Application</text>
+    <text class="dg-s" x="410" y="113" text-anchor="middle">use cases · port.in / port.out</text>
+    <text class="dg-s" x="410" y="335" text-anchor="middle">CurrentUserPort · ownership</text>
+
+    <polygon class="dg-core" points="315,215 362.5,132.7 457.5,132.7 505,215 457.5,297.3 362.5,297.3"/>
+    <text class="dg-t dg-t-accent" x="410" y="186" text-anchor="middle">Domain</text>
+    <text class="dg-s" x="410" y="207" text-anchor="middle">Participation · Event</text>
+    <text class="dg-s" x="410" y="223" text-anchor="middle">Cosplay · User</text>
+    <text class="dg-s dg-s-accent" x="410" y="246" text-anchor="middle">domain events</text>
+
+    <!-- Adaptadores de salida -->
+    <rect class="dg-box" x="640" y="44" width="170" height="62" rx="10"/>
+    <text class="dg-t" x="654" y="70">PostgreSQL 16</text>
+    <text class="dg-s" x="654" y="90">JPA · Flyway</text>
+
+    <rect class="dg-box" x="640" y="134" width="170" height="62" rx="10"/>
+    <text class="dg-t" x="654" y="160">Apache Kafka</text>
+    <text class="dg-s" x="654" y="180">event publisher</text>
+
+    <rect class="dg-box" x="640" y="224" width="170" height="62" rx="10"/>
+    <text class="dg-t" x="654" y="250">ListadoManga</text>
+    <text class="dg-s" x="654" y="270">Jsoup · retry · backoff</text>
+
+    <rect class="dg-box" x="640" y="314" width="170" height="62" rx="10"/>
+    <text class="dg-t" x="654" y="340">Security</text>
+    <text class="dg-s" x="654" y="360">JWT · BCrypt</text>
+
+    <!-- Flechas -->
+    <path class="dg-line" d="M180 100H294" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M180 215H229" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M180 330H294" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M508 75H634" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M561 165H634" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M567 255H634" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M516 345H634" marker-end="url(#dg-arrow-cj)"/>
+
+    <text class="dg-note" x="410" y="420" text-anchor="middle">{{ t.diagram.hex_rule }}</text>
+</svg>
