@@ -307,8 +307,8 @@
         "path": "app/…/data/PlaceRepository.kt",
         "url": "https://github.com/AsKrueger/ExplorerSaga-Extremadura/blob/main/app/src/main/java/com/alonso/explorersaga/data/PlaceRepository.kt",
         "caption": {
-          "es": "El repositorio intenta primero la API y, si falla o no hay datos, cae a los JSON locales. Devuelve también el origen de los datos para que la interfaz muestre si estás conectado al backend o en modo local.",
-          "en": "The repository tries the API first and falls back to local JSON if it fails or returns nothing. It also returns where the data came from, so the UI can show whether you're on the backend or in local mode."
+          "es": "El repositorio pide los lugares a la API y guarda la respuesta en Room. Si no hay red o no llegan datos, sirve la última copia guardada y, en el primer arranque, los lugares incluidos en la app. Devuelve también el origen para que la interfaz muestre si estás conectado al backend o en modo local.",
+          "en": "The repository fetches places from the API and stores the response in Room. If there is no network or no data comes back, it serves the last saved copy and, on first launch, the places bundled with the app. It also returns where the data came from, so the UI can show whether you're on the backend or in local mode."
         }
       },
       "gallery": [

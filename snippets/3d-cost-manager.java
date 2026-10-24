@@ -5,20 +5,15 @@ public final class CostCalculator {
     private static final BigDecimal HUNDRED = new BigDecimal("100");
     private static final BigDecimal THOUSAND = new BigDecimal("1000");
     // …
-    public static CostCalculationResult calculate(
-            CostCalculationInput input,
-            LocalDateTime calculationDateTime,
-            BigDecimal marginPercentage,
-            BigDecimal safetyPercentage,
-            ElectricityPriceProvider priceProvider) {
-
-        validateInputs(input, calculationDateTime, marginPercentage, safetyPercentage, priceProvider);
-
         BigDecimal materialCost = calculateMaterialCost(input);
         BigDecimal machineCost = calculateMachineCost(input);
         BigDecimal toolCost = calculateToolCost(input);
         BigDecimal laborCost = calculateLaborCost(input);
-        BigDecimal electricityCost = calculateElectricityCost(input, calculationDateTime, priceProvider);
+        BigDecimal energyKWh = calculateEnergyKWh(input);
+        BigDecimal electricityPrice = resolveElectricityPrice(energyKWh, calculationDateTime, priceProvider);
+        BigDecimal electricityCost = electricityPrice == null
+                ? BigDecimal.ZERO.setScale(INTERNAL_SCALE, RoundingMode.HALF_UP)
+                : energyKWh.multiply(electricityPrice).setScale(INTERNAL_SCALE, RoundingMode.HALF_UP);
 
         BigDecimal baseCost = materialCost
                 .add(machineCost)
@@ -46,7 +41,9 @@ public final class CostCalculator {
                 scaleToFinal(safetyAmount),
                 scaleToFinal(adjustedCost),
                 scaleToFinal(profitAmount),
-                scaleToFinal(finalPrice)
+                scaleToFinal(finalPrice),
+                scaleToFinal(energyKWh),
+                electricityPrice
         );
     }
     // …

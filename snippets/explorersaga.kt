@@ -9,26 +9,35 @@ data class PlacesResult(
     val origin: DataSourceOrigin
 )
 
-class PlaceRepository(private val context: Context) {
+// Room es la única caché local: refleja la última sincronización correcta con el backend
+// o, si nunca la hubo, los lugares incluidos en la app
+class PlaceRepository(
+    private val placeDao: PlaceDao,
+    private val api: ExplorerSagaApi,
+    private val importApi: ExplorerSagaApi,
+    private val loadBundledPlaces: () -> List<PlaceEntity>
+) {
 
-    private val json = Json { ignoreUnknownKeys = true }
-
-    suspend fun getPlacesResult(category: String? = null): PlacesResult = withContext(Dispatchers.IO) {
-        try {
-            val remotePlaces = RetrofitClient.api.getPlaces(category)
-            if (remotePlaces.isNotEmpty()) {
-                PlacesResult(remotePlaces.map { it.toPlaceEntity() }, DataSourceOrigin.REMOTE)
-            } else {
-                val localPlaces = loadPlacesFromAssets()
-                val filteredLocal = if (category != null) localPlaces.filter { it.category.contains(category, ignoreCase = true) } else localPlaces
-                PlacesResult(filteredLocal, DataSourceOrigin.LOCAL_FALLBACK)
-            }
+    // …
+    suspend fun getPlacesResult(): PlacesResult = withContext(Dispatchers.IO) {
+        val remotePlaces = try {
+            api.getPlaces()
         } catch (e: Exception) {
             e.printStackTrace()
-            val localPlaces = loadPlacesFromAssets()
-            val filteredLocal = if (category != null) localPlaces.filter { it.category.contains(category, ignoreCase = true) } else localPlaces
-            PlacesResult(filteredLocal, DataSourceOrigin.LOCAL_FALLBACK)
+            emptyList()
         }
+
+        if (remotePlaces.isEmpty()) {
+            return@withContext PlacesResult(getCachedPlaces(), DataSourceOrigin.LOCAL_FALLBACK)
+        }
+
+        val entities = remotePlaces.map { it.toPlaceEntity() }
+        try {
+            placeDao.replaceAll(entities)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        PlacesResult(entities, DataSourceOrigin.REMOTE)
     }
     // …
 }
