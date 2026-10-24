@@ -1065,6 +1065,31 @@ strong { color: var(--text-strong); font-weight: 600; }
 .cv-toolbar-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .not-found .hero-actions { margin-top: 0; }
 
+/* ---------- capturas ---------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+.gallery figcaption {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
 /* ---------- diagramas ---------- */
 .diagram {
     border: 1px solid var(--border);

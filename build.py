@@ -87,6 +87,9 @@ def validate(data):
         snippet = project.get("snippet")
         if snippet and not (BASE_DIR / snippet["file"]).exists():
             sys.exit(f"[x] No existe el fragmento {snippet['file']}")
+        for shot in project.get("gallery", []):
+            if not (STATIC_DIR / shot["src"]).exists():
+                sys.exit(f"[x] No existe la captura {shot['src']}")
 
 
 def prepare_projects(projects):
@@ -95,6 +98,7 @@ def prepare_projects(projects):
     for project in projects:
         diagram = Path("diagrams") / f"{project['slug']}.svg"
         project["diagram"] = diagram.as_posix() if (TEMPLATES_DIR / diagram).exists() else None
+        project.setdefault("gallery", [])
         snippet = project.setdefault("snippet", None)
         if snippet:
             code = (BASE_DIR / snippet["file"]).read_text(encoding="utf-8")

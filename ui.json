@@ -212,6 +212,10 @@
       "es": "ver en GitHub",
       "en": "view on GitHub"
     },
+    "gallery": {
+      "es": "Capturas de la versión 1.0 (MVP)",
+      "en": "Screenshots of version 1.0 (MVP)"
+    },
     "built": {
       "es": "Qué he construido",
       "en": "What I built"
