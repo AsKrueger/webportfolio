@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alonso Amador Sánchez · Desarrollador de Software Junior · Backend · Java · Spring Boot</title>
+    <meta name="description" content="Desarrollador de Software Junior (Backend · Java · Spring Boot), Mérida, Extremadura. Construyo backends en Java y Spring Boot: APIs REST con contratos claros, dominio protegido y tests que dejan dormir tranquilo.">
+    <meta name="author" content="Alonso Amador Sánchez">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+    <link rel="canonical" href="https://askrueger.github.io/webportfolio/">
+    <meta property="og:url" content="https://askrueger.github.io/webportfolio/">
+    <link rel="alternate" hreflang="es" href="https://askrueger.github.io/webportfolio/">
+    <link rel="alternate" hreflang="en" href="https://askrueger.github.io/webportfolio/en/">
+    <link rel="alternate" hreflang="x-default" href="https://askrueger.github.io/webportfolio/">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Alonso Amador Sánchez">
+    <meta property="og:title" content="Alonso Amador Sánchez · Desarrollador de Software Junior · Backend · Java · Spring Boot">
+    <meta property="og:description" content="Desarrollador de Software Junior (Backend · Java · Spring Boot), Mérida, Extremadura. Construyo backends en Java y Spring Boot: APIs REST con contratos claros, dominio protegido y tests que dejan dormir tranquilo.">
+    <meta property="og:image" content="https://askrueger.github.io/webportfolio/static/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Alonso Amador Sánchez · Backend · Java · Spring Boot">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script>
+        try {
+            var t = localStorage.getItem("theme");
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Person", "address": {"@type": "PostalAddress", "addressCountry": "ES", "addressLocality": "M\u00e9rida", "addressRegion": "Extremadura"}, "alumniOf": ["Cesur", "Universidad de Extremadura"], "email": "mailto:alonsoamadorsanchez@gmail.com", "image": "https://avatars.githubusercontent.com/u/156074850?v=4", "jobTitle": "Desarrollador de Software Junior", "knowsAbout": ["Java 17/21", "Spring Boot 3", "Spring Security + JWT", "REST / OpenAPI", "JPA / Hibernate", "Apache Kafka", "NestJS", "PostgreSQL", "SQL", "Flyway", "Prisma", "Room / SQLite"], "knowsLanguage": ["Espa\u00f1ol", "Ingl\u00e9s"], "name": "Alonso Amador S\u00e1nchez", "sameAs": ["https://github.com/AsKrueger", "https://www.linkedin.com/in/alonso-amador"], "url": "https://askrueger.github.io/webportfolio/"}
+</script>
+</head>
+<body class="">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="" aria-label="Alonso Amador Sánchez, Inicio">
+                <span class="brand-mark" aria-hidden="true">AA</span>
+                <span class="brand-text">Alonso Amador<span class="brand-cursor" aria-hidden="true">_</span></span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="#projects">Proyectos</a>
+                <a href="#about">Sobre mí</a>
+                <a href="#experience">Experiencia</a>
+                <a href="cv/">CV</a>
+                <a href="#contact" class="nav-cta">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-btn lang-switch" href="en/" hreflang="en" lang="en" aria-label="Read this page in English">EN</a>
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="site-nav">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="availability">
+                <span class="pulse" aria-hidden="true"></span>
+                Disponibilidad inmediata · Mérida, Extremadura
+            </p>
+            <h1 class="hero-title">
+                <span class="hero-name">Alonso Amador Sánchez</span>
+                <span class="hero-role">Desarrollador de Software Junior<br><span class="accent">Backend · Java · Spring Boot</span></span>
+            </h1>
+            <p class="hero-lead">Construyo backends en Java y Spring Boot: APIs REST con contratos claros, dominio protegido y tests que dejan dormir tranquilo.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#projects">Ver proyectos <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <a class="btn btn-ghost" href="cv/alonso-amador-sanchez-cv.pdf" download><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg> CV en PDF</a>
+                <a class="btn btn-ghost" href="https://github.com/AsKrueger" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+ GitHub</a>
+            </div>
+        </div>
+
+        <figure class="terminal" aria-label="Perfil resumido como respuesta JSON de una API">
+            <div class="terminal-bar" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <p>bash — alonso-amador</p>
+            </div>
+            <pre class="terminal-body"><code><span class="t-line"><span class="t-prompt">$</span> curl -s <span class="t-url">/api/v1/developers/alonso-amador</span></span>
+<span class="t-line"><span class="t-ok">HTTP/1.1 200 OK</span></span>
+<span class="t-line"><span class="t-dim">Content-Type: application/json</span></span>
+<span class="t-line"> </span>
+<span class="t-line">{</span>
+<span class="t-line">  <span class="t-key">"name"</span>: <span class="t-str">"Alonso Amador"</span>,</span>
+<span class="t-line">  <span class="t-key">"role"</span>: <span class="t-str">"Junior Backend Developer"</span>,</span>
+<span class="t-line">  <span class="t-key">"stack"</span>: [<span class="t-str">"Java"</span>, <span class="t-str">"Spring Boot"</span>, <span class="t-str">"PostgreSQL"</span>],</span>
+<span class="t-line">  <span class="t-key">"location"</span>: <span class="t-str">"Mérida, Extremadura"</span>,</span>
+<span class="t-line">  <span class="t-key">"workModes"</span>: [<span class="t-str">"presencial"</span>, <span class="t-str">"híbrido"</span>, <span class="t-str">"remoto"</span>],</span>
+<span class="t-line">  <span class="t-key">"available"</span>: <span class="t-bool">true</span>,</span>
+<span class="t-line">  <span class="t-key">"building"</span>: <span class="t-str">"Cosplay Journal"</span>,</span>
+<span class="t-line">  <span class="t-key">"publicProjects"</span>: <span class="t-num">6</span></span>
+<span class="t-line">}<span class="t-caret" aria-hidden="true"></span></span></code></pre>
+        </figure>
+    </div>
+
+    <div class="container">
+        <dl class="quick-facts" aria-label="Resumen rápido">
+            <div>
+                <dd>3</dd>
+                <dt>backends Spring Boot con PostgreSQL y Flyway</dt>
+            </div>
+            <div>
+                <dd>4</dd>
+                <dt>repos con CI en GitHub Actions</dt>
+            </div>
+            <div>
+                <dd>20+</dd>
+                <dt>decisiones técnicas documentadas (ADRs)</dt>
+            </div>
+            <div>
+                <dd>Ya</dd>
+                <dt>incorporación · presencial, híbrido o remoto</dt>
+            </div>
+        </dl>
+    </div>
+</section>
+
+<!-- ============ PROYECTOS ============ -->
+<section class="section" id="projects">
+    <div class="container">
+        <header class="section-head">
+            <p class="kicker"><span class="mono">01</span> Proyectos</p>
+            <h2>Software con dominio, contratos y tests</h2>
+            <p class="section-lead">Proyectos personales trabajados como en un equipo real: issues, ramas, ADRs, CI y documentación. Cada estado está indicado tal como es.</p>
+        </header>
+
+        <div class="featured-list">
+            <article class="feature-card reveal">
+                <div class="feature-index mono" aria-hidden="true">01</div>
+                <div class="feature-main">
+                    <div class="card-meta">
+                        <span class="kind mono">Backend · Java 21</span>
+                        <span class="status status-active"><span class="status-dot" aria-hidden="true"></span>Backend en desarrollo activo</span>
+
+                    </div>
+                    <h3><a class="stretched" href="proyectos/cosplay-journal/">Cosplay Journal</a></h3>
+                    <p class="tagline">Plataforma para cosplayers: eventos, proyectos y grupos.</p>
+                    <p>Backend en Java 21 y Spring Boot 3 con arquitectura hexagonal que importa eventos de cosplay reales, gestiona proyectos (cosplans) y coordina participaciones individuales, en dúo y en grupo.</p>
+                    <ul class="chips">
+    <li>Java 21</li>
+    <li>Spring Boot 3</li>
+    <li>Spring Security</li>
+    <li>JWT</li>
+    <li>Apache Kafka</li>
+    <li>Jsoup</li>
+</ul>
+
+                </div>
+                <div class="feature-side">
+                    <dl class="metrics">
+                        <div><dt>issues cerradas</dt><dd>16</dd></div>
+                        <div><dt>ADRs</dt><dd>13</dd></div>
+                        <div><dt>eventos de dominio</dt><dd>Kafka</dd></div>
+                    </dl>
+                    <span class="card-link">Ver caso técnico <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    <p class="card-extras mono">
+<span>◇ arquitectura</span><span>{ } código real</span>                    </p>
+                </div>
+            </article>
+            <article class="feature-card reveal">
+                <div class="feature-index mono" aria-hidden="true">02</div>
+                <div class="feature-main">
+                    <div class="card-meta">
+                        <span class="kind mono">Full stack · Java + Kotlin</span>
+                        <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v1.0.0</span>
+
+                    </div>
+                    <h3><a class="stretched" href="proyectos/3d-cost-manager/">3D Cost Manager</a></h3>
+                    <p class="tagline">Gestión de proyectos y presupuestos de impresión 3D.</p>
+                    <p>Backend Spring Boot con un motor de cálculo de costes y un cliente Android nativo. A partir de materiales, máquinas, mano de obra, márgenes y la tarifa eléctrica real de ESIOS, genera presupuestos inmutables.</p>
+                    <ul class="chips">
+    <li>Java 21</li>
+    <li>Spring Boot 3.2</li>
+    <li>Spring Security</li>
+    <li>JWT</li>
+    <li>ESIOS API</li>
+</ul>
+
+                </div>
+                <div class="feature-side">
+                    <dl class="metrics">
+                        <div><dt>tests en backend</dt><dd>69</dd></div>
+                        <div><dt>cálculo determinista</dt><dd>BigDecimal</dd></div>
+                        <div><dt>CloudFormation</dt><dd>AWS IaC</dd></div>
+                    </dl>
+                    <span class="card-link">Ver caso técnico <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    <p class="card-extras mono">
+<span>◇ arquitectura</span><span>{ } código real</span>                    </p>
+                </div>
+            </article>
+            <article class="feature-card reveal">
+                <div class="feature-index mono" aria-hidden="true">03</div>
+                <div class="feature-main">
+                    <div class="card-meta">
+                        <span class="kind mono">Android + Backend</span>
+                        <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>MVP · TFG</span>
+
+                    </div>
+                    <h3><a class="stretched" href="proyectos/explorersaga/">ExplorerSaga Extremadura</a></h3>
+                    <p class="tagline">Guía turística de Mérida. Mi Trabajo de Fin de Grado.</p>
+                    <p>App Android nativa en Kotlin y Jetpack Compose para descubrir monumentos, restaurantes y comercios de Mérida en listas y un mapa OpenStreetMap, respaldada por un backend Spring Boot que importa lugares desde Overpass API.</p>
+                    <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Navigation Compose</li>
+    <li>Material 3</li>
+    <li>Retrofit</li>
+    <li>osmdroid</li>
+</ul>
+
+                </div>
+                <div class="feature-side">
+                    <dl class="metrics">
+                        <div><dt>DAM · Cesur</dt><dd>TFG</dd></div>
+                        <div><dt>mapas sin coste</dt><dd>OSM</dd></div>
+                        <div><dt>respaldo local</dt><dd>Offline</dd></div>
+                    </dl>
+                    <span class="card-link">Ver caso técnico <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    <p class="card-extras mono">
+<span>◇ arquitectura</span><span>{ } código real</span>                    </p>
+                </div>
+            </article>
+        </div>
+
+        <h3 class="subhead">Más proyectos</h3>
+        <div class="card-grid">
+            <article class="mini-card reveal">
+                <div class="card-meta">
+                    <span class="kind mono">Monorepo · TypeScript</span>
+                    <span class="status status-early"><span class="status-dot" aria-hidden="true"></span>Fase inicial</span>
+
+                </div>
+                <h4><a class="stretched" href="proyectos/pantrymind/">PantryMind</a></h4>
+                <p>Aprovecha todos los alimentos de tu despensa.</p>
+                <ul class="chips">
+    <li>NestJS</li>
+    <li>TypeScript</li>
+    <li>Prisma</li>
+</ul>
+
+            </article>
+            <article class="mini-card reveal">
+                <div class="card-meta">
+                    <span class="kind mono">Frontend · Angular</span>
+                    <span class="status status-active"><span class="status-dot" aria-hidden="true"></span>En desarrollo</span>
+
+                </div>
+                <h4><a class="stretched" href="proyectos/wayly/">Wayly</a></h4>
+                <p>Tu tiempo. Tu lugar. Tu plan.</p>
+                <ul class="chips">
+    <li>Angular 18</li>
+    <li>TypeScript</li>
+    <li>Leaflet</li>
+</ul>
+
+            </article>
+            <article class="mini-card reveal">
+                <div class="card-meta">
+                    <span class="kind mono">Monorepo · TypeScript</span>
+                    <span class="status status-active"><span class="status-dot" aria-hidden="true"></span>Reconstrucción en curso</span>
+
+                </div>
+                <h4><a class="stretched" href="proyectos/bingogoals/">BingoGoals</a></h4>
+                <p>Tus metas convertidas en un cartón de bingo.</p>
+                <ul class="chips">
+    <li>React</li>
+    <li>Vite</li>
+    <li>TypeScript</li>
+</ul>
+
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section class="section section-alt" id="about">
+    <div class="container about-grid">
+        <div>
+            <header class="section-head">
+                <p class="kicker"><span class="mono">02</span> Sobre mí</p>
+                <h2>De la recepción de un Parador al backend</h2>
+            </header>
+            <div class="prose">
+                <p>Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (Cesur) y he trabajado como desarrollador de aplicaciones en CodeArts Solutions con C#, Unity y .NET. Hoy mi foco está en el backend: Java, Spring Boot, PostgreSQL y arquitectura limpia.</p>
+                <p>Antes de programar estudié Turismo en la Universidad de Extremadura y trabajé en la recepción del Parador de Mérida. De ahí me traigo algo que no se aprende en un tutorial: entender qué necesita la persona al otro lado y explicarlo con claridad.</p>
+                <p>Me gusta trabajar como en un equipo real aunque el proyecto sea mío: issues, ramas, ADRs, CI y documentación que cuenta la verdad sobre el estado del código.</p>
+            </div>
+        </div>
+        <aside class="about-card reveal">
+            <img src="https://avatars.githubusercontent.com/u/156074850?v=4" alt="Foto de Alonso Amador Sánchez" width="96" height="96" loading="lazy">
+            <dl class="facts">
+                <div><dt>base</dt><dd>Mérida, Extremadura, España</dd></div>
+                <div><dt>modalidad</dt><dd>Presencial · Híbrido · Remoto</dd></div>
+                <div><dt>Idiomas</dt><dd>Español (Nativo), Inglés (B1)</dd></div>
+                <div><dt>estado</dt><dd class="ok">Disponibilidad inmediata</dd></div>
+            </dl>
+        </aside>
+    </div>
+
+    <div class="container">
+        <div class="principles">
+            <div class="principle reveal">
+                <span class="mono principle-n">01</span>
+                <h3>Dominio primero</h3>
+                <p>Agregados que protegen sus invariantes y lógica de negocio desacoplada del framework.</p>
+            </div>
+            <div class="principle reveal">
+                <span class="mono principle-n">02</span>
+                <h3>Contratos claros</h3>
+                <p>APIs REST versionadas, errores homogéneos y especificación OpenAPI.</p>
+            </div>
+            <div class="principle reveal">
+                <span class="mono principle-n">03</span>
+                <h3>Tests de verdad</h3>
+                <p>JUnit 5, Mockito y Testcontainers contra PostgreSQL y Kafka reales.</p>
+            </div>
+            <div class="principle reveal">
+                <span class="mono principle-n">04</span>
+                <h3>Documentación honesta</h3>
+                <p>README, ADRs y roadmap que dicen qué está hecho y qué no.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section class="section" id="stack">
+    <div class="container">
+        <header class="section-head">
+            <p class="kicker"><span class="mono">03</span> Stack</p>
+            <h2>Herramientas que uso en mis proyectos</h2>
+        </header>
+        <div class="stack-grid">
+            <div class="stack-group reveal">
+                <h3 class="mono">Backend</h3>
+                <ul class="chips">
+    <li>Java 17/21</li>
+    <li>Spring Boot 3</li>
+    <li>Spring Security + JWT</li>
+    <li>REST / OpenAPI</li>
+    <li>JPA / Hibernate</li>
+    <li>Apache Kafka</li>
+    <li>NestJS</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Datos</h3>
+                <ul class="chips">
+    <li>PostgreSQL</li>
+    <li>SQL</li>
+    <li>Flyway</li>
+    <li>Prisma</li>
+    <li>Room / SQLite</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Calidad</h3>
+                <ul class="chips">
+    <li>JUnit 5</li>
+    <li>Mockito</li>
+    <li>Testcontainers</li>
+    <li>Vitest</li>
+    <li>Jest</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">DevOps</h3>
+                <ul class="chips">
+    <li>Docker</li>
+    <li>Docker Compose</li>
+    <li>GitHub Actions</li>
+    <li>AWS (CloudFormation, EC2, RDS)</li>
+    <li>Maven</li>
+    <li>Gradle</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Cliente</h3>
+                <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Retrofit</li>
+    <li>React</li>
+    <li>Angular</li>
+    <li>TypeScript</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Arquitectura</h3>
+                <ul class="chips">
+    <li>Hexagonal</li>
+    <li>DDD táctico</li>
+    <li>MVVM</li>
+    <li>SOLID</li>
+    <li>ADRs</li>
+</ul>
+
+            </div>
+        </div>
+        <p class="also mono"><span class="dim">// también he trabajado con:</span> C# · .NET · Unity · Python · Git / GitHub</p>
+    </div>
+</section>
+
+<!-- ============ EXPERIENCIA Y FORMACIÓN ============ -->
+<section class="section section-alt" id="experience">
+    <div class="container two-col">
+        <div>
+            <header class="section-head">
+                <p class="kicker"><span class="mono">04</span> Experiencia</p>
+                <h2>Trayectoria</h2>
+            </header>
+            <ol class="timeline">
+                <li class="reveal">
+                    <p class="timeline-date mono">sept. 2025 – ene. 2026</p>
+                    <h3>Desarrollador de aplicaciones</h3>
+                    <p class="timeline-org">CodeArts Solutions <span class="dim">· Prácticas · Remoto</span></p>
+                    <ul class="bullets">
+<li>Desarrollo de aplicaciones multiplataforma con C#, Unity y .NET.</li><li>Participación en el ciclo completo: análisis, implementación, pruebas y entrega.</li><li>Trabajo en sprints ágiles con control de versiones en Git/GitHub.</li>                    </ul>
+<ul class="chips">
+    <li>C#</li>
+    <li>.NET</li>
+    <li>Unity</li>
+    <li>Git</li>
+</ul>
+                </li>
+                <li class="reveal">
+                    <p class="timeline-date mono">abr. 2022 – ago. 2023</p>
+                    <h3>Ayudante de recepción</h3>
+                    <p class="timeline-org">Parador de Mérida <span class="dim">· Contrato temporal · Mérida</span></p>
+                    <ul class="bullets">
+<li>Atención al cliente en recepción, primero en prácticas (abr. – sept. 2022) y después con contrato (oct. 2022 – ago. 2023).</li><li>Servicio de atención al cliente y turismo sostenible en un entorno de alta exigencia.</li>                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div id="education">
+            <header class="section-head">
+                <p class="kicker"><span class="mono">05</span> Formación</p>
+                <h2>Estudios</h2>
+            </header>
+            <ol class="timeline">
+                <li class="reveal">
+                    <p class="timeline-date mono">oct. 2023 – dic. 2025</p>
+                    <h3>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma</h3>
+                    <p class="timeline-org">Cesur</p>
+                    <p>Java, Kotlin, C#, Python y SQL. Android, escritorio, acceso a datos y servicios en red. TFG: ExplorerSaga Extremadura.</p>
+                </li>
+                <li class="reveal">
+                    <p class="timeline-date mono">sept. 2018 – jun. 2024</p>
+                    <h3>Grado en Turismo</h3>
+                    <p class="timeline-org">Universidad de Extremadura</p>
+                    <p>Gestión, atención al cliente y turismo sostenible. El origen de ExplorerSaga y Wayly.</p>
+                </li>
+            </ol>
+            <h3 class="subhead">Certificaciones</h3>
+            <ul class="cert-list">
+                <li><span>Lógica de programación <span class="dim">· mouredev pro</span></span><span class="mono dim">feb. 2026</span></li>
+                <li><span>Python intermedio <span class="dim">· mouredev pro</span></span><span class="mono dim">feb. 2026</span></li>
+                <li><span>SQL y bases de datos</span><span class="mono dim">ene. 2026</span></li>
+                <li><span>Git y GitHub desde cero</span><span class="mono dim">ene. 2026</span></li>
+                <li><span>Python desde cero</span><span class="mono dim">sept. 2025</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section contact" id="contact">
+    <div class="container contact-inner reveal">
+        <p class="kicker"><span class="mono">06</span> Contacto</p>
+        <h2>¿Buscas un backend junior con ganas de aprender en serio?</h2>
+        <p class="section-lead">Estoy disponible ya, en Mérida o en remoto. Respondo rápido.</p>
+        <div class="contact-actions">
+            <a class="btn btn-primary btn-lg" href="mailto:alonsoamadorsanchez@gmail.com">alonsoamadorsanchez@gmail.com</a>
+            <button class="btn btn-ghost" type="button" data-copy="alonsoamadorsanchez@gmail.com" data-copied="¡Copiado!">&lt;built-in method copy of dict object at 0x7fdebc073340&gt;</button>
+        </div>
+        <p class="contact-links">
+            <a href="https://www.linkedin.com/in/alonso-amador" target="_blank" rel="noopener">LinkedIn <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://github.com/AsKrueger" target="_blank" rel="noopener">GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="cv/alonso-amador-sanchez-cv.pdf" download>Descargar CV en PDF <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></a>
+        </p>
+    </div>
+</section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="mono footer-build">
+                <span class="dim">$</span> python build.py <span class="dim">→</span> <span class="ok">200 OK</span>
+                <span class="dim">· Generado con Python + Jinja2 desde un <a href="https://github.com/AsKrueger/webportfolio" target="_blank" rel="noopener">data.json</a></span>
+            </p>
+            <p class="footer-links">
+                <a href="mailto:alonsoamadorsanchez@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/alonso-amador" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/AsKrueger" target="_blank" rel="noopener">GitHub</a>
+                <span class="dim">© 2026 Alonso Amador Sánchez</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js" defer></script>
+</body>
+</html>
