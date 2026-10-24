@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% import "_macros.html" as ui %}
+
+{% block title %}{{ project.name }} · {{ t.case.title_suffix }} · {{ profile.name }}{% endblock %}
+{% block description %}{{ project.summary }}{% endblock %}
+{% block og_type %}article{% endblock %}
+
+{% block content %}
+{% set n = namespace(i=0) %}
+<article class="case">
+    <header class="case-hero">
+        <div class="container case-hero-grid">
+        <div class="case-hero-main">
+            <nav class="breadcrumb mono" aria-label="{{ t.case.breadcrumb }}">
+                <a href="{{ base }}">{{ t.nav.home | lower }}</a> <span class="dim">/</span>
+                <a href="{{ base }}#projects">{{ t.nav.projects | lower }}</a> <span class="dim">/</span>
+                <span aria-current="page">{{ project.slug }}</span>
+            </nav>
+            <div class="card-meta">
+                <span class="kind mono">{{ project.kind }}</span>
+                {{ ui.status(project) }}
+            </div>
+            <h1>{{ project.name }}</h1>
+            <p class="case-tagline">{{ project.tagline }}</p>
+            <p class="hero-lead">{{ project.summary }}</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="{{ project.repository }}" target="_blank" rel="noopener">{{ ui.github_icon() }} {{ t.case.repo }}</a>
+                <a class="btn btn-ghost" href="{{ base }}#projects">{{ t.case.all }}</a>
+            </div>
+            {% if project.metrics %}
+            <dl class="metrics metrics-row">
+                {% for m in project.metrics %}
+                <div><dt>{{ m.label }}</dt><dd>{{ m.value }}</dd></div>
+                {% endfor %}
+            </dl>
+            {% endif %}
+        </div>
+        <aside class="case-aside">
+            <div class="aside-card">
+                <h2 class="mono">stack</h2>
+                {% for group in project.stack %}
+                <h3>{{ group.group }}</h3>
+                {{ ui.chips(group["items"]) }}
+                {% endfor %}
+            </div>
+        </aside>
+        </div>
+    </header>
+
+    <div class="container case-grid">
+        <div class="case-body">
+            {% set n.i = n.i + 1 %}
+            <section>
+                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.problem }}</h2>
+                <p>{{ project.problem }}</p>
+            </section>
+
+            {% if project.diagram %}
+            {% set n.i = n.i + 1 %}
+            <section>
+                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.architecture }}</h2>
+                <figure class="diagram">
+                    <div class="diagram-scroll">{% include project.diagram %}</div>
+                </figure>
+            </section>
+            {% endif %}
+
+            {% if project.snippet %}
+            {% set n.i = n.i + 1 %}
+            <section>
+                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.code }}</h2>
+                {{ ui.code_block(project.snippet, t) }}
+            </section>
+            {% endif %}
+
+            {% if project.gallery %}
+            {% set n.i = n.i + 1 %}
+            <section>
+                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.gallery }}</h2>
+                <ul class="gallery">
+                    {% for shot in project.gallery %}
+                    <li>
+                        <figure>
+                            <img src="{{ root }}static/{{ shot.src }}" alt="{{ shot.alt }}" width="420" loading="lazy">
+                            <figcaption>{{ shot.caption }}</figcaption>
+                        </figure>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            {% endif %}
+
+            {% set n.i = n.i + 1 %}
+            <section>
+                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.built }}</h2>
+                <ul class="checks">
+                    {% for item in project.highlights %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section class="note">
+                <p><strong>{{ t.case.note_title }}</strong> {{ t.case.note }}</p>
+            </section>
+        </div>
+
+    </div>
+
+    <nav class="container case-nav" aria-label="{{ t.case.other }}">
+        {% if prev_project %}
+        <a class="case-nav-link" href="{{ base }}{{ projects_dir }}/{{ prev_project.slug }}/"><span class="mono dim">← {{ t.case.prev }}</span><strong>{{ prev_project.name }}</strong></a>
+        {% else %}<span></span>{% endif %}
+        {% if next_project %}
+        <a class="case-nav-link next" href="{{ base }}{{ projects_dir }}/{{ next_project.slug }}/"><span class="mono dim">{{ t.case.next }} →</span><strong>{{ next_project.name }}</strong></a>
+        {% endif %}
+    </nav>
+</article>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}CV · {{ profile.name }} · {{ profile.focus }}{% endblock %}
+{% block description %}{{ t.cv.description }} {{ profile.name }}, {{ profile.role }} ({{ profile.focus }}).{% endblock %}
+{% block body_class %}page-cv{% endblock %}
+
+{% block content %}
+<div class="container cv-toolbar no-print">
+    <p class="mono dim">{{ t.cv.toolbar }}</p>
+    <div class="cv-toolbar-actions">
+        {% if has_pdf %}
+        <a class="btn btn-primary" href="{{ site.cv_pdf }}" download>{{ t.cv.download }}</a>
+        <button class="btn btn-ghost" type="button" data-print>{{ t.cv.print }}</button>
+        {% else %}
+        <button class="btn btn-primary" type="button" data-print>{{ t.cv.print }}</button>
+        {% endif %}
+    </div>
+</div>
+
+<article class="cv-sheet">
+    <header class="cv-header">
+        <div>
+            <h1>{{ profile.name }}</h1>
+            <p class="cv-role">{{ profile.role }} · {{ profile.focus }}</p>
+        </div>
+        <ul class="cv-contact">
+            <li>{{ profile.location }} · {{ profile.work_modes | join(" / ") }}</li>
+            <li><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+            <li><a href="{{ contact.linkedin }}">{{ contact.linkedin | replace("https://www.", "") }}</a></li>
+            <li><a href="{{ contact.github }}">{{ contact.github | replace("https://", "") }}</a></li>
+            {% if public_url %}{% set home_url = alternates[lang].url | replace("cv/", "") %}<li><a href="{{ home_url }}">{{ home_url | replace("https://", "") | trim("/") }}</a></li>{% endif %}
+        </ul>
+    </header>
+
+    <section>
+        <h2>{{ t.cv.profile }}</h2>
+        <p>{{ profile.headline }} {{ profile.about[0] }} {{ profile.availability }}.</p>
+    </section>
+
+    <section>
+        <h2>{{ t.cv.projects }}</h2>
+        {% for project in projects if project.featured %}
+        <div class="cv-item">
+            <div class="cv-item-head">
+                <h3>{{ project.name }} <span class="cv-muted">· {{ project.kind }}</span></h3>
+                <a class="cv-muted" href="{{ project.repository }}">{{ project.repository | replace("https://", "") }}</a>
+            </div>
+            <p>{{ project.summary }}</p>
+            <ul>
+                {% for item in project.highlights[:2] %}<li>{{ item }}</li>{% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section>
+        <h2>{{ t.nav.experience }}</h2>
+        {% for job in experience %}
+        <div class="cv-item">
+            <div class="cv-item-head">
+                <h3>{{ job.role }} <span class="cv-muted">· {{ job.company }} ({{ job.type }})</span></h3>
+                <span class="cv-muted">{{ job.period }}</span>
+            </div>
+            <ul>{% for point in job.points %}<li>{{ point }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
+    </section>
+
+    <div class="cv-columns">
+        <section>
+            <h2>{{ t.education.kicker }}</h2>
+            {% for edu in education %}
+            <div class="cv-item">
+                <h3>{{ edu.title }}</h3>
+                <p class="cv-muted">{{ edu.school }} · {{ edu.period }}</p>
+            </div>
+            {% endfor %}
+            <h2>{{ t.education.certs }}</h2>
+            <p class="cv-certs">{% for cert in certifications %}{{ cert.name }} <span class="cv-muted">({{ cert.date }})</span>{{ " · " if not loop.last }}{% endfor %}</p>
+        </section>
+        <section>
+            <h2>{{ t.cv.skills }}</h2>
+            {% for group in skills %}
+            <p class="cv-skill"><strong>{{ group.group }}:</strong> {{ group["items"] | join(", ") }}</p>
+            {% endfor %}
+            <p class="cv-skill"><strong>{{ t.cv.other }}:</strong> {{ also_know | join(", ") }}</p>
+            <h2>{{ t.about.languages }}</h2>
+            <ul class="cv-plain">
+                {% for l in languages %}<li>{{ l.name }} <span class="cv-muted">· {{ l.level }}</span></li>{% endfor %}
+            </ul>
+        </section>
+    </div>
+</article>
+{% endblock %}
