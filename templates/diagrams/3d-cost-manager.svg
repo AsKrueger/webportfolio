@@ -1,0 +1,77 @@
+<svg class="dg" viewBox="0 0 820 460" role="img" aria-label="{{ t.diagram.cost_label }}" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="dg-arrow-3d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path class="dg-head" d="M0 0L10 5L0 10z"/>
+        </marker>
+    </defs>
+
+    <!-- Cliente Android -->
+    <rect class="dg-box" x="10" y="60" width="170" height="84" rx="10"/>
+    <text class="dg-t" x="24" y="88">Android</text>
+    <text class="dg-s" x="24" y="108">Compose · MVVM</text>
+    <text class="dg-s" x="24" y="124">Retrofit · AES-256</text>
+
+    <!-- Backend -->
+    <rect class="dg-group" x="240" y="20" width="380" height="262" rx="14"/>
+    <text class="dg-label" x="256" y="44">Spring Boot 3.2 · Java 21</text>
+
+    <rect class="dg-box" x="258" y="60" width="160" height="64" rx="10"/>
+    <text class="dg-t" x="272" y="86">REST /api/v1</text>
+    <text class="dg-s" x="272" y="106">ApiError · 4xx/5xx</text>
+
+    <rect class="dg-box" x="440" y="60" width="160" height="64" rx="10"/>
+    <text class="dg-t" x="454" y="86">Services</text>
+    <text class="dg-s" x="454" y="106">Project · Quote</text>
+
+    <rect class="dg-core-box" x="258" y="166" width="342" height="96" rx="10"/>
+    <text class="dg-t dg-t-accent" x="274" y="194">CostCalculator</text>
+    <text class="dg-s" x="274" y="214">BigDecimal · scale 8 → 4 · HALF_UP</text>
+    <text class="dg-s" x="274" y="230">{{ t.diagram.pure }}</text>
+    <text class="dg-s dg-s-accent" x="274" y="248">port: ElectricityPriceProvider</text>
+
+    <!-- Externos -->
+    <rect class="dg-box" x="650" y="60" width="160" height="64" rx="10"/>
+    <text class="dg-t" x="664" y="86">PostgreSQL 16</text>
+    <text class="dg-s" x="664" y="106">Flyway · validate</text>
+
+    <rect class="dg-ext" x="650" y="180" width="160" height="64" rx="10"/>
+    <text class="dg-t" x="664" y="206">ESIOS API</text>
+    <text class="dg-s" x="664" y="226">€/kWh</text>
+
+    <path class="dg-line" d="M180 92H252" marker-end="url(#dg-arrow-3d)"/>
+    <text class="dg-s" x="215" y="84" text-anchor="middle">JWT</text>
+    <path class="dg-line" d="M418 92H434" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M520 124V160" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M600 92H644" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M600 212H644" marker-end="url(#dg-arrow-3d)"/>
+
+    <!-- AWS (definido como código) -->
+    <rect class="dg-group dg-group-pending" x="10" y="310" width="800" height="140" rx="14"/>
+    <text class="dg-label" x="26" y="334">AWS · CloudFormation · GitHub Actions</text>
+    <text class="dg-label dg-label-accent" x="794" y="334" text-anchor="end">{{ t.diagram.pending }}</text>
+
+    <rect class="dg-box" x="26" y="350" width="140" height="60" rx="10"/>
+    <text class="dg-t" x="38" y="376">GitHub Actions</text>
+    <text class="dg-s" x="38" y="395">CI · OIDC</text>
+
+    <rect class="dg-box" x="186" y="350" width="140" height="60" rx="10"/>
+    <text class="dg-t" x="198" y="376">Amazon ECR</text>
+    <text class="dg-s" x="198" y="395">ARM64 image</text>
+
+    <rect class="dg-box" x="346" y="350" width="140" height="60" rx="10"/>
+    <text class="dg-t" x="358" y="376">EC2 t4g</text>
+    <text class="dg-s" x="358" y="395">Docker · SSM</text>
+
+    <rect class="dg-box" x="506" y="350" width="140" height="60" rx="10"/>
+    <text class="dg-t" x="518" y="376">RDS</text>
+    <text class="dg-s" x="518" y="395">PostgreSQL 16</text>
+
+    <rect class="dg-box" x="666" y="350" width="128" height="60" rx="10"/>
+    <text class="dg-t" x="678" y="376">SSM Params</text>
+    <text class="dg-s" x="678" y="395">JWT_SECRET</text>
+
+    <path class="dg-line" d="M166 380H180" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M326 380H340" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M486 380H500" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M730 410V428H416V416" marker-end="url(#dg-arrow-3d)"/>
+</svg>

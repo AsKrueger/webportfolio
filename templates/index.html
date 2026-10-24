@@ -1,139 +1,272 @@
 {% extends "base.html" %}
+{% import "_macros.html" as ui %}
 
-{% block title %}{{ nombre }} | {{ titulo }} | {{ subtitulo }}{% endblock %}
-{% block description %}{{ descripcion }}{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{{ {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": profile.name,
+    "jobTitle": profile.role,
+    "image": site.avatar,
+    "url": page_url,
+    "email": "mailto:" ~ contact.email,
+    "address": {"@type": "PostalAddress", "addressLocality": "Mérida", "addressRegion": "Extremadura", "addressCountry": "ES"},
+    "alumniOf": education | map(attribute="school") | list,
+    "knowsAbout": skills[0]["items"] + skills[1]["items"],
+    "knowsLanguage": languages | map(attribute="name") | list,
+    "sameAs": [contact.github, contact.linkedin]
+} | tojson }}
+</script>
+{% endblock %}
 
 {% block content %}
-<section id="inicio" class="hero">
+{% set featured = projects | selectattr("featured") | list %}
+{% set others = projects | rejectattr("featured") | list %}
+
+<!-- ============ HERO ============ -->
+<section class="hero">
     <div class="container hero-grid">
         <div class="hero-copy">
-            <span class="eyebrow">JUNIOR SOFTWARE DEVELOPER · BACKEND JAVA / SPRING BOOT</span>
-            <h1>{{ nombre }}</h1>
-            <p class="hero-title">Desarrollador junior orientado principalmente al backend con Java y Spring Boot.</p>
-            <p class="hero-text">{{ descripcion }}</p>
+            <p class="availability">
+                <span class="pulse" aria-hidden="true"></span>
+                {{ profile.availability }} · {{ profile.location }}
+            </p>
+            <h1 class="hero-title">
+                <span class="hero-name">{{ profile.name }}</span>
+                <span class="hero-role">{{ profile.role }}<br><span class="accent">{{ profile.focus }}</span></span>
+            </h1>
+            <p class="hero-lead">{{ profile.headline }}</p>
             <div class="hero-actions">
-                <a href="https://github.com/{{ github_user }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver GitHub</a>
-                <a href="{{ site_root }}proyectos/" class="btn btn-outline">Ver proyectos</a>
+                <a class="btn btn-primary" href="#projects">{{ t.hero.cta_projects }} {{ ui.arrow() }}</a>
+                {% if has_pdf %}
+                <a class="btn btn-ghost" href="cv/{{ site.cv_pdf }}" download>{{ ui.download_icon() }} {{ t.hero.cta_cv_pdf }}</a>
+                {% else %}
+                <a class="btn btn-ghost" href="cv/">{{ t.hero.cta_cv }}</a>
+                {% endif %}
+                <a class="btn btn-ghost" href="{{ contact.github }}" target="_blank" rel="noopener">{{ ui.github_icon() }} GitHub</a>
             </div>
         </div>
-        <div class="hero-panel">
-            <div class="code-card">
-                <div class="code-card-label">backend_core.java</div>
-                <pre><code>public class DeveloperProfile {
-    String role = "Junior Software Developer";
-    String orientation = "Backend Java / Spring Boot";
-    String[] stack = {"Java", "Spring Boot", "REST", "PostgreSQL", "JUnit", "Docker"};
 
-    void grow() {
-        buildAPIs();
-        testBusinessLogic();
-        improveArchitecture();
-    }
-}</code></pre>
+        <figure class="terminal" aria-label="{{ t.hero.terminal_label }}">
+            <div class="terminal-bar" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <p>bash — {{ profile.handle }}</p>
             </div>
-        </div>
+            <pre class="terminal-body"><code><span class="t-line"><span class="t-prompt">$</span> curl -s <span class="t-url">/api/v1/developers/{{ profile.handle }}</span></span>
+<span class="t-line"><span class="t-ok">HTTP/1.1 200 OK</span></span>
+<span class="t-line"><span class="t-dim">Content-Type: application/json</span></span>
+<span class="t-line"> </span>
+<span class="t-line">{</span>
+<span class="t-line">  <span class="t-key">"name"</span>: <span class="t-str">"{{ profile.short_name }}"</span>,</span>
+<span class="t-line">  <span class="t-key">"role"</span>: <span class="t-str">"Junior Backend Developer"</span>,</span>
+<span class="t-line">  <span class="t-key">"stack"</span>: [<span class="t-str">"Java"</span>, <span class="t-str">"Spring Boot"</span>, <span class="t-str">"PostgreSQL"</span>],</span>
+<span class="t-line">  <span class="t-key">"location"</span>: <span class="t-str">"{{ profile.location }}"</span>,</span>
+<span class="t-line">  <span class="t-key">"workModes"</span>: [{% for m in profile.work_modes %}<span class="t-str">"{{ m | lower }}"</span>{{ ", " if not loop.last }}{% endfor %}],</span>
+<span class="t-line">  <span class="t-key">"available"</span>: <span class="t-bool">true</span>,</span>
+<span class="t-line">  <span class="t-key">"building"</span>: <span class="t-str">"{{ featured[0].name }}"</span>,</span>
+<span class="t-line">  <span class="t-key">"publicProjects"</span>: <span class="t-num">{{ projects | length }}</span></span>
+<span class="t-line">}<span class="t-caret" aria-hidden="true"></span></span></code></pre>
+        </figure>
     </div>
-</section>
 
-<section class="section-sobre">
-    <div class="container section-grid">
-        <div class="content-card">
-            <div class="section-header">
-                <span class="section-label">Perfil técnico y evolución</span>
-                <h2>Mi recorrido me ha llevado desde el desarrollo multiplataforma hacia el backend</h2>
-            </div>
-            <p>He desarrollado mi base con formación en DAM y experiencia previa en aplicaciones, y actualmente estoy orientando mi perfil hacia el desarrollo backend con Java, Spring Boot y APIs REST.</p>
-            <div class="feature-list">
-                <div class="feature-item">➔ Java y Spring Boot como eje principal de mi evolución profesional.</div>
-                <div class="feature-item">➔ Diseño de APIs REST y lógica de negocio en backend.</div>
-                <div class="feature-item">➔ Persistencia con PostgreSQL, JPA y Hibernate.</div>
-                <div class="feature-item">➔ Testing con JUnit y Mockito para validar comportamiento.</div>
-                <div class="feature-item">➔ Docker y entorno de desarrollo para proyectos backend.</div>
-                <div class="feature-item">➔ Base sólida en programación, arquitectura y buenas prácticas.</div>
-            </div>
-        </div>
-        <div class="skills-panel">
-            <div class="section-header">
-                <span class="section-label">Habilidades</span>
-                <h2>Lo que manejo con confianza</h2>
-            </div>
-            <div class="skills-grid">
-                {% for skill in habilidades %}
-                <span class="skill-tag">{{ skill }}</span>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section-proyectos">
     <div class="container">
-        <div class="section-header center">
-            <span class="section-label">Proyectos Destacados</span>
-            <h2>Construyendo software con propósito y calidad técnica.</h2>
-        </div>
-        <div class="projects-grid">
-            {% if project_cards %}
-                {% for project in project_cards[:3] %}
-                <article class="project-card">
-                    <div class="project-meta-top">
-                        {% if project.language %}
-                        <span class="project-badge">{{ project.language }}</span>
-                        {% endif %}
-                        <span class="project-badge secondary">GitHub</span>
+        <dl class="quick-facts" aria-label="{{ t.hero.facts_label }}">
+            {% for fact in quick_facts %}
+            <div>
+                <dd>{{ fact.value }}</dd>
+                <dt>{{ fact.label }}</dt>
+            </div>
+            {% endfor %}
+        </dl>
+    </div>
+</section>
+
+<!-- ============ PROYECTOS ============ -->
+<section class="section" id="projects">
+    <div class="container">
+        <header class="section-head">
+            <p class="kicker"><span class="mono">01</span> {{ t.nav.projects }}</p>
+            <h2>{{ t.projects.title }}</h2>
+            <p class="section-lead">{{ t.projects.lead }}</p>
+        </header>
+
+        <div class="featured-list">
+            {% for project in featured %}
+            <article class="feature-card reveal">
+                <div class="feature-index mono" aria-hidden="true">{{ "%02d" | format(loop.index) }}</div>
+                <div class="feature-main">
+                    <div class="card-meta">
+                        <span class="kind mono">{{ project.kind }}</span>
+                        {{ ui.status(project) }}
                     </div>
-                    <h3>{{ project.name }}</h3>
-                    <p class="project-description">{{ project.description or "Aplicación en desarrollo con enfoque en buenas prácticas." }}</p>
-                    <a href="{{ project.html_url }}" target="_blank" rel="noopener noreferrer" class="project-link">Ver código</a>
-                </article>
-                {% endfor %}
-            {% else %}
-                <div class="empty-state">
-                    <p>No se pudieron cargar los proyectos en este momento.</p>
-                    <a href="https://github.com/{{ github_user }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver todos en GitHub</a>
+                    <h3><a class="stretched" href="{{ projects_dir }}/{{ project.slug }}/">{{ project.name }}</a></h3>
+                    <p class="tagline">{{ project.tagline }}</p>
+                    <p>{{ project.summary }}</p>
+                    {{ ui.chips(project.stack[0]["items"], 6) }}
                 </div>
-            {% endif %}
+                <div class="feature-side">
+                    {% if project.metrics %}
+                    <dl class="metrics">
+                        {% for m in project.metrics %}
+                        <div><dt>{{ m.label }}</dt><dd>{{ m.value }}</dd></div>
+                        {% endfor %}
+                    </dl>
+                    {% endif %}
+                    <span class="card-link">{{ t.projects.read_case }} {{ ui.arrow() }}</span>
+                    {% if project.snippet or project.diagram %}
+                    <p class="card-extras mono">
+                        {% if project.diagram %}<span>◇ {{ t.projects.has_diagram }}</span>{% endif %}
+                        {% if project.snippet %}<span>{ } {{ t.projects.has_code }}</span>{% endif %}
+                    </p>
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if others %}
+        <h3 class="subhead">{{ t.projects.more }}</h3>
+        <div class="card-grid">
+            {% for project in others %}
+            <article class="mini-card reveal">
+                <div class="card-meta">
+                    <span class="kind mono">{{ project.kind }}</span>
+                    {{ ui.status(project) }}
+                </div>
+                <h4><a class="stretched" href="{{ projects_dir }}/{{ project.slug }}/">{{ project.name }}</a></h4>
+                <p>{{ project.tagline }}</p>
+                {{ ui.chips(project.stack[0]["items"], 4) }}
+            </article>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section class="section section-alt" id="about">
+    <div class="container about-grid">
+        <div>
+            <header class="section-head">
+                <p class="kicker"><span class="mono">02</span> {{ t.nav.about }}</p>
+                <h2>{{ t.about.title }}</h2>
+            </header>
+            <div class="prose">
+                {% for paragraph in profile.about %}
+                <p>{{ paragraph }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <aside class="about-card reveal">
+            <img src="{{ site.avatar }}" alt="{{ t.about.photo_alt }} {{ profile.name }}" width="96" height="96" loading="lazy">
+            <dl class="facts">
+                <div><dt>{{ t.about.base }}</dt><dd>{{ profile.location }}, {{ profile.country }}</dd></div>
+                <div><dt>{{ t.about.modes }}</dt><dd>{{ profile.work_modes | join(" · ") }}</dd></div>
+                <div><dt>{{ t.about.languages }}</dt><dd>{% for l in languages %}{{ l.name }} ({{ l.level.split(" ·")[0] }}){{ ", " if not loop.last }}{% endfor %}</dd></div>
+                <div><dt>{{ t.about.status }}</dt><dd class="ok">{{ profile.availability }}</dd></div>
+            </dl>
+        </aside>
+    </div>
+
+    <div class="container">
+        <div class="principles">
+            {% for item in profile.principles %}
+            <div class="principle reveal">
+                <span class="mono principle-n">{{ "%02d" | format(loop.index) }}</span>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.text }}</p>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
-<section class="section-cv">
+<!-- ============ STACK ============ -->
+<section class="section" id="stack">
     <div class="container">
-        <div class="section-header center">
-            <span class="section-label">Experiencia & Educación</span>
-            <h2>Trayectoria y formación enfocadas en el desarrollo de software.</h2>
+        <header class="section-head">
+            <p class="kicker"><span class="mono">03</span> Stack</p>
+            <h2>{{ t.stack.title }}</h2>
+        </header>
+        <div class="stack-grid">
+            {% for group in skills %}
+            <div class="stack-group reveal">
+                <h3 class="mono">{{ group.group }}</h3>
+                {{ ui.chips(group["items"]) }}
+            </div>
+            {% endfor %}
         </div>
-        <div class="timeline-grid">
-            <div class="timeline-block">
-                <span class="timeline-title">Formación</span>
-                {% for edu in educacion %}
-                <div class="timeline-item">
-                    <h3>{{ edu.titulo }}</h3>
-                    <p class="meta">{{ edu.institucion }} · {{ edu.periodo }}</p>
-                    <p>{{ edu.descripcion }}</p>
-                </div>
+        <p class="also mono"><span class="dim">// {{ t.stack.also }}:</span> {{ also_know | join(" · ") }}</p>
+    </div>
+</section>
+
+<!-- ============ EXPERIENCIA Y FORMACIÓN ============ -->
+<section class="section section-alt" id="experience">
+    <div class="container two-col">
+        <div>
+            <header class="section-head">
+                <p class="kicker"><span class="mono">04</span> {{ t.nav.experience }}</p>
+                <h2>{{ t.experience.title }}</h2>
+            </header>
+            <ol class="timeline">
+                {% for job in experience %}
+                <li class="reveal">
+                    <p class="timeline-date mono">{{ job.period }}</p>
+                    <h3>{{ job.role }}</h3>
+                    <p class="timeline-org">{{ job.company }} <span class="dim">· {{ job.type }}</span></p>
+                    <ul class="bullets">
+                        {% for point in job.points %}<li>{{ point }}</li>{% endfor %}
+                    </ul>
+                    {% if job.tech %}{{ ui.chips(job.tech) }}{% endif %}
+                </li>
                 {% endfor %}
-            </div>
-            <div class="timeline-block">
-                <span class="timeline-title">Experiencia</span>
-                {% for exp in experiencia %}
-                <div class="timeline-item">
-                    <h3>{{ exp.titulo }}</h3>
-                    <p class="meta">{{ exp.empresa }} · {{ exp.periodo }}</p>
-                    <p>{{ exp.descripcion }}</p>
-                </div>
+            </ol>
+        </div>
+        <div id="education">
+            <header class="section-head">
+                <p class="kicker"><span class="mono">05</span> {{ t.education.kicker }}</p>
+                <h2>{{ t.education.title }}</h2>
+            </header>
+            <ol class="timeline">
+                {% for edu in education %}
+                <li class="reveal">
+                    <p class="timeline-date mono">{{ edu.period }}</p>
+                    <h3>{{ edu.title }}</h3>
+                    <p class="timeline-org">{{ edu.school }}</p>
+                    <p>{{ edu.detail }}</p>
+                </li>
                 {% endfor %}
-            </div>
+            </ol>
+            <h3 class="subhead">{{ t.education.certs }}</h3>
+            <ul class="cert-list">
+                {% for cert in certifications %}
+                <li><span>{{ cert.name }}{% if cert.issuer %} <span class="dim">· {{ cert.issuer }}</span>{% endif %}</span><span class="mono dim">{{ cert.date }}</span></li>
+                {% endfor %}
+            </ul>
         </div>
-        <div class="certification-panel">
-            <h3>Certificaciones & Logros</h3>
-            <div class="certification-list">
-                <span class="badge">Lógica de Programación</span>
-                <span class="badge">Python Intermedio</span>
-                <span class="badge">SQL & Bases de Datos</span>
-                <span class="badge">Git & GitHub Pro</span>
-            </div>
+    </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section contact" id="contact">
+    <div class="container contact-inner reveal">
+        <p class="kicker"><span class="mono">06</span> {{ t.nav.contact }}</p>
+        <h2>{{ t.contact.title }}</h2>
+        <p class="section-lead">{{ t.contact.lead }}</p>
+        <div class="contact-actions">
+            <a class="btn btn-primary btn-lg" href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+            <button class="btn btn-ghost" type="button" data-copy="{{ contact.email }}" data-copied="{{ t.contact.copied }}">{{ t.contact.copy }}</button>
         </div>
+        <p class="contact-links">
+            <a href="{{ contact.linkedin }}" target="_blank" rel="noopener">LinkedIn {{ ui.arrow() }}</a>
+            <a href="{{ contact.github }}" target="_blank" rel="noopener">GitHub {{ ui.arrow() }}</a>
+            {% if has_pdf %}
+            <a href="cv/{{ site.cv_pdf }}" download>{{ t.contact.cv_pdf }} {{ ui.download_icon() }}</a>
+            {% else %}
+            <a href="cv/">{{ t.contact.cv }} {{ ui.arrow() }}</a>
+            {% endif %}
+        </p>
     </div>
 </section>
 {% endblock %}
