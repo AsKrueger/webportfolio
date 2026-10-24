@@ -73,6 +73,23 @@
             </section>
             {% endif %}
 
+            {% if project.gallery %}
+            {% set n.i = n.i + 1 %}
+            <section>
+                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.gallery }}</h2>
+                <ul class="gallery">
+                    {% for shot in project.gallery %}
+                    <li>
+                        <figure>
+                            <img src="{{ root }}static/{{ shot.src }}" alt="{{ shot.alt }}" width="420" loading="lazy">
+                            <figcaption>{{ shot.caption }}</figcaption>
+                        </figure>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            {% endif %}
+
             {% set n.i = n.i + 1 %}
             <section>
                 <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.built }}</h2>

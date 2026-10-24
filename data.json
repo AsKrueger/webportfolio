@@ -195,8 +195,8 @@
       "name": "3D Cost Manager",
       "tagline": {"es": "Gestión de proyectos y presupuestos de impresión 3D.", "en": "Project and quote management for 3D printing."},
       "kind": "Full stack · Java + Kotlin",
-      "status": "v1.0.0",
-      "status_level": "stable",
+      "status": {"es": "v1.0 MVP · sin publicar", "en": "v1.0 MVP · not published"},
+      "status_level": "mvp",
       "featured": true,
       "summary": {
         "es": "Backend Spring Boot con un motor de cálculo de costes y un cliente Android nativo. A partir de materiales, máquinas, mano de obra, márgenes y la tarifa eléctrica real de ESIOS, genera presupuestos inmutables.",
@@ -248,6 +248,13 @@
           "en": "The cost engine is plain Java: it knows nothing about Spring or JPA. It works with 8 internal decimals, rounds to 4 at the end and gets the electricity price through a port (ElectricityPriceProvider), so it is tested without network or database."
         }
       },
+      "gallery": [
+        {"src": "img/projects/3d-cost-manager/01-proyectos.webp", "alt": {"es": "Lista de proyectos activos y archivados de 3D Cost Manager", "en": "3D Cost Manager project list with active and archived projects"}, "caption": {"es": "Proyectos con su estado y su coste calculado.", "en": "Projects with their status and calculated cost."}},
+        {"src": "img/projects/3d-cost-manager/02-proyecto.webp", "alt": {"es": "Detalle de un proyecto con mano de obra, materiales, máquinas y herramientas", "en": "Project detail with labour, materials, machines and tools"}, "caption": {"es": "Detalle de un proyecto: mano de obra, materiales, máquinas y herramientas.", "en": "Project detail: labour, materials, machines and tools."}},
+        {"src": "img/projects/3d-cost-manager/03-catalogo.webp", "alt": {"es": "Catálogo de materiales con su coste por unidad", "en": "Materials catalogue with unit costs"}, "caption": {"es": "Catálogo de materiales, máquinas y herramientas con su coste por unidad.", "en": "Catalogue of materials, machines and tools with their unit cost."}},
+        {"src": "img/projects/3d-cost-manager/04-presupuestos.webp", "alt": {"es": "Historial de presupuestos con su estado", "en": "Quote history with their status"}, "caption": {"es": "Historial de presupuestos y su estado: borrador o enviado.", "en": "Quote history and status: draft or sent."}},
+        {"src": "img/projects/3d-cost-manager/05-presupuesto.webp", "alt": {"es": "Formulario de nuevo presupuesto con márgenes de seguridad y beneficio", "en": "New quote form with safety and profit margins"}, "caption": {"es": "Nuevo presupuesto con margen de seguridad y margen de beneficio.", "en": "New quote with a safety margin and a profit margin."}}
+      ],
       "repository": "https://github.com/AsKrueger/Calculadora3D"
     },
     {
@@ -255,8 +262,8 @@
       "name": "ExplorerSaga Extremadura",
       "tagline": {"es": "Guía turística de Mérida. Mi Trabajo de Fin de Grado.", "en": "A tourist guide to Mérida. My final degree project."},
       "kind": "Android + Backend",
-      "status": {"es": "MVP · TFG", "en": "MVP · Final project"},
-      "status_level": "stable",
+      "status": {"es": "v1.0 MVP · sin publicar", "en": "v1.0 MVP · not published"},
+      "status_level": "mvp",
       "featured": true,
       "summary": {
         "es": "App Android nativa en Kotlin y Jetpack Compose para descubrir monumentos, restaurantes y comercios de Mérida en listas y un mapa OpenStreetMap, respaldada por un backend Spring Boot que importa lugares desde Overpass API.",
@@ -304,6 +311,14 @@
           "en": "The repository tries the API first and falls back to local JSON if it fails or returns nothing. It also returns where the data came from, so the UI can show whether you're on the backend or in local mode."
         }
       },
+      "gallery": [
+        {"src": "img/projects/explorersaga/01-portada.webp", "alt": {"es": "Portada de ExplorerSaga con la sección Descubre Mérida", "en": "ExplorerSaga home screen with the Discover Mérida section"}, "caption": {"es": "Portada: historia de Mérida y acceso a mapa y lugares.", "en": "Home: the history of Mérida and access to the map and places."}},
+        {"src": "img/projects/explorersaga/02-mapa.webp", "alt": {"es": "Mapa OpenStreetMap de Mérida con marcadores por categoría", "en": "OpenStreetMap map of Mérida with markers by category"}, "caption": {"es": "Mapa OpenStreetMap con marcadores por categoría.", "en": "OpenStreetMap map with markers by category."}},
+        {"src": "img/projects/explorersaga/03-filtros.webp", "alt": {"es": "Filtros por categoría: monumentos, gastronomía y tiendas", "en": "Category filters: monuments, food and shops"}, "caption": {"es": "Filtros por monumentos, gastronomía y tiendas.", "en": "Filters for monuments, food and shops."}},
+        {"src": "img/projects/explorersaga/04-lista.webp", "alt": {"es": "Lista de lugares en modo local de respaldo", "en": "List of places in local fallback mode"}, "caption": {"es": "Lista de lugares. Si el servidor no responde, la app muestra el modo local.", "en": "List of places. If the server is down, the app shows local mode."}},
+        {"src": "img/projects/explorersaga/05-ficha.webp", "alt": {"es": "Ficha de un comercio con horarios, dirección y mapa", "en": "Shop detail with opening hours, address and map"}, "caption": {"es": "Ficha de un lugar con horarios, dirección y mapa.", "en": "Place detail with opening hours, address and map."}},
+        {"src": "img/projects/explorersaga/06-detalle-foto.webp", "alt": {"es": "Mapa con la ficha del Acueducto de los Milagros, con foto y horarios", "en": "Map with the Acueducto de los Milagros detail sheet, with photo and opening hours"}, "caption": {"es": "Ficha con foto del lugar, horarios y dirección sobre el mapa.", "en": "Detail sheet with a photo of the place, opening hours and address over the map."}}
+      ],
       "repository": "https://github.com/AsKrueger/ExplorerSaga-Extremadura"
     },
     {

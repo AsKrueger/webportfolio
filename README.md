@@ -71,7 +71,7 @@ python build.py --pdf --serve    # también genera los PDF (necesita Chrome)
 python tools/make_og.py          # regenera static/img/og.png
 ```
 
-Para añadir un proyecto, añade un objeto a `projects` en `data.json`. Con `"featured": true` aparece en grande en la portada. Para que tenga diagrama, crea `templates/diagrams/<slug>.svg`; para enseñar código, añade un fichero en `snippets/` y una clave `snippet`.
+Para añadir un proyecto, añade un objeto a `projects` en `data.json`. Con `"featured": true` aparece en grande en la portada. Para que tenga diagrama, crea `templates/diagrams/<slug>.svg`; para enseñar código, añade un fichero en `snippets/` y una clave `snippet`; para enseñar capturas, pon las imágenes en `static/img/projects/<slug>/` y una lista `gallery` con `src`, `alt` y `caption` en los dos idiomas. `status_level` admite `stable`, `active`, `early` y `mvp`.
 
 ## Despliegue
 
