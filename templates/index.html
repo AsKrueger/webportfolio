@@ -256,7 +256,7 @@
         <p class="section-lead">{{ t.contact.lead }}</p>
         <div class="contact-actions">
             <a class="btn btn-primary btn-lg" href="mailto:{{ contact.email }}">{{ contact.email }}</a>
-            <button class="btn btn-ghost" type="button" data-copy="{{ contact.email }}" data-copied="{{ t.contact.copied }}">{{ t.contact.copy }}</button>
+            <button class="btn btn-ghost" type="button" data-copy="{{ contact.email }}" data-copied="{{ t.contact.copied }}">{{ t.contact["copy"] }}</button>
         </div>
         <p class="contact-links">
             <a href="{{ contact.linkedin }}" target="_blank" rel="noopener">LinkedIn {{ ui.arrow() }}</a>
