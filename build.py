@@ -27,6 +27,7 @@ from pygments.lexers import get_lexer_by_name
 BASE_DIR = Path(__file__).parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 STATIC_DIR = BASE_DIR / "static"
+PAGES_DIR = BASE_DIR / "pages"
 OUTPUT_DIR = BASE_DIR / "dist"
 
 # Español en la raíz (URLs ya publicadas), inglés bajo /en/.
@@ -184,6 +185,8 @@ class Site:
         if OUTPUT_DIR.exists():
             shutil.rmtree(OUTPUT_DIR)
         shutil.copytree(STATIC_DIR, OUTPUT_DIR / "static")
+        # Páginas que no salen de las plantillas, como las políticas de privacidad de las apps.
+        shutil.copytree(PAGES_DIR, OUTPUT_DIR, dirs_exist_ok=True)
 
         projects = self.data["projects"]
         for lang in LANGS:
