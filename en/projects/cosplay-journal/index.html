@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cosplay Journal · Case study · Alonso Amador Sánchez</title>
+    <meta name="description" content="A Java 21 and Spring Boot 3 backend with hexagonal architecture that imports real cosplay events, manages projects (cosplans) and coordinates solo, duo and group entries.">
+    <meta name="author" content="Alonso Amador Sánchez">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+    <link rel="canonical" href="https://askrueger.github.io/webportfolio/en/projects/cosplay-journal/">
+    <meta property="og:url" content="https://askrueger.github.io/webportfolio/en/projects/cosplay-journal/">
+    <link rel="alternate" hreflang="es" href="https://askrueger.github.io/webportfolio/proyectos/cosplay-journal/">
+    <link rel="alternate" hreflang="en" href="https://askrueger.github.io/webportfolio/en/projects/cosplay-journal/">
+    <link rel="alternate" hreflang="x-default" href="https://askrueger.github.io/webportfolio/proyectos/cosplay-journal/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Alonso Amador Sánchez">
+    <meta property="og:title" content="Cosplay Journal · Case study · Alonso Amador Sánchez">
+    <meta property="og:description" content="A Java 21 and Spring Boot 3 backend with hexagonal architecture that imports real cosplay events, manages projects (cosplans) and coordinates solo, duo and group entries.">
+    <meta property="og:image" content="https://askrueger.github.io/webportfolio/static/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Alonso Amador Sánchez · Backend · Java · Spring Boot">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../../../static/img/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="../../../static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../../static/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../../static/css/style.css">
+    <script>
+        try {
+            var t = localStorage.getItem("theme");
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+</head>
+<body class="">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../../en/" aria-label="Alonso Amador Sánchez, Home">
+                <span class="brand-mark" aria-hidden="true">AA</span>
+                <span class="brand-text">Alonso Amador<span class="brand-cursor" aria-hidden="true">_</span></span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <a href="../../../en/#projects">Projects</a>
+                <a href="../../../en/#about">About</a>
+                <a href="../../../en/#experience">Experience</a>
+                <a href="../../../en/cv/">CV</a>
+                <a href="../../../en/#contact" class="nav-cta">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-btn lang-switch" href="../../../proyectos/cosplay-journal/" hreflang="es" lang="es" aria-label="Leer esta página en español">ES</a>
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="site-nav">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+<article class="case">
+    <header class="case-hero">
+        <div class="container case-hero-grid">
+        <div class="case-hero-main">
+            <nav class="breadcrumb mono" aria-label="Breadcrumb">
+                <a href="../../../en/">home</a> <span class="dim">/</span>
+                <a href="../../../en/#projects">projects</a> <span class="dim">/</span>
+                <span aria-current="page">cosplay-journal</span>
+            </nav>
+            <div class="card-meta">
+                <span class="kind mono">Backend · Java 21</span>
+                <span class="status status-active"><span class="status-dot" aria-hidden="true"></span>Backend in active development</span>
+
+            </div>
+            <h1>Cosplay Journal</h1>
+            <p class="case-tagline">A platform for cosplayers: events, projects and groups.</p>
+            <p class="hero-lead">A Java 21 and Spring Boot 3 backend with hexagonal architecture that imports real cosplay events, manages projects (cosplans) and coordinates solo, duo and group entries.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://github.com/AsKrueger/Cosplay-Journal" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+ View repository</a>
+                <a class="btn btn-ghost" href="../../../en/#projects">All projects</a>
+            </div>
+            <dl class="metrics metrics-row">
+                <div><dt>issues closed</dt><dd>16</dd></div>
+                <div><dt>ADRs</dt><dd>13</dd></div>
+                <div><dt>domain events</dt><dd>Kafka</dd></div>
+            </dl>
+        </div>
+        <aside class="case-aside">
+            <div class="aside-card">
+                <h2 class="mono">stack</h2>
+                <h3>Backend</h3>
+                <ul class="chips">
+    <li>Java 21</li>
+    <li>Spring Boot 3</li>
+    <li>Spring Security</li>
+    <li>JWT</li>
+    <li>Apache Kafka</li>
+    <li>Jsoup</li>
+    <li>OpenAPI</li>
+</ul>
+
+                <h3>Data</h3>
+                <ul class="chips">
+    <li>PostgreSQL 16</li>
+    <li>JPA / Hibernate</li>
+    <li>Flyway</li>
+</ul>
+
+                <h3>Quality &amp; delivery</h3>
+                <ul class="chips">
+    <li>JUnit 5</li>
+    <li>Mockito</li>
+    <li>Testcontainers</li>
+    <li>GitHub Actions</li>
+    <li>Docker</li>
+</ul>
+
+                <h3>Client</h3>
+                <ul class="chips">
+    <li>Android</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+</ul>
+
+            </div>
+        </aside>
+        </div>
+    </header>
+
+    <div class="container case-grid">
+        <div class="case-body">
+            <section>
+                <h2><span class="mono dim">01</span> The problem</h2>
+                <p>Cosplayers juggle events, materials, budgets and groups across spreadsheets, chats and scattered event websites.</p>
+            </section>
+
+            <section>
+                <h2><span class="mono dim">02</span> Architecture</h2>
+                <figure class="diagram">
+                    <div class="diagram-scroll"><svg class="dg" viewBox="0 0 820 440" role="img" aria-label="Cosplay Journal hexagonal architecture: REST, a Kafka consumer and a scheduler enter through ports into use cases and the domain; PostgreSQL, Kafka, the ListadoManga scraper and security are driven adapters." xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="dg-arrow-cj" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path class="dg-head" d="M0 0L10 5L0 10z"/>
+        </marker>
+    </defs>
+
+    <text class="dg-label" x="10" y="26">Driving side</text>
+    <text class="dg-label" x="810" y="26" text-anchor="end">Driven side</text>
+
+    <!-- Adaptadores de entrada -->
+    <rect class="dg-box" x="10" y="64" width="170" height="72" rx="10"/>
+    <text class="dg-t" x="24" y="94">REST API</text>
+    <text class="dg-s" x="24" y="114">/api/v1 · OpenAPI</text>
+    <text class="dg-s" x="24" y="128">JWT filter</text>
+
+    <rect class="dg-box" x="10" y="179" width="170" height="72" rx="10"/>
+    <text class="dg-t" x="24" y="209">Kafka consumer</text>
+    <text class="dg-s" x="24" y="229">ParticipantJoined</text>
+
+    <rect class="dg-box" x="10" y="294" width="170" height="72" rx="10"/>
+    <text class="dg-t" x="24" y="324">Scheduler</text>
+    <text class="dg-s" x="24" y="344">sync ListadoManga</text>
+
+    <!-- Hexágono: aplicación + dominio -->
+    <polygon class="dg-hex" points="235,215 322.5,63.4 497.5,63.4 585,215 497.5,366.6 322.5,366.6"/>
+    <text class="dg-t" x="410" y="96" text-anchor="middle">Application</text>
+    <text class="dg-s" x="410" y="113" text-anchor="middle">use cases · port.in / port.out</text>
+    <text class="dg-s" x="410" y="335" text-anchor="middle">CurrentUserPort · ownership</text>
+
+    <polygon class="dg-core" points="315,215 362.5,132.7 457.5,132.7 505,215 457.5,297.3 362.5,297.3"/>
+    <text class="dg-t dg-t-accent" x="410" y="186" text-anchor="middle">Domain</text>
+    <text class="dg-s" x="410" y="207" text-anchor="middle">Participation · Event</text>
+    <text class="dg-s" x="410" y="223" text-anchor="middle">Cosplay · User</text>
+    <text class="dg-s dg-s-accent" x="410" y="246" text-anchor="middle">domain events</text>
+
+    <!-- Adaptadores de salida -->
+    <rect class="dg-box" x="640" y="44" width="170" height="62" rx="10"/>
+    <text class="dg-t" x="654" y="70">PostgreSQL 16</text>
+    <text class="dg-s" x="654" y="90">JPA · Flyway</text>
+
+    <rect class="dg-box" x="640" y="134" width="170" height="62" rx="10"/>
+    <text class="dg-t" x="654" y="160">Apache Kafka</text>
+    <text class="dg-s" x="654" y="180">event publisher</text>
+
+    <rect class="dg-box" x="640" y="224" width="170" height="62" rx="10"/>
+    <text class="dg-t" x="654" y="250">ListadoManga</text>
+    <text class="dg-s" x="654" y="270">Jsoup · retry · backoff</text>
+
+    <rect class="dg-box" x="640" y="314" width="170" height="62" rx="10"/>
+    <text class="dg-t" x="654" y="340">Security</text>
+    <text class="dg-s" x="654" y="360">JWT · BCrypt</text>
+
+    <!-- Flechas -->
+    <path class="dg-line" d="M180 100H294" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M180 215H229" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M180 330H294" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M508 75H634" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M561 165H634" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M567 255H634" marker-end="url(#dg-arrow-cj)"/>
+    <path class="dg-line" d="M516 345H634" marker-end="url(#dg-arrow-cj)"/>
+
+    <text class="dg-note" x="410" y="420" text-anchor="middle">Dependencies point towards the domain (ports &amp; adapters).</text>
+</svg></div>
+                </figure>
+            </section>
+
+            <section>
+                <h2><span class="mono dim">03</span> A look at the code</h2>
+                <figure class="code-window">
+    <div class="code-bar">
+        <span class="code-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="code-path mono">domain/model/participation/Participation.java</span>
+        <a class="code-source mono" href="https://github.com/AsKrueger/Cosplay-Journal/blob/main/backend/src/main/java/com/cosplayjournal/domain/model/participation/Participation.java" target="_blank" rel="noopener">view on GitHub ↗</a>
+    </div>
+    <pre class="code-body highlight"><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Participation</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// …</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addParticipant</span><span class="p">(</span><span class="n">Participant</span><span class="w"> </span><span class="n">participant</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">participant</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidParticipationDataException</span><span class="p">(</span><span class="s">&quot;El participante a añadir no puede ser nulo&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">alreadyExists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">participants</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">anyMatch</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getUserId</span><span class="p">().</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="na">getUserId</span><span class="p">()));</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">alreadyExists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidParticipationDataException</span><span class="p">(</span><span class="s">&quot;El usuario &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">participant</span><span class="p">.</span><span class="na">getUserId</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; ya forma parte de esta participación&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ParticipationType</span><span class="p">.</span><span class="na">INDIVIDUAL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">participants</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidParticipationDataException</span><span class="p">(</span><span class="s">&quot;Una participación individual no puede tener más de 1 participante&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ParticipationType</span><span class="p">.</span><span class="na">DUO</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">participants</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidParticipationDataException</span><span class="p">(</span><span class="s">&quot;Una participación en dúo no puede tener más de 2 participantes&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">participants</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">updatedAt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Instant</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">changeStatus</span><span class="p">(</span><span class="n">ParticipationStatus</span><span class="w"> </span><span class="n">newStatus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidParticipationDataException</span><span class="p">(</span><span class="s">&quot;El estado de la participación no puede ser nulo&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ParticipationStatus</span><span class="p">.</span><span class="na">CONFIRMED</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">newStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ParticipationStatus</span><span class="p">.</span><span class="na">FINISHED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">validateParticipantCountForStatus</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newStatus</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">updatedAt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Instant</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">validateParticipantCountForStatus</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">participants</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ParticipationType</span><span class="p">.</span><span class="na">INDIVIDUAL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidParticipationDataException</span><span class="p">(</span><span class="s">&quot;Una participación individual confirmada debe tener exactamente 1 participante (actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ParticipationType</span><span class="p">.</span><span class="na">DUO</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidParticipationDataException</span><span class="p">(</span><span class="s">&quot;Una participación en dúo confirmada debe tener exactamente 2 participantes (actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ParticipationType</span><span class="p">.</span><span class="na">GROUP</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidParticipationDataException</span><span class="p">(</span><span class="s">&quot;Una participación grupal confirmada debe tener al menos 3 participantes (actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+    <figcaption>The Participation aggregate enforces its own rules: a duo can&#39;t take a third member and a group entry can&#39;t be confirmed with fewer than three. No controller or service can bypass it.</figcaption>
+</figure>
+
+            </section>
+
+
+            <section>
+                <h2><span class="mono dim">04</span> What I built</h2>
+                <ul class="checks">
+                    <li>Hexagonal architecture (ports &amp; adapters) with the domain decoupled from infrastructure.</li>
+                    <li>Aggregates with explicit consistency boundaries and business invariants.</li>
+                    <li>Domain events published to Apache Kafka.</li>
+                    <li>Spring Security + JWT and resource-ownership authorization (403 when it isn&#39;t yours).</li>
+                    <li>ListadoManga scraper with Jsoup, idempotent sync, scheduler, timeouts and retries with exponential backoff.</li>
+                    <li>REST API /api/v1 documented with OpenAPI 3 and Swagger UI.</li>
+                    <li>Integration tests with Testcontainers (PostgreSQL 16 and Kafka) and CI on GitHub Actions.</li>
+                    <li>13 ADRs written and 16 issues closed; next up is wiring the Android client.</li>
+                </ul>
+            </section>
+            <section class="note">
+                <p><strong>Transparency:</strong> the status above reflects the repository README. Anything planned is labelled as such; the full code and documentation are on GitHub.</p>
+            </section>
+        </div>
+
+    </div>
+
+    <nav class="container case-nav" aria-label="Other projects">
+<span></span>        <a class="case-nav-link next" href="../../../en/projects/3d-cost-manager/"><span class="mono dim">next →</span><strong>3D Cost Manager</strong></a>
+    </nav>
+</article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="mono footer-build">
+                <span class="dim">$</span> python build.py <span class="dim">→</span> <span class="ok">200 OK</span>
+                <span class="dim">· Generated with Python + Jinja2 from a <a href="https://github.com/AsKrueger/webportfolio" target="_blank" rel="noopener">data.json</a></span>
+            </p>
+            <p class="footer-links">
+                <a href="mailto:alonsoamadorsanchez@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/alonso-amador" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/AsKrueger" target="_blank" rel="noopener">GitHub</a>
+                <span class="dim">© 2026 Alonso Amador Sánchez</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../../../static/js/main.js" defer></script>
+</body>
+</html>
