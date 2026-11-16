@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BingoGoals · Tus metas convertidas en un cartón de bingo. · Alonso Amador Sánchez</title>
+    <meta name="description" content="Convierte tus metas en un cartón de bingo y canta línea cada vez que cumples una. App Android nativa para crear cartones de bingo con tus metas de Año Nuevo, del verano, de un viaje o de cualquier ocasión: sellas cada meta que cumples, cantas línea y celebras el cartón completo. Nació como prototipo en Flutter, pasó por una web instalable con API en NestJS y hoy es una app en Kotlin y Jetpack Compose.">
+    <meta name="author" content="Alonso Amador Sánchez">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+    <link rel="canonical" href="https://askrueger.github.io/webportfolio/proyectos/bingogoals/">
+    <meta property="og:url" content="https://askrueger.github.io/webportfolio/proyectos/bingogoals/">
+    <link rel="alternate" hreflang="es" href="https://askrueger.github.io/webportfolio/proyectos/bingogoals/">
+    <link rel="alternate" hreflang="en" href="https://askrueger.github.io/webportfolio/en/projects/bingogoals/">
+    <link rel="alternate" hreflang="x-default" href="https://askrueger.github.io/webportfolio/proyectos/bingogoals/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Alonso Amador Sánchez">
+    <meta property="og:title" content="BingoGoals · Tus metas convertidas en un cartón de bingo. · Alonso Amador Sánchez">
+    <meta property="og:description" content="Convierte tus metas en un cartón de bingo y canta línea cada vez que cumples una. App Android nativa para crear cartones de bingo con tus metas de Año Nuevo, del verano, de un viaje o de cualquier ocasión: sellas cada meta que cumples, cantas línea y celebras el cartón completo. Nació como prototipo en Flutter, pasó por una web instalable con API en NestJS y hoy es una app en Kotlin y Jetpack Compose.">
+    <meta property="og:image" content="https://askrueger.github.io/webportfolio/static/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Alonso Amador Sánchez · Backend Java · Android Kotlin">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../../static/img/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="../../static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../static/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../static/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <script>
+        try {
+            var t = localStorage.getItem("theme");
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+</head>
+<body class="">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../" aria-label="Alonso Amador Sánchez, Inicio">
+                <span class="brand-mark" aria-hidden="true">AA</span>
+                <span class="brand-text">Alonso Amador<span class="brand-cursor" aria-hidden="true">_</span></span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="../../#projects">Proyectos</a>
+                <a href="../../#about">Sobre mí</a>
+                <a href="../../#experience">Experiencia</a>
+                <a href="../../cv/">CV</a>
+                <a href="../../#contact" class="nav-cta">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-btn lang-switch" href="../../en/projects/bingogoals/" hreflang="en" lang="en" aria-label="Read this page in English">EN</a>
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="site-nav">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+<article class="app" style="--brand: #d0213a; --brand-ink: #ffffff;">
+
+    <!-- ============ LA APP ============ -->
+    <header class="app-hero">
+        <div class="container app-hero-grid">
+            <div class="app-hero-copy">
+                <nav class="breadcrumb mono" aria-label="Ruta">
+                    <a href="../../">inicio</a> <span class="dim">/</span>
+                    <a href="../../#projects">proyectos</a> <span class="dim">/</span>
+                    <span aria-current="page">bingogoals</span>
+                </nav>
+                <div class="app-id">
+                    <img class="app-icon" src="../../static/img/projects/bingogoals/icon.svg" alt="" width="72" height="72">
+                    <div>
+                        <p class="app-name">BingoGoals</p>
+                        <div class="card-meta">
+                            <span class="kind mono">Android · Kotlin + TypeScript</span>
+                            <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v0.1 · prueba cerrada en Google Play</span>
+
+                        </div>
+                    </div>
+                </div>
+                <h1 class="app-pitch">Convierte tus metas en un cartón de bingo y canta línea cada vez que cumples una.</h1>
+                <p class="hero-lead">App Android nativa para crear cartones de bingo con tus metas de Año Nuevo, del verano, de un viaje o de cualquier ocasión: sellas cada meta que cumples, cantas línea y celebras el cartón completo. Nació como prototipo en Flutter, pasó por una web instalable con API en NestJS y hoy es una app en Kotlin y Jetpack Compose.</p>
+                <ul class="perks">
+<li>3×3, 4×4 o 5×5</li><li>Ideas para cada ocasión</li><li>Sin cuenta</li><li>ES / EN</li>                </ul>
+                <div class="hero-actions">
+                    <a class="btn btn-brand btn-lg" href="mailto:alonsoamadorsanchez@gmail.com?subject=Quiero%20probar%20BingoGoals&amp;body=Hola%20Alonso%2C%20me%20gustar%C3%ADa%20probar%20la%20app.%20Mi%20cuenta%20de%20Google%20Play%20es%3A%20"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l13 8-13 8z"/></svg> Pedir acceso a la prueba</a>
+
+                    <a class="btn btn-ghost btn-lg" href="https://askrueger.github.io/BingoGoals/" target="_blank" rel="noopener">Probar la web ↗</a>
+                    <a class="btn btn-ghost btn-lg" href="https://github.com/AsKrueger/BingoGoals" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+ Ver repositorio</a>
+                </div>
+                <p class="access-note dim">La app está en prueba cerrada en Google Play: escríbeme con tu cuenta de Google y te doy acceso.</p>
+            </div>
+            <div class="app-hero-shots" aria-hidden="false">
+                <div class="hero-shot hero-shot-1"><span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/02-carton.webp" alt="Cartón de 3×3 con tres metas selladas en diagonal y la línea tachada" width="420" fetchpriority="high" decoding="async"></span>
+</div>
+                <div class="hero-shot hero-shot-2"><span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/03-carton-5x5.webp" alt="Cartón de 5×5 en tema oscuro con seis metas cumplidas" width="420" fetchpriority="high" decoding="async"></span>
+</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="app-features" aria-labelledby="features-title">
+        <div class="container">
+            <header class="section-head">
+                <p class="kicker"><span class="mono">✦</span> Lo que puedes hacer</p>
+                <h2 id="features-title">Por qué te va a gustar BingoGoals</h2>
+            </header>
+            <div class="feature-rows">
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/01-bienvenida.webp" alt="Bienvenida con un cartón de ejemplo y el botón para crear el primero" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">01</span>
+                        <h3>Tu primer cartón en un minuto</h3>
+                        <p>Sin registro, sin permisos y sin anuncios al empezar: abres la app y creas tu cartón.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/05-crear.webp" alt="Pantalla para crear un cartón: ocasión, tamaño, estilo y metas" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">02</span>
+                        <h3>Un cartón para cada ocasión</h3>
+                        <p>Año Nuevo, verano, un viaje, en pareja o con amigos. Elige 3×3, 4×4 o 5×5 y, si te faltan metas, la app te propone ideas.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/02-carton.webp" alt="Cartón de 3×3 con tres metas selladas en diagonal y la línea tachada" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">03</span>
+                        <h3>Sella, canta línea, celebra</h3>
+                        <p>Cada meta cumplida se sella en el cartón. Cuando completas una fila, una columna o una diagonal, se tacha y lo celebras.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/06-compartir.webp" alt="Cartón listo para compartir como historia" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">04</span>
+                        <h3>Compártelo con quien te anime</h3>
+                        <p>Envía tu cartón como historia o imagen cuadrada, ocultando las metas que no quieras enseñar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-gallery" aria-labelledby="gallery-title">
+        <div class="container">
+            <header class="section-head section-head-row">
+                <h2 id="gallery-title">Capturas de la app Android</h2>
+                <p class="dim mono gallery-hint">desliza →</p>
+            </header>
+        </div>
+        <ul class="shot-strip" tabindex="0" aria-label="Capturas de la app Android">
+            <li>
+                <figure>
+                    <span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/01-bienvenida.webp" alt="Bienvenida con un cartón de ejemplo y el botón para crear el primero" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Bienvenida: tu primer cartón en un toque.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/02-carton.webp" alt="Cartón de 3×3 con tres metas selladas en diagonal y la línea tachada" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Sella metas y canta línea.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/03-carton-5x5.webp" alt="Cartón de 5×5 en tema oscuro con seis metas cumplidas" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Cartones de 5×5, también en tema oscuro.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/04-cartones.webp" alt="Lista de cartones con su progreso" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Todos tus cartones con su progreso.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/05-crear.webp" alt="Pantalla para crear un cartón: ocasión, tamaño, estilo y metas" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Crea un cartón para cualquier ocasión.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot shot-framed"><img src="../../static/img/projects/bingogoals/06-compartir.webp" alt="Cartón listo para compartir como historia" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Compártelo como historia o imagen cuadrada.</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+    <section class="app-cta">
+        <div class="container">
+            <div class="app-cta-card">
+                <img class="app-icon" src="../../static/img/projects/bingogoals/icon.svg" alt="" width="64" height="64">
+                <div class="app-cta-text">
+                    <h2>¿Te apetece probar BingoGoals?</h2>
+                    <p>La app está en prueba cerrada en Google Play: escríbeme con tu cuenta de Google y te doy acceso.</p>
+                </div>
+                <div class="app-cta-actions">
+                    <a class="btn btn-brand" href="mailto:alonsoamadorsanchez@gmail.com?subject=Quiero%20probar%20BingoGoals&amp;body=Hola%20Alonso%2C%20me%20gustar%C3%ADa%20probar%20la%20app.%20Mi%20cuenta%20de%20Google%20Play%20es%3A%20"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l13 8-13 8z"/></svg> Pedir acceso a la prueba</a>
+
+<a class="btn btn-ghost" href="https://askrueger.github.io/BingoGoals/" target="_blank" rel="noopener">Probar la web ↗</a>                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BAJO EL CAPÓ ============ -->
+    <section class="under-hood" aria-labelledby="hood-title">
+        <div class="container">
+            <header class="hood-head">
+                <p class="kicker"><span class="mono">{ }</span> Bajo el capó</p>
+                <h2 id="hood-title">Cómo está hecha</h2>
+                <p class="section-lead">Para quien quiera saber qué hay detrás: el problema, la arquitectura, código real y las decisiones que tomé.</p>
+                <dl class="metrics metrics-row">
+                    <div><dt>tests en Android</dt><dd>84</dd></div>
+                    <div><dt>tamaños de cartón</dt><dd>3</dd></div>
+                    <div><dt>idiomas</dt><dd>ES / EN</dd></div>
+                </dl>
+            </header>
+
+            <div class="hood-grid">
+                <div class="case-body">
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">01</span> El problema</h3>
+                        <p>Los propósitos de año nuevo se olvidan en febrero. Un formato de juego hace que apetezca volver a ellos.</p>
+                    </section>
+
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">02</span> Un fragmento del código</h3>
+                        <figure class="code-window">
+    <div class="code-bar">
+        <span class="code-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="code-path mono">domain/…/Lines.kt</span>
+        <a class="code-source mono" href="https://github.com/AsKrueger/BingoGoals/blob/main/apps/android/domain/src/main/kotlin/app/bingogoals/domain/Lines.kt" target="_blank" rel="noopener">ver en GitHub ↗</a>
+    </div>
+    <pre class="code-body highlight"><code><span class="cm">/** Filas, columnas y las dos diagonales, en ese orden. */</span>
+<span class="kd">fun</span><span class="w"> </span><span class="n">BoardSize</span><span class="p">.</span><span class="nf">lines</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Line</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dimension</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">n</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">range</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Line</span><span class="p">(</span><span class="n">LineType</span><span class="p">.</span><span class="na">ROW</span><span class="p">,</span><span class="w"> </span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="n">range</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Line</span><span class="p">(</span><span class="n">LineType</span><span class="p">.</span><span class="na">COLUMN</span><span class="p">,</span><span class="w"> </span><span class="n">column</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="n">Line</span><span class="p">(</span><span class="n">LineType</span><span class="p">.</span><span class="na">DIAGONAL</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="n">Line</span><span class="p">(</span><span class="n">LineType</span><span class="p">.</span><span class="na">DIAGONAL</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="nb">it</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">fun</span><span class="w"> </span><span class="n">Board</span><span class="p">.</span><span class="nf">completedLines</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Line</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">.</span><span class="na">lines</span><span class="p">().</span><span class="na">filter</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="na">cells</span><span class="p">.</span><span class="na">all</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">goals</span><span class="o">[</span><span class="nb">it</span><span class="o">]</span><span class="p">.</span><span class="na">isCompleted</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+
+<span class="cm">/** Bingo: todas las casillas cumplidas. */</span>
+<span class="kd">val</span><span class="w"> </span><span class="nv">Board</span><span class="p">.</span><span class="na">isFullCard</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="k">get</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">goals</span><span class="p">.</span><span class="na">all</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">isCompleted</span><span class="w"> </span><span class="p">}</span>
+
+<span class="cm">/** Qué hay que celebrar tras un cambio. */</span>
+<span class="kd">sealed</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nc">Celebration</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">data</span><span class="w"> </span><span class="kd">object</span><span class="w"> </span><span class="nc">None</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Celebration</span>
+
+<span class="w">    </span><span class="cm">/** Una o más líneas nuevas, para tacharlas con el rotulador. */</span>
+<span class="w">    </span><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Lines</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">lines</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Line</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Celebration</span>
+
+<span class="w">    </span><span class="kd">data</span><span class="w"> </span><span class="kd">object</span><span class="w"> </span><span class="nc">Bingo</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Celebration</span>
+<span class="p">}</span>
+
+<span class="cm">/** Lo nuevo que hay que celebrar al pasar de `before` a `after`. */</span>
+<span class="kd">fun</span><span class="w"> </span><span class="nf">celebrationBetween</span><span class="p">(</span><span class="n">before</span><span class="p">:</span><span class="w"> </span><span class="n">Board</span><span class="p">,</span><span class="w"> </span><span class="n">after</span><span class="p">:</span><span class="w"> </span><span class="n">Board</span><span class="p">):</span><span class="w"> </span><span class="n">Celebration</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">after</span><span class="p">.</span><span class="na">isFullCard</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">before</span><span class="p">.</span><span class="na">isFullCard</span><span class="p">)</span><span class="w"> </span><span class="n">Celebration</span><span class="p">.</span><span class="na">None</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">Celebration</span><span class="p">.</span><span class="na">Bingo</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">previous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">before</span><span class="p">.</span><span class="na">completedLines</span><span class="p">().</span><span class="na">toSet</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fresh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">after</span><span class="p">.</span><span class="na">completedLines</span><span class="p">().</span><span class="na">filterNot</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fresh</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="n">Celebration</span><span class="p">.</span><span class="na">None</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">Celebration</span><span class="p">.</span><span class="na">Lines</span><span class="p">(</span><span class="n">fresh</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+    <figcaption>Las reglas del bingo son Kotlin puro. Al sellar una casilla, la app compara el cartón antes y después para saber qué celebrar: una línea nueva se tacha con el rotulador, el cartón completo es bingo, y una línea que ya estaba no se vuelve a celebrar.</figcaption>
+</figure>
+
+                    </section>
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">03</span> Qué he construido</h3>
+                        <ul class="checks">
+                            <li>App nativa en Kotlin y Jetpack Compose con Room y DataStore, y un módulo :domain en Kotlin puro con las reglas del bingo.</li>
+                            <li>Tests de capturas de pantalla en español e inglés y en tema claro y oscuro; las capturas de esta página salen de ellos. 84 tests en la app Android.</li>
+                            <li>Crear un cartón: ocasión, tamaño (3×3, 4×4 o 5×5) y estilo. Si tus metas no llenan el cartón, se completa con ideas de la ocasión.</li>
+                            <li>Compartir el cartón como imagen cuadrada o como historia, con opción de ocultar las casillas.</li>
+                            <li>Versión de publicación firmada con una clave guardada fuera del repositorio y política de privacidad enlazada desde Ajustes.</li>
+                            <li>La versión web sigue desplegada: PWA en React con IndexedDB y API en NestJS, Prisma y PostgreSQL con cuentas y sincronización, que será el servidor de la app.</li>
+                            <li>Vitest, Testing Library y Playwright en la web, CI en cada pull request y revisión de código al cerrar cada fase.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">04</span> Decisiones y por qué</h3>
+                        <ol class="decisions">
+                            <li>Nativa en Kotlin en lugar de envolver la web con Capacitor. El widget, los anuncios con el consentimiento de la UE y las animaciones del sello a 60 fps necesitaban código nativo igualmente.</li>
+                            <li>Las reglas del bingo en un módulo de Kotlin puro (:domain), portadas de la versión web junto con sus tests. Se prueban en milisegundos, sin emulador.</li>
+                            <li>Tests de capturas además de los tests de lógica. Detectan cambios visuales en los dos idiomas y temas, y de paso dan capturas siempre actualizadas.</li>
+                            <li>Primero local: los cartones viven en el móvil y la cuenta es opcional. La API que ya funciona para la web dará la sincronización cuando haga falta.</li>
+                        </ol>
+                    </section>
+
+                    <section class="note">
+                        <p><strong>Transparencia:</strong> el estado indicado arriba refleja el README del repositorio. Lo que está planificado se marca como tal; el código y la documentación completa están en GitHub.</p>
+                    </section>
+                </div>
+
+                <aside class="case-aside">
+                    <div class="aside-card">
+                        <h3 class="mono">stack</h3>
+                        <h4>Android</h4>
+                        <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+    <li>Room</li>
+    <li>DataStore</li>
+    <li>:domain (Kotlin)</li>
+</ul>
+
+                        <h4>Web y API</h4>
+                        <ul class="chips">
+    <li>React</li>
+    <li>TypeScript</li>
+    <li>PWA</li>
+    <li>NestJS</li>
+    <li>Prisma</li>
+    <li>PostgreSQL</li>
+</ul>
+
+                        <h4>Calidad y entrega</h4>
+                        <ul class="chips">
+    <li>JUnit</li>
+    <li>Tests de capturas</li>
+    <li>Vitest</li>
+    <li>Playwright</li>
+    <li>GitHub Actions</li>
+</ul>
+
+                        <a class="btn btn-ghost aside-repo" href="https://github.com/AsKrueger/BingoGoals" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+ Ver repositorio</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <nav class="container case-nav" aria-label="Otros proyectos">
+        <a class="case-nav-link" href="../../proyectos/training-arc/"><span class="mono dim">← anterior</span><strong>Training Arc</strong></a>
+    </nav>
+</article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="mono footer-build">
+                <span class="dim">$</span> python build.py <span class="dim">→</span> <span class="ok">200 OK</span>
+                <span class="dim">· Generado con Python + Jinja2 desde un <a href="https://github.com/AsKrueger/webportfolio" target="_blank" rel="noopener">data.json</a></span>
+            </p>
+            <p class="footer-links">
+                <a href="mailto:alonsoamadorsanchez@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/alonso-amador" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/AsKrueger" target="_blank" rel="noopener">GitHub</a>
+                <span class="dim">© 2026 Alonso Amador Sánchez</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../../static/js/main.js" defer></script>
+</body>
+</html>

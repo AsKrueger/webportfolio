@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alonso Amador Sánchez · Desarrollador de Software Junior · Backend Java · Android Kotlin</title>
+    <meta name="description" content="Desarrollador de Software Junior (Backend Java · Android Kotlin), Mérida, Extremadura. Construyo backends con Java y Spring Boot y apps Android con Kotlin y Jetpack Compose, desde la API hasta la app en Google Play, con tests y documentación que dicen la verdad.">
+    <meta name="author" content="Alonso Amador Sánchez">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+    <link rel="canonical" href="https://askrueger.github.io/webportfolio/">
+    <meta property="og:url" content="https://askrueger.github.io/webportfolio/">
+    <link rel="alternate" hreflang="es" href="https://askrueger.github.io/webportfolio/">
+    <link rel="alternate" hreflang="en" href="https://askrueger.github.io/webportfolio/en/">
+    <link rel="alternate" hreflang="x-default" href="https://askrueger.github.io/webportfolio/">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Alonso Amador Sánchez">
+    <meta property="og:title" content="Alonso Amador Sánchez · Desarrollador de Software Junior · Backend Java · Android Kotlin">
+    <meta property="og:description" content="Desarrollador de Software Junior (Backend Java · Android Kotlin), Mérida, Extremadura. Construyo backends con Java y Spring Boot y apps Android con Kotlin y Jetpack Compose, desde la API hasta la app en Google Play, con tests y documentación que dicen la verdad.">
+    <meta property="og:image" content="https://askrueger.github.io/webportfolio/static/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Alonso Amador Sánchez · Backend Java · Android Kotlin">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script>
+        try {
+            var t = localStorage.getItem("theme");
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Person", "address": {"@type": "PostalAddress", "addressCountry": "ES", "addressLocality": "M\u00e9rida", "addressRegion": "Extremadura"}, "alumniOf": ["Cesur", "Universidad de Extremadura"], "email": "mailto:alonsoamadorsanchez@gmail.com", "image": "https://avatars.githubusercontent.com/u/156074850?v=4", "jobTitle": "Desarrollador de Software Junior", "knowsAbout": ["Java 17/21", "Spring Boot 3", "Spring Security + JWT", "REST / OpenAPI", "JPA / Hibernate", "NestJS", "Apache Kafka", "Kotlin", "Jetpack Compose", "Room", "WorkManager", "Retrofit / OkHttp", "MapLibre"], "knowsLanguage": ["Espa\u00f1ol", "Ingl\u00e9s"], "name": "Alonso Amador S\u00e1nchez", "sameAs": ["https://github.com/AsKrueger", "https://www.linkedin.com/in/alonso-amador"], "url": "https://askrueger.github.io/webportfolio/"}
+</script>
+</head>
+<body class="">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="" aria-label="Alonso Amador Sánchez, Inicio">
+                <span class="brand-mark" aria-hidden="true">AA</span>
+                <span class="brand-text">Alonso Amador<span class="brand-cursor" aria-hidden="true">_</span></span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="#projects">Proyectos</a>
+                <a href="#about">Sobre mí</a>
+                <a href="#experience">Experiencia</a>
+                <a href="cv/">CV</a>
+                <a href="#contact" class="nav-cta">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-btn lang-switch" href="en/" hreflang="en" lang="en" aria-label="Read this page in English">EN</a>
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="site-nav">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="availability">
+                <span class="pulse" aria-hidden="true"></span>
+                Disponibilidad inmediata · Mérida, Extremadura
+            </p>
+            <h1 class="hero-title">
+                <span class="hero-name">Alonso Amador Sánchez</span>
+                <span class="hero-role">Desarrollador de Software Junior<br><span class="accent">Backend Java · Android Kotlin</span></span>
+            </h1>
+            <p class="hero-lead">Construyo backends con Java y Spring Boot y apps Android con Kotlin y Jetpack Compose, desde la API hasta la app en Google Play, con tests y documentación que dicen la verdad.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#projects">Ver proyectos <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <a class="btn btn-ghost" href="cv/alonso-amador-sanchez-cv.pdf" download><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg> CV en PDF</a>
+                <a class="btn btn-ghost" href="https://github.com/AsKrueger" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+ GitHub</a>
+            </div>
+            <a class="app-dock" href="#projects">
+                <span class="app-dock-icons"><img src="static/img/projects/explorersaga/icon.webp" alt="" width="40" height="40"><img src="static/img/projects/3d-cost-manager/icon.webp" alt="" width="40" height="40"><img src="static/img/projects/animewatchlist/icon.webp" alt="" width="40" height="40"><img src="static/img/projects/training-arc/icon.webp" alt="" width="40" height="40"><img src="static/img/projects/bingogoals/icon.svg" alt="" width="40" height="40"></span>
+                <span class="app-dock-text"><strong>5 apps en Google Play</strong>Pruebas cerradas · Kotlin y Jetpack Compose</span>
+            </a>
+        </div>
+
+        <div class="app-fan" aria-label="Mis apps en Google Play">
+            <a class="fan-card fan-1" href="proyectos/explorersaga/" style="--brand: #2f9e57;">
+                <span class="fan-shot"><img src="static/img/projects/explorersaga/01-inicio.webp" alt="ExplorerSaga Extremadura: Pantalla de inicio con el Teatro Romano de Mérida, categorías, «Ahora en temporada» y lugares cercanos" width="220" fetchpriority="high" decoding="async"></span>
+                <span class="fan-label"><img src="static/img/projects/explorersaga/icon.webp" alt="" width="28" height="28">ExplorerSaga Extremadura</span>
+            </a>
+            <a class="fan-card fan-2" href="proyectos/3d-cost-manager/" style="--brand: #f06418;">
+                <span class="fan-shot"><img src="static/img/projects/3d-cost-manager/01-coste.webp" alt="3D Cost Manager: Resultado del cálculo con el precio por pieza y el desglose de costes" width="220" fetchpriority="high" decoding="async"></span>
+                <span class="fan-label"><img src="static/img/projects/3d-cost-manager/icon.webp" alt="" width="28" height="28">3D Cost Manager</span>
+            </a>
+            <a class="fan-card fan-3" href="proyectos/animewatchlist/" style="--brand: #ff4f8b;">
+                <span class="fan-shot"><img src="static/img/projects/animewatchlist/01-calendario.webp" alt="AnimeWatchlist: Calendario semanal con los episodios del miércoles" width="220" fetchpriority="high" decoding="async"></span>
+                <span class="fan-label"><img src="static/img/projects/animewatchlist/icon.webp" alt="" width="28" height="28">AnimeWatchlist</span>
+            </a>
+            <a class="fan-card fan-4" href="proyectos/training-arc/" style="--brand: #ff8a1f;">
+                <span class="fan-shot"><img src="static/img/projects/training-arc/01-level-up.webp" alt="Training Arc: Pantalla del héroe con nivel, racha y gráfica de volumen semanal" width="220" loading="lazy" decoding="async"></span>
+                <span class="fan-label"><img src="static/img/projects/training-arc/icon.webp" alt="" width="28" height="28">Training Arc</span>
+            </a>
+            <a class="fan-card fan-5" href="proyectos/bingogoals/" style="--brand: #d0213a;">
+                <span class="fan-shot shot-framed"><img src="static/img/projects/bingogoals/02-carton.webp" alt="BingoGoals: Cartón de 3×3 con tres metas selladas en diagonal y la línea tachada" width="220" loading="lazy" decoding="async"></span>
+                <span class="fan-label"><img src="static/img/projects/bingogoals/icon.svg" alt="" width="28" height="28">BingoGoals</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <dl class="quick-facts" aria-label="Resumen rápido">
+            <div>
+                <dd>5</dd>
+                <dt>apps en prueba cerrada en Google Play</dt>
+            </div>
+            <div>
+                <dd>3</dd>
+                <dt>APIs REST con PostgreSQL (Spring Boot y NestJS)</dt>
+            </div>
+            <div>
+                <dd>200+</dd>
+                <dt>tests automatizados</dt>
+            </div>
+            <div>
+                <dd>Ya</dd>
+                <dt>incorporación · presencial, híbrido o remoto</dt>
+            </div>
+        </dl>
+    </div>
+</section>
+
+<!-- ============ PROYECTOS ============ -->
+<section class="section" id="projects">
+    <div class="container">
+        <header class="section-head">
+            <p class="kicker"><span class="mono">01</span> Proyectos</p>
+            <h2>Apps en Google Play, con su backend y sus tests</h2>
+            <p class="section-lead">Mis cinco apps en prueba cerrada en Google Play, trabajadas como en un equipo real: issues, ramas, pull requests, CI y documentación. Cada estado está indicado tal como es.</p>
+        </header>
+
+        <div class="featured-list">
+            <article class="feature-card app-card reveal" style="--brand: #2f9e57;">
+                <div class="app-card-banner">
+                    <img src="static/img/projects/explorersaga/banner.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+                </div>
+                <div class="feature-main">
+                    <div class="app-card-id">
+                        <img class="app-icon" src="static/img/projects/explorersaga/icon.webp" alt="" width="52" height="52" loading="lazy">
+                        <div>
+                            <h3><a class="stretched" href="proyectos/explorersaga/">ExplorerSaga Extremadura</a></h3>
+                            <div class="card-meta">
+                                <span class="kind mono">Android · Kotlin + Python</span>
+                                <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v2 · prueba cerrada en Google Play</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tagline">Toda Extremadura en el bolsillo, también sin cobertura.</p>
+                    <ul class="perks perks-sm">
+<li>5.700+ lugares</li><li>Mapa sin conexión</li><li>Gratis y sin cuenta</li><li>ES / EN</li>                    </ul>
+                    <div class="app-card-foot">
+                        <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+    <li>Room + FTS4</li>
+</ul>
+
+                        <span class="card-link">Ver la app <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </div>
+                </div>
+            </article>
+            <article class="feature-card app-card reveal" style="--brand: #f06418;">
+                <div class="app-card-banner">
+                    <img src="static/img/projects/3d-cost-manager/banner.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+                </div>
+                <div class="feature-main">
+                    <div class="app-card-id">
+                        <img class="app-icon" src="static/img/projects/3d-cost-manager/icon.webp" alt="" width="52" height="52" loading="lazy">
+                        <div>
+                            <h3><a class="stretched" href="proyectos/3d-cost-manager/">3D Cost Manager</a></h3>
+                            <div class="card-meta">
+                                <span class="kind mono">Android · Kotlin</span>
+                                <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v1.0.0 · prueba cerrada en Google Play</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tagline">Sabe lo que te cuesta de verdad cada pieza y cuánto cobrar en cada sitio.</p>
+                    <ul class="perks perks-sm">
+<li>Sin cuenta ni conexión</li><li>Importa G-code y 3MF</li><li>Presupuestos en PDF</li><li>6 idiomas</li>                    </ul>
+                    <div class="app-card-foot">
+                        <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+    <li>Room</li>
+</ul>
+
+                        <span class="card-link">Ver la app <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </div>
+                </div>
+            </article>
+            <article class="feature-card app-card reveal" style="--brand: #ff4f8b;">
+                <div class="app-card-banner">
+                    <img src="static/img/projects/animewatchlist/banner.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+                </div>
+                <div class="feature-main">
+                    <div class="app-card-id">
+                        <img class="app-icon" src="static/img/projects/animewatchlist/icon.webp" alt="" width="52" height="52" loading="lazy">
+                        <div>
+                            <h3><a class="stretched" href="proyectos/animewatchlist/">AnimeWatchlist</a></h3>
+                            <div class="card-meta">
+                                <span class="kind mono">Android · Kotlin</span>
+                                <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v1.1.0 · prueba cerrada en Google Play</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tagline">¿Qué anime sale hoy? ¿Por qué episodio ibas? Te lo dice en un toque.</p>
+                    <ul class="perks perks-sm">
+<li>Calendario semanal</li><li>Sin cuenta</li><li>Funciona sin conexión</li><li>ES / EN</li>                    </ul>
+                    <div class="app-card-foot">
+                        <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+    <li>Room</li>
+</ul>
+
+                        <span class="card-link">Ver la app <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </div>
+                </div>
+            </article>
+            <article class="feature-card app-card reveal" style="--brand: #ff8a1f;">
+                <div class="app-card-banner">
+                    <img src="static/img/projects/training-arc/banner.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+                </div>
+                <div class="feature-main">
+                    <div class="app-card-id">
+                        <img class="app-icon" src="static/img/projects/training-arc/icon.webp" alt="" width="52" height="52" loading="lazy">
+                        <div>
+                            <h3><a class="stretched" href="proyectos/training-arc/">Training Arc</a></h3>
+                            <div class="card-meta">
+                                <span class="kind mono">Android · Kotlin</span>
+                                <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v1.0.0 · prueba cerrada en Google Play</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tagline">Tu registro de gimnasio, convertido en un RPG. Cada serie suma XP.</p>
+                    <ul class="perks perks-sm">
+<li>883 ejercicios</li><li>Rangos de E a SS</li><li>Sin cuenta ni anuncios</li><li>ES / EN</li>                    </ul>
+                    <div class="app-card-foot">
+                        <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+    <li>Room</li>
+</ul>
+
+                        <span class="card-link">Ver la app <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </div>
+                </div>
+            </article>
+            <article class="feature-card app-card reveal" style="--brand: #d0213a;">
+                <div class="app-card-banner">
+                    <img src="static/img/projects/bingogoals/banner.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+                </div>
+                <div class="feature-main">
+                    <div class="app-card-id">
+                        <img class="app-icon" src="static/img/projects/bingogoals/icon.svg" alt="" width="52" height="52" loading="lazy">
+                        <div>
+                            <h3><a class="stretched" href="proyectos/bingogoals/">BingoGoals</a></h3>
+                            <div class="card-meta">
+                                <span class="kind mono">Android · Kotlin + TypeScript</span>
+                                <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v0.1 · prueba cerrada en Google Play</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tagline">Convierte tus metas en un cartón de bingo y canta línea cada vez que cumples una.</p>
+                    <ul class="perks perks-sm">
+<li>3×3, 4×4 o 5×5</li><li>Ideas para cada ocasión</li><li>Sin cuenta</li><li>ES / EN</li>                    </ul>
+                    <div class="app-card-foot">
+                        <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+    <li>Room</li>
+</ul>
+
+                        <span class="card-link">Ver la app <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section class="section section-alt" id="about">
+    <div class="container about-grid">
+        <div>
+            <header class="section-head">
+                <p class="kicker"><span class="mono">02</span> Sobre mí</p>
+                <h2>De la recepción de un Parador al software</h2>
+            </header>
+            <div class="prose">
+                <p>Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (Cesur) y he trabajado como desarrollador de aplicaciones en CodeArts Solutions con C#, Unity y .NET. Hoy tengo cinco apps en prueba cerrada en Google Play, con su propio backend cuando lo necesitan.</p>
+                <p>Antes de programar estudié Turismo en la Universidad de Extremadura y trabajé en la recepción del Parador de Mérida. De ahí me traigo algo que no se aprende en un tutorial: entender qué necesita la persona al otro lado y explicarlo con claridad.</p>
+                <p>Me gusta trabajar como en un equipo real aunque el proyecto sea mío: issues, ramas, pull requests, versiones por fases, CI y documentación que cuenta la verdad sobre el estado del código.</p>
+            </div>
+        </div>
+        <aside class="about-card reveal">
+            <img src="https://avatars.githubusercontent.com/u/156074850?v=4" alt="Foto de Alonso Amador Sánchez" width="96" height="96" loading="lazy">
+            <dl class="facts">
+                <div><dt>base</dt><dd>Mérida, Extremadura, España</dd></div>
+                <div><dt>modalidad</dt><dd>Presencial · Híbrido · Remoto</dd></div>
+                <div><dt>Idiomas</dt><dd>Español (Nativo), Inglés (B1)</dd></div>
+                <div><dt>estado</dt><dd class="ok">Disponibilidad inmediata</dd></div>
+            </dl>
+        </aside>
+    </div>
+
+    <div class="container">
+        <div class="principles">
+            <div class="principle reveal">
+                <span class="mono principle-n">01</span>
+                <h3>Dominio primero</h3>
+                <p>Agregados que protegen sus invariantes y lógica de negocio desacoplada del framework.</p>
+            </div>
+            <div class="principle reveal">
+                <span class="mono principle-n">02</span>
+                <h3>Sin conexión primero</h3>
+                <p>Apps que guardan sus datos en el dispositivo y siguen funcionando sin cobertura.</p>
+            </div>
+            <div class="principle reveal">
+                <span class="mono principle-n">03</span>
+                <h3>Tests de verdad</h3>
+                <p>JUnit 5, Mockito y Testcontainers en el backend, Vitest y Playwright en la web y tests de interfaz en Android.</p>
+            </div>
+            <div class="principle reveal">
+                <span class="mono principle-n">04</span>
+                <h3>Documentación honesta</h3>
+                <p>README, ADRs y roadmap que dicen qué está hecho y qué no.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section class="section" id="stack">
+    <div class="container">
+        <header class="section-head">
+            <p class="kicker"><span class="mono">03</span> Stack</p>
+            <h2>Herramientas que uso en mis proyectos</h2>
+        </header>
+        <div class="stack-grid">
+            <div class="stack-group reveal">
+                <h3 class="mono">Backend</h3>
+                <ul class="chips">
+    <li>Java 17/21</li>
+    <li>Spring Boot 3</li>
+    <li>Spring Security + JWT</li>
+    <li>REST / OpenAPI</li>
+    <li>JPA / Hibernate</li>
+    <li>NestJS</li>
+    <li>Apache Kafka</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Android</h3>
+                <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Room</li>
+    <li>WorkManager</li>
+    <li>Retrofit / OkHttp</li>
+    <li>MapLibre</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Datos</h3>
+                <ul class="chips">
+    <li>PostgreSQL</li>
+    <li>SQL</li>
+    <li>Flyway</li>
+    <li>Prisma</li>
+    <li>SQLite / FTS</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Calidad</h3>
+                <ul class="chips">
+    <li>JUnit 5</li>
+    <li>Mockito</li>
+    <li>Testcontainers</li>
+    <li>Vitest</li>
+    <li>Playwright</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">DevOps</h3>
+                <ul class="chips">
+    <li>Docker</li>
+    <li>GitHub Actions</li>
+    <li>AWS (CloudFormation, EC2, RDS)</li>
+    <li>Gradle</li>
+    <li>Maven</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Web</h3>
+                <ul class="chips">
+    <li>React</li>
+    <li>TypeScript</li>
+    <li>PWA</li>
+    <li>Angular</li>
+</ul>
+
+            </div>
+            <div class="stack-group reveal">
+                <h3 class="mono">Arquitectura</h3>
+                <ul class="chips">
+    <li>Hexagonal</li>
+    <li>DDD táctico</li>
+    <li>MVVM</li>
+    <li>Offline-first</li>
+</ul>
+
+            </div>
+        </div>
+        <p class="also mono"><span class="dim">// también he trabajado con:</span> C# · .NET · Unity · Python · Git / GitHub</p>
+    </div>
+</section>
+
+<!-- ============ EXPERIENCIA Y FORMACIÓN ============ -->
+<section class="section section-alt" id="experience">
+    <div class="container two-col">
+        <div>
+            <header class="section-head">
+                <p class="kicker"><span class="mono">04</span> Experiencia</p>
+                <h2>Trayectoria</h2>
+            </header>
+            <ol class="timeline">
+                <li class="reveal">
+                    <p class="timeline-date mono">sept. 2025 – ene. 2026</p>
+                    <h3>Desarrollador de aplicaciones</h3>
+                    <p class="timeline-org">CodeArts Solutions <span class="dim">· Prácticas · Remoto</span></p>
+                    <ul class="bullets">
+<li>Desarrollo de aplicaciones multiplataforma con C#, Unity y .NET.</li><li>Participación en el ciclo completo: análisis, implementación, pruebas y entrega.</li><li>Trabajo en sprints ágiles con control de versiones en Git/GitHub.</li>                    </ul>
+<ul class="chips">
+    <li>C#</li>
+    <li>.NET</li>
+    <li>Unity</li>
+    <li>Git</li>
+</ul>
+                </li>
+                <li class="reveal">
+                    <p class="timeline-date mono">abr. 2022 – ago. 2023</p>
+                    <h3>Ayudante de recepción</h3>
+                    <p class="timeline-org">Parador de Mérida <span class="dim">· Contrato temporal · Mérida</span></p>
+                    <ul class="bullets">
+<li>Atención al cliente en recepción, primero en prácticas (abr. – sept. 2022) y después con contrato (oct. 2022 – ago. 2023).</li><li>Servicio de atención al cliente y turismo sostenible en un entorno de alta exigencia.</li>                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div id="education">
+            <header class="section-head">
+                <p class="kicker"><span class="mono">05</span> Formación</p>
+                <h2>Estudios</h2>
+            </header>
+            <ol class="timeline">
+                <li class="reveal">
+                    <p class="timeline-date mono">oct. 2023 – dic. 2025</p>
+                    <h3>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma</h3>
+                    <p class="timeline-org">Cesur</p>
+                    <p>Java, Kotlin, C#, Python y SQL. Android, escritorio, acceso a datos y servicios en red. TFG: ExplorerSaga Extremadura.</p>
+                </li>
+                <li class="reveal">
+                    <p class="timeline-date mono">sept. 2018 – jun. 2024</p>
+                    <h3>Grado en Turismo</h3>
+                    <p class="timeline-org">Universidad de Extremadura</p>
+                    <p>Gestión, atención al cliente y turismo sostenible. El origen de ExplorerSaga.</p>
+                </li>
+            </ol>
+            <h3 class="subhead">Certificaciones</h3>
+            <ul class="cert-list">
+                <li><span>Lógica de programación <span class="dim">· mouredev pro</span></span><span class="mono dim">feb. 2026</span></li>
+                <li><span>Python intermedio <span class="dim">· mouredev pro</span></span><span class="mono dim">feb. 2026</span></li>
+                <li><span>SQL y bases de datos</span><span class="mono dim">ene. 2026</span></li>
+                <li><span>Git y GitHub desde cero</span><span class="mono dim">ene. 2026</span></li>
+                <li><span>Python desde cero</span><span class="mono dim">sept. 2025</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section contact" id="contact">
+    <div class="container contact-inner reveal">
+        <p class="kicker"><span class="mono">06</span> Contacto</p>
+        <h2>¿Buscas un desarrollador junior de backend o Android con ganas de aprender en serio?</h2>
+        <p class="section-lead">Estoy disponible ya, en Mérida o en remoto. Respondo rápido.</p>
+        <div class="contact-actions">
+            <a class="btn btn-primary btn-lg" href="mailto:alonsoamadorsanchez@gmail.com">alonsoamadorsanchez@gmail.com</a>
+            <button class="btn btn-ghost" type="button" data-copy="alonsoamadorsanchez@gmail.com" data-copied="¡Copiado!">Copiar email</button>
+        </div>
+        <p class="contact-links">
+            <a href="https://www.linkedin.com/in/alonso-amador" target="_blank" rel="noopener">LinkedIn <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://github.com/AsKrueger" target="_blank" rel="noopener">GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="cv/alonso-amador-sanchez-cv.pdf" download>Descargar CV en PDF <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></a>
+        </p>
+    </div>
+</section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="mono footer-build">
+                <span class="dim">$</span> python build.py <span class="dim">→</span> <span class="ok">200 OK</span>
+                <span class="dim">· Generado con Python + Jinja2 desde un <a href="https://github.com/AsKrueger/webportfolio" target="_blank" rel="noopener">data.json</a></span>
+            </p>
+            <p class="footer-links">
+                <a href="mailto:alonsoamadorsanchez@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/alonso-amador" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/AsKrueger" target="_blank" rel="noopener">GitHub</a>
+                <span class="dim">© 2026 Alonso Amador Sánchez</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Training Arc · Registro de entrenamientos convertido en un RPG de estética anime. · Alonso Amador Sánchez</title>
+    <meta name="description" content="Tu registro de gimnasio, convertido en un RPG. Cada serie suma XP. App Android para registrar entrenamientos en la que cada serie da XP, cada sesión sube seis atributos y cada semana seguida alimenta tu racha. Tiene 883 ejercicios, 8 programas temáticos, récords personales, mapa muscular y estadísticas. Funciona sin conexión y sin cuenta, en español e inglés.">
+    <meta name="author" content="Alonso Amador Sánchez">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+    <link rel="canonical" href="https://askrueger.github.io/webportfolio/proyectos/training-arc/">
+    <meta property="og:url" content="https://askrueger.github.io/webportfolio/proyectos/training-arc/">
+    <link rel="alternate" hreflang="es" href="https://askrueger.github.io/webportfolio/proyectos/training-arc/">
+    <link rel="alternate" hreflang="en" href="https://askrueger.github.io/webportfolio/en/projects/training-arc/">
+    <link rel="alternate" hreflang="x-default" href="https://askrueger.github.io/webportfolio/proyectos/training-arc/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Alonso Amador Sánchez">
+    <meta property="og:title" content="Training Arc · Registro de entrenamientos convertido en un RPG de estética anime. · Alonso Amador Sánchez">
+    <meta property="og:description" content="Tu registro de gimnasio, convertido en un RPG. Cada serie suma XP. App Android para registrar entrenamientos en la que cada serie da XP, cada sesión sube seis atributos y cada semana seguida alimenta tu racha. Tiene 883 ejercicios, 8 programas temáticos, récords personales, mapa muscular y estadísticas. Funciona sin conexión y sin cuenta, en español e inglés.">
+    <meta property="og:image" content="https://askrueger.github.io/webportfolio/static/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Alonso Amador Sánchez · Backend Java · Android Kotlin">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../../static/img/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="../../static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../static/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../static/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <script>
+        try {
+            var t = localStorage.getItem("theme");
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+</head>
+<body class="">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../" aria-label="Alonso Amador Sánchez, Inicio">
+                <span class="brand-mark" aria-hidden="true">AA</span>
+                <span class="brand-text">Alonso Amador<span class="brand-cursor" aria-hidden="true">_</span></span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="../../#projects">Proyectos</a>
+                <a href="../../#about">Sobre mí</a>
+                <a href="../../#experience">Experiencia</a>
+                <a href="../../cv/">CV</a>
+                <a href="../../#contact" class="nav-cta">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-btn lang-switch" href="../../en/projects/training-arc/" hreflang="en" lang="en" aria-label="Read this page in English">EN</a>
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="site-nav">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+<article class="app" style="--brand: #ff8a1f; --brand-ink: #14110d;">
+
+    <!-- ============ LA APP ============ -->
+    <header class="app-hero">
+        <div class="container app-hero-grid">
+            <div class="app-hero-copy">
+                <nav class="breadcrumb mono" aria-label="Ruta">
+                    <a href="../../">inicio</a> <span class="dim">/</span>
+                    <a href="../../#projects">proyectos</a> <span class="dim">/</span>
+                    <span aria-current="page">training-arc</span>
+                </nav>
+                <div class="app-id">
+                    <img class="app-icon" src="../../static/img/projects/training-arc/icon.webp" alt="" width="72" height="72">
+                    <div>
+                        <p class="app-name">Training Arc</p>
+                        <div class="card-meta">
+                            <span class="kind mono">Android · Kotlin</span>
+                            <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v1.0.0 · prueba cerrada en Google Play</span>
+
+                        </div>
+                    </div>
+                </div>
+                <h1 class="app-pitch">Tu registro de gimnasio, convertido en un RPG. Cada serie suma XP.</h1>
+                <p class="hero-lead">App Android para registrar entrenamientos en la que cada serie da XP, cada sesión sube seis atributos y cada semana seguida alimenta tu racha. Tiene 883 ejercicios, 8 programas temáticos, récords personales, mapa muscular y estadísticas. Funciona sin conexión y sin cuenta, en español e inglés.</p>
+                <ul class="perks">
+<li>883 ejercicios</li><li>Rangos de E a SS</li><li>Sin cuenta ni anuncios</li><li>ES / EN</li>                </ul>
+                <div class="hero-actions">
+                    <a class="btn btn-brand btn-lg" href="mailto:alonsoamadorsanchez@gmail.com?subject=Quiero%20probar%20Training%20Arc&amp;body=Hola%20Alonso%2C%20me%20gustar%C3%ADa%20probar%20la%20app.%20Mi%20cuenta%20de%20Google%20Play%20es%3A%20"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l13 8-13 8z"/></svg> Pedir acceso a la prueba</a>
+
+                </div>
+                <p class="access-note dim">La app está en prueba cerrada en Google Play: escríbeme con tu cuenta de Google y te doy acceso.</p>
+            </div>
+            <div class="app-hero-shots" aria-hidden="false">
+                <div class="hero-shot hero-shot-1"><span class="shot"><img src="../../static/img/projects/training-arc/01-level-up.webp" alt="Pantalla del héroe con nivel, racha y gráfica de volumen semanal" width="420" fetchpriority="high" decoding="async"></span>
+</div>
+                <div class="hero-shot hero-shot-2"><span class="shot"><img src="../../static/img/projects/training-arc/02-log.webp" alt="Entrenamiento en directo con series de sentadilla y temporizador de descanso" width="420" fetchpriority="high" decoding="async"></span>
+</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="app-features" aria-labelledby="features-title">
+        <div class="container">
+            <header class="section-head">
+                <p class="kicker"><span class="mono">✦</span> Lo que puedes hacer</p>
+                <h2 id="features-title">Por qué te va a gustar Training Arc</h2>
+            </header>
+            <div class="feature-rows">
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/training-arc/01-level-up.webp" alt="Pantalla del héroe con nivel, racha y gráfica de volumen semanal" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">01</span>
+                        <h3>Sube de nivel entrenando</h3>
+                        <p>Cada serie te da XP, cada entrenamiento sube tus atributos y cada semana seguida alimenta tu aura.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/training-arc/02-log.webp" alt="Entrenamiento en directo con series de sentadilla y temporizador de descanso" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">02</span>
+                        <h3>Registra una serie en un toque</h3>
+                        <p>Ves lo que hiciste la última vez y el descanso arranca solo. Te avisa aunque tengas el móvil bloqueado.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/training-arc/03-stats.webp" alt="Mapa muscular y radar de los seis atributos" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">03</span>
+                        <h3>Seis atributos que crecen contigo</h3>
+                        <p>Fuerza, Resistencia, Velocidad, Agilidad, Disciplina y Recuperación, y un rango de E a SS para cada músculo.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/training-arc/04-arcs.webp" alt="Lista de arcos de entrenamiento temáticos" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">04</span>
+                        <h3>8 arcos de entrenamiento</h3>
+                        <p>Programas temáticos inspirados en el entrenamiento del anime, cada uno con su progreso por sesiones.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/training-arc/06-records.webp" alt="Resumen de un entrenamiento con récords personales marcados" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">05</span>
+                        <h3>Récords que se detectan solos</h3>
+                        <p>Al terminar, la app marca tus récords personales y te da XP extra. Gráficas de progreso, 1RM estimado y 14 logros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-gallery" aria-labelledby="gallery-title">
+        <div class="container">
+            <header class="section-head section-head-row">
+                <h2 id="gallery-title">Capturas de la versión 1.0 (ficha de Play en inglés)</h2>
+                <p class="dim mono gallery-hint">desliza →</p>
+            </header>
+        </div>
+        <ul class="shot-strip" tabindex="0" aria-label="Capturas de la versión 1.0 (ficha de Play en inglés)">
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/training-arc/01-level-up.webp" alt="Pantalla del héroe con nivel, racha y gráfica de volumen semanal" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>El héroe: nivel, racha y progreso semanal.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/training-arc/02-log.webp" alt="Entrenamiento en directo con series de sentadilla y temporizador de descanso" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Registro de series con los valores de la sesión anterior.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/training-arc/03-stats.webp" alt="Mapa muscular y radar de los seis atributos" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Seis atributos en un radar y rango por músculo.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/training-arc/04-arcs.webp" alt="Lista de arcos de entrenamiento temáticos" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Arcos: 8 programas temáticos con su progreso.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/training-arc/05-muscles.webp" alt="Estadísticas de los últimos 7 días con mapa muscular y series por grupo" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Estadísticas semanales con mapa de calor muscular.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/training-arc/06-records.webp" alt="Resumen de un entrenamiento con récords personales marcados" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Récords personales detectados al terminar.</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+    <section class="app-cta">
+        <div class="container">
+            <div class="app-cta-card">
+                <img class="app-icon" src="../../static/img/projects/training-arc/icon.webp" alt="" width="64" height="64">
+                <div class="app-cta-text">
+                    <h2>¿Te apetece probar Training Arc?</h2>
+                    <p>La app está en prueba cerrada en Google Play: escríbeme con tu cuenta de Google y te doy acceso.</p>
+                </div>
+                <div class="app-cta-actions">
+                    <a class="btn btn-brand" href="mailto:alonsoamadorsanchez@gmail.com?subject=Quiero%20probar%20Training%20Arc&amp;body=Hola%20Alonso%2C%20me%20gustar%C3%ADa%20probar%20la%20app.%20Mi%20cuenta%20de%20Google%20Play%20es%3A%20"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l13 8-13 8z"/></svg> Pedir acceso a la prueba</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BAJO EL CAPÓ ============ -->
+    <section class="under-hood" aria-labelledby="hood-title">
+        <div class="container">
+            <header class="hood-head">
+                <p class="kicker"><span class="mono">{ }</span> Bajo el capó</p>
+                <h2 id="hood-title">Cómo está hecha</h2>
+                <p class="section-lead">Para quien quiera saber qué hay detrás: el problema, la arquitectura, código real y las decisiones que tomé.</p>
+                <dl class="metrics metrics-row">
+                    <div><dt>ejercicios</dt><dd>883</dd></div>
+                    <div><dt>atributos RPG</dt><dd>6</dd></div>
+                    <div><dt>tests del dominio</dt><dd>34</dd></div>
+                </dl>
+            </header>
+
+            <div class="hood-grid">
+                <div class="case-body">
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">01</span> El problema</h3>
+                        <p>Las apps de registro de entrenamientos son eficaces pero frías, y a mucha gente le cuesta mantener la constancia. Convertir el progreso en un personaje que sube de nivel da una razón más para volver al gimnasio.</p>
+                    </section>
+
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">02</span> Un fragmento del código</h3>
+                        <figure class="code-window">
+    <div class="code-bar">
+        <span class="code-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="code-path mono">app/…/domain/Rpg.kt</span>
+        <span class="code-source mono">repositorio privado</span>
+    </div>
+    <pre class="code-body highlight"><code><span class="cm">/**</span>
+<span class="cm"> * Turns training into XP, levels and stats. Everything is deterministic and pure, so the totals</span>
+<span class="cm"> * can always be rebuilt from the stored workouts.</span>
+<span class="cm"> */</span>
+<span class="kd">object</span><span class="w"> </span><span class="nc">RpgEngine</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// …</span>
+
+<span class="w">    </span><span class="cm">/** XP needed to go from [level] to the next one. */</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">xpToNextLevel</span><span class="p">(</span><span class="n">level</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">):</span><span class="w"> </span><span class="kt">Long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">level</span><span class="p">.</span><span class="na">toDouble</span><span class="p">().</span><span class="na">pow</span><span class="p">(</span><span class="m">1.5</span><span class="p">)).</span><span class="na">roundToInt</span><span class="p">().</span><span class="na">toLong</span><span class="p">()</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The reward for a finished workout.</span>
+<span class="cm">     * @param streakWeeks consecutive weeks with training before this workout.</span>
+<span class="cm">     * @param restedBefore whether there was at least one rest day since the previous workout.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">reward</span><span class="p">(</span>
+<span class="w">        </span><span class="n">sets</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">SetForReward</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">heroClass</span><span class="p">:</span><span class="w"> </span><span class="n">HeroClass?,</span>
+<span class="w">        </span><span class="n">bodyweightKg</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">,</span>
+<span class="w">        </span><span class="n">streakWeeks</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span>
+<span class="w">        </span><span class="n">restedBefore</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span><span class="p">,</span>
+<span class="w">    </span><span class="p">):</span><span class="w"> </span><span class="n">WorkoutReward</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">stats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stat</span><span class="p">.</span><span class="na">entries</span><span class="p">.</span><span class="na">associateWith</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="m">0.0</span><span class="w"> </span><span class="p">}.</span><span class="na">toMutableMap</span><span class="p">()</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nv">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0</span>
+<span class="w">        </span><span class="n">sets</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="n">profile</span><span class="p">,</span><span class="w"> </span><span class="k">set</span><span class="p">,</span><span class="w"> </span><span class="n">isPr</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nv">setXp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setXp</span><span class="p">(</span><span class="k">set</span><span class="p">,</span><span class="w"> </span><span class="n">bodyweightKg</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">setXp</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="nd">@forEach</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isPr</span><span class="p">)</span><span class="w"> </span><span class="n">setXp</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">PR_MULTIPLIER</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">weights</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">statWeights</span><span class="p">(</span><span class="n">profile</span><span class="p">,</span><span class="w"> </span><span class="k">set</span><span class="p">.</span><span class="na">reps</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weights</span><span class="p">.</span><span class="na">maxBy</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">value</span><span class="w"> </span><span class="p">}.</span><span class="na">key</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">heroClass</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">heroClass</span><span class="p">.</span><span class="na">focus</span><span class="p">)</span><span class="w"> </span><span class="n">setXp</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">heroClass</span><span class="p">.</span><span class="na">bonus</span>
+<span class="w">            </span><span class="n">xp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">setXp</span>
+<span class="w">            </span><span class="n">weights</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="n">stat</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">stats</span><span class="o">[</span><span class="n">stat</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="p">.</span><span class="na">getValue</span><span class="p">(</span><span class="n">stat</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">setXp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">xp</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0.0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">WorkoutReward</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">stats</span><span class="p">)</span>
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">streakMultiplier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.05</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">streakWeeks</span><span class="p">.</span><span class="na">coerceIn</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<span class="w">        </span><span class="n">stats</span><span class="o">[</span><span class="n">Stat</span><span class="p">.</span><span class="na">DIS</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="p">.</span><span class="na">getValue</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">DIS</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">streakWeeks</span><span class="p">.</span><span class="na">coerceIn</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.5</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">restedBefore</span><span class="p">)</span><span class="w"> </span><span class="n">stats</span><span class="o">[</span><span class="n">Stat</span><span class="p">.</span><span class="na">REC</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stats</span><span class="p">.</span><span class="na">getValue</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">REC</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span>
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">xp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">COMPLETION_BONUS</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">streakMultiplier</span><span class="p">).</span><span class="na">roundToInt</span><span class="p">()</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">WorkoutReward</span><span class="p">(</span><span class="n">total</span><span class="p">,</span><span class="w"> </span><span class="n">stats</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+    <figcaption>La recompensa de un entrenamiento es una función pura: reparte la XP de cada serie entre los atributos que entrena, aplica los bonus de récord, de clase y de racha, y premia la constancia y el descanso. Como no depende de nada externo, se prueba con tests unitarios y los totales se pueden recalcular en cualquier momento.</figcaption>
+</figure>
+
+                    </section>
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">03</span> Qué he construido</h3>
+                        <ul class="checks">
+                            <li>Kotlin y Jetpack Compose con una sola Activity, Navigation Compose, Room para entrenamientos y rutinas y DataStore para ajustes y héroe.</li>
+                            <li>Motor RPG en Kotlin puro y determinista: XP por serie según el tipo de ejercicio, bonus por récord, clase y racha, seis atributos y rangos de E a SS. Los totales se pueden reconstruir siempre desde los entrenamientos guardados.</li>
+                            <li>Entrenamiento en directo con los valores de la sesión anterior, tipos de serie y temporizador de descanso que sigue en la notificación con el móvil bloqueado.</li>
+                            <li>Récords personales detectados al terminar (1RM estimado con Epley), 14 logros, objetivo semanal, gráficas de progreso y peso corporal.</li>
+                            <li>Mapa muscular vectorial propio, de frente y de espaldas, usado en fichas, resultados y como mapa de calor semanal.</li>
+                            <li>883 ejercicios de Free Exercise DB (dominio público) preparados con un script en Python, con instrucciones traducidas en el dispositivo con ML Kit.</li>
+                            <li>Sin backend ni cuentas: copia de seguridad exportable, imágenes sin conexión y borrado de caché y datos. El prototipo anterior en Flutter y FastAPI se conserva en una etiqueta.</li>
+                            <li>34 tests unitarios del motor RPG, las rachas, los logros, el progreso, el catálogo y los formatos.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">04</span> Decisiones y por qué</h3>
+                        <ol class="decisions">
+                            <li>El progreso se calcula, no se guarda. El motor RPG es una función pura, así que nivel y atributos se pueden reconstruir siempre desde los entrenamientos: un cambio en las reglas o un error nunca deja un progreso corrupto.</li>
+                            <li>Valores absurdos (600 kg, 500 repeticiones) se limitan en lugar de rechazarse. Una errata no debe hacer perder una serie, pero tampoco regalar niveles.</li>
+                            <li>Sin backend: el prototipo en Flutter y FastAPI se sustituyó por una app nativa que guarda todo en el móvil. Sin cuentas ni servidor no hay costes ni datos de salud fuera del dispositivo.</li>
+                        </ol>
+                    </section>
+
+                    <section class="note">
+                        <p><strong>Transparencia:</strong> el estado indicado arriba refleja el roadmap del proyecto. El repositorio es privado porque la app está en Google Play; el fragmento de código es literal y puedo enseñar el resto en una entrevista.</p>
+                    </section>
+                </div>
+
+                <aside class="case-aside">
+                    <div class="aside-card">
+                        <h3 class="mono">stack</h3>
+                        <h4>Android</h4>
+                        <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+    <li>Room</li>
+    <li>DataStore</li>
+    <li>Navigation Compose</li>
+    <li>Coil 3</li>
+</ul>
+
+                        <h4>Datos y servicios</h4>
+                        <ul class="chips">
+    <li>Free Exercise DB</li>
+    <li>ML Kit Translate</li>
+    <li>Python</li>
+</ul>
+
+                        <h4>Calidad y entrega</h4>
+                        <ul class="chips">
+    <li>JUnit</li>
+    <li>Google Play Console</li>
+</ul>
+
+                        <p class="aside-private mono dim">Repositorio privado</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <nav class="container case-nav" aria-label="Otros proyectos">
+        <a class="case-nav-link" href="../../proyectos/animewatchlist/"><span class="mono dim">← anterior</span><strong>AnimeWatchlist</strong></a>
+        <a class="case-nav-link next" href="../../proyectos/bingogoals/"><span class="mono dim">siguiente →</span><strong>BingoGoals</strong></a>
+    </nav>
+</article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="mono footer-build">
+                <span class="dim">$</span> python build.py <span class="dim">→</span> <span class="ok">200 OK</span>
+                <span class="dim">· Generado con Python + Jinja2 desde un <a href="https://github.com/AsKrueger/webportfolio" target="_blank" rel="noopener">data.json</a></span>
+            </p>
+            <p class="footer-links">
+                <a href="mailto:alonsoamadorsanchez@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/alonso-amador" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/AsKrueger" target="_blank" rel="noopener">GitHub</a>
+                <span class="dim">© 2026 Alonso Amador Sánchez</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../../static/js/main.js" defer></script>
+</body>
+</html>

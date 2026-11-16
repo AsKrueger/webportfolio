@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3D Cost Manager · Cuánto te cuesta cada impresión 3D y a cuánto venderla. · Alonso Amador Sánchez</title>
+    <meta name="description" content="Sabe lo que te cuesta de verdad cada pieza y cuánto cobrar en cada sitio. App Android que calcula el coste real de cada pieza impresa en 3D (material, luz, desgaste, tu tiempo e impresiones fallidas) y a cuánto venderla en cada canal, con su comisión y el IVA. Gestiona presupuestos y pedidos con PDF y funciona entera en el móvil, sin cuenta ni servidor, en 6 idiomas.">
+    <meta name="author" content="Alonso Amador Sánchez">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+    <link rel="canonical" href="https://askrueger.github.io/webportfolio/proyectos/3d-cost-manager/">
+    <meta property="og:url" content="https://askrueger.github.io/webportfolio/proyectos/3d-cost-manager/">
+    <link rel="alternate" hreflang="es" href="https://askrueger.github.io/webportfolio/proyectos/3d-cost-manager/">
+    <link rel="alternate" hreflang="en" href="https://askrueger.github.io/webportfolio/en/projects/3d-cost-manager/">
+    <link rel="alternate" hreflang="x-default" href="https://askrueger.github.io/webportfolio/proyectos/3d-cost-manager/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Alonso Amador Sánchez">
+    <meta property="og:title" content="3D Cost Manager · Cuánto te cuesta cada impresión 3D y a cuánto venderla. · Alonso Amador Sánchez">
+    <meta property="og:description" content="Sabe lo que te cuesta de verdad cada pieza y cuánto cobrar en cada sitio. App Android que calcula el coste real de cada pieza impresa en 3D (material, luz, desgaste, tu tiempo e impresiones fallidas) y a cuánto venderla en cada canal, con su comisión y el IVA. Gestiona presupuestos y pedidos con PDF y funciona entera en el móvil, sin cuenta ni servidor, en 6 idiomas.">
+    <meta property="og:image" content="https://askrueger.github.io/webportfolio/static/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Alonso Amador Sánchez · Backend Java · Android Kotlin">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../../static/img/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="../../static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../static/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../static/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <script>
+        try {
+            var t = localStorage.getItem("theme");
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+</head>
+<body class="">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../" aria-label="Alonso Amador Sánchez, Inicio">
+                <span class="brand-mark" aria-hidden="true">AA</span>
+                <span class="brand-text">Alonso Amador<span class="brand-cursor" aria-hidden="true">_</span></span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="../../#projects">Proyectos</a>
+                <a href="../../#about">Sobre mí</a>
+                <a href="../../#experience">Experiencia</a>
+                <a href="../../cv/">CV</a>
+                <a href="../../#contact" class="nav-cta">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-btn lang-switch" href="../../en/projects/3d-cost-manager/" hreflang="en" lang="en" aria-label="Read this page in English">EN</a>
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="site-nav">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+<article class="app" style="--brand: #f06418; --brand-ink: #14110d;">
+
+    <!-- ============ LA APP ============ -->
+    <header class="app-hero">
+        <div class="container app-hero-grid">
+            <div class="app-hero-copy">
+                <nav class="breadcrumb mono" aria-label="Ruta">
+                    <a href="../../">inicio</a> <span class="dim">/</span>
+                    <a href="../../#projects">proyectos</a> <span class="dim">/</span>
+                    <span aria-current="page">3d-cost-manager</span>
+                </nav>
+                <div class="app-id">
+                    <img class="app-icon" src="../../static/img/projects/3d-cost-manager/icon.webp" alt="" width="72" height="72">
+                    <div>
+                        <p class="app-name">3D Cost Manager</p>
+                        <div class="card-meta">
+                            <span class="kind mono">Android · Kotlin</span>
+                            <span class="status status-stable"><span class="status-dot" aria-hidden="true"></span>v1.0.0 · prueba cerrada en Google Play</span>
+
+                        </div>
+                    </div>
+                </div>
+                <h1 class="app-pitch">Sabe lo que te cuesta de verdad cada pieza y cuánto cobrar en cada sitio.</h1>
+                <p class="hero-lead">App Android que calcula el coste real de cada pieza impresa en 3D (material, luz, desgaste, tu tiempo e impresiones fallidas) y a cuánto venderla en cada canal, con su comisión y el IVA. Gestiona presupuestos y pedidos con PDF y funciona entera en el móvil, sin cuenta ni servidor, en 6 idiomas.</p>
+                <ul class="perks">
+<li>Sin cuenta ni conexión</li><li>Importa G-code y 3MF</li><li>Presupuestos en PDF</li><li>6 idiomas</li>                </ul>
+                <div class="hero-actions">
+                    <a class="btn btn-brand btn-lg" href="mailto:alonsoamadorsanchez@gmail.com?subject=Quiero%20probar%203D%20Cost%20Manager&amp;body=Hola%20Alonso%2C%20me%20gustar%C3%ADa%20probar%20la%20app.%20Mi%20cuenta%20de%20Google%20Play%20es%3A%20"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l13 8-13 8z"/></svg> Pedir acceso a la prueba</a>
+
+                    <a class="btn btn-ghost btn-lg" href="https://github.com/AsKrueger/Calculadora3D" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+ Ver repositorio</a>
+                </div>
+                <p class="access-note dim">La app está en prueba cerrada en Google Play: escríbeme con tu cuenta de Google y te doy acceso.</p>
+            </div>
+            <div class="app-hero-shots" aria-hidden="false">
+                <div class="hero-shot hero-shot-1"><span class="shot"><img src="../../static/img/projects/3d-cost-manager/01-coste.webp" alt="Resultado del cálculo con el precio por pieza y el desglose de costes" width="420" fetchpriority="high" decoding="async"></span>
+</div>
+                <div class="hero-shot hero-shot-2"><span class="shot"><img src="../../static/img/projects/3d-cost-manager/02-canales.webp" alt="Comparador de precios por canal de venta" width="420" fetchpriority="high" decoding="async"></span>
+</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="app-features" aria-labelledby="features-title">
+        <div class="container">
+            <header class="section-head">
+                <p class="kicker"><span class="mono">✦</span> Lo que puedes hacer</p>
+                <h2 id="features-title">Por qué te va a gustar 3D Cost Manager</h2>
+            </header>
+            <div class="feature-rows">
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/3d-cost-manager/01-coste.webp" alt="Resultado del cálculo con el precio por pieza y el desglose de costes" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">01</span>
+                        <h3>El coste real, no solo el filamento</h3>
+                        <p>Material con varios colores y purga, luz, desgaste de la impresora, tu tiempo y las impresiones que fallan. Lo ves desglosado al momento.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/3d-cost-manager/02-canales.webp" alt="Comparador de precios por canal de venta" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">02</span>
+                        <h3>Cobra lo justo en cada sitio</h3>
+                        <p>Etsy, Amazon, eBay, Wallapop o tu tienda: la app suma la comisión y el IVA y te dice lo que te queda limpio en cada uno.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/3d-cost-manager/04-importar.webp" alt="Nuevo cálculo con el aviso para importar el archivo del laminador" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">03</span>
+                        <h3>Abre el G-code y listo</h3>
+                        <p>Comparte un G-code o 3MF desde tu laminador y se rellenan el tiempo, los gramos de cada filamento y la imagen de la pieza.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/3d-cost-manager/03-pedidos.webp" alt="Pedidos del mes con ventas, beneficio y gráfico" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">04</span>
+                        <h3>Presupuestos, pedidos y beneficio</h3>
+                        <p>Presupuestos en PDF con tu logo para WhatsApp o correo, estados de cada pedido y un resumen del mes con lo que has ganado.</p>
+                    </div>
+                </div>
+                <div class="feature-row reveal">
+                    <figure class="feature-shot"><span class="shot"><img src="../../static/img/projects/3d-cost-manager/05-temporizador.webp" alt="Temporizador de impresión en curso" width="420" loading="lazy" decoding="async"></span>
+</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">05</span>
+                        <h3>Te avisa cuando termina</h3>
+                        <p>Temporizador de impresión con aviso y un widget en la pantalla de inicio con la cuenta atrás.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-gallery" aria-labelledby="gallery-title">
+        <div class="container">
+            <header class="section-head section-head-row">
+                <h2 id="gallery-title">Capturas de la versión 1.0</h2>
+                <p class="dim mono gallery-hint">desliza →</p>
+            </header>
+        </div>
+        <ul class="shot-strip" tabindex="0" aria-label="Capturas de la versión 1.0">
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/3d-cost-manager/01-coste.webp" alt="Resultado del cálculo con el precio por pieza y el desglose de costes" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>El coste real, con su desglose.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/3d-cost-manager/02-canales.webp" alt="Comparador de precios por canal de venta" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Precio y beneficio en cada canal de venta.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/3d-cost-manager/03-pedidos.webp" alt="Pedidos del mes con ventas, beneficio y gráfico" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Pedidos, ventas y beneficio del mes.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/3d-cost-manager/04-importar.webp" alt="Nuevo cálculo con el aviso para importar el archivo del laminador" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Importa el G-code o 3MF y se rellena solo.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/3d-cost-manager/05-temporizador.webp" alt="Temporizador de impresión en curso" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Te avisa cuando termina la impresión.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <span class="shot"><img src="../../static/img/projects/3d-cost-manager/06-widget.webp" alt="Widget en la pantalla de inicio con la cuenta atrás" width="260" loading="lazy" decoding="async"></span>
+
+                    <figcaption>Widget con la cuenta atrás en la pantalla de inicio.</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+    <section class="app-cta">
+        <div class="container">
+            <div class="app-cta-card">
+                <img class="app-icon" src="../../static/img/projects/3d-cost-manager/icon.webp" alt="" width="64" height="64">
+                <div class="app-cta-text">
+                    <h2>¿Te apetece probar 3D Cost Manager?</h2>
+                    <p>La app está en prueba cerrada en Google Play: escríbeme con tu cuenta de Google y te doy acceso.</p>
+                </div>
+                <div class="app-cta-actions">
+                    <a class="btn btn-brand" href="mailto:alonsoamadorsanchez@gmail.com?subject=Quiero%20probar%203D%20Cost%20Manager&amp;body=Hola%20Alonso%2C%20me%20gustar%C3%ADa%20probar%20la%20app.%20Mi%20cuenta%20de%20Google%20Play%20es%3A%20"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l13 8-13 8z"/></svg> Pedir acceso a la prueba</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BAJO EL CAPÓ ============ -->
+    <section class="under-hood" aria-labelledby="hood-title">
+        <div class="container">
+            <header class="hood-head">
+                <p class="kicker"><span class="mono">{ }</span> Bajo el capó</p>
+                <h2 id="hood-title">Cómo está hecha</h2>
+                <p class="section-lead">Para quien quiera saber qué hay detrás: el problema, la arquitectura, código real y las decisiones que tomé.</p>
+                <dl class="metrics metrics-row">
+                    <div><dt>idiomas</dt><dd>6</dd></div>
+                    <div><dt>laminadores compatibles</dt><dd>5</dd></div>
+                    <div><dt>tests en la app</dt><dd>37</dd></div>
+                </dl>
+            </header>
+
+            <div class="hood-grid">
+                <div class="case-body">
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">01</span> El problema</h3>
+                        <p>Casi todas las calculadoras de impresión 3D solo cuentan el filamento. Quien vende en Etsy o Wallapop acaba cobrando de menos porque olvida la luz, el desgaste, su tiempo, las piezas que fallan y la comisión del canal.</p>
+                    </section>
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">02</span> Arquitectura</h3>
+                        <figure class="diagram">
+                            <div class="diagram-scroll"><svg class="dg" viewBox="0 0 820 400" role="img" aria-label="Arquitectura de 3D Cost Manager: la app Android lo hace todo en el móvil. La interfaz en Compose habla con los ViewModels, que usan el motor de costes CostEngine (Kotlin puro) y el repositorio sobre Room y DataStore. Aparte, el importador de G-code y 3MF, el PDF de presupuestos, el widget del temporizador y el cliente del precio de la luz (PVPC). El backend Spring Boot de la versión 1 está archivado." xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="dg-arrow-3d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path class="dg-head" d="M0 0L10 5L0 10z"/>
+        </marker>
+    </defs>
+
+    <!-- App Android: todo en el dispositivo -->
+    <rect class="dg-group" x="10" y="20" width="560" height="362" rx="14"/>
+    <text class="dg-label" x="26" y="42">Android · Kotlin · todo en el móvil</text>
+
+    <rect class="dg-box" x="30" y="56" width="250" height="56" rx="10"/>
+    <text class="dg-t" x="44" y="80">Compose UI</text>
+    <text class="dg-s" x="44" y="99">calculadora · pedidos · catálogo</text>
+
+    <rect class="dg-box" x="300" y="56" width="250" height="56" rx="10"/>
+    <text class="dg-t" x="314" y="80">ViewModels</text>
+    <text class="dg-s" x="314" y="99">StateFlow</text>
+
+    <rect class="dg-core-box" x="30" y="146" width="250" height="76" rx="10"/>
+    <text class="dg-t dg-t-accent" x="44" y="172">CostEngine</text>
+    <text class="dg-s" x="44" y="192">Kotlin puro · BigDecimal</text>
+    <text class="dg-s" x="44" y="208">scale 8 → 4 · HALF_UP</text>
+
+    <rect class="dg-box" x="300" y="146" width="250" height="56" rx="10"/>
+    <text class="dg-t" x="314" y="170">Repository</text>
+    <text class="dg-s" x="314" y="189">piezas · pedidos · bobinas</text>
+
+    <rect class="dg-box" x="30" y="250" width="120" height="56" rx="10"/>
+    <text class="dg-t" x="44" y="274">Widget</text>
+    <text class="dg-s" x="44" y="293">PrintTimer</text>
+
+    <rect class="dg-box" x="160" y="250" width="120" height="56" rx="10"/>
+    <text class="dg-t" x="174" y="274">PDF · CSV</text>
+    <text class="dg-s" x="174" y="293">QuotePdf</text>
+
+    <rect class="dg-box" x="300" y="250" width="120" height="56" rx="10"/>
+    <text class="dg-t" x="314" y="274">Room</text>
+    <text class="dg-s" x="314" y="293">DataStore</text>
+
+    <rect class="dg-box" x="430" y="250" width="120" height="56" rx="10"/>
+    <text class="dg-t" x="444" y="274">Importer</text>
+    <text class="dg-s" x="444" y="293">G-code · 3MF</text>
+
+    <rect class="dg-box" x="30" y="322" width="250" height="44" rx="10"/>
+    <text class="dg-t" x="44" y="341">PvpcClient</text>
+    <text class="dg-s" x="44" y="357">precio de la luz del día</text>
+
+    <path class="dg-line" d="M280 84H294" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M380 112V128H155V140" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M470 112V140" marker-end="url(#dg-arrow-3d)"/>
+    <path class="dg-line" d="M360 202V244" marker-end="url(#dg-arrow-3d)"/>
+
+    <!-- Fuera del móvil -->
+    <rect class="dg-ext" x="600" y="250" width="210" height="56" rx="10"/>
+    <text class="dg-t" x="614" y="274">Laminador</text>
+    <text class="dg-s" x="614" y="293">Orca · Bambu · Prusa · Cura</text>
+    <path class="dg-line" d="M600 278H556" marker-end="url(#dg-arrow-3d)"/>
+
+    <rect class="dg-ext" x="600" y="316" width="210" height="56" rx="10"/>
+    <text class="dg-t" x="614" y="340">REE · PVPC</text>
+    <text class="dg-s" x="614" y="359">€/kWh</text>
+    <path class="dg-line" d="M280 344H594" marker-end="url(#dg-arrow-3d)"/>
+
+    <!-- Backend v1, archivado -->
+    <rect class="dg-group dg-group-pending" x="600" y="20" width="210" height="182" rx="14"/>
+    <text class="dg-label dg-label-accent" x="614" y="42">v1 · archivado</text>
+    <rect class="dg-ext" x="614" y="58" width="182" height="72" rx="10"/>
+    <text class="dg-t" x="628" y="82">Spring Boot 3</text>
+    <text class="dg-s" x="628" y="101">PostgreSQL · JWT</text>
+    <text class="dg-s" x="628" y="117">AWS CloudFormation</text>
+    <text class="dg-note" x="705" y="160" text-anchor="middle">La app ya no lo necesita;</text>
+    <text class="dg-note" x="705" y="178" text-anchor="middle">queda para sincronizar</text>
+</svg></div>
+                        </figure>
+                    </section>
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">03</span> Un fragmento del código</h3>
+                        <figure class="code-window">
+    <div class="code-bar">
+        <span class="code-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="code-path mono">app/…/core/calc/CostEngine.kt</span>
+        <a class="code-source mono" href="https://github.com/AsKrueger/Calculadora3D/blob/main/android/app/src/main/java/com/tdcostmanager/app/core/calc/CostEngine.kt" target="_blank" rel="noopener">ver en GitHub ↗</a>
+    </div>
+    <pre class="code-body highlight"><code><span class="cm">/**</span>
+<span class="cm"> * Precio con IVA (lo que paga el cliente) tal que, tras quitar el IVA y la comisión del canal,</span>
+<span class="cm"> * queda el coste más el beneficio buscado:</span>
+<span class="cm"> *   bruto / (1 + iva) - bruto * comisión - fijo = coste + beneficio</span>
+<span class="cm"> * La comisión de los marketplaces se cobra sobre el total que paga el cliente.</span>
+<span class="cm"> */</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">price</span><span class="p">(</span>
+<span class="w">    </span><span class="n">cost</span><span class="p">:</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">,</span>
+<span class="w">    </span><span class="n">pricing</span><span class="p">:</span><span class="w"> </span><span class="n">Pricing</span><span class="p">,</span>
+<span class="w">    </span><span class="n">channel</span><span class="p">:</span><span class="w"> </span><span class="n">ChannelFees</span><span class="p">,</span>
+<span class="w">    </span><span class="n">vatPercent</span><span class="p">:</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">,</span>
+<span class="w">    </span><span class="n">rounding</span><span class="p">:</span><span class="w"> </span><span class="n">PriceRounding</span>
+<span class="p">):</span><span class="w"> </span><span class="n">Priced</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">vat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vatPercent</span><span class="p">.</span><span class="na">nonNeg</span><span class="p">().</span><span class="na">div</span><span class="p">(</span><span class="n">HUNDRED</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="p">.</span><span class="na">feePercent</span><span class="p">.</span><span class="na">nonNeg</span><span class="p">().</span><span class="na">div</span><span class="p">(</span><span class="n">HUNDRED</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fixed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="p">.</span><span class="na">fixedFee</span><span class="p">.</span><span class="na">nonNeg</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">netFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">ONE</span><span class="p">.</span><span class="na">div</span><span class="p">(</span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">ONE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vat</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">fee</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">gross</span><span class="p">:</span><span class="w"> </span><span class="n">BigDecimal</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">feasible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">pricing</span><span class="p">.</span><span class="na">mode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">PricingMode</span><span class="p">.</span><span class="na">FIXED_PRICE</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">gross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pricing</span><span class="p">.</span><span class="na">value</span><span class="p">.</span><span class="na">nonNeg</span><span class="p">()</span>
+<span class="w">        </span><span class="n">PricingMode</span><span class="p">.</span><span class="na">MARKUP</span><span class="p">,</span><span class="w"> </span><span class="n">PricingMode</span><span class="p">.</span><span class="na">TARGET_PROFIT</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pricing</span><span class="p">.</span><span class="na">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PricingMode</span><span class="p">.</span><span class="na">MARKUP</span><span class="p">)</span>
+<span class="w">                </span><span class="n">cost</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pricing</span><span class="p">.</span><span class="na">value</span><span class="p">.</span><span class="na">nonNeg</span><span class="p">().</span><span class="na">div</span><span class="p">(</span><span class="n">HUNDRED</span><span class="p">)</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">pricing</span><span class="p">.</span><span class="na">value</span><span class="p">.</span><span class="na">nonNeg</span><span class="p">()</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">netFactor</span><span class="p">.</span><span class="na">signum</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// Comisión e IVA se comen todo el precio: no hay precio que dé beneficio</span>
+<span class="w">                </span><span class="n">feasible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">                </span><span class="n">gross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span><span class="p">()</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">gross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rounding</span><span class="p">.</span><span class="na">roundUp</span><span class="p">((</span><span class="n">cost</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fixed</span><span class="p">).</span><span class="na">div</span><span class="p">(</span><span class="n">netFactor</span><span class="p">))</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">vatAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gross</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">gross</span><span class="p">.</span><span class="na">div</span><span class="p">(</span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">ONE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vat</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gross</span><span class="p">.</span><span class="na">signum</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="n">zero</span><span class="p">()</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">gross</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fee</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fixed</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">profit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gross</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vatAmount</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">fees</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cost</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Priced</span><span class="p">(</span><span class="n">gross</span><span class="p">,</span><span class="w"> </span><span class="n">vatAmount</span><span class="p">,</span><span class="w"> </span><span class="n">fees</span><span class="p">,</span><span class="w"> </span><span class="n">profit</span><span class="p">,</span><span class="w"> </span><span class="n">feasible</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+    <figcaption>Sumar un margen al coste no basta: Etsy o Amazon cobran su comisión sobre el total con IVA, y el beneficio real sale menor. El motor despeja el precio de la ecuación para que, tras el IVA y la comisión, quede exactamente el beneficio buscado, y avisa si no existe ningún precio que lo consiga.</figcaption>
+</figure>
+
+                    </section>
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">04</span> Qué he construido</h3>
+                        <ul class="checks">
+                            <li>Kotlin, Jetpack Compose, Room y DataStore. Todo vive en el dispositivo, sin cuenta ni servidor.</li>
+                            <li>Motor de cálculo en Kotlin puro (CostEngine) con BigDecimal: escala 8 en los pasos y 4 en el resultado. Una placa fallida repite material, luz, desgaste y preparación, pero no el acabado ni los extras.</li>
+                            <li>Precio despejado para que, tras el IVA y la comisión del canal sobre el total, quede el beneficio buscado, con comparador de canales (Etsy, Amazon, eBay, Wallapop y tienda propia).</li>
+                            <li>Importación de G-code y 3MF de Flash Studio, OrcaSlicer, Bambu Studio, PrusaSlicer y Cura: tiempo, gramos de cada filamento e imagen de la pieza.</li>
+                            <li>Presupuestos y pedidos con estados, PDF con el logo del negocio, resumen del mes con gráfico y exportación a CSV.</li>
+                            <li>Temporizador de impresión con widget en la pantalla de inicio, stock de bobinas con aviso y precio de la luz del día (PVPC) en España.</li>
+                            <li>Seis idiomas generados desde un script que falla si a un idioma le falta o le sobra una clave.</li>
+                            <li>Empezó como backend Spring Boot con JWT, PostgreSQL e infraestructura AWS como código (69 tests). Se archivó cuando la app dejó de necesitar servidor y el motor se portó a Kotlin. La app tiene 37 tests.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">05</span> Decisiones y por qué</h3>
+                        <ol class="decisions">
+                            <li>Del servidor al móvil. La primera versión tenía backend Spring Boot e infraestructura AWS. Para una calculadora personal, una cuenta y un servidor eran fricción y coste sin ventaja, así que todo pasó al dispositivo y el backend quedó archivado por si algún día hace falta sincronizar.</li>
+                            <li>BigDecimal con 8 decimales internos y redondeo HALF_UP a 4 al final. Con dinero, los errores de coma flotante de double acaban en céntimos que no cuadran.</li>
+                            <li>El precio se despeja en lugar de sumar porcentajes, porque la comisión de los marketplaces se cobra sobre el total con IVA y un margen sumado sin más deja menos beneficio del que crees.</li>
+                            <li>Cada línea de un presupuesto congela su precio y su coste al añadirla. Si mañana sube el filamento, un presupuesto enviado no cambia solo; «Actualizar precios» lo recalcula a propósito.</li>
+                        </ol>
+                    </section>
+
+                    <section class="note">
+                        <p><strong>Transparencia:</strong> el estado indicado arriba refleja el README del repositorio. Lo que está planificado se marca como tal; el código y la documentación completa están en GitHub.</p>
+                    </section>
+                </div>
+
+                <aside class="case-aside">
+                    <div class="aside-card">
+                        <h3 class="mono">stack</h3>
+                        <h4>Android</h4>
+                        <ul class="chips">
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Material 3</li>
+    <li>Room</li>
+    <li>DataStore</li>
+    <li>App widget</li>
+</ul>
+
+                        <h4>Datos y servicios</h4>
+                        <ul class="chips">
+    <li>G-code / 3MF</li>
+    <li>PDF</li>
+    <li>PVPC (REE)</li>
+    <li>AdMob + UMP</li>
+    <li>Play Billing</li>
+</ul>
+
+                        <h4>Calidad y entrega</h4>
+                        <ul class="chips">
+    <li>JUnit</li>
+    <li>Google Play Console</li>
+</ul>
+
+                        <h4>Backend v1 (archivado)</h4>
+                        <ul class="chips">
+    <li>Java 21</li>
+    <li>Spring Boot 3</li>
+    <li>PostgreSQL</li>
+    <li>CloudFormation</li>
+</ul>
+
+                        <a class="btn btn-ghost aside-repo" href="https://github.com/AsKrueger/Calculadora3D" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+ Ver repositorio</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <nav class="container case-nav" aria-label="Otros proyectos">
+        <a class="case-nav-link" href="../../proyectos/explorersaga/"><span class="mono dim">← anterior</span><strong>ExplorerSaga Extremadura</strong></a>
+        <a class="case-nav-link next" href="../../proyectos/animewatchlist/"><span class="mono dim">siguiente →</span><strong>AnimeWatchlist</strong></a>
+    </nav>
+</article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="mono footer-build">
+                <span class="dim">$</span> python build.py <span class="dim">→</span> <span class="ok">200 OK</span>
+                <span class="dim">· Generado con Python + Jinja2 desde un <a href="https://github.com/AsKrueger/webportfolio" target="_blank" rel="noopener">data.json</a></span>
+            </p>
+            <p class="footer-links">
+                <a href="mailto:alonsoamadorsanchez@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/alonso-amador" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/AsKrueger" target="_blank" rel="noopener">GitHub</a>
+                <span class="dim">© 2026 Alonso Amador Sánchez</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../../static/js/main.js" defer></script>
+</body>
+</html>
