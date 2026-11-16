@@ -45,9 +45,18 @@ LEGACY_REDIRECTS = {
     "contacto/index.html": "#contact",
     "proyectos/index.html": "#projects",
     "curriculum.html": "cv/",
+    # Proyectos retirados del portfolio (solo se muestran apps en Google Play).
+    **{
+        f"{path}/{slug}/index.html": target
+        for slug in ("cosplay-journal", "pantrymind", "wayly")
+        for path, target in (("proyectos", "#projects"), ("en/projects", "en/#projects"))
+    },
 }
 
-REQUIRED_PROJECT_KEYS = ("slug", "name", "tagline", "summary", "status", "repository")
+REQUIRED_PROJECT_KEYS = (
+    "slug", "name", "tagline", "summary", "status",
+    "icon", "banner", "brand", "pitch", "perks", "hero", "features", "gallery",
+)
 
 CHROME_CANDIDATES = (
     "google-chrome",
@@ -82,15 +91,33 @@ def validate(data):
         missing = [key for key in REQUIRED_PROJECT_KEYS if not project.get(key)]
         if missing:
             sys.exit(f"[x] Proyecto '{project.get('slug', '?')}' sin campos: {', '.join(missing)}")
+        if not project.get("repository") and not project.get("repo_private"):
+            sys.exit(f"[x] Proyecto '{project['slug']}' sin 'repository' (o 'repo_private': true)")
         if project["slug"] in slugs:
             sys.exit(f"[x] Slug duplicado: {project['slug']}")
         slugs.add(project["slug"])
         snippet = project.get("snippet")
         if snippet and not (BASE_DIR / snippet["file"]).exists():
             sys.exit(f"[x] No existe el fragmento {snippet['file']}")
-        for shot in project.get("gallery", []):
-            if not (STATIC_DIR / shot["src"]).exists():
-                sys.exit(f"[x] No existe la captura {shot['src']}")
+        sources = [project["icon"], project["banner"]]
+        for shot in project["gallery"]:
+            src = shot["src"]
+            sources += list(src.values()) if isinstance(src, dict) else [src]
+        for src in sources:
+            if not (STATIC_DIR / src).exists():
+                sys.exit(f"[x] No existe la imagen {src}")
+        shots = len(project["gallery"])
+        indexes = list(project["hero"]) + [feature["shot"] for feature in project["features"]]
+        if any(not 0 <= i < shots for i in indexes):
+            sys.exit(f"[x] Proyecto '{project['slug']}': 'hero' o 'features' apuntan a una captura que no existe")
+
+
+def ink_for(color):
+    """Texto blanco o casi negro, el que más contraste tenga sobre el color de marca."""
+    channels = [int(color.lstrip("#")[i : i + 2], 16) / 255 for i in (0, 2, 4)]
+    r, g, b = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in channels]
+    luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b
+    return "#ffffff" if (1.05 / (luminance + 0.05)) >= ((luminance + 0.05) / 0.0601) else "#14110d"
 
 
 def prepare_projects(projects):
@@ -99,9 +126,13 @@ def prepare_projects(projects):
     for project in projects:
         diagram = Path("diagrams") / f"{project['slug']}.svg"
         project["diagram"] = diagram.as_posix() if (TEMPLATES_DIR / diagram).exists() else None
-        project.setdefault("gallery", [])
+        project["brand_ink"] = ink_for(project["brand"])
+        project.setdefault("frame", False)
+        for optional in ("repository", "demo", "gallery_title", "cv_point", "play_package", "decisions"):
+            project.setdefault(optional, None)
         snippet = project.setdefault("snippet", None)
         if snippet:
+            snippet.setdefault("url", None)
             code = (BASE_DIR / snippet["file"]).read_text(encoding="utf-8")
             snippet["html"] = Markup(highlight(code, get_lexer_by_name(snippet["lang"]), formatter))
 

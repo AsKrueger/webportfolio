@@ -10,10 +10,10 @@
     "short_name": "Alonso Amador",
     "handle": "alonso-amador",
     "role": {"es": "Desarrollador de Software Junior", "en": "Junior Software Developer"},
-    "focus": "Backend · Java · Spring Boot",
+    "focus": "Backend Java · Android Kotlin",
     "headline": {
-      "es": "Construyo backends en Java y Spring Boot: APIs REST con contratos claros, dominio protegido y tests que dejan dormir tranquilo.",
-      "en": "I build Java and Spring Boot backends: REST APIs with clear contracts, a protected domain and tests you can sleep on."
+      "es": "Construyo backends con Java y Spring Boot y apps Android con Kotlin y Jetpack Compose, desde la API hasta la app en Google Play, con tests y documentación que dicen la verdad.",
+      "en": "I build Java and Spring Boot backends and Android apps with Kotlin and Jetpack Compose, from the API to the app on Google Play, with tests and docs that tell the truth."
     },
     "location": "Mérida, Extremadura",
     "country": {"es": "España", "en": "Spain"},
@@ -21,27 +21,27 @@
     "work_modes": {"es": ["Presencial", "Híbrido", "Remoto"], "en": ["On-site", "Hybrid", "Remote"]},
     "about": {
       "es": [
-        "Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (Cesur) y he trabajado como desarrollador de aplicaciones en CodeArts Solutions con C#, Unity y .NET. Hoy mi foco está en el backend: Java, Spring Boot, PostgreSQL y arquitectura limpia.",
+        "Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (Cesur) y he trabajado como desarrollador de aplicaciones en CodeArts Solutions con C#, Unity y .NET. Hoy tengo cinco apps en prueba cerrada en Google Play, con su propio backend cuando lo necesitan.",
         "Antes de programar estudié Turismo en la Universidad de Extremadura y trabajé en la recepción del Parador de Mérida. De ahí me traigo algo que no se aprende en un tutorial: entender qué necesita la persona al otro lado y explicarlo con claridad.",
-        "Me gusta trabajar como en un equipo real aunque el proyecto sea mío: issues, ramas, ADRs, CI y documentación que cuenta la verdad sobre el estado del código."
+        "Me gusta trabajar como en un equipo real aunque el proyecto sea mío: issues, ramas, pull requests, versiones por fases, CI y documentación que cuenta la verdad sobre el estado del código."
       ],
       "en": [
-        "I hold a Higher National Diploma in Cross-Platform Application Development (Cesur) and worked as an application developer at CodeArts Solutions with C#, Unity and .NET. Today my focus is the backend: Java, Spring Boot, PostgreSQL and clean architecture.",
+        "I hold a Higher National Diploma in Cross-Platform Application Development (Cesur) and worked as an application developer at CodeArts Solutions with C#, Unity and .NET. Today I have five apps in closed testing on Google Play, with their own backend when they need one.",
         "Before coding I studied Tourism at the University of Extremadura and worked the front desk at the Parador de Mérida hotel. That taught me something no tutorial does: understanding what the person on the other side needs and explaining things clearly.",
-        "I like working as if I were on a real team even on my own projects: issues, branches, ADRs, CI and documentation that tells the truth about the state of the code."
+        "I like working as if I were on a real team even on my own projects: issues, branches, pull requests, phased releases, CI and documentation that tells the truth about the state of the code."
       ]
     },
     "principles": [
       {"title": {"es": "Dominio primero", "en": "Domain first"}, "text": {"es": "Agregados que protegen sus invariantes y lógica de negocio desacoplada del framework.", "en": "Aggregates that guard their invariants and business logic decoupled from the framework."}},
-      {"title": {"es": "Contratos claros", "en": "Clear contracts"}, "text": {"es": "APIs REST versionadas, errores homogéneos y especificación OpenAPI.", "en": "Versioned REST APIs, consistent errors and an OpenAPI spec."}},
-      {"title": {"es": "Tests de verdad", "en": "Real tests"}, "text": {"es": "JUnit 5, Mockito y Testcontainers contra PostgreSQL y Kafka reales.", "en": "JUnit 5, Mockito and Testcontainers against real PostgreSQL and Kafka."}},
+      {"title": {"es": "Sin conexión primero", "en": "Offline first"}, "text": {"es": "Apps que guardan sus datos en el dispositivo y siguen funcionando sin cobertura.", "en": "Apps that keep their data on the device and keep working without signal."}},
+      {"title": {"es": "Tests de verdad", "en": "Real tests"}, "text": {"es": "JUnit 5, Mockito y Testcontainers en el backend, Vitest y Playwright en la web y tests de interfaz en Android.", "en": "JUnit 5, Mockito and Testcontainers on the backend, Vitest and Playwright on the web and UI tests on Android."}},
       {"title": {"es": "Documentación honesta", "en": "Honest docs"}, "text": {"es": "README, ADRs y roadmap que dicen qué está hecho y qué no.", "en": "READMEs, ADRs and roadmaps that say what is done and what is not."}}
     ]
   },
   "quick_facts": [
-    {"value": "3", "label": {"es": "backends Spring Boot con PostgreSQL y Flyway", "en": "Spring Boot backends with PostgreSQL and Flyway"}},
-    {"value": "4", "label": {"es": "repos con CI en GitHub Actions", "en": "repos with CI on GitHub Actions"}},
-    {"value": "20+", "label": {"es": "decisiones técnicas documentadas (ADRs)", "en": "documented technical decisions (ADRs)"}},
+    {"value": "5", "label": {"es": "apps en prueba cerrada en Google Play", "en": "apps in closed testing on Google Play"}},
+    {"value": "3", "label": {"es": "APIs REST con PostgreSQL (Spring Boot y NestJS)", "en": "REST APIs with PostgreSQL (Spring Boot and NestJS)"}},
+    {"value": "200+", "label": {"es": "tests automatizados", "en": "automated tests"}},
     {"value": {"es": "Ya", "en": "Now"}, "label": {"es": "incorporación · presencial, híbrido o remoto", "en": "start date · on-site, hybrid or remote"}}
   ],
   "contact": {
@@ -51,12 +51,13 @@
     "linkedin": "https://www.linkedin.com/in/alonso-amador"
   },
   "skills": [
-    {"group": "Backend", "items": ["Java 17/21", "Spring Boot 3", "Spring Security + JWT", "REST / OpenAPI", "JPA / Hibernate", "Apache Kafka", "NestJS"]},
-    {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL", "SQL", "Flyway", "Prisma", "Room / SQLite"]},
-    {"group": {"es": "Calidad", "en": "Quality"}, "items": ["JUnit 5", "Mockito", "Testcontainers", "Vitest", "Jest"]},
-    {"group": "DevOps", "items": ["Docker", "Docker Compose", "GitHub Actions", "AWS (CloudFormation, EC2, RDS)", "Maven", "Gradle"]},
-    {"group": {"es": "Cliente", "en": "Client"}, "items": ["Kotlin", "Jetpack Compose", "Retrofit", "React", "Angular", "TypeScript"]},
-    {"group": {"es": "Arquitectura", "en": "Architecture"}, "items": ["Hexagonal", {"es": "DDD táctico", "en": "Tactical DDD"}, "MVVM", "SOLID", "ADRs"]}
+    {"group": "Backend", "items": ["Java 17/21", "Spring Boot 3", "Spring Security + JWT", "REST / OpenAPI", "JPA / Hibernate", "NestJS", "Apache Kafka"]},
+    {"group": "Android", "items": ["Kotlin", "Jetpack Compose", "Room", "WorkManager", "Retrofit / OkHttp", "MapLibre"]},
+    {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL", "SQL", "Flyway", "Prisma", "SQLite / FTS"]},
+    {"group": {"es": "Calidad", "en": "Quality"}, "items": ["JUnit 5", "Mockito", "Testcontainers", "Vitest", "Playwright"]},
+    {"group": "DevOps", "items": ["Docker", "GitHub Actions", "AWS (CloudFormation, EC2, RDS)", "Gradle", "Maven"]},
+    {"group": "Web", "items": ["React", "TypeScript", "PWA", "Angular"]},
+    {"group": {"es": "Arquitectura", "en": "Architecture"}, "items": ["Hexagonal", {"es": "DDD táctico", "en": "Tactical DDD"}, "MVVM", "Offline-first"]}
   ],
   "also_know": ["C#", ".NET", "Unity", "Python", "Git / GitHub"],
   "experience": [
@@ -112,8 +113,8 @@
       "school": {"es": "Universidad de Extremadura", "en": "University of Extremadura"},
       "period": {"es": "sept. 2018 – jun. 2024", "en": "Sep 2018 – Jun 2024"},
       "detail": {
-        "es": "Gestión, atención al cliente y turismo sostenible. El origen de ExplorerSaga y Wayly.",
-        "en": "Management, customer service and sustainable tourism. Where ExplorerSaga and Wayly come from."
+        "es": "Gestión, atención al cliente y turismo sostenible. El origen de ExplorerSaga.",
+        "en": "Management, customer service and sustainable tourism. Where ExplorerSaga comes from."
       }
     }
   ],
@@ -130,311 +131,833 @@
   ],
   "projects": [
     {
-      "slug": "cosplay-journal",
-      "name": "Cosplay Journal",
-      "tagline": {"es": "Plataforma para cosplayers: eventos, proyectos y grupos.", "en": "A platform for cosplayers: events, projects and groups."},
-      "kind": "Backend · Java 21",
-      "status": {"es": "Backend en desarrollo activo", "en": "Backend in active development"},
-      "status_level": "active",
-      "featured": true,
-      "summary": {
-        "es": "Backend en Java 21 y Spring Boot 3 con arquitectura hexagonal que importa eventos de cosplay reales, gestiona proyectos (cosplans) y coordina participaciones individuales, en dúo y en grupo.",
-        "en": "A Java 21 and Spring Boot 3 backend with hexagonal architecture that imports real cosplay events, manages projects (cosplans) and coordinates solo, duo and group entries."
-      },
-      "problem": {
-        "es": "Los cosplayers organizan eventos, materiales, presupuestos y grupos entre hojas de cálculo, chats y webs de eventos dispersas.",
-        "en": "Cosplayers juggle events, materials, budgets and groups across spreadsheets, chats and scattered event websites."
-      },
-      "highlights": {
-        "es": [
-          "Arquitectura hexagonal (ports & adapters) con el dominio desacoplado de la infraestructura.",
-          "Agregados con límites de consistencia e invariantes de negocio explícitos.",
-          "Eventos de dominio publicados en Apache Kafka.",
-          "Spring Security + JWT y autorización por propiedad del recurso (403 cuando no es tuyo).",
-          "Scraper de ListadoManga con Jsoup, sincronización idempotente, scheduler, timeouts y reintentos con backoff exponencial.",
-          "API REST /api/v1 documentada con OpenAPI 3 y Swagger UI.",
-          "Tests de integración con Testcontainers (PostgreSQL 16 y Kafka) y CI en GitHub Actions.",
-          "13 ADRs documentados y 16 issues cerradas; la siguiente es integrar el cliente Android."
-        ],
-        "en": [
-          "Hexagonal architecture (ports & adapters) with the domain decoupled from infrastructure.",
-          "Aggregates with explicit consistency boundaries and business invariants.",
-          "Domain events published to Apache Kafka.",
-          "Spring Security + JWT and resource-ownership authorization (403 when it isn't yours).",
-          "ListadoManga scraper with Jsoup, idempotent sync, scheduler, timeouts and retries with exponential backoff.",
-          "REST API /api/v1 documented with OpenAPI 3 and Swagger UI.",
-          "Integration tests with Testcontainers (PostgreSQL 16 and Kafka) and CI on GitHub Actions.",
-          "13 ADRs written and 16 issues closed; next up is wiring the Android client."
-        ]
-      },
-      "stack": [
-        {"group": "Backend", "items": ["Java 21", "Spring Boot 3", "Spring Security", "JWT", "Apache Kafka", "Jsoup", "OpenAPI"]},
-        {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL 16", "JPA / Hibernate", "Flyway"]},
-        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["JUnit 5", "Mockito", "Testcontainers", "GitHub Actions", "Docker"]},
-        {"group": {"es": "Cliente", "en": "Client"}, "items": ["Android", "Jetpack Compose", "Material 3"]}
-      ],
-      "metrics": [
-        {"value": "16", "label": {"es": "issues cerradas", "en": "issues closed"}},
-        {"value": "13", "label": "ADRs"},
-        {"value": "Kafka", "label": {"es": "eventos de dominio", "en": "domain events"}}
-      ],
-      "snippet": {
-        "file": "snippets/cosplay-journal.java",
-        "lang": "java",
-        "path": "domain/model/participation/Participation.java",
-        "url": "https://github.com/AsKrueger/Cosplay-Journal/blob/main/backend/src/main/java/com/cosplayjournal/domain/model/participation/Participation.java",
-        "caption": {
-          "es": "El agregado Participation protege sus propias reglas: un dúo no admite un tercer participante y una participación de grupo no puede confirmarse con menos de tres. Ningún controlador ni servicio puede saltárselo.",
-          "en": "The Participation aggregate enforces its own rules: a duo can't take a third member and a group entry can't be confirmed with fewer than three. No controller or service can bypass it."
-        }
-      },
-      "repository": "https://github.com/AsKrueger/Cosplay-Journal"
-    },
-    {
-      "slug": "3d-cost-manager",
-      "name": "3D Cost Manager",
-      "tagline": {"es": "Gestión de proyectos y presupuestos de impresión 3D.", "en": "Project and quote management for 3D printing."},
-      "kind": "Full stack · Java + Kotlin",
-      "status": "v1.0.0",
-      "status_level": "stable",
-      "featured": true,
-      "summary": {
-        "es": "Backend Spring Boot con un motor de cálculo de costes y un cliente Android nativo. A partir de materiales, máquinas, mano de obra, márgenes y la tarifa eléctrica real de ESIOS, genera presupuestos inmutables.",
-        "en": "A Spring Boot backend with a cost calculation engine and a native Android client. From materials, machines, labour, margins and the real ESIOS electricity rate, it produces immutable quotes."
-      },
-      "problem": {
-        "es": "Calcular con precisión el coste real de una pieza impresa en 3D (material, máquina, electricidad, post-procesado y margen) y dejar un presupuesto que no cambie después de emitirlo.",
-        "en": "Accurately calculating the real cost of a 3D-printed part (material, machine, electricity, post-processing and margin) and issuing a quote that never changes afterwards."
-      },
-      "highlights": {
-        "es": [
-          "Motor de cálculo puro (CostCalculator) desacoplado del ORM, con BigDecimal y redondeo HALF_UP deterministas.",
-          "DDD táctico: agregados Project y Quote, proyectos archivados inmodificables y snapshots financieros inmutables.",
-          "Contrato de errores REST unificado (ApiError + GlobalExceptionHandler) sin filtrar trazas internas.",
-          "JWT con secreto inyectado y validado al arrancar; BCrypt para contraseñas.",
-          "Cliente Android con MVVM, Retrofit y sesión cifrada con EncryptedSharedPreferences (AES-256).",
-          "Infraestructura como código en AWS (VPC, RDS, EC2 ARM64, Parameter Store) y pipeline de GitHub Actions hacia ECR y EC2. Definida y validada en código; pendiente de aprovisionar en una cuenta real.",
-          "69 tests unitarios y de integración en el backend."
-        ],
-        "en": [
-          "Pure calculation engine (CostCalculator) decoupled from the ORM, with deterministic BigDecimal and HALF_UP rounding.",
-          "Tactical DDD: Project and Quote aggregates, read-only archived projects and immutable financial snapshots.",
-          "Unified REST error contract (ApiError + GlobalExceptionHandler) that never leaks internal traces.",
-          "JWT with an injected secret validated at startup; BCrypt for passwords.",
-          "Android client with MVVM, Retrofit and an encrypted session in EncryptedSharedPreferences (AES-256).",
-          "Infrastructure as code on AWS (VPC, RDS, ARM64 EC2, Parameter Store) and a GitHub Actions pipeline to ECR and EC2. Defined and validated in code; not yet provisioned on a real account.",
-          "69 unit and integration tests in the backend."
-        ]
-      },
-      "stack": [
-        {"group": "Backend", "items": ["Java 21", "Spring Boot 3.2", "Spring Security", "JWT", "ESIOS API"]},
-        {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL 16", "JPA / Hibernate", "Flyway"]},
-        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["JUnit 5", "Mockito", "Testcontainers", "Docker", "GitHub Actions"]},
-        {"group": "Cloud", "items": ["CloudFormation", "EC2", "RDS", "ECR", "SSM Parameter Store"]},
-        {"group": {"es": "Cliente", "en": "Client"}, "items": ["Kotlin", "Jetpack Compose", "Retrofit", "Coroutines"]}
-      ],
-      "metrics": [
-        {"value": "69", "label": {"es": "tests en backend", "en": "backend tests"}},
-        {"value": "BigDecimal", "label": {"es": "cálculo determinista", "en": "deterministic maths"}},
-        {"value": "AWS IaC", "label": "CloudFormation"}
-      ],
-      "snippet": {
-        "file": "snippets/3d-cost-manager.java",
-        "lang": "java",
-        "path": "domain/calculation/CostCalculator.java",
-        "url": "https://github.com/AsKrueger/Calculadora3D/blob/main/backend/src/main/java/com/tdcostmanager/backend/domain/calculation/CostCalculator.java",
-        "caption": {
-          "es": "El motor de costes es Java puro: no conoce Spring ni JPA. Calcula con 8 decimales internos, redondea a 4 al final y recibe el precio de la luz a través de un puerto (ElectricityPriceProvider), así que se prueba sin red ni base de datos.",
-          "en": "The cost engine is plain Java: it knows nothing about Spring or JPA. It works with 8 internal decimals, rounds to 4 at the end and gets the electricity price through a port (ElectricityPriceProvider), so it is tested without network or database."
-        }
-      },
-      "gallery": [
-        {"src": "img/projects/3d-cost-manager/01-proyectos.webp", "alt": {"es": "Lista de proyectos activos y archivados de 3D Cost Manager", "en": "3D Cost Manager project list with active and archived projects"}, "caption": {"es": "Proyectos con su estado y su coste calculado.", "en": "Projects with their status and calculated cost."}},
-        {"src": "img/projects/3d-cost-manager/02-proyecto.webp", "alt": {"es": "Detalle de un proyecto con mano de obra, materiales, máquinas y herramientas", "en": "Project detail with labour, materials, machines and tools"}, "caption": {"es": "Detalle de un proyecto: mano de obra, materiales, máquinas y herramientas.", "en": "Project detail: labour, materials, machines and tools."}},
-        {"src": "img/projects/3d-cost-manager/03-catalogo.webp", "alt": {"es": "Catálogo de materiales con su coste por unidad", "en": "Materials catalogue with unit costs"}, "caption": {"es": "Catálogo de materiales, máquinas y herramientas con su coste por unidad.", "en": "Catalogue of materials, machines and tools with their unit cost."}},
-        {"src": "img/projects/3d-cost-manager/04-presupuestos.webp", "alt": {"es": "Historial de presupuestos con su estado", "en": "Quote history with their status"}, "caption": {"es": "Historial de presupuestos y su estado: borrador o enviado.", "en": "Quote history and status: draft or sent."}},
-        {"src": "img/projects/3d-cost-manager/05-presupuesto.webp", "alt": {"es": "Formulario de nuevo presupuesto con márgenes de seguridad y beneficio", "en": "New quote form with safety and profit margins"}, "caption": {"es": "Nuevo presupuesto con margen de seguridad y margen de beneficio.", "en": "New quote with a safety margin and a profit margin."}}
-      ],
-      "repository": "https://github.com/AsKrueger/Calculadora3D"
-    },
-    {
       "slug": "explorersaga",
       "name": "ExplorerSaga Extremadura",
-      "tagline": {"es": "Guía turística de Mérida. Mi Trabajo de Fin de Grado.", "en": "A tourist guide to Mérida. My final degree project."},
-      "kind": "Android + Backend",
-      "status": {"es": "MVP · TFG", "en": "MVP · Final project"},
+      "icon": "img/projects/explorersaga/icon.webp",
+      "banner": "img/projects/explorersaga/banner.webp",
+      "brand": "#2f9e57",
+      "tagline": {
+        "es": "Guía turística de toda Extremadura que funciona sin conexión. Empezó como mi TFG.",
+        "en": "An offline-ready tourist guide to all of Extremadura. It started as my final degree project."
+      },
+      "pitch": {"es": "Toda Extremadura en el bolsillo, también sin cobertura.", "en": "All of Extremadura in your pocket, even without signal."},
+      "perks": {"es": ["5.700+ lugares", "Mapa sin conexión", "Gratis y sin cuenta", "ES / EN"], "en": ["5,700+ places", "Offline map", "Free, no account", "ES / EN"]},
+      "kind": "Android · Kotlin + Python",
+      "status": {"es": "v2 · prueba cerrada en Google Play", "en": "v2 · closed testing on Google Play"},
       "status_level": "stable",
       "featured": true,
       "summary": {
-        "es": "App Android nativa en Kotlin y Jetpack Compose para descubrir monumentos, restaurantes y comercios de Mérida en listas y un mapa OpenStreetMap, respaldada por un backend Spring Boot que importa lugares desde Overpass API.",
-        "en": "A native Android app in Kotlin and Jetpack Compose to discover Mérida's monuments, restaurants and shops through lists and an OpenStreetMap map, backed by a Spring Boot service that imports places from the Overpass API."
+        "es": "App Android nativa con más de 5.700 lugares de Cáceres y Badajoz, mapa vectorial sin conexión, 8 rutas, agenda de temporada y planificador de viaje, en español e inglés. No tiene servidor propio: el contenido lo genera una fábrica de datos en Python a partir de datos abiertos y se publica como paquete versionado en GitHub.",
+        "en": "A native Android app with more than 5,700 places across Cáceres and Badajoz, an offline vector map, 8 routes, a seasonal events agenda and a trip planner, in Spanish and English. It has no backend of its own: a Python data factory builds the content from open data and publishes it as a versioned pack on GitHub."
       },
       "problem": {
-        "es": "La información turística de Mérida está repartida. Quería una guía visual y sencilla que juntara la historia de la ciudad con un mapa de lo que hay que ver, comer y comprar.",
-        "en": "Tourist information about Mérida is scattered. I wanted a simple, visual guide that brings the city's history together with a map of what to see, eat and buy."
+        "es": "La información turística de Extremadura está repartida entre webs oficiales, Wikipedia y mapas, y en muchos pueblos y espacios naturales no hay cobertura. La primera versión, mi TFG, cubría solo Mérida y dependía de un backend; la v2 tenía que cubrir toda la región, funcionar sin conexión y no costar nada de mantener.",
+        "en": "Tourist information about Extremadura is scattered across official sites, Wikipedia and maps, and many villages and natural areas have no signal. The first version, my final project, only covered Mérida and relied on a backend; v2 had to cover the whole region, work offline and cost nothing to run."
       },
+      "hero": [0, 2],
+      "features": [
+        {
+          "shot": 0,
+          "title": {"es": "Lo que toca ver, hoy", "en": "What's on, today"},
+          "text": {
+            "es": "La portada te enseña lo que pasa esta temporada (el cerezo en flor del Jerte, la berrea en Monfragüe, el Festival de Mérida) y los lugares que tienes cerca.",
+            "en": "The home screen shows what's happening this season (cherry blossom in the Jerte Valley, the deer rut in Monfragüe, the Mérida Festival) and the places near you."
+          }
+        },
+        {
+          "shot": 1,
+          "title": {"es": "Un mapa que no te deja tirado", "en": "A map that won't let you down"},
+          "text": {
+            "es": "Descarga el mapa de Extremadura, unos 60 MB, y úsalo en plena sierra sin una sola raya de cobertura.",
+            "en": "Download the map of Extremadura, about 60 MB, and use it deep in the hills without a single bar of signal."
+          }
+        },
+        {
+          "shot": 2,
+          "title": {"es": "Todo sobre cada lugar", "en": "Everything about each place"},
+          "text": {
+            "es": "Foto, historia, horario, accesibilidad y cómo llegar. Llamar o abrir la web está a un toque.",
+            "en": "Photo, history, opening hours, accessibility and directions. Calling or opening the website is one tap away."
+          }
+        },
+        {
+          "shot": 3,
+          "title": {"es": "8 rutas listas para seguir", "en": "8 routes ready to follow"},
+          "text": {
+            "es": "De la Mérida romana en un día al Valle del Jerte o la judería de Hervás, con sus paradas en el mapa y navegación en tu app de mapas.",
+            "en": "From Roman Mérida in a day to the Jerte Valley or the Jewish quarter of Hervás, with stops on the map and directions in your maps app."
+          }
+        },
+        {
+          "shot": 4,
+          "title": {"es": "Tu viaje, organizado por días", "en": "Your trip, planned by day"},
+          "text": {
+            "es": "Guarda lugares y repártelos por días. Todo se queda en tu móvil y funciona sin conexión.",
+            "en": "Save places and spread them across days. Everything stays on your phone and works offline."
+          }
+        }
+      ],
+      "frame": false,
+      "gallery_title": {"es": "Capturas de la versión 2", "en": "Screenshots of version 2"},
+      "gallery": [
+        {
+          "src": {"es": "img/projects/explorersaga/01-inicio.webp", "en": "img/projects/explorersaga/01-inicio-en.webp"},
+          "alt": {
+            "es": "Pantalla de inicio con el Teatro Romano de Mérida, categorías, «Ahora en temporada» y lugares cercanos",
+            "en": "Home screen with the Roman Theatre of Mérida, categories, \"In season now\" and nearby places"
+          },
+          "caption": {"es": "Inicio: categorías, eventos de temporada y lugares cerca de ti.", "en": "Home: categories, seasonal events and places near you."}
+        },
+        {
+          "src": {"es": "img/projects/explorersaga/02-mapa.webp", "en": "img/projects/explorersaga/02-mapa-en.webp"},
+          "alt": {
+            "es": "Mapa de Mérida con los lugares marcados y la ficha resumida del Teatro Romano",
+            "en": "Map of Mérida with places marked and a summary card for the Roman Theatre"
+          },
+          "caption": {"es": "Mapa vectorial que se puede descargar para usarlo sin cobertura.", "en": "Vector map that can be downloaded for use without signal."}
+        },
+        {
+          "src": {"es": "img/projects/explorersaga/03-ficha.webp", "en": "img/projects/explorersaga/03-ficha-en.webp"},
+          "alt": {
+            "es": "Ficha del Teatro Romano con foto, categorías, botones de cómo llegar, llamar y web, y descripción",
+            "en": "Roman Theatre page with photo, categories, directions, call and website buttons, and description"
+          },
+          "caption": {"es": "Ficha de un lugar con foto de Commons, descripción y cómo llegar.", "en": "Place page with a Commons photo, description and directions."}
+        },
+        {
+          "src": {"es": "img/projects/explorersaga/04-ruta.webp", "en": "img/projects/explorersaga/04-ruta-en.webp"},
+          "alt": {
+            "es": "Ruta «Mérida romana en un día» con mapa del recorrido y lista de paradas",
+            "en": "\"Roman Mérida in a day\" route with a map of the walk and a list of stops"
+          },
+          "caption": {"es": "Una de las 8 rutas, con mapa y paradas.", "en": "One of the 8 routes, with map and stops."}
+        },
+        {
+          "src": {"es": "img/projects/explorersaga/05-mi-viaje.webp", "en": "img/projects/explorersaga/05-mi-viaje-en.webp"},
+          "alt": {"es": "Mi viaje con el Teatro Romano el día 1 y el Foro Romano el día 2", "en": "My trip with the Roman Theatre on day 1 and the Roman Forum on day 2"},
+          "caption": {"es": "Mi viaje: favoritos organizados por días, también sin conexión.", "en": "My trip: favourites organised by day, offline too."}
+        },
+        {
+          "src": {"es": "img/projects/explorersaga/06-explorar.webp", "en": "img/projects/explorersaga/06-explorar-en.webp"},
+          "alt": {
+            "es": "Explorar con búsqueda, filtros por categoría, provincia y municipio, y lista ordenada por cercanía",
+            "en": "Explore with search, category, province and town filters, and a list sorted by distance"
+          },
+          "caption": {
+            "es": "Explorar: búsqueda sin tildes y filtros por categoría, provincia y municipio.",
+            "en": "Explore: accent-insensitive search and filters by category, province and town."
+          }
+        },
+        {
+          "src": "img/projects/explorersaga/07-agenda.webp",
+          "alt": {"es": "Agenda de temporada con eventos actuales y próximos", "en": "Seasonal agenda with current and upcoming events"},
+          "caption": {"es": "Agenda de temporada: fiestas y naturaleza según la fecha.", "en": "Seasonal agenda: festivals and nature by date."}
+        }
+      ],
       "highlights": {
         "es": [
-          "Cliente Android con MVVM, Navigation Compose y Material Design 3.",
-          "Mapa OpenStreetMap (osmdroid) con marcadores por categoría y BottomSheet informativo.",
-          "Backend Spring Boot hexagonal con API REST /api/v1/places, filtrado por categoría y Swagger.",
-          "Importación idempotente de lugares desde OpenStreetMap (Overpass API), sin coste de licencias.",
-          "Integración con Retrofit y modo local de respaldo (assets JSON) cuando el servidor no responde, con indicador de origen de datos y reintento.",
-          "Proyecto llevado de principio a fin de forma autónoma."
+          "App en Kotlin con Jetpack Compose (Material 3), Navigation con rutas tipadas, ViewModels, DataStore y Coil 3.",
+          "Fábrica de datos en Python 3.12 sin dependencias que cruza OpenStreetMap, Wikidata, Wikipedia, Wikimedia Commons y datos abiertos de la Junta de Extremadura. Con la misma caché genera el mismo paquete byte a byte.",
+          "El paquete se publica como GitHub Release con un manifiesto versionado y su sha256. WorkManager busca versiones nuevas cada 3 días, comprueba tamaño y hash antes de importarlas y conserva los favoritos del usuario.",
+          "Room con FTS4: búsqueda de texto completo sin tildes, en los dos idiomas y por categoría («museo», «castle», «farmacia»).",
+          "Mapa vectorial con MapLibre y OpenFreeMap, con lugares agrupados por zonas y descarga del mapa de Extremadura (unos 60 MB) para usarlo sin conexión.",
+          "Fichas con foto de Commons y su autor y licencia, descripción de Wikipedia, horario y accesibilidad; 8 rutas, «Ahora en temporada», Mi viaje por días y servicios útiles con llamada al 112.",
+          "Sin cuentas ni rastreadores, con ajustes para borrar caché y datos. La v1 del TFG (backend Spring Boot hexagonal con PostgreSQL) sigue en el repositorio.",
+          "103 tests: 26 unitarios y 3 de interfaz en Android, 26 de la fábrica de datos y 48 del backend v1."
         ],
         "en": [
-          "Android client with MVVM, Navigation Compose and Material Design 3.",
-          "OpenStreetMap map (osmdroid) with category markers and an info BottomSheet.",
-          "Hexagonal Spring Boot backend with a REST API /api/v1/places, category filtering and Swagger.",
-          "Idempotent import of places from OpenStreetMap (Overpass API), with no licensing cost.",
-          "Retrofit integration with a local fallback (JSON assets) when the server is down, plus a data-source indicator and retry.",
-          "Built end to end on my own."
+          "Kotlin app with Jetpack Compose (Material 3), type-safe Navigation routes, ViewModels, DataStore and Coil 3.",
+          "Dependency-free Python 3.12 data factory that merges OpenStreetMap, Wikidata, Wikipedia, Wikimedia Commons and Extremadura regional open data. Given the same cache it produces the same pack byte for byte.",
+          "The pack ships as a GitHub Release with a versioned manifest and its sha256. WorkManager looks for new versions every 3 days, checks size and hash before importing and keeps the user's favourites.",
+          "Room with FTS4: accent-insensitive full-text search in both languages and by category (\"museo\", \"castle\", \"farmacia\").",
+          "Vector map with MapLibre and OpenFreeMap, places clustered by area, and a downloadable Extremadura map (about 60 MB) for offline use.",
+          "Place pages with a Commons photo plus author and licence, a Wikipedia description, opening hours and accessibility; 8 routes, \"In season now\", a day-by-day trip planner and nearby services with a 112 call button.",
+          "No accounts and no trackers, with settings to clear cache and data. The v1 final project (hexagonal Spring Boot backend with PostgreSQL) is still in the repository.",
+          "103 tests: 26 unit and 3 UI tests on Android, 26 for the data factory and 48 for the v1 backend."
+        ]
+      },
+      "decisions": {
+        "es": [
+          "Sin servidor en la v2. Los datos turísticos cambian poco, así que un paquete versionado en GitHub Releases sustituye al backend del TFG: coste cero, funciona sin cobertura y no hay nada que mantener encendido. A cambio, el contenido se actualiza cada pocos días, no al instante.",
+          "Búsqueda local con Room FTS4 en lugar de una API de búsqueda. Funciona en un pueblo sin cobertura; las tildes se normalizan al indexar para que «caceres» encuentre «Cáceres».",
+          "Fábrica de datos en Python sin dependencias y reproducible. Si el mismo origen genera el mismo paquete byte a byte, el sha256 del manifiesto sirve para saber si hay contenido nuevo de verdad.",
+          "Inyección de dependencias manual con un AppContainer en lugar de Hilt. Para una app de este tamaño evita procesar anotaciones y mantiene el grafo de dependencias visible en un solo fichero; si la app crece, el paso a Hilt es directo."
+        ],
+        "en": [
+          "No server in v2. Tourist data changes slowly, so a versioned pack on GitHub Releases replaces the thesis backend: zero cost, works without signal and nothing to keep running. The trade-off is that content updates every few days, not instantly.",
+          "Local search with Room FTS4 instead of a search API. It works in a village with no signal; accents are folded at index time so \"caceres\" finds \"Cáceres\".",
+          "Dependency-free, reproducible Python data factory. If the same input produces the same pack byte for byte, the manifest's sha256 tells whether there is genuinely new content.",
+          "Manual dependency injection with an AppContainer instead of Hilt. For an app this size it avoids annotation processing and keeps the dependency graph visible in one file; if the app grows, moving to Hilt is straightforward."
         ]
       },
       "stack": [
-        {"group": {"es": "Cliente", "en": "Client"}, "items": ["Kotlin", "Jetpack Compose", "Navigation Compose", "Material 3", "Retrofit", "osmdroid"]},
-        {"group": "Backend", "items": ["Java 17", "Spring Boot 3", "REST / OpenAPI", "Overpass API"]},
-        {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL 15", "Flyway", "Room / SQLite"]}
+        {"group": "Android", "items": ["Kotlin", "Jetpack Compose", "Material 3", "Room + FTS4", "WorkManager", "MapLibre", "DataStore", "OkHttp"]},
+        {"group": {"es": "Datos", "en": "Data"}, "items": ["Python 3.12", "OpenStreetMap", "Wikidata", "Wikipedia", "Wikimedia Commons"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["JUnit", "Compose UI tests", "unittest", "GitHub Actions", "GitHub Releases"]},
+        {"group": {"es": "Backend v1 (TFG)", "en": "v1 backend (thesis)"}, "items": ["Java 17", "Spring Boot 3", "PostgreSQL", "Flyway"]}
       ],
       "metrics": [
-        {"value": {"es": "TFG", "en": "Thesis"}, "label": "DAM · Cesur"},
-        {"value": "OSM", "label": {"es": "mapas sin coste", "en": "free maps"}},
-        {"value": "Offline", "label": {"es": "respaldo local", "en": "local fallback"}}
+        {"value": "5.700+", "label": {"es": "lugares de Extremadura", "en": "places in Extremadura"}},
+        {"value": "Offline", "label": {"es": "mapa y contenido", "en": "map and content"}},
+        {"value": "103", "label": {"es": "tests", "en": "tests"}}
       ],
       "snippet": {
         "file": "snippets/explorersaga.kt",
         "lang": "kotlin",
-        "path": "app/…/data/PlaceRepository.kt",
-        "url": "https://github.com/AsKrueger/ExplorerSaga-Extremadura/blob/main/app/src/main/java/com/alonso/explorersaga/data/PlaceRepository.kt",
+        "path": "app/…/data/content/ContentRepository.kt",
+        "url": "https://github.com/AsKrueger/ExplorerSaga-Extremadura/blob/main/app/src/main/java/com/alonso/explorersaga/data/content/ContentRepository.kt",
         "caption": {
-          "es": "El repositorio intenta primero la API y, si falla o no hay datos, cae a los JSON locales. Devuelve también el origen de los datos para que la interfaz muestre si estás conectado al backend o en modo local.",
-          "en": "The repository tries the API first and falls back to local JSON if it fails or returns nothing. It also returns where the data came from, so the UI can show whether you're on the backend or in local mode."
+          "es": "La sincronización solo instala un paquete si su esquema es compatible, si es más nuevo que el instalado y si el tamaño y el sha256 coinciden con el manifiesto. Un mutex evita que dos importaciones se pisen, y cualquier fallo de red deja el contenido anterior intacto.",
+          "en": "Sync only installs a pack if its schema is supported, it is newer than the installed one, and its size and sha256 match the manifest. A mutex stops two imports from overlapping, and any network failure leaves the previous content untouched."
         }
       },
-      "gallery": [
-        {"src": "img/projects/explorersaga/01-portada.webp", "alt": {"es": "Portada de ExplorerSaga con la sección Descubre Mérida", "en": "ExplorerSaga home screen with the Discover Mérida section"}, "caption": {"es": "Portada: historia de Mérida y acceso a mapa y lugares.", "en": "Home: the history of Mérida and access to the map and places."}},
-        {"src": "img/projects/explorersaga/02-mapa.webp", "alt": {"es": "Mapa OpenStreetMap de Mérida con marcadores por categoría", "en": "OpenStreetMap map of Mérida with markers by category"}, "caption": {"es": "Mapa OpenStreetMap con marcadores por categoría.", "en": "OpenStreetMap map with markers by category."}},
-        {"src": "img/projects/explorersaga/03-filtros.webp", "alt": {"es": "Filtros por categoría: monumentos, gastronomía y tiendas", "en": "Category filters: monuments, food and shops"}, "caption": {"es": "Filtros por monumentos, gastronomía y tiendas.", "en": "Filters for monuments, food and shops."}},
-        {"src": "img/projects/explorersaga/04-lista.webp", "alt": {"es": "Lista de lugares en modo local de respaldo", "en": "List of places in local fallback mode"}, "caption": {"es": "Lista de lugares. Si el servidor no responde, la app muestra el modo local.", "en": "List of places. If the server is down, the app shows local mode."}},
-        {"src": "img/projects/explorersaga/05-ficha.webp", "alt": {"es": "Ficha de un comercio con horarios, dirección y mapa", "en": "Shop detail with opening hours, address and map"}, "caption": {"es": "Ficha de un lugar con horarios, dirección y mapa.", "en": "Place detail with opening hours, address and map."}},
-        {"src": "img/projects/explorersaga/06-detalle-foto.webp", "alt": {"es": "Mapa con la ficha del Acueducto de los Milagros, con foto y horarios", "en": "Map with the Acueducto de los Milagros detail sheet, with photo and opening hours"}, "caption": {"es": "Ficha con foto del lugar, horarios y dirección sobre el mapa.", "en": "Detail sheet with a photo of the place, opening hours and address over the map."}}
-      ],
+      "cv_point": {
+        "es": "Fábrica de datos en Python reproducible que publica el contenido en GitHub Releases con sha256; WorkManager lo actualiza y Room + FTS4 lo busca sin conexión. 103 tests.",
+        "en": "Content built by a reproducible Python data factory and shipped as a GitHub Release with sha256; WorkManager updates it and Room + FTS4 searches it offline. 103 tests."
+      },
+      "play_package": "com.alonso.explorersaga",
       "repository": "https://github.com/AsKrueger/ExplorerSaga-Extremadura"
     },
     {
-      "slug": "pantrymind",
-      "name": "PantryMind",
-      "tagline": {"es": "Aprovecha todos los alimentos de tu despensa.", "en": "Make the most of everything in your pantry."},
-      "kind": "Monorepo · TypeScript",
-      "status": {"es": "Fase inicial", "en": "Early stage"},
-      "status_level": "early",
-      "featured": false,
+      "slug": "3d-cost-manager",
+      "name": "3D Cost Manager",
+      "icon": "img/projects/3d-cost-manager/icon.webp",
+      "banner": "img/projects/3d-cost-manager/banner.webp",
+      "brand": "#f06418",
+      "tagline": {"es": "Cuánto te cuesta cada impresión 3D y a cuánto venderla.", "en": "What each 3D print really costs and what to charge for it."},
+      "pitch": {
+        "es": "Sabe lo que te cuesta de verdad cada pieza y cuánto cobrar en cada sitio.",
+        "en": "Know what each print really costs you and what to charge everywhere you sell."
+      },
+      "perks": {
+        "es": ["Sin cuenta ni conexión", "Importa G-code y 3MF", "Presupuestos en PDF", "6 idiomas"],
+        "en": ["No account, works offline", "Imports G-code and 3MF", "PDF quotes", "6 languages"]
+      },
+      "kind": "Android · Kotlin",
+      "status": {"es": "v1.0.0 · prueba cerrada en Google Play", "en": "v1.0.0 · closed testing on Google Play"},
+      "status_level": "stable",
+      "featured": true,
       "summary": {
-        "es": "Monorepo con API en NestJS y web en React para gestionar inventario, recetas y lista de la compra. Ya tiene registro, inicio de sesión con tokens y rutas protegidas; la lógica de producto viene después.",
-        "en": "A monorepo with a NestJS API and a React web app to manage pantry stock, recipes and shopping lists. Sign-up, token login and protected routes are in place; product features come next."
+        "es": "App Android que calcula el coste real de cada pieza impresa en 3D (material, luz, desgaste, tu tiempo e impresiones fallidas) y a cuánto venderla en cada canal, con su comisión y el IVA. Gestiona presupuestos y pedidos con PDF y funciona entera en el móvil, sin cuenta ni servidor, en 6 idiomas.",
+        "en": "An Android app that works out the real cost of each 3D-printed part (material, electricity, wear, your time and failed prints) and what to sell it for on each channel, fees and VAT included. It manages quotes and orders with PDFs and runs entirely on the phone, with no account or server, in 6 languages."
       },
       "problem": {
-        "es": "Se compra lo que ya hay en casa, otras cosas caducan sin usarse y cuesta decidir qué cocinar con lo disponible.",
-        "en": "People buy what they already have, other food expires unused, and it's hard to decide what to cook with what's on hand."
+        "es": "Casi todas las calculadoras de impresión 3D solo cuentan el filamento. Quien vende en Etsy o Wallapop acaba cobrando de menos porque olvida la luz, el desgaste, su tiempo, las piezas que fallan y la comisión del canal.",
+        "en": "Almost every 3D printing calculator only counts filament. People selling on Etsy or Wallapop end up undercharging because they forget electricity, wear, their own time, failed prints and the channel's fee."
       },
+      "hero": [0, 1],
+      "features": [
+        {
+          "shot": 0,
+          "title": {"es": "El coste real, no solo el filamento", "en": "The real cost, not just filament"},
+          "text": {
+            "es": "Material con varios colores y purga, luz, desgaste de la impresora, tu tiempo y las impresiones que fallan. Lo ves desglosado al momento.",
+            "en": "Multi-colour material and purge, electricity, printer wear, your time and failed prints. You see it broken down instantly."
+          }
+        },
+        {
+          "shot": 1,
+          "title": {"es": "Cobra lo justo en cada sitio", "en": "Charge the right price everywhere"},
+          "text": {
+            "es": "Etsy, Amazon, eBay, Wallapop o tu tienda: la app suma la comisión y el IVA y te dice lo que te queda limpio en cada uno.",
+            "en": "Etsy, Amazon, eBay, Wallapop or your own shop: the app adds the fee and VAT and tells you what you actually keep on each."
+          }
+        },
+        {
+          "shot": 3,
+          "title": {"es": "Abre el G-code y listo", "en": "Open the G-code and you're done"},
+          "text": {
+            "es": "Comparte un G-code o 3MF desde tu laminador y se rellenan el tiempo, los gramos de cada filamento y la imagen de la pieza.",
+            "en": "Share a G-code or 3MF from your slicer and the time, grams per filament and part image fill themselves in."
+          }
+        },
+        {
+          "shot": 2,
+          "title": {"es": "Presupuestos, pedidos y beneficio", "en": "Quotes, orders and profit"},
+          "text": {
+            "es": "Presupuestos en PDF con tu logo para WhatsApp o correo, estados de cada pedido y un resumen del mes con lo que has ganado.",
+            "en": "PDF quotes with your logo for WhatsApp or email, a status for each order and a monthly summary of what you've earned."
+          }
+        },
+        {
+          "shot": 4,
+          "title": {"es": "Te avisa cuando termina", "en": "It tells you when it's done"},
+          "text": {
+            "es": "Temporizador de impresión con aviso y un widget en la pantalla de inicio con la cuenta atrás.",
+            "en": "Print timer with an alert and a home-screen widget showing the countdown."
+          }
+        }
+      ],
+      "frame": false,
+      "gallery_title": {"es": "Capturas de la versión 1.0", "en": "Screenshots of version 1.0"},
+      "gallery": [
+        {
+          "src": {"es": "img/projects/3d-cost-manager/01-coste.webp", "en": "img/projects/3d-cost-manager/01-coste-en.webp"},
+          "alt": {"es": "Resultado del cálculo con el precio por pieza y el desglose de costes", "en": "Calculation result with the price per part and the cost breakdown"},
+          "caption": {"es": "El coste real, con su desglose.", "en": "The real cost, broken down."}
+        },
+        {
+          "src": {"es": "img/projects/3d-cost-manager/02-canales.webp", "en": "img/projects/3d-cost-manager/02-canales-en.webp"},
+          "alt": {"es": "Comparador de precios por canal de venta", "en": "Price comparison by sales channel"},
+          "caption": {"es": "Precio y beneficio en cada canal de venta.", "en": "Price and profit on each sales channel."}
+        },
+        {
+          "src": {"es": "img/projects/3d-cost-manager/03-pedidos.webp", "en": "img/projects/3d-cost-manager/03-pedidos-en.webp"},
+          "alt": {"es": "Pedidos del mes con ventas, beneficio y gráfico", "en": "Monthly orders with sales, profit and chart"},
+          "caption": {"es": "Pedidos, ventas y beneficio del mes.", "en": "Orders, sales and profit for the month."}
+        },
+        {
+          "src": "img/projects/3d-cost-manager/04-importar.webp",
+          "alt": {"es": "Nuevo cálculo con el aviso para importar el archivo del laminador", "en": "New calculation with the prompt to import the slicer file"},
+          "caption": {"es": "Importa el G-code o 3MF y se rellena solo.", "en": "Import the G-code or 3MF and it fills itself in."}
+        },
+        {
+          "src": "img/projects/3d-cost-manager/05-temporizador.webp",
+          "alt": {"es": "Temporizador de impresión en curso", "en": "Print timer running"},
+          "caption": {"es": "Te avisa cuando termina la impresión.", "en": "It tells you when the print is done."}
+        },
+        {
+          "src": "img/projects/3d-cost-manager/06-widget.webp",
+          "alt": {"es": "Widget en la pantalla de inicio con la cuenta atrás", "en": "Home-screen widget with the countdown"},
+          "caption": {"es": "Widget con la cuenta atrás en la pantalla de inicio.", "en": "Home-screen widget with the countdown."}
+        }
+      ],
       "highlights": {
         "es": [
-          "Workspaces de npm con un único lockfile para la API y la web.",
-          "Autenticación con tokens y rutas protegidas en NestJS.",
-          "Prisma ORM sobre PostgreSQL 18 en Docker, con una base de datos separada para tests de integración.",
-          "Decisiones registradas en ADRs y guías de instalación para Windows y Linux.",
-          "CI en GitHub Actions."
+          "Kotlin, Jetpack Compose, Room y DataStore. Todo vive en el dispositivo, sin cuenta ni servidor.",
+          "Motor de cálculo en Kotlin puro (CostEngine) con BigDecimal: escala 8 en los pasos y 4 en el resultado. Una placa fallida repite material, luz, desgaste y preparación, pero no el acabado ni los extras.",
+          "Precio despejado para que, tras el IVA y la comisión del canal sobre el total, quede el beneficio buscado, con comparador de canales (Etsy, Amazon, eBay, Wallapop y tienda propia).",
+          "Importación de G-code y 3MF de Flash Studio, OrcaSlicer, Bambu Studio, PrusaSlicer y Cura: tiempo, gramos de cada filamento e imagen de la pieza.",
+          "Presupuestos y pedidos con estados, PDF con el logo del negocio, resumen del mes con gráfico y exportación a CSV.",
+          "Temporizador de impresión con widget en la pantalla de inicio, stock de bobinas con aviso y precio de la luz del día (PVPC) en España.",
+          "Seis idiomas generados desde un script que falla si a un idioma le falta o le sobra una clave.",
+          "Empezó como backend Spring Boot con JWT, PostgreSQL e infraestructura AWS como código (69 tests). Se archivó cuando la app dejó de necesitar servidor y el motor se portó a Kotlin. La app tiene 37 tests."
         ],
         "en": [
-          "npm workspaces with a single lockfile for the API and the web app.",
-          "Token authentication and protected routes in NestJS.",
-          "Prisma ORM on PostgreSQL 18 in Docker, with a separate database for integration tests.",
-          "Decisions recorded in ADRs and setup guides for Windows and Linux.",
-          "CI on GitHub Actions."
+          "Kotlin, Jetpack Compose, Room and DataStore. Everything lives on the device, with no account or server.",
+          "Pure Kotlin calculation engine (CostEngine) with BigDecimal: scale 8 in the steps and 4 in the result. A failed plate repeats material, electricity, wear and prep, but not finishing or extras.",
+          "Price solved so that, after VAT and the channel's fee on the total, the target profit is left, with a channel comparison (Etsy, Amazon, eBay, Wallapop and your own shop).",
+          "G-code and 3MF import from Flash Studio, OrcaSlicer, Bambu Studio, PrusaSlicer and Cura: time, grams per filament and a picture of the part.",
+          "Quotes and orders with statuses, PDFs with the business logo, a monthly summary with a chart and CSV export.",
+          "Print timer with a home-screen widget, spool stock with low-stock alerts and Spain's daily electricity price (PVPC).",
+          "Six languages generated from a script that fails if a language is missing or has an extra key.",
+          "It started as a Spring Boot backend with JWT, PostgreSQL and AWS infrastructure as code (69 tests). It was archived once the app no longer needed a server and the engine was ported to Kotlin. The app has 37 tests."
+        ]
+      },
+      "decisions": {
+        "es": [
+          "Del servidor al móvil. La primera versión tenía backend Spring Boot e infraestructura AWS. Para una calculadora personal, una cuenta y un servidor eran fricción y coste sin ventaja, así que todo pasó al dispositivo y el backend quedó archivado por si algún día hace falta sincronizar.",
+          "BigDecimal con 8 decimales internos y redondeo HALF_UP a 4 al final. Con dinero, los errores de coma flotante de double acaban en céntimos que no cuadran.",
+          "El precio se despeja en lugar de sumar porcentajes, porque la comisión de los marketplaces se cobra sobre el total con IVA y un margen sumado sin más deja menos beneficio del que crees.",
+          "Cada línea de un presupuesto congela su precio y su coste al añadirla. Si mañana sube el filamento, un presupuesto enviado no cambia solo; «Actualizar precios» lo recalcula a propósito."
+        ],
+        "en": [
+          "From server to phone. The first version had a Spring Boot backend and AWS infrastructure. For a personal calculator, an account and a server were friction and cost with no upside, so everything moved to the device and the backend was archived in case sync is ever needed.",
+          "BigDecimal with 8 internal decimals and HALF_UP rounding to 4 at the end. With money, double's floating-point errors end up as cents that don't add up.",
+          "The price is solved instead of adding percentages, because marketplaces take their fee on the VAT-inclusive total and a plain margin leaves less profit than you think.",
+          "Each quote line freezes its price and cost when added. If filament gets dearer tomorrow, a quote already sent doesn't change by itself; \"Update prices\" recalculates it on purpose."
         ]
       },
       "stack": [
-        {"group": "Backend", "items": ["NestJS", "TypeScript", "Prisma"]},
-        {"group": {"es": "Datos", "en": "Data"}, "items": ["PostgreSQL 18", "Docker Compose"]},
-        {"group": {"es": "Cliente", "en": "Client"}, "items": ["React 19", "Vite"]},
-        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["Vitest", "Testing Library", "GitHub Actions"]}
+        {"group": "Android", "items": ["Kotlin", "Jetpack Compose", "Material 3", "Room", "DataStore", "App widget"]},
+        {"group": {"es": "Datos y servicios", "en": "Data & services"}, "items": ["G-code / 3MF", "PDF", "PVPC (REE)", "AdMob + UMP", "Play Billing"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["JUnit", "Google Play Console"]},
+        {"group": {"es": "Backend v1 (archivado)", "en": "v1 backend (archived)"}, "items": ["Java 21", "Spring Boot 3", "PostgreSQL", "CloudFormation"]}
       ],
-      "metrics": [],
-      "repository": "https://github.com/AsKrueger/PantryMind"
+      "metrics": [
+        {"value": "6", "label": {"es": "idiomas", "en": "languages"}},
+        {"value": "5", "label": {"es": "laminadores compatibles", "en": "supported slicers"}},
+        {"value": "37", "label": {"es": "tests en la app", "en": "app tests"}}
+      ],
+      "snippet": {
+        "file": "snippets/3d-cost-manager.kt",
+        "lang": "kotlin",
+        "path": "app/…/core/calc/CostEngine.kt",
+        "url": "https://github.com/AsKrueger/Calculadora3D/blob/main/android/app/src/main/java/com/tdcostmanager/app/core/calc/CostEngine.kt",
+        "caption": {
+          "es": "Sumar un margen al coste no basta: Etsy o Amazon cobran su comisión sobre el total con IVA, y el beneficio real sale menor. El motor despeja el precio de la ecuación para que, tras el IVA y la comisión, quede exactamente el beneficio buscado, y avisa si no existe ningún precio que lo consiga.",
+          "en": "Adding a margin to the cost isn't enough: Etsy or Amazon take their fee on the VAT-inclusive total, so the real profit comes out lower. The engine solves the equation for the price so that, after VAT and the fee, exactly the target profit is left, and it warns when no price can achieve it."
+        }
+      },
+      "cv_point": {
+        "es": "Motor de costes en Kotlin puro (BigDecimal), precio con IVA y comisión por canal, importación de G-code y 3MF, 6 idiomas. Antes, backend Spring Boot.",
+        "en": "Pure Kotlin cost engine with BigDecimal, price solved for VAT and channel fees, G-code and 3MF import and 6 languages. Previously a Spring Boot backend on AWS."
+      },
+      "play_package": "com.tdcostmanager.app",
+      "repository": "https://github.com/AsKrueger/Calculadora3D"
     },
     {
-      "slug": "wayly",
-      "name": "Wayly",
-      "tagline": {"es": "Tu tiempo. Tu lugar. Tu plan.", "en": "Your time. Your place. Your plan."},
-      "kind": "Frontend · Angular",
-      "status": {"es": "En desarrollo", "en": "In development"},
-      "status_level": "active",
-      "featured": false,
+      "slug": "animewatchlist",
+      "name": "AnimeWatchlist",
+      "icon": "img/projects/animewatchlist/icon.webp",
+      "banner": "img/projects/animewatchlist/banner.webp",
+      "brand": "#ff4f8b",
+      "tagline": {"es": "Tu anime organizado y el calendario de estrenos, sin cuenta.", "en": "Your anime organised, plus a release calendar, no account needed."},
+      "pitch": {"es": "¿Qué anime sale hoy? ¿Por qué episodio ibas? Te lo dice en un toque.", "en": "What anime airs today? Which episode were you on? One tap tells you."},
+      "perks": {"es": ["Calendario semanal", "Sin cuenta", "Funciona sin conexión", "ES / EN"], "en": ["Weekly calendar", "No account", "Works offline", "ES / EN"]},
+      "kind": "Android · Kotlin",
+      "status": {"es": "v1.1.0 · prueba cerrada en Google Play", "en": "v1.1.0 · closed testing on Google Play"},
+      "status_level": "stable",
+      "featured": true,
       "summary": {
-        "es": "Aplicación web que propone qué hacer en una ciudad según el tiempo libre, el presupuesto y las preferencias, con recomendaciones explicables que se pueden comparar.",
-        "en": "A web app that suggests what to do in a city based on free time, budget and preferences, with explainable recommendations you can compare."
+        "es": "App Android nativa para llevar tus listas de anime (pendiente, viendo, abandonado y terminado) con el progreso por episodio, un calendario semanal de estrenos y dónde ver cada serie. Usa el catálogo de Kitsu, no pide cuenta y guarda todo en el dispositivo.",
+        "en": "A native Android app to track your anime lists (plan to watch, watching, dropped and completed) with per-episode progress, a weekly release calendar and where to watch each show. It uses the Kitsu catalogue, needs no account and keeps everything on the device."
       },
       "problem": {
-        "es": "Tener dos horas libres en una ciudad y no saber en qué invertirlas sin abrir diez pestañas.",
-        "en": "Having two free hours in a city and no idea how to spend them without opening ten tabs."
+        "es": "Quien sigue varias series a la vez acaba con el progreso repartido entre notas y capturas, sin saber qué día sale cada episodio ni dónde verlo legalmente.",
+        "en": "Anyone following several shows at once ends up with their progress scattered across notes and screenshots, unsure which day each episode comes out or where to watch it legally."
       },
+      "hero": [0, 2],
+      "features": [
+        {
+          "shot": 0,
+          "title": {"es": "Cada episodio nuevo, el día que sale", "en": "Every new episode, the day it airs"},
+          "text": {
+            "es": "Elige un día y mira qué estrena episodio, de toda la temporada o solo de tus listas. Si la fecha no está confirmada, la app te lo dice.",
+            "en": "Pick a day and see what gets a new episode, across the whole season or just your lists. If a date isn't confirmed, the app tells you."
+          }
+        },
+        {
+          "shot": 1,
+          "title": {"es": "Todo tu anime, en su sitio", "en": "All your anime, in its place"},
+          "text": {
+            "es": "Viendo, Pendiente, Terminado o Abandonado. Suma episodios con un toque y ponle tu nota del 1 al 10.",
+            "en": "Watching, Plan to watch, Completed or Dropped. Add episodes with one tap and give each show your own 1–10 score."
+          }
+        },
+        {
+          "shot": 2,
+          "title": {"es": "Dónde verlo, sin buscar", "en": "Where to watch it, no searching"},
+          "text": {
+            "es": "Cada ficha trae sinopsis, tráiler, temporadas relacionadas y en qué plataformas está.",
+            "en": "Every page has the synopsis, trailer, related seasons and which platforms have it."
+          }
+        },
+        {
+          "shot": 3,
+          "title": {"es": "Recomiéndalo en un PDF", "en": "Recommend it in a PDF"},
+          "text": {
+            "es": "Marca tus favoritos, escribe por qué y compártelos con tus amigos en un PDF listo para enviar.",
+            "en": "Mark your favourites, write why and share them with friends in a PDF ready to send."
+          }
+        },
+        {
+          "shot": 4,
+          "title": {"es": "Tus datos, en tu móvil", "en": "Your data, on your phone"},
+          "text": {
+            "es": "Sin cuenta. Guarda las imágenes para usarla sin conexión, haz copia de tus listas y bórralo todo cuando quieras.",
+            "en": "No account. Save images to use it offline, back up your lists and delete everything whenever you like."
+          }
+        }
+      ],
+      "frame": false,
+      "gallery_title": {"es": "Capturas de la versión 1.1", "en": "Screenshots of version 1.1"},
+      "gallery": [
+        {
+          "src": "img/projects/animewatchlist/01-calendario.webp",
+          "alt": {"es": "Calendario semanal con los episodios del miércoles", "en": "Weekly calendar showing Wednesday's episodes"},
+          "caption": {"es": "Calendario semanal de estrenos, con fechas estimadas marcadas.", "en": "Weekly release calendar, with estimated dates flagged."}
+        },
+        {
+          "src": "img/projects/animewatchlist/02-listas.webp",
+          "alt": {"es": "Mis listas con pestañas de viendo, pendiente, terminado y abandonado", "en": "My lists with watching, plan to watch, completed and dropped tabs"},
+          "caption": {"es": "Listas con el progreso por episodio.", "en": "Lists with per-episode progress."}
+        },
+        {
+          "src": "img/projects/animewatchlist/03-donde-ver.webp",
+          "alt": {
+            "es": "Ficha de Sousou no Frieren con estado, plataformas donde verlo, progreso y nota",
+            "en": "Sousou no Frieren page with status, where to watch, progress and rating"
+          },
+          "caption": {"es": "Ficha con dónde verlo, progreso y nota personal.", "en": "Show page with where to watch, progress and personal rating."}
+        },
+        {
+          "src": "img/projects/animewatchlist/04-recomendados.webp",
+          "alt": {"es": "Recomendados con portadas y botón de compartir en PDF", "en": "Recommendations with covers and a share-as-PDF button"},
+          "caption": {"es": "Recomendados que se comparten en PDF.", "en": "Recommendations shared as a PDF."}
+        },
+        {
+          "src": "img/projects/animewatchlist/05-sin-cuenta.webp",
+          "alt": {"es": "Ajustes de idioma, tema, almacenamiento sin conexión y copia de seguridad", "en": "Settings for language, theme, offline storage and backup"},
+          "caption": {"es": "Ajustes: sin conexión, borrado de datos y copia de seguridad.", "en": "Settings: offline mode, data deletion and backup."}
+        }
+      ],
       "highlights": {
         "es": [
-          "Angular 18 con standalone components y TypeScript estricto.",
-          "Motor de propuestas explicable sobre un catálogo tipado e intercambiable.",
-          "Mapa Leaflet opcional que solo pide teselas cuando hay coordenadas válidas.",
-          "Sistema de diseño con tokens y estados accesibles documentados.",
-          "Jest, ESLint y 8 ADRs; principio de coste cero."
+          "Kotlin y Jetpack Compose con Room, DataStore, Navigation Compose, Coil 3, OkHttp y kotlinx.serialization.",
+          "Fuente de datos elegida tras comparar APIs (Kitsu frente a AniList), con la investigación documentada en el repositorio.",
+          "Calendario semanal con todo el anime en emisión o solo tus listas. Cuando Kitsu no da la fecha estima un episodio por semana y lo indica en pantalla.",
+          "Caché de 6 horas con escritura atómica para que el calendario abra al instante, y refresco por lotes al abrir solo de los anime desactualizados.",
+          "Sinopsis traducidas en el dispositivo con ML Kit y géneros traducidos con una tabla propia.",
+          "Recomendados exportables a PDF, copia de seguridad de las listas e imágenes guardadas para usar la app sin conexión.",
+          "Banner de AdMob con el formulario de consentimiento de Google (UMP). No enlaza webs sin licencia, para cumplir las políticas de Google Play.",
+          "Ocho versiones por fases (de la 1.0.0 a la 1.1.0), con una rama por issue y pull requests a develop."
         ],
         "en": [
-          "Angular 18 with standalone components and strict TypeScript.",
-          "Explainable suggestion engine over a typed, swappable catalogue.",
-          "Optional Leaflet map that only requests tiles when coordinates are valid.",
-          "Design system with tokens and documented accessible states.",
-          "Jest, ESLint and 8 ADRs; zero-cost principle."
+          "Kotlin and Jetpack Compose with Room, DataStore, Navigation Compose, Coil 3, OkHttp and kotlinx.serialization.",
+          "Data source chosen after comparing APIs (Kitsu versus AniList), with the research documented in the repository.",
+          "Weekly calendar with all airing anime or just your lists. When Kitsu has no date it estimates one episode a week and says so on screen.",
+          "6-hour cache with atomic writes so the calendar opens instantly, plus batched refresh on launch of only the stale entries.",
+          "Synopses translated on device with ML Kit and genres translated with a hand-written table.",
+          "Recommendations exportable to PDF, list backups and saved images so the app works offline.",
+          "AdMob banner with Google's consent form (UMP). No links to unlicensed sites, to comply with Google Play policies.",
+          "Eight versions delivered in phases (1.0.0 to 1.1.0), with one branch per issue and pull requests into develop."
+        ]
+      },
+      "decisions": {
+        "es": [
+          "Kitsu en lugar de AniList o MyAnimeList. Antes de escribir código leí sus términos: AniList prohíbe expresamente los trackers de anime y MyAnimeList exige permiso escrito para apps con ingresos. Todo el acceso pasa por una interfaz (AnimeCatalog), así que cambiar de proveedor afecta a una sola clase.",
+          "Si Kitsu no da fecha de estreno, se estima un episodio por semana y la pantalla lo dice. Prefiero una estimación honesta a un calendario vacío o a una fecha inventada.",
+          "Traducción de sinopsis en el dispositivo con ML Kit. Kitsu casi solo tiene textos en inglés; así no se envía nada a un servidor y el modelo (unos 30 MB) solo se descarga si usas la app en español.",
+          "No se enlazan webs que emiten anime sin licencia; el botón (+) hace una búsqueda en Google. Google Play lo prohíbe y pondría en riesgo la cuenta de desarrollador."
+        ],
+        "en": [
+          "Kitsu instead of AniList or MyAnimeList. Before writing code I read their terms: AniList explicitly forbids anime trackers and MyAnimeList requires written permission for apps with revenue. All access goes through one interface (AnimeCatalog), so switching provider touches a single class.",
+          "When Kitsu has no air date, the app estimates one episode a week and says so on screen. An honest estimate beats an empty calendar or a made-up date.",
+          "On-device synopsis translation with ML Kit. Kitsu is almost English-only; this way nothing is sent to a server and the model (about 30 MB) is only downloaded if you use the app in Spanish.",
+          "No links to sites that stream anime without a licence; the (+) button runs a Google search. Google Play forbids it and it would put the developer account at risk."
         ]
       },
       "stack": [
-        {"group": {"es": "Cliente", "en": "Client"}, "items": ["Angular 18", "TypeScript", "Leaflet"]},
-        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["Jest", "ESLint"]}
+        {"group": "Android", "items": ["Kotlin", "Jetpack Compose", "Material 3", "Room", "DataStore", "Navigation Compose", "Coil 3"]},
+        {"group": {"es": "Datos y servicios", "en": "Data & services"}, "items": ["Kitsu API", "OkHttp", "kotlinx.serialization", "ML Kit Translate", "AdMob + UMP"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["JUnit", "Google Play Console"]}
       ],
-      "metrics": [],
-      "repository": "https://github.com/AsKrueger/Wayly"
+      "metrics": [
+        {"value": "1.1.0", "label": {"es": "versión actual", "en": "current version"}},
+        {"value": "8", "label": {"es": "versiones por fases", "en": "phased releases"}},
+        {"value": "ES / EN", "label": {"es": "idiomas", "en": "languages"}}
+      ],
+      "snippet": {
+        "file": "snippets/animewatchlist.kt",
+        "lang": "kotlin",
+        "path": "app/…/data/AiringRepository.kt",
+        "caption": {
+          "es": "Cargar el anime en emisión cuesta unas quince peticiones a Kitsu, así que el calendario enseña al momento la copia guardada y solo vuelve a pedirlo cuando tiene más de seis horas. La copia se escribe en un fichero temporal y se renombra, para que un cierre a medias nunca deje un fichero corrupto.",
+          "en": "Loading the airing anime takes about fifteen requests to Kitsu, so the calendar shows the saved copy straight away and only asks again when it is over six hours old. The copy is written to a temporary file and renamed, so an interrupted write never leaves a corrupt file."
+        }
+      },
+      "cv_point": {
+        "es": "Caché con escritura atómica, traducción con ML Kit, AdMob con consentimiento UMP y ocho versiones por fases.",
+        "en": "Cache with atomic writes, on-device translation with ML Kit, AdMob with UMP consent and eight phased releases."
+      },
+      "play_package": "com.askrueger.animewatchlist",
+      "repo_private": true
+    },
+    {
+      "slug": "training-arc",
+      "name": "Training Arc",
+      "icon": "img/projects/training-arc/icon.webp",
+      "banner": "img/projects/training-arc/banner.webp",
+      "brand": "#ff8a1f",
+      "tagline": {"es": "Registro de entrenamientos convertido en un RPG de estética anime.", "en": "A workout logger turned into an anime-style RPG."},
+      "pitch": {"es": "Tu registro de gimnasio, convertido en un RPG. Cada serie suma XP.", "en": "Your gym log, turned into an RPG. Every set earns XP."},
+      "perks": {"es": ["883 ejercicios", "Rangos de E a SS", "Sin cuenta ni anuncios", "ES / EN"], "en": ["883 exercises", "Ranks from E to SS", "No account, no ads", "ES / EN"]},
+      "kind": "Android · Kotlin",
+      "status": {"es": "v1.0.0 · prueba cerrada en Google Play", "en": "v1.0.0 · closed testing on Google Play"},
+      "status_level": "stable",
+      "featured": true,
+      "summary": {
+        "es": "App Android para registrar entrenamientos en la que cada serie da XP, cada sesión sube seis atributos y cada semana seguida alimenta tu racha. Tiene 883 ejercicios, 8 programas temáticos, récords personales, mapa muscular y estadísticas. Funciona sin conexión y sin cuenta, en español e inglés.",
+        "en": "An Android workout logger where every set earns XP, every session raises six attributes and every week in a row feeds your streak. It has 883 exercises, 8 themed programmes, personal records, a muscle map and statistics. It works offline with no account, in Spanish and English."
+      },
+      "problem": {
+        "es": "Las apps de registro de entrenamientos son eficaces pero frías, y a mucha gente le cuesta mantener la constancia. Convertir el progreso en un personaje que sube de nivel da una razón más para volver al gimnasio.",
+        "en": "Workout logging apps are effective but dry, and many people struggle to stay consistent. Turning progress into a character who levels up gives one more reason to go back to the gym."
+      },
+      "hero": [0, 1],
+      "features": [
+        {
+          "shot": 0,
+          "title": {"es": "Sube de nivel entrenando", "en": "Level up by training"},
+          "text": {
+            "es": "Cada serie te da XP, cada entrenamiento sube tus atributos y cada semana seguida alimenta tu aura.",
+            "en": "Every set gives you XP, every workout raises your stats and every week in a row feeds your aura."
+          }
+        },
+        {
+          "shot": 1,
+          "title": {"es": "Registra una serie en un toque", "en": "Log a set in one tap"},
+          "text": {
+            "es": "Ves lo que hiciste la última vez y el descanso arranca solo. Te avisa aunque tengas el móvil bloqueado.",
+            "en": "See what you did last time and the rest timer starts by itself. It alerts you even with the phone locked."
+          }
+        },
+        {
+          "shot": 2,
+          "title": {"es": "Seis atributos que crecen contigo", "en": "Six stats that grow with you"},
+          "text": {
+            "es": "Fuerza, Resistencia, Velocidad, Agilidad, Disciplina y Recuperación, y un rango de E a SS para cada músculo.",
+            "en": "Strength, Endurance, Speed, Agility, Discipline and Recovery, plus a rank from E to SS for every muscle."
+          }
+        },
+        {
+          "shot": 3,
+          "title": {"es": "8 arcos de entrenamiento", "en": "8 training arcs"},
+          "text": {
+            "es": "Programas temáticos inspirados en el entrenamiento del anime, cada uno con su progreso por sesiones.",
+            "en": "Themed programmes inspired by anime training, each with progress by session."
+          }
+        },
+        {
+          "shot": 5,
+          "title": {"es": "Récords que se detectan solos", "en": "Records detected automatically"},
+          "text": {
+            "es": "Al terminar, la app marca tus récords personales y te da XP extra. Gráficas de progreso, 1RM estimado y 14 logros.",
+            "en": "When you finish, the app marks your personal records and gives bonus XP. Progress charts, estimated 1RM and 14 achievements."
+          }
+        }
+      ],
+      "frame": false,
+      "gallery_title": {"es": "Capturas de la versión 1.0 (ficha de Play en inglés)", "en": "Screenshots of version 1.0"},
+      "gallery": [
+        {
+          "src": "img/projects/training-arc/01-level-up.webp",
+          "alt": {"es": "Pantalla del héroe con nivel, racha y gráfica de volumen semanal", "en": "Hero screen with level, streak and weekly volume chart"},
+          "caption": {"es": "El héroe: nivel, racha y progreso semanal.", "en": "The hero: level, streak and weekly progress."}
+        },
+        {
+          "src": "img/projects/training-arc/02-log.webp",
+          "alt": {"es": "Entrenamiento en directo con series de sentadilla y temporizador de descanso", "en": "Live workout with squat sets and a rest timer"},
+          "caption": {"es": "Registro de series con los valores de la sesión anterior.", "en": "Set logging with last session's values."}
+        },
+        {
+          "src": "img/projects/training-arc/03-stats.webp",
+          "alt": {"es": "Mapa muscular y radar de los seis atributos", "en": "Muscle map and radar of the six attributes"},
+          "caption": {"es": "Seis atributos en un radar y rango por músculo.", "en": "Six attributes on a radar and a rank per muscle."}
+        },
+        {
+          "src": "img/projects/training-arc/04-arcs.webp",
+          "alt": {"es": "Lista de arcos de entrenamiento temáticos", "en": "List of themed training arcs"},
+          "caption": {"es": "Arcos: 8 programas temáticos con su progreso.", "en": "Arcs: 8 themed programmes with progress."}
+        },
+        {
+          "src": "img/projects/training-arc/05-muscles.webp",
+          "alt": {"es": "Estadísticas de los últimos 7 días con mapa muscular y series por grupo", "en": "Last 7 days statistics with muscle map and sets per group"},
+          "caption": {"es": "Estadísticas semanales con mapa de calor muscular.", "en": "Weekly statistics with a muscle heat map."}
+        },
+        {
+          "src": "img/projects/training-arc/06-records.webp",
+          "alt": {"es": "Resumen de un entrenamiento con récords personales marcados", "en": "Workout summary with personal records marked"},
+          "caption": {"es": "Récords personales detectados al terminar.", "en": "Personal records detected on finish."}
+        }
+      ],
+      "highlights": {
+        "es": [
+          "Kotlin y Jetpack Compose con una sola Activity, Navigation Compose, Room para entrenamientos y rutinas y DataStore para ajustes y héroe.",
+          "Motor RPG en Kotlin puro y determinista: XP por serie según el tipo de ejercicio, bonus por récord, clase y racha, seis atributos y rangos de E a SS. Los totales se pueden reconstruir siempre desde los entrenamientos guardados.",
+          "Entrenamiento en directo con los valores de la sesión anterior, tipos de serie y temporizador de descanso que sigue en la notificación con el móvil bloqueado.",
+          "Récords personales detectados al terminar (1RM estimado con Epley), 14 logros, objetivo semanal, gráficas de progreso y peso corporal.",
+          "Mapa muscular vectorial propio, de frente y de espaldas, usado en fichas, resultados y como mapa de calor semanal.",
+          "883 ejercicios de Free Exercise DB (dominio público) preparados con un script en Python, con instrucciones traducidas en el dispositivo con ML Kit.",
+          "Sin backend ni cuentas: copia de seguridad exportable, imágenes sin conexión y borrado de caché y datos. El prototipo anterior en Flutter y FastAPI se conserva en una etiqueta.",
+          "34 tests unitarios del motor RPG, las rachas, los logros, el progreso, el catálogo y los formatos."
+        ],
+        "en": [
+          "Kotlin and Jetpack Compose with a single Activity, Navigation Compose, Room for workouts and routines and DataStore for settings and the hero.",
+          "Pure, deterministic Kotlin RPG engine: XP per set by exercise type, bonuses for records, class and streak, six attributes and ranks from E to SS. Totals can always be rebuilt from the stored workouts.",
+          "Live workout with last session's values, set types and a rest timer that keeps running in the notification while the phone is locked.",
+          "Personal records detected on finish (Epley 1RM estimate), 14 achievements, a weekly goal, progress charts and body weight.",
+          "Custom vector muscle map, front and back, used on exercise pages, results and as a weekly heat map.",
+          "883 exercises from Free Exercise DB (public domain) prepared with a Python script, with instructions translated on device with ML Kit.",
+          "No backend and no accounts: exportable backups, offline images and cache and data deletion. The earlier Flutter and FastAPI prototype is kept under a tag.",
+          "34 unit tests for the RPG engine, streaks, achievements, progress, the catalogue and formatting."
+        ]
+      },
+      "decisions": {
+        "es": [
+          "El progreso se calcula, no se guarda. El motor RPG es una función pura, así que nivel y atributos se pueden reconstruir siempre desde los entrenamientos: un cambio en las reglas o un error nunca deja un progreso corrupto.",
+          "Valores absurdos (600 kg, 500 repeticiones) se limitan en lugar de rechazarse. Una errata no debe hacer perder una serie, pero tampoco regalar niveles.",
+          "Sin backend: el prototipo en Flutter y FastAPI se sustituyó por una app nativa que guarda todo en el móvil. Sin cuentas ni servidor no hay costes ni datos de salud fuera del dispositivo."
+        ],
+        "en": [
+          "Progress is computed, not stored. The RPG engine is a pure function, so level and attributes can always be rebuilt from the workouts: a rule change or a bug never leaves corrupted progress.",
+          "Absurd values (600 kg, 500 reps) are clamped rather than rejected. A typo shouldn't lose a set, but it shouldn't hand out levels either.",
+          "No backend: the Flutter and FastAPI prototype was replaced by a native app that keeps everything on the phone. With no accounts or server there are no running costs and no health data leaves the device."
+        ]
+      },
+      "stack": [
+        {"group": "Android", "items": ["Kotlin", "Jetpack Compose", "Material 3", "Room", "DataStore", "Navigation Compose", "Coil 3"]},
+        {"group": {"es": "Datos y servicios", "en": "Data & services"}, "items": ["Free Exercise DB", "ML Kit Translate", "Python"]},
+        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["JUnit", "Google Play Console"]}
+      ],
+      "metrics": [
+        {"value": "883", "label": {"es": "ejercicios", "en": "exercises"}},
+        {"value": "6", "label": {"es": "atributos RPG", "en": "RPG attributes"}},
+        {"value": "34", "label": {"es": "tests del dominio", "en": "domain tests"}}
+      ],
+      "snippet": {
+        "file": "snippets/training-arc.kt",
+        "lang": "kotlin",
+        "path": "app/…/domain/Rpg.kt",
+        "caption": {
+          "es": "La recompensa de un entrenamiento es una función pura: reparte la XP de cada serie entre los atributos que entrena, aplica los bonus de récord, de clase y de racha, y premia la constancia y el descanso. Como no depende de nada externo, se prueba con tests unitarios y los totales se pueden recalcular en cualquier momento.",
+          "en": "A workout's reward is a pure function: it splits each set's XP across the attributes it trains, applies record, class and streak bonuses, and rewards consistency and rest. Since it depends on nothing external, it is covered by unit tests and the totals can be recalculated at any time."
+        }
+      },
+      "cv_point": {
+        "es": "Motor RPG puro y determinista con 34 tests, Room, descanso en la notificación y 883 ejercicios traducidos con ML Kit.",
+        "en": "Pure, deterministic RPG engine with 34 tests, Room, a rest timer in the notification and 883 exercises translated with ML Kit."
+      },
+      "play_package": "com.askrueger.trainingarc",
+      "repo_private": true
     },
     {
       "slug": "bingogoals",
       "name": "BingoGoals",
+      "icon": "img/projects/bingogoals/icon.svg",
+      "banner": "img/projects/bingogoals/banner.webp",
+      "brand": "#d0213a",
       "tagline": {"es": "Tus metas convertidas en un cartón de bingo.", "en": "Your goals turned into a bingo card."},
-      "kind": "Monorepo · TypeScript",
-      "status": {"es": "Reconstrucción en curso", "en": "Rebuild in progress"},
-      "status_level": "active",
-      "featured": false,
+      "pitch": {
+        "es": "Convierte tus metas en un cartón de bingo y canta línea cada vez que cumples una.",
+        "en": "Turn your goals into a bingo card and call a line every time you hit one."
+      },
+      "perks": {"es": ["3×3, 4×4 o 5×5", "Ideas para cada ocasión", "Sin cuenta", "ES / EN"], "en": ["3×3, 4×4 or 5×5", "Ideas for every occasion", "No account", "ES / EN"]},
+      "kind": "Android · Kotlin + TypeScript",
+      "status": {"es": "v0.1 · prueba cerrada en Google Play", "en": "v0.1 · closed testing on Google Play"},
+      "status_level": "stable",
+      "featured": true,
       "summary": {
-        "es": "Cada casilla es un objetivo y al completarlos cantas línea o bingo. Nació como prototipo en Flutter y se está reconstruyendo como web React con una API NestJS.",
-        "en": "Each square is a goal, and completing them gets you a line or a bingo. It started as a Flutter prototype and is being rebuilt as a React web app with a NestJS API."
+        "es": "App Android nativa para crear cartones de bingo con tus metas de Año Nuevo, del verano, de un viaje o de cualquier ocasión: sellas cada meta que cumples, cantas línea y celebras el cartón completo. Nació como prototipo en Flutter, pasó por una web instalable con API en NestJS y hoy es una app en Kotlin y Jetpack Compose.",
+        "en": "A native Android app to build bingo cards from your New Year, summer, travel or any-occasion goals: stamp each goal you hit, call a line and celebrate the full card. It began as a Flutter prototype, became an installable web app with a NestJS API, and is now a Kotlin and Jetpack Compose app."
       },
       "problem": {
         "es": "Los propósitos de año nuevo se olvidan en febrero. Un formato de juego hace que apetezca volver a ellos.",
         "en": "New Year's resolutions are forgotten by February. A game format makes you want to come back to them."
       },
+      "hero": [1, 2],
+      "features": [
+        {
+          "shot": 0,
+          "title": {"es": "Tu primer cartón en un minuto", "en": "Your first card in a minute"},
+          "text": {
+            "es": "Sin registro, sin permisos y sin anuncios al empezar: abres la app y creas tu cartón.",
+            "en": "No sign-up, no permissions and no ads to start: open the app and create your card."
+          }
+        },
+        {
+          "shot": 4,
+          "title": {"es": "Un cartón para cada ocasión", "en": "A card for every occasion"},
+          "text": {
+            "es": "Año Nuevo, verano, un viaje, en pareja o con amigos. Elige 3×3, 4×4 o 5×5 y, si te faltan metas, la app te propone ideas.",
+            "en": "New Year, summer, a trip, as a couple or with friends. Pick 3×3, 4×4 or 5×5 and, if you run out of goals, the app suggests ideas."
+          }
+        },
+        {
+          "shot": 1,
+          "title": {"es": "Sella, canta línea, celebra", "en": "Stamp, call a line, celebrate"},
+          "text": {
+            "es": "Cada meta cumplida se sella en el cartón. Cuando completas una fila, una columna o una diagonal, se tacha y lo celebras.",
+            "en": "Every goal you hit gets stamped on the card. When you complete a row, a column or a diagonal, it's crossed out and you celebrate."
+          }
+        },
+        {
+          "shot": 5,
+          "title": {"es": "Compártelo con quien te anime", "en": "Share it with whoever cheers you on"},
+          "text": {
+            "es": "Envía tu cartón como historia o imagen cuadrada, ocultando las metas que no quieras enseñar.",
+            "en": "Send your card as a story or a square image, hiding the goals you'd rather keep private."
+          }
+        }
+      ],
+      "frame": true,
+      "gallery_title": {"es": "Capturas de la app Android", "en": "Screenshots of the Android app"},
+      "gallery": [
+        {
+          "src": {"es": "img/projects/bingogoals/01-bienvenida.webp", "en": "img/projects/bingogoals/01-bienvenida-en.webp"},
+          "alt": {"es": "Bienvenida con un cartón de ejemplo y el botón para crear el primero", "en": "Welcome screen with a sample card and the button to create the first one"},
+          "caption": {"es": "Bienvenida: tu primer cartón en un toque.", "en": "Welcome: your first card in one tap."}
+        },
+        {
+          "src": {"es": "img/projects/bingogoals/02-carton.webp", "en": "img/projects/bingogoals/02-carton-en.webp"},
+          "alt": {"es": "Cartón de 3×3 con tres metas selladas en diagonal y la línea tachada", "en": "3×3 card with three goals stamped diagonally and the line crossed out"},
+          "caption": {"es": "Sella metas y canta línea.", "en": "Stamp goals and call a line."}
+        },
+        {
+          "src": "img/projects/bingogoals/03-carton-5x5.webp",
+          "alt": {"es": "Cartón de 5×5 en tema oscuro con seis metas cumplidas", "en": "5×5 card in dark theme with six goals done"},
+          "caption": {"es": "Cartones de 5×5, también en tema oscuro.", "en": "5×5 cards, in dark theme too."}
+        },
+        {
+          "src": "img/projects/bingogoals/04-cartones.webp",
+          "alt": {"es": "Lista de cartones con su progreso", "en": "List of cards with their progress"},
+          "caption": {"es": "Todos tus cartones con su progreso.", "en": "All your cards with their progress."}
+        },
+        {
+          "src": "img/projects/bingogoals/05-crear.webp",
+          "alt": {"es": "Pantalla para crear un cartón: ocasión, tamaño, estilo y metas", "en": "Create a card: occasion, size, style and goals"},
+          "caption": {"es": "Crea un cartón para cualquier ocasión.", "en": "Create a card for any occasion."}
+        },
+        {
+          "src": "img/projects/bingogoals/06-compartir.webp",
+          "alt": {"es": "Cartón listo para compartir como historia", "en": "Card ready to share as a story"},
+          "caption": {"es": "Compártelo como historia o imagen cuadrada.", "en": "Share it as a story or a square image."}
+        }
+      ],
       "highlights": {
         "es": [
-          "Migración desde un prototipo Flutter, conservado en la etiqueta flutter-prototype-final como referencia de reglas y diseño.",
-          "Monorepo con web React + Vite y API NestJS.",
-          "ESLint, Prettier, typecheck y tests en cada pull request con GitHub Actions."
+          "App nativa en Kotlin y Jetpack Compose con Room y DataStore, y un módulo :domain en Kotlin puro con las reglas del bingo.",
+          "Tests de capturas de pantalla en español e inglés y en tema claro y oscuro; las capturas de esta página salen de ellos. 84 tests en la app Android.",
+          "Crear un cartón: ocasión, tamaño (3×3, 4×4 o 5×5) y estilo. Si tus metas no llenan el cartón, se completa con ideas de la ocasión.",
+          "Compartir el cartón como imagen cuadrada o como historia, con opción de ocultar las casillas.",
+          "Versión de publicación firmada con una clave guardada fuera del repositorio y política de privacidad enlazada desde Ajustes.",
+          "La versión web sigue desplegada: PWA en React con IndexedDB y API en NestJS, Prisma y PostgreSQL con cuentas y sincronización, que será el servidor de la app.",
+          "Vitest, Testing Library y Playwright en la web, CI en cada pull request y revisión de código al cerrar cada fase."
         ],
         "en": [
-          "Migration from a Flutter prototype, kept under the flutter-prototype-final tag as a reference for rules and design.",
-          "Monorepo with a React + Vite web app and a NestJS API.",
-          "ESLint, Prettier, typecheck and tests on every pull request with GitHub Actions."
+          "Native Kotlin and Jetpack Compose app with Room and DataStore, plus a pure Kotlin :domain module with the bingo rules.",
+          "Screenshot tests in Spanish and English and in light and dark themes; the screenshots on this page come from them. 84 tests in the Android app.",
+          "Creating a card: occasion, size (3×3, 4×4 or 5×5) and style. If your goals don't fill the card, it is completed with ideas for the occasion.",
+          "Share the card as a square image or a story, with the option to hide squares.",
+          "Release build signed with a key kept outside the repository and a privacy policy linked from Settings.",
+          "The web version is still deployed: a React PWA on IndexedDB and a NestJS, Prisma and PostgreSQL API with accounts and sync, which will be the app's server.",
+          "Vitest, Testing Library and Playwright on the web, CI on every pull request and a code review at the end of each phase."
+        ]
+      },
+      "decisions": {
+        "es": [
+          "Nativa en Kotlin en lugar de envolver la web con Capacitor. El widget, los anuncios con el consentimiento de la UE y las animaciones del sello a 60 fps necesitaban código nativo igualmente.",
+          "Las reglas del bingo en un módulo de Kotlin puro (:domain), portadas de la versión web junto con sus tests. Se prueban en milisegundos, sin emulador.",
+          "Tests de capturas además de los tests de lógica. Detectan cambios visuales en los dos idiomas y temas, y de paso dan capturas siempre actualizadas.",
+          "Primero local: los cartones viven en el móvil y la cuenta es opcional. La API que ya funciona para la web dará la sincronización cuando haga falta."
+        ],
+        "en": [
+          "Native Kotlin instead of wrapping the web app with Capacitor. The widget, ads with EU consent and the 60 fps stamp animations needed native code anyway.",
+          "The bingo rules live in a pure Kotlin module (:domain), ported from the web version along with their tests. They run in milliseconds, with no emulator.",
+          "Screenshot tests on top of logic tests. They catch visual changes across both languages and themes, and give always-current screenshots as a bonus.",
+          "Local first: cards live on the phone and an account is optional. The API already serving the web app will provide sync when it's needed."
         ]
       },
       "stack": [
-        {"group": {"es": "Cliente", "en": "Client"}, "items": ["React", "Vite", "TypeScript"]},
-        {"group": "Backend", "items": ["NestJS"]},
-        {"group": {"es": "Calidad y entrega", "en": "Quality & delivery"}, "items": ["Vitest", "ESLint", "Prettier", "GitHub Actions"]}
+        {"group": "Android", "items": ["Kotlin", "Jetpack Compose", "Material 3", "Room", "DataStore", ":domain (Kotlin)"]},
+        {"group": {"es": "Web y API", "en": "Web & API"}, "items": ["React", "TypeScript", "PWA", "NestJS", "Prisma", "PostgreSQL"]},
+        {
+          "group": {"es": "Calidad y entrega", "en": "Quality & delivery"},
+          "items": ["JUnit", {"es": "Tests de capturas", "en": "Screenshot tests"}, "Vitest", "Playwright", "GitHub Actions"]
+        }
       ],
-      "metrics": [],
+      "metrics": [
+        {"value": "84", "label": {"es": "tests en Android", "en": "Android tests"}},
+        {"value": "3", "label": {"es": "tamaños de cartón", "en": "card sizes"}},
+        {"value": "ES / EN", "label": {"es": "idiomas", "en": "languages"}}
+      ],
+      "snippet": {
+        "file": "snippets/bingogoals.kt",
+        "lang": "kotlin",
+        "path": "domain/…/Lines.kt",
+        "url": "https://github.com/AsKrueger/BingoGoals/blob/main/apps/android/domain/src/main/kotlin/app/bingogoals/domain/Lines.kt",
+        "caption": {
+          "es": "Las reglas del bingo son Kotlin puro. Al sellar una casilla, la app compara el cartón antes y después para saber qué celebrar: una línea nueva se tacha con el rotulador, el cartón completo es bingo, y una línea que ya estaba no se vuelve a celebrar.",
+          "en": "The bingo rules are plain Kotlin. When you stamp a square, the app compares the card before and after to decide what to celebrate: a new line gets crossed out with the marker, a full card is bingo, and a line that was already there isn't celebrated again."
+        }
+      },
+      "cv_point": {
+        "es": "Kotlin y Compose con el dominio en Kotlin puro, 84 tests y tests de capturas. Antes, PWA en React con API NestJS.",
+        "en": "Native Kotlin and Compose app with a pure Kotlin domain, 84 tests and screenshot tests. Before that, a React PWA with a deployed NestJS API."
+      },
+      "play_package": "app.bingogoals",
+      "demo": "https://askrueger.github.io/BingoGoals/",
       "repository": "https://github.com/AsKrueger/BingoGoals"
     }
   ]

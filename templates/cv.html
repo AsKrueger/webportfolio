@@ -43,11 +43,15 @@
         <div class="cv-item">
             <div class="cv-item-head">
                 <h3>{{ project.name }} <span class="cv-muted">· {{ project.kind }}</span></h3>
+                {% if project.repository %}
                 <a class="cv-muted" href="{{ project.repository }}">{{ project.repository | replace("https://", "") }}</a>
+                {% else %}
+                <span class="cv-muted">{{ project.status }}</span>
+                {% endif %}
             </div>
-            <p>{{ project.summary }}</p>
+            <p>{{ project.tagline if project.cv_point else project.summary }}</p>
             <ul>
-                {% for item in project.highlights[:2] %}<li>{{ item }}</li>{% endfor %}
+                {% if project.cv_point %}<li>{{ project.cv_point }}</li>{% else %}{% for item in project.highlights[:2] %}<li>{{ item }}</li>{% endfor %}{% endif %}
             </ul>
         </div>
         {% endfor %}
@@ -77,6 +81,10 @@
             {% endfor %}
             <h2>{{ t.education.certs }}</h2>
             <p class="cv-certs">{% for cert in certifications %}{{ cert.name }} <span class="cv-muted">({{ cert.date }})</span>{{ " · " if not loop.last }}{% endfor %}</p>
+            <h2>{{ t.about.languages }}</h2>
+            <ul class="cv-plain">
+                {% for l in languages %}<li>{{ l.name }} <span class="cv-muted">· {{ l.level }}</span></li>{% endfor %}
+            </ul>
         </section>
         <section>
             <h2>{{ t.cv.skills }}</h2>
@@ -84,10 +92,6 @@
             <p class="cv-skill"><strong>{{ group.group }}:</strong> {{ group["items"] | join(", ") }}</p>
             {% endfor %}
             <p class="cv-skill"><strong>{{ t.cv.other }}:</strong> {{ also_know | join(", ") }}</p>
-            <h2>{{ t.about.languages }}</h2>
-            <ul class="cv-plain">
-                {% for l in languages %}<li>{{ l.name }} <span class="cv-muted">· {{ l.level }}</span></li>{% endfor %}
-            </ul>
         </section>
     </div>
 </article>
