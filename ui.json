@@ -62,27 +62,35 @@
       "es": "CV en PDF",
       "en": "CV (PDF)"
     },
-    "terminal_label": {
-      "es": "Perfil resumido como respuesta JSON de una API",
-      "en": "Profile summary as a JSON API response"
-    },
     "facts_label": {
       "es": "Resumen rápido",
       "en": "At a glance"
+    },
+    "fan_label": {
+      "es": "Mis apps en Google Play",
+      "en": "My apps on Google Play"
+    },
+    "dock_apps": {
+      "es": "apps en Google Play",
+      "en": "apps on Google Play"
+    },
+    "dock_where": {
+      "es": "Pruebas cerradas · Kotlin y Jetpack Compose",
+      "en": "Closed testing · Kotlin and Jetpack Compose"
     }
   },
   "projects": {
     "title": {
-      "es": "Software con dominio, contratos y tests",
-      "en": "Software with a domain, contracts and tests"
+      "es": "Apps en Google Play, con su backend y sus tests",
+      "en": "Apps on Google Play, with their backend and their tests"
     },
     "lead": {
-      "es": "Proyectos personales trabajados como en un equipo real: issues, ramas, ADRs, CI y documentación. Cada estado está indicado tal como es.",
-      "en": "Personal projects run like real team work: issues, branches, ADRs, CI and documentation. Every status is shown exactly as it is."
+      "es": "Mis cinco apps en prueba cerrada en Google Play, trabajadas como en un equipo real: issues, ramas, pull requests, CI y documentación. Cada estado está indicado tal como es.",
+      "en": "My five apps in closed testing on Google Play, run like real team work: issues, branches, pull requests, CI and documentation. Every status is shown exactly as it is."
     },
     "read_case": {
-      "es": "Ver caso técnico",
-      "en": "Read the case study"
+      "es": "Ver la app",
+      "en": "See the app"
     },
     "has_diagram": {
       "es": "arquitectura",
@@ -99,8 +107,8 @@
   },
   "about": {
     "title": {
-      "es": "De la recepción de un Parador al backend",
-      "en": "From a hotel front desk to the backend"
+      "es": "De la recepción de un Parador al software",
+      "en": "From a hotel front desk to software"
     },
     "photo_alt": {
       "es": "Foto de",
@@ -155,8 +163,8 @@
   },
   "contact": {
     "title": {
-      "es": "¿Buscas un backend junior con ganas de aprender en serio?",
-      "en": "Looking for a junior backend developer who takes learning seriously?"
+      "es": "¿Buscas un desarrollador junior de backend o Android con ganas de aprender en serio?",
+      "en": "Looking for a junior backend or Android developer who takes learning seriously?"
     },
     "lead": {
       "es": "Estoy disponible ya, en Mérida o en remoto. Respondo rápido.",
@@ -213,8 +221,8 @@
       "en": "view on GitHub"
     },
     "gallery": {
-      "es": "Capturas de la versión 1.0 (MVP)",
-      "en": "Screenshots of version 1.0 (MVP)"
+      "es": "Capturas",
+      "en": "Screenshots"
     },
     "built": {
       "es": "Qué he construido",
@@ -239,48 +247,112 @@
     "next": {
       "es": "siguiente",
       "en": "next"
+    },
+    "demo": {
+      "es": "Probar la web",
+      "en": "Try the web app"
+    },
+    "private": {
+      "es": "Repositorio privado",
+      "en": "Private repository"
+    },
+    "note_private": {
+      "es": "el estado indicado arriba refleja el roadmap del proyecto. El repositorio es privado porque la app está en Google Play; el fragmento de código es literal y puedo enseñar el resto en una entrevista.",
+      "en": "the status above reflects the project roadmap. The repository is private because the app is on Google Play; the code excerpt is verbatim and I can walk through the rest in an interview."
+    },
+    "private_source": {
+      "es": "repositorio privado",
+      "en": "private repository"
+    },
+    "decisions": {
+      "es": "Decisiones y por qué",
+      "en": "Decisions and why"
+    },
+    "access": {
+      "es": "Pedir acceso a la prueba",
+      "en": "Request test access"
+    },
+    "access_subject": {
+      "es": "Quiero probar",
+      "en": "I'd like to try"
+    },
+    "access_body": {
+      "es": "Hola Alonso, me gustaría probar la app. Mi cuenta de Google Play es: ",
+      "en": "Hi Alonso, I'd like to try the app. My Google Play account is: "
+    },
+    "access_note": {
+      "es": "La app está en prueba cerrada en Google Play: escríbeme con tu cuenta de Google y te doy acceso.",
+      "en": "The app is in closed testing on Google Play: email me your Google account and I'll give you access."
     }
   },
   "diagram": {
-    "in": {
-      "es": "Entrada",
-      "en": "Driving side"
-    },
-    "out": {
-      "es": "Salida",
-      "en": "Driven side"
-    },
-    "pending": {
-      "es": "IaC definida · pendiente de aprovisionar",
-      "en": "IaC defined · not yet provisioned"
-    },
-    "fallback": {
-      "es": "si la API falla",
-      "en": "if the API fails"
-    },
-    "import": {
-      "es": "importación idempotente",
-      "en": "idempotent import"
-    },
-    "pure": {
-      "es": "Java puro · sin Spring ni JPA",
-      "en": "plain Java · no Spring, no JPA"
-    },
-    "hex_rule": {
-      "es": "Las dependencias apuntan hacia el dominio (ports & adapters).",
-      "en": "Dependencies point towards the domain (ports & adapters)."
-    },
-    "hex_label": {
-      "es": "Arquitectura hexagonal de Cosplay Journal: REST, consumidor Kafka y scheduler entran por puertos a los casos de uso y al dominio; PostgreSQL, Kafka, el scraper de ListadoManga y la seguridad son adaptadores de salida.",
-      "en": "Cosplay Journal hexagonal architecture: REST, a Kafka consumer and a scheduler enter through ports into use cases and the domain; PostgreSQL, Kafka, the ListadoManga scraper and security are driven adapters."
-    },
     "cost_label": {
-      "es": "Arquitectura de 3D Cost Manager: app Android contra API REST Spring Boot, servicios, motor CostCalculator puro, PostgreSQL y API de ESIOS; debajo, la infraestructura AWS definida como código.",
-      "en": "3D Cost Manager architecture: Android app calling a Spring Boot REST API, services, a pure CostCalculator engine, PostgreSQL and the ESIOS API; below, the AWS infrastructure defined as code."
+      "es": "Arquitectura de 3D Cost Manager: la app Android lo hace todo en el móvil. La interfaz en Compose habla con los ViewModels, que usan el motor de costes CostEngine (Kotlin puro) y el repositorio sobre Room y DataStore. Aparte, el importador de G-code y 3MF, el PDF de presupuestos, el widget del temporizador y el cliente del precio de la luz (PVPC). El backend Spring Boot de la versión 1 está archivado.",
+      "en": "3D Cost Manager architecture: the Android app does everything on the phone. The Compose UI talks to ViewModels, which use the pure Kotlin CostEngine and a repository over Room and DataStore. Alongside are the G-code and 3MF importer, the quote PDF, the timer widget and the electricity price (PVPC) client. The version 1 Spring Boot backend is archived."
     },
     "explorer_label": {
-      "es": "Arquitectura de ExplorerSaga: la app Android pide los lugares al backend Spring Boot por Retrofit y, si falla, usa JSON locales; el backend importa lugares de OpenStreetMap y los guarda en PostgreSQL.",
-      "en": "ExplorerSaga architecture: the Android app requests places from the Spring Boot backend via Retrofit and falls back to local JSON; the backend imports places from OpenStreetMap into PostgreSQL."
+      "es": "Arquitectura de ExplorerSaga v2: una fábrica de datos en Python genera un paquete de contenido con datos abiertos y lo publica en una GitHub Release; la app Android lo descarga cada pocos días con WorkManager, comprueba tamaño y hash y lo importa en Room con búsqueda FTS4. La app trae una copia para el primer arranque sin conexión.",
+      "en": "ExplorerSaga v2 architecture: a Python data factory builds a content pack from open data and publishes it as a GitHub Release; the Android app downloads it every few days with WorkManager, checks size and hash and imports it into Room with FTS4 search. The app ships a copy for the first offline launch."
+    },
+    "open_data": {
+      "es": "Datos abiertos",
+      "en": "Open data"
+    },
+    "reproducible": {
+      "es": "reproducible byte a byte",
+      "en": "byte-for-byte reproducible"
+    },
+    "verify": {
+      "es": "se comprueban tamaño y hash",
+      "en": "size and hash are checked"
+    },
+    "bundled": {
+      "es": "copia incluida para el primer arranque",
+      "en": "bundled copy for first launch"
+    },
+    "room": {
+      "es": "lugares · rutas · agenda · Mi viaje",
+      "en": "places · routes · events · My trip"
+    },
+    "worker": {
+      "es": "WorkManager · cada 3 días",
+      "en": "WorkManager · every 3 days"
+    },
+    "cost_group": {
+      "es": "Android · Kotlin · todo en el móvil",
+      "en": "Android · Kotlin · all on device"
+    },
+    "cost_ui": {
+      "es": "calculadora · pedidos · catálogo",
+      "en": "calculator · orders · catalogue"
+    },
+    "cost_repo": {
+      "es": "piezas · pedidos · bobinas",
+      "en": "parts · orders · spools"
+    },
+    "pure_kotlin": {
+      "es": "Kotlin puro · BigDecimal",
+      "en": "pure Kotlin · BigDecimal"
+    },
+    "pvpc": {
+      "es": "precio de la luz del día",
+      "en": "today's electricity price"
+    },
+    "slicer": {
+      "es": "Laminador",
+      "en": "Slicer"
+    },
+    "archived": {
+      "es": "v1 · archivado",
+      "en": "v1 · archived"
+    },
+    "archived_note": {
+      "es": "La app ya no lo necesita;",
+      "en": "The app no longer needs it;"
+    },
+    "archived_note2": {
+      "es": "queda para sincronizar",
+      "en": "kept for future sync"
     }
   },
   "cv": {
@@ -315,6 +387,36 @@
     "other": {
       "es": "Otros",
       "en": "Other"
+    }
+  },
+  "app": {
+    "features_kicker": {
+      "es": "Lo que puedes hacer",
+      "en": "What you can do"
+    },
+    "features_title": {
+      "es": "Por qué te va a gustar {name}",
+      "en": "Why you'll like {name}"
+    },
+    "swipe": {
+      "es": "desliza",
+      "en": "swipe"
+    },
+    "cta_title": {
+      "es": "¿Te apetece probar {name}?",
+      "en": "Fancy trying {name}?"
+    },
+    "hood_kicker": {
+      "es": "Bajo el capó",
+      "en": "Under the hood"
+    },
+    "hood_title": {
+      "es": "Cómo está hecha",
+      "en": "How it's built"
+    },
+    "hood_lead": {
+      "es": "Para quien quiera saber qué hay detrás: el problema, la arquitectura, código real y las decisiones que tomé.",
+      "en": "For anyone curious about what's behind it: the problem, the architecture, real code and the decisions I made."
     }
   }
 }

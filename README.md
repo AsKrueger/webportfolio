@@ -2,7 +2,7 @@
 
 [![Build & deploy](https://github.com/AsKrueger/webportfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/AsKrueger/webportfolio/actions/workflows/deploy.yml)
 
-**Desarrollador de Software Junior · Backend con Java y Spring Boot** · Mérida, Extremadura · Disponibilidad inmediata
+**Desarrollador de Software Junior · Backend con Java y Spring Boot · Android con Kotlin** · Mérida, Extremadura · Disponibilidad inmediata
 
 🌐 **[askrueger.github.io/webportfolio](https://askrueger.github.io/webportfolio/)** ([English](https://askrueger.github.io/webportfolio/en/)) · [CV en PDF](https://askrueger.github.io/webportfolio/cv/alonso-amador-sanchez-cv.pdf) · [LinkedIn](https://www.linkedin.com/in/alonso-amador) · [Email](mailto:alonsoamadorsanchez@gmail.com)
 
@@ -14,12 +14,13 @@
 
 | Proyecto | Qué es | Stack principal |
 | --- | --- | --- |
-| [**Cosplay Journal**](https://github.com/AsKrueger/Cosplay-Journal) | Backend hexagonal con eventos Kafka, JWT, scraper idempotente y Testcontainers | Java 21 · Spring Boot 3 · PostgreSQL · Kafka |
-| [**3D Cost Manager**](https://github.com/AsKrueger/Calculadora3D) | Motor de costes de impresión 3D con DDD, cliente Android e infraestructura AWS como código | Java 21 · Spring Boot · Kotlin · AWS |
-| [**ExplorerSaga Extremadura**](https://github.com/AsKrueger/ExplorerSaga-Extremadura) | TFG: guía turística de Mérida con mapa OSM y backend propio | Kotlin · Jetpack Compose · Spring Boot |
-| [PantryMind](https://github.com/AsKrueger/PantryMind) · [Wayly](https://github.com/AsKrueger/Wayly) · [BingoGoals](https://github.com/AsKrueger/BingoGoals) | Proyectos web en TypeScript | NestJS · React · Angular |
+| [**ExplorerSaga Extremadura**](https://github.com/AsKrueger/ExplorerSaga-Extremadura) | Guía turística de toda Extremadura sin conexión, con contenido generado por una fábrica de datos en Python (empezó como mi TFG) | Kotlin · Jetpack Compose · Room · MapLibre · Python |
+| [**3D Cost Manager**](https://github.com/AsKrueger/Calculadora3D) | Coste real y precio de venta de cada impresión 3D, presupuestos en PDF e importación de G-code y 3MF, todo en el móvil (empezó como backend Spring Boot) | Kotlin · Jetpack Compose · Room |
+| **AnimeWatchlist** (repositorio privado) | Listas de anime, calendario semanal de estrenos y dónde verlo | Kotlin · Jetpack Compose · Room · AdMob |
+| **Training Arc** (repositorio privado) | Registro de entrenamientos convertido en un RPG con estética anime | Kotlin · Jetpack Compose · Room · ML Kit |
+| [**BingoGoals**](https://github.com/AsKrueger/BingoGoals) | Metas en forma de cartón de bingo: app Android nativa con tests de capturas, más una PWA con API NestJS | Kotlin · Jetpack Compose · React · NestJS |
 
-Cada proyecto destacado tiene en la web su caso técnico: problema, **diagrama de arquitectura**, **un fragmento de código real** del repositorio y el estado real del proyecto.
+Las cinco apps están en prueba cerrada en Google Play. Cada una tiene en la web su caso técnico: el problema, **un fragmento de código real**, capturas o **diagrama de arquitectura** y el estado real del proyecto.
 
 ---
 

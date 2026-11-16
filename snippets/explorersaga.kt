@@ -1,34 +1,25 @@
-enum class DataSourceOrigin {
-    REMOTE,
-    LOCAL_FALLBACK,
-    NONE
-}
+suspend fun sync(): SyncResult = withContext(Dispatchers.IO) {
+    try {
+        val manifest = ContentImporter.json.decodeFromString<ContentManifest>(
+            download(baseUrl + MANIFEST).decodeToString()
+        )
+        if (manifest.schema != ContentImporter.SUPPORTED_SCHEMA) return@withContext SyncResult.UP_TO_DATE
+        if (manifest.version <= (dao.meta()?.version ?: 0)) return@withContext SyncResult.UP_TO_DATE
 
-data class PlacesResult(
-    val places: List<PlaceEntity>,
-    val origin: DataSourceOrigin
-)
-
-class PlaceRepository(private val context: Context) {
-
-    private val json = Json { ignoreUnknownKeys = true }
-
-    suspend fun getPlacesResult(category: String? = null): PlacesResult = withContext(Dispatchers.IO) {
-        try {
-            val remotePlaces = RetrofitClient.api.getPlaces(category)
-            if (remotePlaces.isNotEmpty()) {
-                PlacesResult(remotePlaces.map { it.toPlaceEntity() }, DataSourceOrigin.REMOTE)
-            } else {
-                val localPlaces = loadPlacesFromAssets()
-                val filteredLocal = if (category != null) localPlaces.filter { it.category.contains(category, ignoreCase = true) } else localPlaces
-                PlacesResult(filteredLocal, DataSourceOrigin.LOCAL_FALLBACK)
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            val localPlaces = loadPlacesFromAssets()
-            val filteredLocal = if (category != null) localPlaces.filter { it.category.contains(category, ignoreCase = true) } else localPlaces
-            PlacesResult(filteredLocal, DataSourceOrigin.LOCAL_FALLBACK)
+        val bytes = download(baseUrl + manifest.file)
+        if (bytes.size.toLong() != manifest.size || ContentImporter.sha256(bytes) != manifest.sha256) {
+            Log.w(TAG, "Paquete descartado: tamaño o hash no coinciden")
+            return@withContext SyncResult.FAILED
         }
+        importMutex.withLock {
+            import(ContentImporter.readPack(ByteArrayInputStream(bytes)))
+        }
+        SyncResult.UPDATED
+    } catch (e: IOException) {
+        Log.w(TAG, "No se pudo actualizar el contenido", e)
+        SyncResult.FAILED
+    } catch (e: IllegalArgumentException) {
+        Log.w(TAG, "Paquete de contenido no válido", e)
+        SyncResult.FAILED
     }
-    // …
 }

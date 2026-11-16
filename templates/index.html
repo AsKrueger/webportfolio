@@ -46,28 +46,21 @@
                 {% endif %}
                 <a class="btn btn-ghost" href="{{ contact.github }}" target="_blank" rel="noopener">{{ ui.github_icon() }} GitHub</a>
             </div>
+            <a class="app-dock" href="#projects">
+                <span class="app-dock-icons">{% for project in featured %}<img src="static/{{ project.icon }}" alt="" width="40" height="40">{% endfor %}</span>
+                <span class="app-dock-text"><strong>{{ featured | length }} {{ t.hero.dock_apps }}</strong>{{ t.hero.dock_where }}</span>
+            </a>
         </div>
 
-        <figure class="terminal" aria-label="{{ t.hero.terminal_label }}">
-            <div class="terminal-bar" aria-hidden="true">
-                <span></span><span></span><span></span>
-                <p>bash — {{ profile.handle }}</p>
-            </div>
-            <pre class="terminal-body"><code><span class="t-line"><span class="t-prompt">$</span> curl -s <span class="t-url">/api/v1/developers/{{ profile.handle }}</span></span>
-<span class="t-line"><span class="t-ok">HTTP/1.1 200 OK</span></span>
-<span class="t-line"><span class="t-dim">Content-Type: application/json</span></span>
-<span class="t-line"> </span>
-<span class="t-line">{</span>
-<span class="t-line">  <span class="t-key">"name"</span>: <span class="t-str">"{{ profile.short_name }}"</span>,</span>
-<span class="t-line">  <span class="t-key">"role"</span>: <span class="t-str">"Junior Backend Developer"</span>,</span>
-<span class="t-line">  <span class="t-key">"stack"</span>: [<span class="t-str">"Java"</span>, <span class="t-str">"Spring Boot"</span>, <span class="t-str">"PostgreSQL"</span>],</span>
-<span class="t-line">  <span class="t-key">"location"</span>: <span class="t-str">"{{ profile.location }}"</span>,</span>
-<span class="t-line">  <span class="t-key">"workModes"</span>: [{% for m in profile.work_modes %}<span class="t-str">"{{ m | lower }}"</span>{{ ", " if not loop.last }}{% endfor %}],</span>
-<span class="t-line">  <span class="t-key">"available"</span>: <span class="t-bool">true</span>,</span>
-<span class="t-line">  <span class="t-key">"building"</span>: <span class="t-str">"{{ featured[0].name }}"</span>,</span>
-<span class="t-line">  <span class="t-key">"publicProjects"</span>: <span class="t-num">{{ projects | length }}</span></span>
-<span class="t-line">}<span class="t-caret" aria-hidden="true"></span></span></code></pre>
-        </figure>
+        <div class="app-fan" aria-label="{{ t.hero.fan_label }}">
+            {% for project in featured %}
+            <a class="fan-card fan-{{ loop.index }}" href="{{ projects_dir }}/{{ project.slug }}/" style="--brand: {{ project.brand }};">
+                {% set shot = project.gallery[project.hero[0]] %}
+                <span class="fan-shot{{ ' shot-framed' if project.frame }}"><img src="static/{{ shot.src }}" alt="{{ project.name }}: {{ shot.alt }}" width="220" {% if loop.index <= 3 %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async"></span>
+                <span class="fan-label"><img src="static/{{ project.icon }}" alt="" width="28" height="28">{{ project.name }}</span>
+            </a>
+            {% endfor %}
+        </div>
     </div>
 
     <div class="container">
@@ -93,33 +86,29 @@
 
         <div class="featured-list">
             {% for project in featured %}
-            <article class="feature-card reveal">
-                <div class="feature-index mono" aria-hidden="true">{{ "%02d" | format(loop.index) }}</div>
-                <div class="feature-main">
-                    <div class="card-meta">
-                        <span class="kind mono">{{ project.kind }}</span>
-                        {{ ui.status(project) }}
-                    </div>
-                    <h3><a class="stretched" href="{{ projects_dir }}/{{ project.slug }}/">{{ project.name }}</a></h3>
-                    <p class="tagline">{{ project.tagline }}</p>
-                    <p>{{ project.summary }}</p>
-                    {{ ui.chips(project.stack[0]["items"], 6) }}
+            <article class="feature-card app-card reveal" style="--brand: {{ project.brand }};">
+                <div class="app-card-banner">
+                    <img src="static/{{ project.banner }}" alt="" width="1024" height="500" loading="lazy" decoding="async">
                 </div>
-                <div class="feature-side">
-                    {% if project.metrics %}
-                    <dl class="metrics">
-                        {% for m in project.metrics %}
-                        <div><dt>{{ m.label }}</dt><dd>{{ m.value }}</dd></div>
-                        {% endfor %}
-                    </dl>
-                    {% endif %}
-                    <span class="card-link">{{ t.projects.read_case }} {{ ui.arrow() }}</span>
-                    {% if project.snippet or project.diagram %}
-                    <p class="card-extras mono">
-                        {% if project.diagram %}<span>◇ {{ t.projects.has_diagram }}</span>{% endif %}
-                        {% if project.snippet %}<span>{ } {{ t.projects.has_code }}</span>{% endif %}
-                    </p>
-                    {% endif %}
+                <div class="feature-main">
+                    <div class="app-card-id">
+                        <img class="app-icon" src="static/{{ project.icon }}" alt="" width="52" height="52" loading="lazy">
+                        <div>
+                            <h3><a class="stretched" href="{{ projects_dir }}/{{ project.slug }}/">{{ project.name }}</a></h3>
+                            <div class="card-meta">
+                                <span class="kind mono">{{ project.kind }}</span>
+                                {{ ui.status(project) }}
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tagline">{{ project.pitch }}</p>
+                    <ul class="perks perks-sm">
+                        {% for perk in project.perks %}<li>{{ perk }}</li>{% endfor %}
+                    </ul>
+                    <div class="app-card-foot">
+                        {{ ui.chips(project.stack[0]["items"], 4) }}
+                        <span class="card-link">{{ t.projects.read_case }} {{ ui.arrow() }}</span>
+                    </div>
                 </div>
             </article>
             {% endfor %}
@@ -256,7 +245,7 @@
         <p class="section-lead">{{ t.contact.lead }}</p>
         <div class="contact-actions">
             <a class="btn btn-primary btn-lg" href="mailto:{{ contact.email }}">{{ contact.email }}</a>
-            <button class="btn btn-ghost" type="button" data-copy="{{ contact.email }}" data-copied="{{ t.contact.copied }}">{{ t.contact.copy }}</button>
+            <button class="btn btn-ghost" type="button" data-copy="{{ contact.email }}" data-copied="{{ t.contact.copied }}">{{ t.contact["copy"] }}</button>
         </div>
         <p class="contact-links">
             <a href="{{ contact.linkedin }}" target="_blank" rel="noopener">LinkedIn {{ ui.arrow() }}</a>
