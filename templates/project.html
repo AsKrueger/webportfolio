@@ -1,110 +1,211 @@
 {% extends "base.html" %}
 {% import "_macros.html" as ui %}
 
-{% block title %}{{ project.name }} · {{ t.case.title_suffix }} · {{ profile.name }}{% endblock %}
-{% block description %}{{ project.summary }}{% endblock %}
+{% block title %}{{ project.name }} · {{ project.tagline }} · {{ profile.name }}{% endblock %}
+{% block description %}{{ project.pitch }} {{ project.summary }}{% endblock %}
 {% block og_type %}article{% endblock %}
+
+{% macro shot_img(shot, frame, eager=False, size=420) %}
+<span class="shot{{ ' shot-framed' if frame }}"><img src="{{ root }}static/{{ shot.src }}" alt="{{ shot.alt }}" width="{{ size }}"{% if eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async"></span>
+{% endmacro %}
+
+{% macro access_button(project, primary=True) %}
+{% if project.play_package %}
+<a class="btn btn-brand{{ ' btn-lg' if primary }}" href="mailto:{{ contact.email }}?subject={{ (t.case.access_subject ~ ' ' ~ project.name) | urlencode }}&amp;body={{ t.case.access_body | urlencode }}">{{ ui.play_icon() }} {{ t.case.access }}</a>
+{% endif %}
+{% endmacro %}
 
 {% block content %}
 {% set n = namespace(i=0) %}
-<article class="case">
-    <header class="case-hero">
-        <div class="container case-hero-grid">
-        <div class="case-hero-main">
-            <nav class="breadcrumb mono" aria-label="{{ t.case.breadcrumb }}">
-                <a href="{{ base }}">{{ t.nav.home | lower }}</a> <span class="dim">/</span>
-                <a href="{{ base }}#projects">{{ t.nav.projects | lower }}</a> <span class="dim">/</span>
-                <span aria-current="page">{{ project.slug }}</span>
-            </nav>
-            <div class="card-meta">
-                <span class="kind mono">{{ project.kind }}</span>
-                {{ ui.status(project) }}
+<article class="app" style="--brand: {{ project.brand }}; --brand-ink: {{ project.brand_ink }};">
+
+    <!-- ============ LA APP ============ -->
+    <header class="app-hero">
+        <div class="container app-hero-grid">
+            <div class="app-hero-copy">
+                <nav class="breadcrumb mono" aria-label="{{ t.case.breadcrumb }}">
+                    <a href="{{ base }}">{{ t.nav.home | lower }}</a> <span class="dim">/</span>
+                    <a href="{{ base }}#projects">{{ t.nav.projects | lower }}</a> <span class="dim">/</span>
+                    <span aria-current="page">{{ project.slug }}</span>
+                </nav>
+                <div class="app-id">
+                    <img class="app-icon" src="{{ root }}static/{{ project.icon }}" alt="" width="72" height="72">
+                    <div>
+                        <p class="app-name">{{ project.name }}</p>
+                        <div class="card-meta">
+                            <span class="kind mono">{{ project.kind }}</span>
+                            {{ ui.status(project) }}
+                        </div>
+                    </div>
+                </div>
+                <h1 class="app-pitch">{{ project.pitch }}</h1>
+                <p class="hero-lead">{{ project.summary }}</p>
+                <ul class="perks">
+                    {% for perk in project.perks %}<li>{{ perk }}</li>{% endfor %}
+                </ul>
+                <div class="hero-actions">
+                    {{ access_button(project) }}
+                    {% if project.demo %}
+                    <a class="btn btn-ghost btn-lg" href="{{ project.demo }}" target="_blank" rel="noopener">{{ t.case.demo }} ↗</a>
+                    {% endif %}
+                    {% if project.repository %}
+                    <a class="btn btn-ghost btn-lg" href="{{ project.repository }}" target="_blank" rel="noopener">{{ ui.github_icon() }} {{ t.case.repo }}</a>
+                    {% endif %}
+                </div>
+                {% if project.play_package %}
+                <p class="access-note dim">{{ t.case.access_note }}</p>
+                {% endif %}
             </div>
-            <h1>{{ project.name }}</h1>
-            <p class="case-tagline">{{ project.tagline }}</p>
-            <p class="hero-lead">{{ project.summary }}</p>
-            <div class="hero-actions">
-                <a class="btn btn-primary" href="{{ project.repository }}" target="_blank" rel="noopener">{{ ui.github_icon() }} {{ t.case.repo }}</a>
-                <a class="btn btn-ghost" href="{{ base }}#projects">{{ t.case.all }}</a>
-            </div>
-            {% if project.metrics %}
-            <dl class="metrics metrics-row">
-                {% for m in project.metrics %}
-                <div><dt>{{ m.label }}</dt><dd>{{ m.value }}</dd></div>
+            <div class="app-hero-shots" aria-hidden="false">
+                {% for index in project.hero %}
+                <div class="hero-shot hero-shot-{{ loop.index }}">{{ shot_img(project.gallery[index], project.frame, eager=True) }}</div>
                 {% endfor %}
-            </dl>
-            {% endif %}
-        </div>
-        <aside class="case-aside">
-            <div class="aside-card">
-                <h2 class="mono">stack</h2>
-                {% for group in project.stack %}
-                <h3>{{ group.group }}</h3>
-                {{ ui.chips(group["items"]) }}
-                {% endfor %}
             </div>
-        </aside>
         </div>
     </header>
 
-    <div class="container case-grid">
-        <div class="case-body">
-            {% set n.i = n.i + 1 %}
-            <section>
-                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.problem }}</h2>
-                <p>{{ project.problem }}</p>
-            </section>
-
-            {% if project.diagram %}
-            {% set n.i = n.i + 1 %}
-            <section>
-                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.architecture }}</h2>
-                <figure class="diagram">
-                    <div class="diagram-scroll">{% include project.diagram %}</div>
-                </figure>
-            </section>
-            {% endif %}
-
-            {% if project.snippet %}
-            {% set n.i = n.i + 1 %}
-            <section>
-                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.code }}</h2>
-                {{ ui.code_block(project.snippet, t) }}
-            </section>
-            {% endif %}
-
-            {% if project.gallery %}
-            {% set n.i = n.i + 1 %}
-            <section>
-                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.gallery }}</h2>
-                <ul class="gallery">
-                    {% for shot in project.gallery %}
-                    <li>
-                        <figure>
-                            <img src="{{ root }}static/{{ shot.src }}" alt="{{ shot.alt }}" width="420" loading="lazy">
-                            <figcaption>{{ shot.caption }}</figcaption>
-                        </figure>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </section>
-            {% endif %}
-
-            {% set n.i = n.i + 1 %}
-            <section>
-                <h2><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.built }}</h2>
-                <ul class="checks">
-                    {% for item in project.highlights %}
-                    <li>{{ item }}</li>
-                    {% endfor %}
-                </ul>
-            </section>
-            <section class="note">
-                <p><strong>{{ t.case.note_title }}</strong> {{ t.case.note }}</p>
-            </section>
+    <section class="app-features" aria-labelledby="features-title">
+        <div class="container">
+            <header class="section-head">
+                <p class="kicker"><span class="mono">✦</span> {{ t.app.features_kicker }}</p>
+                <h2 id="features-title">{{ t.app.features_title | replace("{name}", project.name) }}</h2>
+            </header>
+            <div class="feature-rows">
+                {% for feature in project.features %}
+                <div class="feature-row reveal">
+                    <figure class="feature-shot">{{ shot_img(project.gallery[feature.shot], project.frame) }}</figure>
+                    <div class="feature-copy">
+                        <span class="feature-num mono">{{ "%02d" | format(loop.index) }}</span>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.text }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
+    </section>
 
-    </div>
+    <section class="app-gallery" aria-labelledby="gallery-title">
+        <div class="container">
+            <header class="section-head section-head-row">
+                <h2 id="gallery-title">{{ project.gallery_title or t.case.gallery }}</h2>
+                <p class="dim mono gallery-hint">{{ t.app.swipe }} →</p>
+            </header>
+        </div>
+        <ul class="shot-strip" tabindex="0" aria-label="{{ project.gallery_title or t.case.gallery }}">
+            {% for shot in project.gallery %}
+            <li>
+                <figure>
+                    {{ shot_img(shot, project.frame, size=260) }}
+                    <figcaption>{{ shot.caption }}</figcaption>
+                </figure>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="app-cta">
+        <div class="container">
+            <div class="app-cta-card">
+                <img class="app-icon" src="{{ root }}static/{{ project.icon }}" alt="" width="64" height="64">
+                <div class="app-cta-text">
+                    <h2>{{ t.app.cta_title | replace("{name}", project.name) }}</h2>
+                    <p>{{ t.case.access_note if project.play_package else project.tagline }}</p>
+                </div>
+                <div class="app-cta-actions">
+                    {{ access_button(project, primary=False) }}
+                    {% if project.demo %}<a class="btn btn-ghost" href="{{ project.demo }}" target="_blank" rel="noopener">{{ t.case.demo }} ↗</a>{% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BAJO EL CAPÓ ============ -->
+    <section class="under-hood" aria-labelledby="hood-title">
+        <div class="container">
+            <header class="hood-head">
+                <p class="kicker"><span class="mono">{ }</span> {{ t.app.hood_kicker }}</p>
+                <h2 id="hood-title">{{ t.app.hood_title }}</h2>
+                <p class="section-lead">{{ t.app.hood_lead }}</p>
+                {% if project.metrics %}
+                <dl class="metrics metrics-row">
+                    {% for m in project.metrics %}
+                    <div><dt>{{ m.label }}</dt><dd>{{ m.value }}</dd></div>
+                    {% endfor %}
+                </dl>
+                {% endif %}
+            </header>
+
+            <div class="hood-grid">
+                <div class="case-body">
+                    {% set n.i = n.i + 1 %}
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.problem }}</h3>
+                        <p>{{ project.problem }}</p>
+                    </section>
+
+                    {% if project.diagram %}
+                    {% set n.i = n.i + 1 %}
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.architecture }}</h3>
+                        <figure class="diagram">
+                            <div class="diagram-scroll">{% include project.diagram %}</div>
+                        </figure>
+                    </section>
+                    {% endif %}
+
+                    {% if project.snippet %}
+                    {% set n.i = n.i + 1 %}
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.code }}</h3>
+                        {{ ui.code_block(project.snippet, t) }}
+                    </section>
+                    {% endif %}
+
+                    {% set n.i = n.i + 1 %}
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.built }}</h3>
+                        <ul class="checks">
+                            {% for item in project.highlights %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+
+                    {% if project.decisions %}
+                    {% set n.i = n.i + 1 %}
+                    <section>
+                        <h3 class="case-h"><span class="mono dim">{{ "%02d" | format(n.i) }}</span> {{ t.case.decisions }}</h3>
+                        <ol class="decisions">
+                            {% for item in project.decisions %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ol>
+                    </section>
+                    {% endif %}
+
+                    <section class="note">
+                        <p><strong>{{ t.case.note_title }}</strong> {{ t.case.note if project.repository else t.case.note_private }}</p>
+                    </section>
+                </div>
+
+                <aside class="case-aside">
+                    <div class="aside-card">
+                        <h3 class="mono">stack</h3>
+                        {% for group in project.stack %}
+                        <h4>{{ group.group }}</h4>
+                        {{ ui.chips(group["items"]) }}
+                        {% endfor %}
+                        {% if project.repository %}
+                        <a class="btn btn-ghost aside-repo" href="{{ project.repository }}" target="_blank" rel="noopener">{{ ui.github_icon() }} {{ t.case.repo }}</a>
+                        {% else %}
+                        <p class="aside-private mono dim">{{ t.case.private }}</p>
+                        {% endif %}
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
 
     <nav class="container case-nav" aria-label="{{ t.case.other }}">
         {% if prev_project %}
